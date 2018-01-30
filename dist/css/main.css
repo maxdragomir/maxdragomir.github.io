@@ -14,8 +14,8 @@
 
 @font-face {
   font-family: ProximaNovaSemiBold;
-  src: url("/fonts/ProximaNovaSemiBold/proximanova-semibold.eot");
-  src: url("/fonts/ProximaNovaSemiBold/proximanova-semibold.eot?iefix") format("eot"), url("/fonts/ProximaNovaSemiBold/proximanova-semibold.woff") format("woff"), url("/fonts/ProximaNovaSemiBold/proximanova-semibold.ttf") format("truetype"), url("/fonts/ProximaNovaSemiBold/proximanova-semibold.svg#webfont") format("svg");
+  src: url("../fonts/ProximaNovaSemiBold/proximanova-semibold.eot");
+  src: url("../fonts/ProximaNovaSemiBold/proximanova-semibold.eot?iefix") format("eot"), url("../fonts/ProximaNovaSemiBold/proximanova-semibold.woff") format("woff"), url("../fonts/ProximaNovaSemiBold/proximanova-semibold.ttf") format("truetype"), url("../fonts/ProximaNovaSemiBold/proximanova-semibold.svg#webfont") format("svg");
   font-weight: 400;
   font-style: normal; }
 
