@@ -1,14 +1,14 @@
 @font-face {
   font-family: ProximaNovaBold;
-  src: url("/fonts/ProximaNovaBold/proximanova-bold.eot");
-  src: url("/fonts/ProximaNovaBold/proximanova-bold.eot?iefix") format("eot"), url("/fonts/ProximaNovaBold/proximanova-bold.woff") format("woff"), url("/fonts/ProximaNovaBold/proximanova-bold.ttf") format("truetype"), url("/fonts/ProximaNovaBold/proximanova-bold.svg#webfont") format("svg");
+  src: url("../fonts/ProximaNovaBold/proximanova-bold.eot");
+  src: url("../fonts/ProximaNovaBold/proximanova-bold.eot?iefix") format("eot"), url("../fonts/ProximaNovaBold/proximanova-bold.woff") format("woff"), url("../fonts/ProximaNovaBold/proximanova-bold.ttf") format("truetype"), url("/fonts/ProximaNovaBold/proximanova-bold.svg#webfont") format("svg");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: ProximaNovaExtraBold;
-  src: url("/fonts/ProximaNovaExtraBold/proximanova-extrabold.eot");
-  src: url("/fonts/ProximaNovaExtraBold/proximanova-extrabold.eot?iefix") format("eot"), url("/fonts/ProximaNovaExtraBold/proximanova-extrabold.woff") format("woff"), url("/fonts/ProximaNovaExtraBold/proximanova-extrabold.ttf") format("truetype"), url("/fonts/ProximaNovaExtraBold/proximanova-extrabold.svg#webfont") format("svg");
+  src: url("../fonts/ProximaNovaExtraBold/proximanova-extrabold.eot");
+  src: url("../fonts/ProximaNovaExtraBold/proximanova-extrabold.eot?iefix") format("eot"), url("../fonts/ProximaNovaExtraBold/proximanova-extrabold.woff") format("woff"), url("../fonts/ProximaNovaExtraBold/proximanova-extrabold.ttf") format("truetype"), url(",,/fonts/ProximaNovaExtraBold/proximanova-extrabold.svg#webfont") format("svg");
   font-weight: 400;
   font-style: normal; }
 
@@ -291,7 +291,7 @@ a {
 .header__icon-mobile {
   width: 53px;
   height: 38px;
-  background: url(/img/svg/logo.svg) center no-repeat;
+  background: url(../img/svg/logo.svg) center no-repeat;
   -webkit-background-size: 100% 100%;
           background-size: 100% 100%; }
 
@@ -412,7 +412,7 @@ a {
   transition: all .3s ease-out; }
 
 .close-menu:before {
-  background: url(/img/svg/close.svg) center no-repeat;
+  background: url(../img/svg/close.svg) center no-repeat;
   -webkit-background-size: 100% 100%;
           background-size: 100% 100%; }
 
