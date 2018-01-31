@@ -453,6 +453,9 @@ a {
 .line-4 {
   right: 28%; }
 
+.line-5 {
+  right: 109px; }
+
 .dashed-line {
   border-color: #b2b2b2;
   -webkit-transition: all 1.2s ease;
