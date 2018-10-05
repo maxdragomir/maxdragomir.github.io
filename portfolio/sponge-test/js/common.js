@@ -21,6 +21,7 @@
 
         setTimeout(function(){
             document.getElementsByClassName('header__icon-mobile')[0].classList.add('animate-logo');
+            document.getElementsByClassName('dashed-lines')[0].classList.add('animate-lines');
             document.getElementById('logo-icon').classList.add('animate-logo');
             showElement();
         }, 1500);

@@ -69,7 +69,7 @@ a {
   margin: 0 auto;
   padding: 0 110px;
   z-index: 10;
-  border-bottom: 1px dashed #ECECEC; }
+ }
 
 .header, .center-header {
   width: 100%; }
@@ -416,51 +416,57 @@ a {
   -webkit-background-size: 100% 100%;
           background-size: 100% 100%; }
 
-.dashed-lines, .dashed-line {
-  top: 0;
-  height: 100%;
-  margin: 0 auto;
-  position: absolute; }
-
 .dashed-lines {
-  width: 100%;
+    top: 0;
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
   z-index: -1;
   right: 0;
   left: 0;
   pointer-events: none; }
 
-.dashed-lines, .dashed-line {
-  top: 0;
-  height: 100%;
-  margin: 0 auto;
-  position: absolute;
-  color: black; }
-
 .dashed-line {
-  width: 0;
-  border-right: 1px dashed #ECECEC; }
+    top: 0;
+    height: 0 !important;
+    margin: 0 auto;
+    position: absolute;
+    width: 0;
+    border-right: 1px dashed #ECECEC;
+}
 
+.dashed-lines.animate-lines .dashed-line {
+    height: 100% !important;
+}
 .line-1 {
-  left: 109px; }
+  left: 109px;
+    transition: height 3s ease 0s;
+}
 
 .line-2 {
-  left: 28%; }
-
+  left: 28%;
+    transition: height 3s ease 1s;
+}
+.line-3 {
+    transition: height 3s ease 2s;
+}
 .header, .line-3 {
   right: 0;
   left: 0; }
 
 .line-4 {
-  right: 28%; }
+  right: 28%;
+    transition: height 3s ease 3s;
+}
 
 .line-5 {
-  right: 109px; }
+  right: 109px;
+    transition: height 3s ease 4s;
+}
 
 .dashed-line {
-  border-color: #b2b2b2;
-  -webkit-transition: all 1.2s ease;
-  -o-transition: all 1.2s ease;
-  transition: all 1.2s ease; }
+  border-color: #b2b2b2; }
 
 .dashed-line, .line-1, .line-2, .line-3 {
   height: 0; }
