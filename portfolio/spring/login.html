@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Log in</title>
+    <meta charset="UTF-8">
+    
+    <!-- Useful meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="img/logo-fav.png" />
+    
+    
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body class="login">
+    <div data-offset=".6"  class="wrapper">
+        <div class="bg-test"></div>
+
+        <div class="main">
+
+            <div class="content login-page">
+                <div class="card card-form">
+                    <div class="login-logo">
+                        <a href="index.html" class="logo waves-effect"><img src="img/logo-ua.png" alt="LOGO"></a>
+                    </div>
+                    <div class="login-form">
+                        <div class="login-header">
+                            <div class="login-title">Log In</div>
+                        </div>
+                        <div class="login-content">
+                            <div class="row mb-0">
+                                <div class="input-field col s12 color-grey">
+                                    <input id="login" class="m-0" type="text">
+                                    <label for="login">Username</label>
+                                </div>
+                                <div class="input-field col s12 color-grey">
+                                    <input id="password" class="m-0" type="text">
+                                    <label for="password">Password</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="login-footer">
+                            <button class="btn waves-effect btn-toggle btn-forgot"><i class="fa fa-key left"></i> <span>Forgot password?</span></button>
+                            <button class="btn btn-large waves-effect btn-submit">Submit</button>
+                        </div>
+                    </div>
+                    <div class="forgot-form">
+                        <div class="login-header">
+                            <div class="login-title">Restore Password</div>
+                        </div>
+                        <div class="login-content">
+                            <div class="row mb-0">
+                                <div class="input-field col s12 color-grey">
+                                    <input id="restore" class="m-0" type="text">
+                                    <label for="restore">Email or Username</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="login-footer">
+                            <button class="btn waves-effect btn-toggle btn-back"><i class="fa fa-angle-left left"></i> <span>Back to Login</span></button>
+                            <button class="btn btn-large waves-effect btn-submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    Developed and supported by <a target="_blank" href="http://www.xmllogistic.com/"> XMLlogistic</a>, a subsidiary of <a target="_blank" href="http://www.xmlshop.com/">XMLshop </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="js/main.js"></script>
+<script src="js/script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.login-logo').addClass('show-logo');
+            $('.bg-test').addClass('show_bg');
+
+
+
+            setTimeout(function () {
+                $('.card-form').addClass('show-card');
+                $('#login').focus();
+            }, 500);
+
+
+            $('.btn-forgot').on('click', function () {
+                $('.login-form').slideUp();
+                $('.forgot-form').slideDown();
+
+                $('.login-logo').removeClass('show-logo');
+
+                setTimeout(function () {
+                    $('.login-logo').addClass('show-logo');
+                    $('#restore').focus();
+                }, 500);
+            });
+
+
+
+            $('.btn-back').on('click', function () {
+                $('.login-form').slideDown();
+                $('.forgot-form').slideUp();
+
+                $('.login-logo').removeClass('show-logo');
+
+                setTimeout(function () {
+                    $('.login-logo').addClass('show-logo');
+                    $('#login').focus();
+                }, 500);
+            });
+
+
+
+        });
+    </script>
+</body>
+</html>
