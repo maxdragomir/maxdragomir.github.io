@@ -4623,8 +4623,9 @@ div.btn:active {
     width: 95%; }
   .m-mt-l-4 {
     margin-top: 2rem; }
-  .iframe .modal-content {
-    padding: 2rem 1rem; }
+  /*.iframe .modal-content {*/
+    /*padding: 2rem 1rem; */
+  /*}*/
     .iframe .modal-content > .row > .col:not(#list-products) {
       padding: 0 !important; }
     .iframe .modal-content .dummy {
