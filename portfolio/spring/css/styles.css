@@ -4624,7 +4624,7 @@ div.btn:active {
   .m-mt-l-4 {
     margin-top: 2rem; }
   .iframe .modal-content {
-    padding: inherit;
+    padding: 2rem 2rem 2rem 3rem;
   }
     .iframe .modal-content > .row > .col:not(#list-products) {
       padding: 0 !important; }
