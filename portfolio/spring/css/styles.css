@@ -4397,6 +4397,8 @@ div.btn:active {
     padding-right: 0; } }
 
 @media only screen and (max-width: 1780px) {
+    .modal.modal-style {
+        width: 80% !important; }
   .main .content .card.card-table td, .main .content .card.card-table th {
     border-radius: 0;
     border: 1px solid #ddd;
@@ -4444,8 +4446,6 @@ div.btn:active {
     width: 90px; } }
 
 @media only screen and (max-width: 1500px) {
-  .modal.modal-style {
-    width: 80% !important; }
   .main .content .card.card-table td:first-child, .main .content .card.card-table th:first-child {
     width: 180px; }
   .main .content .card.card-table td:nth-child(2), .main .content .card.card-table th:nth-child(2) {
