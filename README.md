@@ -1,7 +1,7 @@
 # Front-End Developer
 
 
-## Max Dragomiretskiy
+## Maxim Dragomiretskiy
 
 
 ### My Works
