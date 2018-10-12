@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Max Dragomir</title>
+    <meta name="description" content="Web developer, Front-end developer, Designer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Max Dragomir">
+    <!-- ================= Favicon ================== -->
+    <!-- Standard -->
+    <link rel="shortcut icon" href="img/favicon.png">
+    <!-- ============== Resources style ============== -->
+    <link rel="stylesheet" href="css/style-1.css" />
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <!-- Modernizr runs quickly on page load to detect features -->
+    <script src="js/modernizr.js"></script>
+  </head>
+  <body>
+
+
+    <canvas id="dotty"></canvas>
+
+    <div class="loading-part animated-quick">
+      <div class="loader-part opacity-0 animated-quick">
+        <div class="loader-circle"></div>
+        <div class="loader-text">Dragomir</div>
+      </div>
+    </div>
+
+    <button class="open-menu-mobile">
+      <i class="icon ion-navicon-round opening-menu"></i>
+      <i class="icon ion-close-round closing-menu display-none"></i>
+    </button>
+
+    <div id="navigation" class="mobile-nav animated-middle ">
+      <ul class="main-navigation">
+        <li>
+          <a class="nav-link-close">
+            <i class="icon ion-ios-home-outline"></i> Главная
+          </a>
+        </li>
+        <li>
+          <a class="nav-link about-content">
+            <i class="icon ion-ios-people-outline"></i> Обо мне
+          </a>
+        </li>
+        <!--             <li>
+          <a class="nav-link services-content">
+            <i class="icon ion-ios-gear-outline"></i> Услуги
+          </a>
+        </li> -->
+        <li>
+          <a class="nav-link contact-content">
+            <i class="icon ion-ios-email-outline"></i> Контакты
+          </a>
+        </li>
+        <li class="newsletter-color">
+          <a class="open-newsletter">
+            <span class="icon ion-ios-flame-outline"></span> Мои работы
+          </a>
+        </li>
+        <li class="vkontakte-color">
+          <a href="https://vk.com/sunthesunny" target="_blank" title="">
+            <span class="icon zocial-vk"></span> Vkontakte
+          </a>
+        </li>
+        <li class="twitter-color">
+          <a href="https://twitter.com/Sunthesunny" target="_blank" title="">
+            <span class="icon ion-social-twitter-outline"></span> Twitter
+          </a>
+        </li>
+        <li class="facebook-color">
+          <a href="https://www.facebook.com/profile.php?id=100006269083042" target="_blank" title="">
+            <span class="icon fa ion-social-facebook-outline"></span> Facebook
+          </a>
+        </li>
+        <li class="instagram-color">
+          <a href="https://www.instagram.com/maximdragomiretsky/" target="_blank" title="">
+            <span class="icon ion-social-instagram-outline"></span> Instagram
+          </a>
+        </li>
+      </ul>
+      <!-- CLOSE Main nav -->
+    </div>
+    <!-- CLOSE #navigation -->
+
+    <section id="home-part" class="scale-max">
+      <div class="overlay">
+        <canvas id="constellation"></canvas>
+      </div>
+      <div class="item-title text-center animated-quick">
+        <!-- Your logo -->
+        <img src="img/logo.png" alt="" class="brand-logo" />
+        <h1 class="cd-headline letters rotate-2">
+        <div class="cd-words-wrapper">
+          <b class="is-visible">front-end&nbsp;developer</b> <!-- use the code &nbsp; to add a space between 2 words -->
+          <!-- <b>back-end&nbsp;developer</b> -->
+          <b>designer</b>
+        </div>
+        </h1>
+        <!-- <p>Делаю с <i class="icon ion-heart animated-middle pulse infinite"></i></p> -->
+        <a class="btntype1 btn-colortype1 open-newsletter">Мои работы</a>
+        <a class="btntype1 btn-colortype2 open-content about-content">обо мне</a><br>
+        <div class="toggleUp"><!-- <i class="fa fa-info"></i> --> Горячие клавиши  <br> </div>
+        <span class="esc">
+          <i>Shift + D(в)</i> - информация <br>
+          <i>Shift + A(ф)</i> - мои работы <br>
+          <i>Shift + S(ы)</i> - подсказка <br>
+          <i>Shift + X(ч)</i> - контакты <br>
+          <i>Shift + Space</i> - меню <br>
+          <i>Esc</i> - закрыть все
+        </span>
+      </div>
+      <!-- CLOSE item-title -->
+    </section>
+    <!-- CLOSE #home-part -->
+    <section id="content-part">
+      <a class="nav-link-close closebtn">
+        <i class="icon ion-close-round"></i>
+      </a>
+<!--       <a class="nav-link-top topbtn" title="нажмите Shift, чтобы перейти в начало">
+        <i class="icon ion-android-arrow-up"></i>
+      </a> -->
+      <div id="main-about">
+        <div class="item-title">
+          <div id="countdown_dashboard">
+            <!-- Days / if you need only 2 figures for the day,delete the first line <div class="digit">0</div> -->
+            <!--                 <div class="dash-glob">
+              <div class="dash days_dash">
+                <div class="digit">0</div>
+                <div class="digit">0</div>
+                <div class="digit">0</div>
+                <div class="text-right">Дней</div>
+              </div>
+            </div>
+            <h3 class="text-news">до конца работ над<br>
+            <span class="point"> "MAX DRAGOMIR"</span></h3>
+            <h3 class="text-news">Новых проектов<br>
+            <span class="point"> нет</span></h3>  -->
+          </div>
+          <!-- .countdown_dashboard -->
+        </div>
+      </div>
+      <div class="inner-content" id="about-content">
+        <h2 align="center">Обо мне</h2>
+        <div class="separator"></div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-lg-8">
+            <p>Мне 22 года. Я учусь в Одесском Национальном Морском Университете, факультет - Кораблестроительный, специальность - Компьютерные системы. Помимо учебы увлекаюсь созданием сайтов и занимаюсь этим уже больше года. Написал более 6 сайтов. Моя цель - это получение системных знаний и получение опыта работы в команде.
+              <br>
+              <br>
+            <br> Честный, порядочный, целеустремленный, дисциплинированный.</p>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-lg-4">
+            <div class="progress-title small-title">html
+              <!-- <span>%90</span> --></div>
+              <div class="progress lio-sh-progress">
+                <div class="progress-bar gradient-facebook-messenger" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="95">
+                </div>
+              </div>
+              <!-- End Bar Item -->
+              <!-- Bar Item -->
+              <div class="progress-title small-title">css
+                <!-- <span>%88</span> --></div>
+                <div class="progress lio-sh-progress">
+                  <div class="progress-bar gradient-facebook-messenger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="90">
+                  </div>
+                </div>
+                <!-- End Bar Item -->
+                <!-- Bar Item -->
+                <div class="progress-title small-title">javascript
+                  <!-- <span>%99</span> --></div>
+                  <div class="progress lio-sh-progress">
+                    <div class="progress-bar gradient-facebook-messenger" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="65">
+                    </div>
+                  </div>
+                  <!-- End Bar Item -->
+                  <!-- Bar Item -->
+                  <div class="progress-title small-title">php
+                    <!-- <span>%79</span> --></div>
+                    <div class="progress lio-sh-progress">
+                      <div class="progress-bar gradient-facebook-messenger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="40">
+                      </div>
+                    </div>
+                    <!-- End Bar Item -->
+                    <!-- Bar Item -->
+                    <div class="progress-title small-title">photoshop
+                      <!-- <span>%79</span> --></div>
+                      <div class="progress lio-sh-progress">
+                        <div class="progress-bar gradient-facebook-messenger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="70">
+                        </div>
+                      </div>
+                      <!-- End Bar Item -->
+                      <!-- Bar Item -->
+                      <div class="progress-title small-title">illustrator
+                        <!-- <span>%79</span> --></div>
+                        <div class="progress lio-sh-progress">
+                          <div class="progress-bar gradient-facebook-messenger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="50">
+                          </div>
+                        </div>
+                        <!-- End Bar Item -->
+                      </div>
+                    </div>
+                  </div>
+                  <div id="map"></div>
+                  <div class="inner-content" id="contact-content">
+                    <h2 align="center">Обратная связь</h2>
+                    <div class="separator"></div>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-12 col-lg-4">
+                        <div class="contact-item">
+                          <h6><i class="icon ion-ios-location"></i> Мой адрес</h6>
+                          <p>
+                            <a href="https://goo.gl/maps/2eF6Z" target="_blank">
+                            <strong>Потемкинская лестница, 9</strong></a>
+                          </p>
+                        </div>
+                        <div class="contact-item">
+                          <h6><i class="icon ion-ios-telephone"></i> Мой номер</h6>
+                          <p>
+                            <strong><a href="tel:#">+38(093) 996-64-46</a></strong>
+                            <br>
+                            <strong><a href="tel:#">+38(093) 996-64-46</a></strong>
+                          </p>
+                        </div>
+                        <div class="contact-item">
+                          <h6><i class="icon ion-paper-airplane"></i> Моя почта</h6>
+                          <p>
+                            <strong><a href="mailto:#">nasus88@mail.ru</a></strong>
+                            <br>
+                            <strong><a href="mailto:#">nsus99@gmail.com</a></strong>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-lg-8">
+                        <!-- Contact form -->
+                        <form id="contact-form" name="contact-form" method="POST" data-name="Contact Form">
+                          <div class="row">
+                            <!-- Full name -->
+                            <div class="col-xs-12 col-sm-6 col-lg-6">
+                              <div class="form-group">
+                                <input type="text" id="name" class="form form-control" placeholder="Ваше Имя" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ваше Имя'" name="name" data-name="Name" required>
+                              </div>
+                            </div>
+                            <!-- E-mail -->
+                            <div class="col-xs-12 col-sm-6 col-lg-6">
+                              <div class="form-group">
+                                <input type="email" id="email" class="form form-control" placeholder="Ваш Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ваш Email'" name="email-address" data-name="Email Address" required>
+                              </div>
+                            </div>
+                            <!-- Subject -->
+                            <div class="col-xs-12 col-sm-12 col-lg-12">
+                              <div class="form-group">
+                                <input type="text" id="subject" class="form form-control" placeholder="Укажите тему" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Укажите тему'" name="subject" data-name="Subject" required>
+                              </div>
+                            </div>
+                            <!-- Message -->
+                            <div class="col-xs-12 col-sm-12 col-lg-12 no-padding">
+                              <div class="form-group">
+                                <textarea id="text-area" class="form textarea form-control" placeholder="Ваше сообщение... минимум 10 символов." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ваше сообщение... минимум 10 символов.'" name="message" data-name="Text Area" required></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Button submit -->
+                          <button type="submit" id="valid-form" class="btn">Отправить</button>
+                        </form>
+                        <!-- /. Contact form -->
+                        <div id="block-answer">
+                          <div id="answer"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p class="copyright">©MAX DRAGOMIR 2016</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="lang">
+                        <a href="#" class="active">RU</a>
+                        <a href="#">EN</a>
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <!-- CLOSE #content-part -->
+
+
+
+
+
+                <section id="newsletter-part" class="opacity-0 newsletter-touch">
+                  <div class="item-title2 text-center animated-quick">
+                    <!-- <h1 class="newsletter-title">Мои работы</h1> -->
+                    <div class="portfolio">
+                      <div class="col-xs-12 col-sm-6 col-lg-6">
+                        <div class="col-xs-12 col-sm-6 col-lg-6">
+
+                          <a rel="gallery-1" href="img/meterfund/главная.png" title="Meter.Fund" class="swipebox">
+                            <div class="small-square img_1">
+                              <div class="hover-info">
+                                <h4><img src="img/meterfund/favicon.ico" alt="">Meter.Fund</h4>
+                                <span id="link_meter" class="link" title="перейти на сайт">meterFund.com</span>
+                                <span class="date-info lol">Сайт </span>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a rel="gallery-1" href="img/meterfund/информация.png" title="Информация" class="swipebox"></a>
+                          <a rel="gallery-1" href="img/meterfund/предложение.png" title="Наше предложение" class="swipebox"></a>
+                          <a rel="gallery-1" href="img/meterfund/особенности.png" title="Особенности" class="swipebox"></a>
+                          <a rel="gallery-1" href="img/meterfund/примеры.png" title="Примеры" class="swipebox"></a>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-lg-6">
+
+                          <a rel="gallery-2" href="img/komuntrans/главная.png" title="komuntrans-group" class="swipebox">
+                            <div class="small-square img_2">
+                              <div class="hover-info">
+                                <h4><img src="img/komuntrans/favicon.png" alt="">komuntrans</h4>
+                                <span id="link_komun" class="link" title="перейти на сайт">komuntrans-group.com</span>
+                                <span class="date-info">Сайт</span>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a rel="gallery-2" href="img/komuntrans/услуги.png" title="Услуги" class="swipebox"></a>
+                          <a rel="gallery-2" href="img/komuntrans/компания.png" title="О компании" class="swipebox"></a>
+                          <a rel="gallery-2" href="img/komuntrans/контакты.png" title="Контакты" class="swipebox"></a>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-lg-6">
+
+                          <a rel="gallery-5" href="img/allinmarket/главная.png" title="All in Market" class="swipebox">
+                            <div class="small-square img_5">
+                              <div class="hover-info">
+                                <h4><img src="img/allinmarket/fav.png" alt="">All in Market</h4>
+                                <span id="link_true" class="link" title="перейти на сайт">trueshop.esy.es</span>
+                                <span class="date-info">Сайт</span>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a rel="gallery-5" href="img/allinmarket/категория.png" title="Категория" class="swipebox"></a>
+                          <a rel="gallery-5" href="img/allinmarket/категория2.png" title="Категория" class="swipebox"></a>
+                          <a rel="gallery-5" href="img/allinmarket/продукт.png" title="Продукт" class="swipebox"></a>
+                          <a rel="gallery-5" href="img/allinmarket/авторизация.png" title="Авторизация" class="swipebox"></a>
+                          <a rel="gallery-5" href="img/allinmarket/профиль.png" title="Профиль" class="swipebox"></a>
+                          <a rel="gallery-5" href="img/allinmarket/корзина.png" title="Корзина" class="swipebox"></a>
+                          <a rel="gallery-5" href="img/allinmarket/заказ.png" title="Оформление заказа" class="swipebox"></a>
+                          <a rel="gallery-5" href="img/allinmarket/контакты.png" title="Контакты" class="swipebox"></a>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-lg-6">
+
+                          <a rel="gallery-6" href="img/phototrend/главная.png" title="PhotoTrend" class="swipebox">
+                            <div class="small-square img_6">
+                              <div class="hover-info">
+                                <h4><img src="img/phototrend/camera.png" alt="">PhotoTrend</h4>
+                                <span id="link_trend" class="link" title="перейти на сайт">phototrend.esy.es</span>
+                                <span class="date-info">Сайт</span>
+                              </div>
+                            </div>
+                          </a>
+
+                        <a rel="gallery-6" href="img/phototrend/инфоблок.png" title="Чем я занимаюсь" class="swipebox"></a>
+                        <a rel="gallery-6" href="img/phototrend/инфоблок2.png" title="Немного обо мне" class="swipebox"></a>
+                        <a rel="gallery-6" href="img/phototrend/работы.png" title="Мои работы" class="swipebox"></a>
+                        <a rel="gallery-6" href="img/phototrend/контакты.png" title="Обратная связь" class="swipebox"></a>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-sm-6 col-lg-6">
+                        <div class="col-xs-12 col-sm-6 col-lg-6">
+
+                          <a rel="gallery-3" href="img/msut/Главная.png" title="Msut" class="swipebox">
+                            <div class="small-square img_3">
+                              <div class="hover-info">
+                                <h4><img src="img/msut/tumblr-100x100.png" alt="">msut</h4>
+                                <span id="link_msut" class="link" title="перейти на сайт">msut.com.ua</span>
+                                <span class="date-info">Сайт</span>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a rel="gallery-3" href="img/msut/продукция.png" title="Продукция" class="swipebox"></a>
+                          <a rel="gallery-3" href="img/msut/производители.png" title="Производители" class="swipebox"></a>
+                          <a rel="gallery-3" href="img/msut/контакты.png" title="Контакты" class="swipebo4"></a>
+                          <a rel="gallery-3" href="img/msut/продукт.png" title="Продукт" class="swipebox"></a>
+                          <a rel="gallery-3" href="img/msut/авторизация.png" title="Авторизация" class="swipebox"></a>
+                          <a rel="gallery-3" href="img/msut/аккаунт.png" title="Профиль" class="swipebox"></a>
+                          <a rel="gallery-3" href="img/msut/корзина.png" title="Корзина" class="swipebox"></a>
+                          <a rel="gallery-3" href="img/msut/заказ.png" title="Оформление заказа" class="swipebox"></a>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-lg-6">
+
+                          <a rel="gallery-4" href="img/rekciti/главная.png" title="RekCiti" class="swipebox">
+                            <div class="small-square img_4">
+                              <div class="hover-info">
+                                <h4><img src="img/rekciti/favicon.ico" alt="">rekciti</h4>
+                                <span id="link_rek" class="link" title="перейти на сайт">rekciti.com</span>
+                                <span class="date-info">Сайт</span>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a rel="gallery-4" href="img/rekciti/категория.png" title="Категория" class="swipebox"></a>
+                          <a rel="gallery-4" href="img/rekciti/категория2.png" title="Категория" class="swipebox"></a>
+                          <a rel="gallery-4" href="img/rekciti/контент.png" title="Запись" class="swipebox"></a>
+                          <a rel="gallery-4" href="img/rekciti/контакты.png" title="Контакты" class="swipebox"></a>
+                          <a rel="gallery-4" href="img/rekciti/профиль.png" title="Профиль" class="swipebox"></a>
+                          <a rel="gallery-4" href="img/rekciti/админка.png" title="Админ панель" class="swipebox"></a>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-lg-6">
+
+                          <a rel="gallery-7" href="img/karavella/главная.png" title="Karavella" class="swipebox">
+                            <div class="small-square img_7">
+                              <div class="hover-info">
+                                <h4><img src="img/karavella/124930.ico" alt="">Karavella</h4>
+                                <span id="link_kara" class="link" title="перейти на сайт">karavella.esy.es</span>
+                                <span class="date-info">Сайт</span>
+                              </div>
+                            </div>
+                          </a>
+
+                        <a rel="gallery-7" href="img/karavella/Услуги.png" title="Услуги" class="swipebox"></a>
+                        <a rel="gallery-7" href="img/karavella/портфолио.png" title="Портфолио" class="swipebox"></a>
+                        <a rel="gallery-7" href="img/karavella/видео.png" title="Видео" class="swipebox"></a>
+                        <a rel="gallery-7" href="img/karavella/нас.png" title="О нас" class="swipebox"></a>
+                        <a rel="gallery-7" href="img/karavella/контакты.png" title="Обратная связь" class="swipebox"></a>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-lg-6">
+
+                          <a rel="gallery-8" href="img/kingdom/Southern_dark.jpg" title="Southern kingdom" class="swipebox">
+                            <div class="small-square img_8">
+                              <div class="hover-info">
+                                <h4>Southern kingdom</h4>
+                                <span class="date-info">Логотип</span>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a rel="gallery-8" href="img/kingdom/Southern_light.png" title="Southern kingdom" class="swipebox"></a>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-sm-6 col-lg-6">
+
+                        <div class="col-xs-12 col-sm-6 col-lg-6">
+
+                          <a rel="gallery-9" href="img/val/сердце.png" title="valentine's day" class="swipebox">
+                            <div class="small-square img_9">
+                              <div class="hover-info">
+                                <h4>valentine's day</h4>
+                                <span id="link_val" class="link" title="перейти на сайт">valentines.esy.es</span>
+                                <span class="date-info">Сайт</span>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a rel="gallery-9" href="img/val/перед.png" title="valentine's day" class="swipebox"></a>
+                          <a rel="gallery-9" href="img/val/надпись.png" title="valentine's day" class="swipebox"></a>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-lg-6  display-none">
+
+                          <a rel="gallery-10" href="img/gallery-3.jpg" title="My Caption 10" class="swipebox">
+                            <div class="small-square img_10">
+                              <div class="hover-info">
+                                <h4>В процессе</h4>
+                                <span class="date-info"></span>
+                              </div>
+                            </div>
+                          </a>
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-lg-6 display-none">
+
+                          <a rel="gallery-13" href="img/gallery-4.jpg" title="My Caption 11" class="swipebox">
+                            <div class="small-square img_13">
+                              <div class="hover-info">
+                                <h4>Amazing land</h4>
+                                <span class="date-info"></span>
+                              </div>
+                            </div>
+                          </a>
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-lg-6 display-none">
+
+                          <a rel="gallery-14" href="img/gallery-5.jpg" title="My Caption 12" class="swipebox">
+                            <div class="small-square img_14">
+                              <div class="hover-info">
+                                <h4>What time is it?</h4>
+                                <span class="date-info"></span>
+                              </div>
+                            </div>
+                          </a>
+
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-sm-6 col-lg-6  display-none">
+                        <div class="col-xs-12 col-sm-6 col-lg-6">
+
+                          <a rel="gallery-11" href="img/gallery-2.jpg" title="My Caption 13" class="swipebox">
+                            <div class="small-square img_11">
+                              <div class="hover-info">
+                                <h4>В процессе</h4>
+                                <span class="date-info"></span>
+                              </div>
+                            </div>
+                          </a>
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-lg-6  display-none">
+
+                          <a rel="gallery-12" href="img/gallery-3.jpg" title="My Caption 14" class="swipebox">
+                            <div class="small-square img_12">
+                              <div class="hover-info">
+                                <h4>В процессе</h4>
+                                <span class="date-info"></span>
+                              </div>
+                            </div>
+                          </a>
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-lg-6 display-none">
+
+                          <a href="img/gallery-4.jpg" title="My Caption 15" class="swipebox">
+                            <div class="small-square third">
+                              <div class="hover-info">
+                                <h4>Amazing land</h4>
+                                <span class="date-info"></span>
+                              </div>
+                            </div>
+                          </a>
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-lg-6 display-none">
+
+                          <a href="img/gallery-5.jpg" title="My Caption 16" class="swipebox">
+                            <div class="small-square fourth">
+                              <div class="hover-info">
+                                <h4>What time is it?</h4>
+                                <span class="date-info"></span>
+                              </div>
+                            </div>
+                          </a>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- CLOSE #work-part -->
+
+
+                <!-- ///////////////////\\\\\\\\\\\\\\\\\\\ -->
+                <!-- ********** Resources jQuery ********** -->
+                <!-- \\\\\\\\\\\\\\\\\\\/////////////////// -->
+                <!-- * Libraries jQuery, Easing and Bootstrap - Be careful to not remove them * -->
+                <script src="js/jquery.min.js"></script>
+
+                <script src="js/jquery.easings.min.js"></script>
+
+                <script src="js/bootstrap.min.js"></script>
+                <!-- Google Maps API -->
+                <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+                <!-- Countdown plugin -->
+                <script src="js/countdown.js"></script>
+                <!-- Newsletter plugin -->
+                <script src="js/notifyMe.js"></script>
+                <!-- Contact form plugin -->
+                <script src="js/contact-me.js"></script>
+                <!-- Swipebox plugin -->
+                <script src="js/jquery.swipebox.js"></script>
+                <!-- Text rotator plugin -->
+                <script src="js/animated-headlines.js"></script>
+                <!-- Scroll plugin -->
+                <script src="js/jquery.mousewheel.js"></script>
+                <!-- Mozaic plugin -->
+                <script src="js/dotty.js"></script>
+                <!-- Custom Scrollbar plugin -->
+                <script src="js/jquery.mCustomScrollbar.js"></script>
+                <!-- Main JS File -->
+                <script src="js/main.js"></script>
+                <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
+  </body>
+</html>
