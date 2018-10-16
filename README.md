@@ -11,6 +11,6 @@
 - [**Pride Club (Freelance)**](https://maxdragomir.github.io/portfolio/pride-club/index.html)
 - [**Leader Group (Freelance)**](https://maxdragomir.github.io/portfolio/leader-group/index.html)
 - [**Test (Sponge Digital & Design)**](https://maxdragomir.github.io/portfolio/sponge-test/index.html)
-- [~~Academy (Sponge Digital & Design)~~](https://)
+- [**Academy (Sponge Digital & Design)**](https://maxdragomir.github.io/portfolio/academy/index.html)
 - [~~Test (XMLshop)~~](https://)
 - [**Spring Admin Panel (XMLshop)**](https://maxdragomir.github.io/portfolio/spring/index.html)
