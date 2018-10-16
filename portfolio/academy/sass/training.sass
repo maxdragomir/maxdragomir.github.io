@@ -1,0 +1,488 @@
+$main-color: #b52a2c
+$transition: opacity .4s ease, transform .4s ease
+$font-light: pfdin-light, sans-serif
+$font-medium: pfdin-medium, sans-serif
+$font-regular: pfdin-regular, sans-serif
+$font-thin: pfdin-thin, sans-serif
+$font-xblack: pfdin-xblack, sans-serif
+$font-xthin: pfdin-xthin, sans-serif
+
+$font-fira-medium: fira-medium, sans-serif
+$font-fira-regular: fira-regular, sans-serif
+$font-fira-light: fira-light, sans-serif
+$font-fira-bold: fira-bold, sans-serif
+$font-fira-semibold: fira-semibold, sans-serif
+
+@font-face
+  font-family: pfdin-light
+  src: url('../fonts/pfdin/pfdintextpro-light.ttf') format('truetype')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: pfdin-medium
+  src: url('../fonts/pfdin/pfdintextpro-medium.ttf') format('truetype')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: pfdin-regular
+  src: url('../fonts/pfdin/pfdintextpro-regular.ttf') format('truetype')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: pfdin-thin
+  src: url('../fonts/pfdin/pfdintextpro-thin.ttf') format('truetype')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: pfdin-xblack
+  src: url('../fonts/pfdin/pfdintextpro-xblack.ttf') format('truetype')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: pfdin-xthin
+  src: url('../fonts/pfdin/pfdintextpro-xthin.ttf') format('truetype')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: fira-regular
+  src: url('../fonts/fira/FiraSans-Regular.ttf') format('truetype')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: fira-medium
+  src: url('../fonts/fira/FiraSans-Medium.ttf') format('truetype')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: fira-bold
+  src: url('../fonts/fira/FiraSans-Bold.ttf') format('truetype')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: fira-semibold
+  src: url('../fonts/fira/FiraSans-SemiBold.ttf') format('truetype')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: fira-light
+  src: url('../fonts/fira/FiraSans-Light.ttf') format('truetype')
+  font-weight: 400
+  font-style: normal
+
+
+// SECTION BLOG
+
+.section-training
+  position: relative
+  overflow: hidden
+  display: flex
+  background: #fcfcfc
+  flex-flow: column nowrap
+  padding: 45px 0 45px
+
+.section-training .content
+  flex-flow: column wrap
+  z-index: 1
+  padding: 0 180px
+
+.content__training-title
+  width: 100%
+  justify-content: center
+
+  h2
+    display: flex
+
+.content__training-more-button
+  display: flex
+  justify-content: center
+  margin-top: 30px
+
+.content__training-post .training-button
+  font-family: $font-medium
+  font-weight: 400
+  text-align: center
+  width: 100%
+  color: #fff
+
+.content__training-post .training-button:hover
+  color: $main-color
+
+.content__training-posts
+  display: flex
+  justify-content: center
+  flex-flow: row wrap
+
+.content__training-post
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  position: relative
+  flex-flow: column nowrap
+  width: 248px
+  //height: 400px
+  margin: 15px
+  background: #fff
+  border: 1px solid #eee
+  opacity: 0
+  overflow: hidden
+  transform: scale(0, 1)
+  transition: $transition
+
+.content__training-post.show
+  opacity: 1
+  transform: scale(1, 1)
+  transition-delay: 300ms
+  transition: $transition
+
+
+.content__post-image
+  display: flex
+  background-size: cover !important
+  width: 100%
+  height: 185px
+  position: relative
+  overflow: hidden
+
+  img
+    max-width: 100%
+
+  &:after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    pointer-events: none
+    background: rgba(181,42,44, .5)
+    top: 0
+    left: 0
+    right: 0
+    opacity: 0
+    border-radius: 20%
+    transform: scale(0, 1)
+    z-index: 0
+    transition: $transition
+
+.content__training-post:hover .content__post-image:after
+  opacity: 1
+  transform: scale(1.15)
+  transition: $transition
+
+.content__post-info
+  display: flex
+  flex-flow: column nowrap
+  align-items: flex-start
+  justify-content: space-between
+  padding: 20px
+  width: 100%
+  height: 320px
+
+.title
+  font-family: $font-medium
+  font-size: 18px
+
+.text
+  color: #7b7b7b
+  font-size: 12px
+
+.content__training-post .content__post-link
+  display: flex
+  position: relative
+  transition: $transition
+  flex-flow: column wrap
+  width: 100%
+
+  a
+    font-family: $font-regular
+    font-size: 14px
+    position: relative
+
+// SECTION ORGANISATION
+
+.section-organisation
+  position: relative
+  overflow: hidden
+  display: flex
+  background: #fff
+  flex-flow: column nowrap
+  padding: 45px 0 45px
+
+.section-organisation .content
+  padding: 0 250px
+  flex-flow: column wrap
+
+.content__organisation-title
+  margin-bottom: 20px
+
+.content__organisation-block
+  width: 80%
+
+  p
+    font-family: $font-medium
+
+    a
+      color: #101010
+      text-decoration: underline
+
+    a:hover
+      color: $main-color
+
+
+
+
+// One Training
+
+
+.content__main-training
+  padding-top: 30px
+
+.content__main-training-title
+  justify-content: flex-start
+  align-items: center
+  margin-bottom: 40px
+
+  h2
+    display: flex
+    padding-left: 40px
+
+.content__main-training-title
+  display: flex
+
+.content__main-training-blocks
+  display: flex
+  flex-flow: row wrap
+  justify-content: flex-start
+
+.date-training
+  display: flex
+  flex-flow: row wrap
+  color: $main-color
+  font-size: 40px
+  align-items: center
+
+.date-inner
+  display: flex
+  flex-flow: column wrap
+  font-size: 14px
+  padding-left: 5px
+
+.image-main-training
+  width: 40%
+  height: 200px
+
+.info-training
+  display: flex
+  flex-flow: column wrap
+  align-items: flex-start
+  justify-content: space-between
+  padding: 20px 0 20px 30px
+  width: 60%
+
+.name-master
+  display: flex
+  flex-flow: column wrap
+  font-size: 22px
+  font-family: $font-medium
+  span
+    font-size: 16px
+
+.mail-text
+  display: flex
+  align-items: center
+  color: #101010
+  padding-bottom: 5px
+  span
+    position: relative
+  svg
+    margin-right: 20px
+
+.info-training svg
+  width: 30px
+  height: 30px
+  fill: #a2a2a2
+
+.links-training .adobe-text svg
+  width: 35px
+  height: 35px
+
+.links-training .adobe-text-inner
+  padding-left: 15px
+
+.mail-text span:after
+  content: ""
+  position: absolute
+  left: 0
+  bottom: 0
+  height: 2px
+  background: $main-color
+  width: 100%
+  transform-origin: left top
+  transform: scale(0, 1)
+  opacity: 0
+  z-index: 0
+  transition: $transition
+
+.mail-text span:after
+  transform-origin: left top
+  height: 2px
+
+.mail-text:hover span:after
+  opacity: 1
+  transform: scale(1)
+
+
+.content__training-double-col
+  display: flex
+  flex-flow: row wrap
+
+.content__training-img
+  display: flex
+  flex-flow: column wrap
+  width: 50%
+  align-items: flex-end
+  padding-right: 50px
+
+  img:last-child
+    padding-top: 20px
+
+.content__training-block
+  display: flex
+  flex-flow: column wrap
+  width: 50%
+
+  h2
+    font-size: 1.5em
+    font-family: $font-medium
+
+  h3
+    padding: 20px 0
+    font-family: $font-medium
+
+  ul
+    list-style: none
+    padding: 0
+    margin: 0
+
+    li
+      display: flex
+      padding: 10px 0
+      align-items: center
+
+    li svg
+      margin-right: 20px
+      width: 20px
+      height: 20px
+      display: flex
+      fill: $main-color
+
+.training-link
+  padding-top: 30px
+
+.red
+  color: $main-color
+  font-family: $font-medium
+
+.content__book
+  display: flex
+  width: 100%
+  border: 5px solid $main-color
+
+  .content__inner-book
+    padding: 40px
+    display: flex
+    width: 100%
+    flex-flow: column wrap
+    justify-content: center
+
+  .title-price
+    display: flex
+    justify-content: space-between
+    padding-bottom: 30px
+    font-family: $font-medium
+    font-size: 25px
+
+  .price
+    display: flex
+    justify-content: space-between
+    border-bottom: 1px solid #eeeeee
+    padding-bottom: 10px
+    margin-bottom: 20px
+
+    .price-info
+      display: flex
+      flex-flow: column wrap
+      justify-content: center
+
+      span:first-child
+        font-family: $font-medium
+        padding-bottom: 10px
+
+    input
+      text-align: center
+      max-width: 150px
+
+  .price:last-child
+    margin-bottom: 0 !important
+
+
+  .title-order
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    padding-top: 30px
+    font-size: 20px
+    font-family: $font-medium
+
+    span:last-child
+      font-size: 30px
+
+.no-margin
+  margin: 0 !important
+
+.booking-title
+  padding-bottom: 20px
+
+.content__booking-now
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  padding: 20px 0
+  align-items: center
+
+  a
+    display: flex
+    justify-content: center
+    max-width: 260px
+    width: 260px
+    padding-right: 40px
+
+  .text-booking
+    display: flex
+    flex-flow: column wrap
+    //width: 50%
+
+    span
+      span
+        color: $main-color
+
+.content__booking-info
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  padding-bottom: 20px
+  align-items: flex-start
+
+  p
+    display: flex
+    max-width: 280px
+    font-size: 12px
+    color: #a2a2a2

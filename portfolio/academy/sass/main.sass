@@ -1,0 +1,1799 @@
+$main-color: #b52a2c
+$transition: opacity .4s ease, transform .4s ease
+$font-light: pfdin-light, sans-serif
+$font-medium: pfdin-medium, sans-serif
+$font-regular: pfdin-regular, sans-serif
+$font-thin: pfdin-thin, sans-serif
+$font-xblack: pfdin-xblack, sans-serif
+$font-xthin: pfdin-xthin, sans-serif
+
+$font-fira-medium: fira-medium, sans-serif
+$font-fira-regular: fira-regular, sans-serif
+$font-fira-light: fira-light, sans-serif
+$font-fira-bold: fira-bold, sans-serif
+$font-fira-semibold: fira-semibold, sans-serif
+
+//@include '_fonts.sass';
+
+*
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  min-width: 300px
+  font-family: $font-regular
+
+body, html
+  width: 100%
+  position: relative
+  margin: 0
+  padding: 0
+
+b, h1, h2, h3, h4, h5, h6
+  font-weight: 400
+  margin: 0
+
+p
+  margin: 0
+
+button:active, button:focus, input
+  outline: 0
+
+button
+  position: relative
+  text-rendering: auto
+  color: initial
+  letter-spacing: normal
+  word-spacing: normal
+  text-transform: none
+  text-indent: 0
+  text-shadow: none
+  display: inline-block
+  text-align: start
+  margin: 0
+
+a
+  text-decoration: none
+  transition: color .4s ease
+
+a:hover
+  color: $main-color
+  transition: color .4s ease
+
+a svg
+  color: #101010
+  transition: fill .4s ease
+
+
+a:hover svg
+  fill: $main-color
+  transition: fill .4s ease
+
+.button
+  font-size: 14px
+  font-weight: 600
+  padding: 10px 20px
+  transition: background .4s ease, color .4s ease
+
+.button:hover
+  background: #a2a2a2
+  color: #fff
+  transition: background .4s ease, color .4s ease
+
+.button-red
+  border: 2px solid $main-color
+  color: #0b0b0b
+
+.button-red:hover
+  background: $main-color
+  color: #fff
+
+.button-red-invers
+  background: $main-color
+  border: 2px solid $main-color
+  color: #fff
+
+.button-red-invers:hover
+  background: #fff
+  border: 2px solid $main-color
+  color: #0b0b0b
+
+.button-grey
+  border: 2px solid #a2a2a2
+  color: #a2a2a2
+
+.button-frey:hover
+  background: #a2a2a2
+  color: #fff
+
+
+//SECTION MAIN
+
+
+.section-main
+  //height: 100vh
+  min-height: 600px
+  position: relative
+  overflow: hidden
+  display: flex
+  flex-flow: column nowrap
+  transition: $transition
+
+
+//.section-main.show
+//  opacity: 1
+//  transform: translateY(0)
+//  transition: $transition
+
+
+.bg-grav1
+  position: absolute
+  top: 50px
+  right: 0
+  background: url(../img/png/grav1.png) no-repeat center
+  background-size: contain
+  width: 430px
+  height: 100%
+  z-index: -1
+
+
+// HEADER
+
+
+.header
+  position: fixed
+  width: 100%
+  height: 105px
+  padding: 0 90px
+  z-index: 2
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: space-between
+  max-width: 1920px
+
+.header__right-menu
+  display: flex
+  justify-content: flex-end
+  transition: $transition
+
+.header__right-menu ul
+  display: flex
+  flex-flow: row wrap
+  list-style: none
+  margin: 0
+  padding: 0
+  align-items: center
+  justify-content: space-between
+  min-width: 760px
+  font-family: $font-medium
+
+.header__link, .header__link *
+  display: flex
+  align-items: center
+  font-size: 14px
+  color: #a2a2a2
+  transition: color .4s ease
+
+.header__link:hover
+  color: $main-color
+  transition: color .4s ease
+
+.header__right-menu a:hover svg
+  fill: $main-color
+  transition: fill .4s ease
+
+.header__right-menu svg
+  margin-right: 10px
+  height: 20px
+  fill: #a2a2a2
+  width: 20px
+  transition: fill .4s ease
+
+.header__social svg
+  margin-right: 0
+
+.main-menu .header__link
+  font-size: 16px
+
+.header__button
+  font-size: 14px
+  min-width: 220px
+  margin-left: 10px
+  text-align: center
+  display: block
+
+.header__logo img
+  width: 100px
+  opacity: 0
+  transform: scale(0, 1)
+  transition: $transition
+
+.header__logo.show img
+  opacity: 1
+  transform: scale(1, 1)
+  transition: $transition
+
+//.logo-text
+//  display: flex
+//  flex-flow: column nowrap
+//  font-family: $font-fira-regular
+//  text-align: center
+//  font-size: 20px
+//
+//.logo-text span
+//  padding: 2px 5px
+//
+//.logo-text span:first-child
+//  transform: translateY(15px)
+//  opacity: 0
+//  z-index: 1
+//  transition: $transition
+//
+//.logo-text span:last-child
+//  background: $main-color
+//  color: #fff
+//  transform: translateY(-15px)
+//  opacity: 0
+//  z-index: 2
+//  transition: $transition
+//
+//.logo-text.show span
+//  opacity: 1
+//  transform: translateY(0)
+//  transition-delay: 300ms !important
+//  transition: $transition
+
+
+// CONTENT
+
+
+.content
+  display: flex
+  max-width: 1920px
+  padding: 0 90px
+
+.section-main .content
+  padding-top: 105px
+  justify-content: flex-start
+
+.content__main-block
+  margin-top: 55px
+  width: 60%
+
+.content__main-photo
+  width: 40%
+  max-width: 40%
+  padding-right: 40px
+
+.content__main-photo span
+  position: relative
+  top: 0
+  left: 0
+  display: flex
+  background: url(../img/png/photo.png) no-repeat left bottom
+  background-size: contain
+  max-width: 100%
+  //width: 550px
+  height: 600px
+  opacity: 0
+  transform: translateX(-10px)
+  transition: $transition
+
+.content__main-photo.show span
+  opacity: 1
+  transform: translateX(0px)
+  transition: $transition
+
+.content__main-menu
+  margin: 55px 0
+
+  ul
+    list-style: none
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    padding: 0
+
+  .menu-item
+    display: flex
+    font-size: 1.2rem
+    text-transform: uppercase
+    font-family: $font-medium
+    color: #101010
+    position: relative
+
+.content__main-menu .active .menu-item,
+.main-menu.active a
+  color: $main-color
+
+.menu-item:after,
+.menu-item:before,
+.main-menu a:after,
+.main-menu a:before,
+.footer__menu .footer__link:after,
+.footer__menu .footer__link:before
+  content: ""
+  position: absolute
+  left: 0
+  bottom: 0
+  height: 2px
+  background: $main-color
+  width: 100%
+  transform-origin: left top
+  transform: scale(0, 1)
+  opacity: 0
+  z-index: 0
+  transition: $transition
+  will-change: transform, opacity
+
+.menu-item:before,
+.main-menu a:before,
+.footer__menu .footer__link:before
+  transform-origin: left top
+  height: 2px
+  bottom: -8px
+
+.main-menu a:before
+  bottom: 0
+
+.menu-item:after,
+.main-menu a:after,
+.footer__menu .footer__link:after
+  transform-origin: right bottom
+  height: 2px
+  bottom: -6px
+
+.main-menu a:after
+  bottom: 2px
+
+.menu-item:hover:after,
+.menu-item:hover:before,
+.main-menu a:hover:after,
+.main-menu a:hover:before,
+.footer__menu .footer__link:hover:after,
+.footer__menu .footer__link:hover:before
+  opacity: 1
+  transform: scale(1)
+
+.content__main-menu li.active .menu-item:after,
+.content__main-menu li.active .menu-item:before,
+.main-menu.active a:after,
+.main-menu.active a:before
+  opacity: 1
+  transform: scale(1)
+
+.main-menu a
+  padding-bottom: 4px
+  position: relative
+
+//.content__main-menu .menu-item:after
+//  content: ''
+//  z-index: 2
+//  position: absolute
+//  width: 100%
+//  height: 3px
+//  background: $main-color
+//  left: 0
+//  opacity: 0
+//  bottom: 0
+//  transform: scale(0, 1) translateY(0)
+//  transition: $transition
+//
+//.content__main-menu .active .menu-item:after, .content__main-menu .menu-item:hover:after
+//  opacity: 1
+//  transform: scale(1, 1) translateY(10px)
+//  transition: $transition
+//
+.content__main-menu .menu-item:hover
+  color: $main-color
+  transition: color .4s ease
+
+.content-title
+  font-size: 22px
+  font-family: $font-medium
+  display: flex
+  margin-bottom: 40px
+
+.content__main-trainings
+  padding-top: 30px
+
+.content__main-trainings-title
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 40px
+
+  h2
+    display: flex
+
+.content__main-trainings-blocks
+  display: flex
+  justify-content: space-between
+
+.content__main-trainings-block
+  opacity: 0
+  transform: scale(0, 1)
+  transition: $transition
+  width: calc(100% - 77%)
+  height: 200px
+
+  &.show
+    opacity: 1
+    transform: scale(1, 1)
+    transition: $transition
+
+  &:first-child
+    transition-delay: 300ms
+
+  &:nth-child(2)
+    transition-delay: 500ms
+
+  &:nth-child(3)
+    transition-delay: 700ms
+
+  &:last-child
+    transition-delay: 900ms
+
+  a
+    display: flex
+    position: relative
+    background: #eee
+    //border: 1px solid #ddd
+    height: 100%
+    width: 100%
+    padding: 25px 10px
+    flex-flow: column wrap
+    transition: background .4s ease
+
+  &:nth-child(even) a
+    background: #f8f8f8
+    //border: 1px solid #eee
+
+.content__main-trainings-block span
+  color: #0b0b0b
+  font-family: $font-regular
+  transition: color .4s ease
+
+.content__main-trainings-block .title
+  font-family: $font-medium
+  display: flex
+
+.content__main-trainings-block .description
+  font-family: $font-medium
+  font-size: 12px
+
+.content__main-trainings-block .data
+  position: absolute
+  bottom: 20px
+  left: 10px
+  font-size: 12px
+  font-family: $font-medium
+
+.content__main-trainings-block:hover .content__main-trainings-block-link span
+  color: #fff
+
+.content__main-trainings-block a:hover
+  background: $main-color
+  transition: background .4s ease
+
+.arrows
+  display: flex
+  width: 190px
+
+.arrows a svg
+  width: 100%
+  height: 10px
+  fill: #d0d0d0
+  transition: all .4s ease
+
+.arrow-left
+  margin-right: 20px
+  overflow: hidden
+
+.arrow-right
+  overflow: hidden
+
+.arrow-right svg
+  transform: rotate(180deg)
+  //fill: $main-color !important
+
+.arrows a:hover svg
+  //fill: #a2a2a2 !important
+  fill: $main-color !important
+  transition: fill .4s ease
+
+
+//SECTION ABOUT
+
+
+.bg-column
+  position: relative
+
+.bg-column:after
+  content: ''
+  width: 100%
+  height: 100%
+  background: url(../img/png/col.png) no-repeat left
+  background-size: contain
+  z-index: 0
+  position: absolute
+  top: 0
+  pointer-events: none
+
+.section-about
+  position: relative
+  overflow: hidden
+  display: flex
+  background: #fcfcfc
+  flex-flow: column nowrap
+  padding: 45px 0 45px
+
+.section-about .content
+  flex-flow: column wrap
+
+.content__about-title
+  width: 100%
+  justify-content: center
+  //margin-bottom: 40px
+
+.content__about-title h2
+  display: flex
+
+.content__about-blocks
+  display: flex
+  justify-content: center
+  flex-flow: row wrap
+  padding: 0 160px
+  z-index: 1
+
+.content__about-block
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 307px
+  margin: 20px 30px
+  opacity: 0
+  transform: scale(0, 1)
+  transition: $transition
+
+.content__about-block:nth-child(n + 4)
+  margin-top: 40px !important
+
+.content__about-block.show
+  opacity: 1
+  transform: scale(1, 1)
+  transition: $transition
+
+.about-icon
+  position: relative
+  width: 200px
+  display: flex
+  justify-content: center
+  z-index: 2
+
+.about-icon svg
+  width: 55px
+  fill: #d32528
+
+.content__about-block:nth-child(5) .about-icon svg
+  width: 50px
+
+.about-icon:after
+  content: ''
+  width: 130px
+  height: 130px
+  background: #f4f4f4
+  border: 1px solid #eee
+  position: absolute
+  top: 10px
+  z-index: -1
+  transition: background .4s ease
+
+.about-info
+  display: flex
+  width: 200px
+  flex-flow: column wrap
+  z-index: 2
+  margin: -20px 0 0 -30px
+  position: relative
+  transition: transform .4s ease
+
+.content__about-last .about-info
+  margin-top: 40px
+
+.about-numbers
+  font-size: 35px
+  font-family: $font-medium
+  color: #0b0b0b
+
+.about-text
+  font-family: $font-regular
+  font-size: 1rem
+  position: absolute
+  top: 45px
+
+.content__about-last .about-icon:after
+  left: 0
+  background: #f4f4f4 !important
+
+.content__about-last .about-info
+  margin-left: -147px
+
+.content__about-last .about-numbers
+  font-size: 16px
+  font-family: $font-regular
+
+.about-numbers .arrow-right
+  position: absolute
+  width: 50px
+  right: -20px
+
+.about-numbers svg
+  width: 100px
+  height: 10px
+  transform: rotate(180deg) translateX(70px)
+  transition: fill .4s ease
+
+.content__about-block:hover .about-icon:after
+  background: $main-color
+  transition: background .4s ease
+
+.content__about-block:hover svg
+  fill: #fff
+  transition: fill .4s ease
+
+.content__about-block:hover .arrow-right svg
+  fill: $main-color
+
+.content__about-block:hover .about-info
+  transform: translateX(30px)
+  transition: transform .4s ease
+
+
+//SECTION VIDEO
+
+.section-video
+  position: relative
+  overflow: hidden
+  display: flex
+  flex-flow: column nowrap
+  padding: 45px 0 45px
+  z-index: 1
+
+.section-video .content
+  flex-flow: column wrap
+
+.content__video-title
+  width: 100%
+  justify-content: center
+  //margin-bottom: 40px
+
+.content__video-title h2
+  display: flex
+
+.content__video-blocks
+  display: flex
+  justify-content: center
+  flex-flow: row wrap
+  padding: 0 160px
+
+.content__video-block
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  width: 341px
+  height: 200px
+  margin: 15px
+  background-size: cover !important
+  //border: 1px solid #ddd
+  opacity: 0
+  overflow: hidden
+  transform: scale(0, 1)
+  transition: $transition
+
+  &.show
+    opacity: 1
+    transform: scale(1, 1)
+    transition-delay: 300ms
+    transition: $transition
+
+.content__video-block:after
+  content: ''
+  position: absolute
+  width: 100%
+  height: 100%
+  pointer-events: none
+  background: rgba(181,42,44, .5)
+  top: 0
+  left: 0
+  right: 0
+  opacity: 0
+  border-radius: 20%
+  transform: scale(0, 1)
+  z-index: -1
+  transition: $transition
+
+.content__video-block:hover:after
+  opacity: 1
+  transform: scale(1.15)
+  transition: $transition
+
+.content__video-block:hover span
+  background: #fff
+  transform: scale(1.15)
+  transition: transform .4s ease
+
+.content__video-block:hover span svg
+  fill: $main-color
+  transition: fill .4s ease
+
+
+.button-play
+  background: $main-color
+  text-align: center
+  display: flex
+  width: 40px
+  height: 30px
+  align-items: center
+  justify-content: center
+  border-radius: 20%
+  transition: transform .4s ease
+
+  svg
+    fill: #fff
+    width: 10px
+    height: 10px
+
+.content__video-more-button
+  display: flex
+  justify-content: center
+  margin-top: 30px
+
+.vsideo-button
+  font-family: $font-medium
+  font-weight: 400
+  text-align: center
+  min-width: 250px
+
+
+// SECTION BLOG
+
+
+.section-blog
+  position: relative
+  overflow: hidden
+  display: flex
+  background: #fcfcfc
+  flex-flow: column nowrap
+  padding: 45px 0 45px
+  z-index: 1
+
+.section-blog .content
+  flex-flow: column wrap
+  z-index: 1
+
+.content__blog-title
+  width: 100%
+  justify-content: center
+  //margin-bottom: 40px
+
+  h2
+    display: flex
+
+.content__blog-more-button
+  display: flex
+  justify-content: center
+  margin-top: 30px
+
+.blog-button
+  font-family: $font-medium
+  font-weight: 400
+  text-align: center
+  min-width: 250px
+
+.content__blog-posts
+  display: flex
+  justify-content: center
+  flex-flow: row wrap
+
+.content__blog-post
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  position: relative
+  flex-flow: column nowrap
+  width: 248px
+  //height: 400px
+  margin: 15px
+  background: #fff
+  border: 1px solid #eee
+  opacity: 0
+  overflow: hidden
+  transform: scale(0, 1)
+  transition: $transition
+
+.content__blog-post.show
+  opacity: 1
+  transform: scale(1, 1)
+  transition-delay: 300ms
+  transition: $transition
+
+
+.content__post-image
+  display: flex
+  background-size: cover !important
+  width: 100%
+  height: 185px
+  position: relative
+  overflow: hidden
+
+  img
+    max-width: 100%
+
+  &:after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    pointer-events: none
+    background: rgba(181,42,44, .5)
+    top: 0
+    left: 0
+    right: 0
+    opacity: 0
+    border-radius: 20%
+    transform: scale(0, 1)
+    z-index: 0
+    transition: $transition
+
+.content__blog-post:hover .content__post-image:after
+    opacity: 1
+    transform: scale(1.15)
+    transition: $transition
+
+.content__post-info
+  display: flex
+  flex-flow: column nowrap
+  align-items: flex-start
+  justify-content: space-between
+  padding: 20px
+  width: 100%
+  height: 185px
+
+.title
+  font-family: $font-medium
+  font-size: 18px
+
+.date
+  font-family: $font-regular
+  font-size: 11px
+
+.post-calendar
+  width: 10px
+  height: 10px
+  padding-right: 8px
+
+  svg
+    width: 10px
+    height: 10px
+
+.text
+  color: #7b7b7b
+  font-size: 12px
+
+.content__post-link
+  display: flex
+  position: relative
+  transition: $transition
+
+  a
+    font-family: $font-medium
+    color: $main-color
+    font-size: 16px
+
+    .text-more
+      position: relative
+      z-index: 2
+      padding: 0 10px 0 0
+      background: #fff
+
+.content__post-link .arrow-right
+  position: absolute
+  top: 1px
+  left: -80px
+  opacity: 1
+  pointer-events: none
+  transition: $transition
+
+.content__post-link svg
+  fill: $main-color
+  height: 10px
+  z-index: 0
+  position: relative
+  transform: rotate(180deg) scale(.8)
+  transition: $transition
+
+.content__blog-post:hover .arrow-right
+  opacity: 1
+  transform: translateX(40px)
+  transition: $transition
+
+.bg-men
+  position: absolute
+  top: 0
+  right: 0
+  background: url(../img/png/men.png) no-repeat center
+  background-size: contain
+  width: 330px
+  height: 100%
+  z-index: 0
+
+//.post-bg-img
+//  background: url(../img/png/posts.png) no-repeat center
+//  background-size: cover
+//  width: 100%
+//  height: 185px
+
+
+// SECTION NEW
+
+
+.section-new
+  position: relative
+  overflow: hidden
+  display: flex
+  background: #fff
+  flex-flow: column nowrap
+  padding: 45px 0 100px
+
+.section-new .content
+  flex-flow: row wrap
+  justify-content: center
+  align-items: flex-start
+  z-index: 1
+  //padding: 0 235px
+
+.content__new-soc
+  display: flex
+  justify-content: left
+  flex-flow: column wrap
+  //width: 65%
+  padding-left: 15px
+  padding-right: 115px
+
+.content__new-video
+  display: flex
+  justify-content: left
+  flex-flow: column wrap
+  //width: 35%
+  padding-right: 15px
+
+.content__new-video-blocks .content__video-block:last-child
+    margin-top: 0 !important
+
+.content__new-video-blocks
+  width: 100%
+  display: flex
+  flex-flow: column wrap
+
+.content__new-title a
+  color: #a2a2a2
+  display: flex
+  align-items: flex-end
+  margin-bottom: 3px
+  font-size: 16px
+  font-family: $font-regular
+  padding-left: 40px
+
+  &:hover
+    color: $main-color
+    transition: color .4s ease
+
+.content__new-soc-block
+  display: flex
+  flex-flow: row wrap
+  padding: 15px 0
+  opacity: 0
+  transform: scale(0, 1)
+  transition: $transition
+
+  &:last-child
+    padding-bottom: 0
+
+.content__new-soc-block.show
+  opacity: 1
+  transform: scale(1, 1)
+  transition: $transition
+
+.content__new-soc-img
+  display: flex
+  width: 300px
+  height: 150px
+  overflow: hidden
+  position: relative
+  background-size: cover !important
+
+  &:after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    pointer-events: none
+    background: rgba(181,42,44, .5)
+    top: 0
+    left: 0
+    right: 0
+    opacity: 0
+    border-radius: 20%
+    transform: scale(0, 1)
+    z-index: 0
+    transition: $transition
+
+  span
+    position: absolute
+    right: 0
+    bottom: 0
+    height: 40px
+    width: 40px
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 1
+
+  span.facebook
+    background: #2b55a2
+
+  span.youtube
+    background: #d32528
+
+  svg
+    width: 20px
+    height: 20px
+    fill: #fff !important
+
+.content__new-soc-block:hover .content__new-soc-img:after
+  opacity: 1
+  transform: scale(1.15)
+  transition: $transition
+
+.content__new-soc-block:hover .title, .content__new-soc-block:hover .link
+  color: $main-color
+
+.title span
+  position: relative
+  
+.content__new-soc-info .title span:after
+  content: ""
+  position: absolute
+  left: 0
+  bottom: 0
+  height: 2px
+  background: $main-color
+  width: 100%
+  transform-origin: left top
+  transform: scale(0, 1)
+  opacity: 0
+  z-index: 0
+  transition: $transition
+
+.content__new-soc-info .title span:after
+  transform-origin: left top
+  height: 2px
+
+.content__new-soc-block:hover .title span:after
+  opacity: 1
+  transform: scale(1)
+
+
+
+.content__new-soc-info
+  width: 350px
+  display: flex
+  flex-flow: column wrap
+  justify-content: space-between
+  padding-left: 30px
+
+  .title
+    color: #252525
+    font-size: 20px
+    padding-bottom: 2px
+    position: relative
+
+  .date
+    font-size: 12px
+
+  .text
+    font-size: 14px
+
+  .link
+    width: 300px
+    color: #252525
+    overflow: hidden
+    text-overflow: ellipsis
+
+.content__new-soc .arrows
+  margin-top: 30px
+
+.content__new-video .content__video-block
+  margin: 30px 0
+  //width: 100%
+
+  &:first-child
+    margin-top: 15px !important
+
+.over-arrow
+  display: flex
+  justify-content: flex-end
+
+
+// FOOTER
+
+
+.footer
+  position: relative
+  padding: 0 90px
+  z-index: 1
+  display: flex
+  background: #fafafa
+  flex-flow: row wrap
+  align-items: center
+  justify-content: space-around
+  max-width: 1920px
+
+.footer__content
+  display: flex
+  justify-content: space-between
+  width: 100%
+  align-items: flex-start
+  padding: 30px 0 40px
+
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+  span
+    font-size: 14px
+    padding-bottom: 5px
+
+.footer__content div
+  display: flex
+  //width: 100%
+
+.footer__copyright
+  display: flex
+  width: 100%
+  padding: 0 0 20px
+  align-items: center
+  font-size: 14px
+  color: #a2a2a2
+
+  a
+    color: $main-color
+
+.footer__logo
+  width: 10%
+  margin-right: calc(100% - 93%)
+
+  img
+    height: 65px
+    display: flex
+
+.footer__menu
+  justify-content: flex-start
+  flex-flow: column wrap
+  width: 25%
+  margin-right: calc(100% - 90%)
+
+  ul
+    height: 160px
+    width: 100%
+    display: flex
+    flex-flow: column wrap
+
+  li
+    padding: 10px 50px 10px 0
+
+.footer__link
+  color: #101010
+  display: inline-block
+  position: relative
+  font-family: $font-medium
+
+.footer__contacts
+  flex-flow: column wrap
+  width: 25%
+  margin-right: calc(100% - 90%)
+
+  a
+    font-size: 14px
+    display: flex
+    align-items: center
+
+  li
+    padding: 10px 0
+    display: flex
+
+  svg
+    width: 20px
+    height: 20px
+    margin-right: 10px
+    fill: #a2a2a2
+
+
+.footer__button
+  margin-top: 15px
+  max-width: 320px
+  display: flex
+  justify-content: center
+
+.footer__subscribe
+  flex-flow: column wrap
+  width: 40%
+
+  .footer__form + span
+    padding-bottom: 10px
+
+.footer__form
+  display: flex
+  margin: 15px 0 30px
+
+  input
+    width: 300px
+    border: 1px solid #a2a2a2
+    border-right: none
+    padding: 10px
+
+
+.footer__social
+
+  svg
+    width: 20px
+    height: 20px
+    margin: 0 10px 0 0
+    fill: #a2a2a2
+
+//.close-menu,
+.open-menu
+  padding: 0
+  border: none
+  position: absolute
+  right: 105px
+  top: 0
+  bottom: 0
+  margin: auto 0
+  cursor: pointer
+  z-index: 100
+
+//.close-menu:before
+//  content: ''
+//  position: absolute
+//  width: 100%
+//  height: 100%
+//  left: 0
+//  top: 0
+//  transition: all .3s ease-out
+//
+//.close-menu:before
+//  background: url(../img/svg/close.svg) center no-repeat
+//  background-size: 100% 100%
+
+.open-menu
+  width: 25px
+  height: 20px
+  opacity: 0
+  visibility: hidden
+  background: none
+  transform: translateY(100px)
+  transition: $transition, visibility .4s ease
+
+.open-menu.show
+  opacity: 1
+  visibility: visible
+  transform: translateY(0)
+  transition: $transition, visibility .4s ease
+
+.open-menu.close .line-btn1
+  transform: translate(-2px, 8px) rotate(40deg)
+  width: 30px
+  transition: width .4s ease, transform .4s ease
+
+.open-menu.close .line-btn2
+  opacity: 0
+  transform: translateX(-30px)
+  transition: $transition
+
+.open-menu.close .line-btn3
+  transform: translate(-2px, -8px) rotate(-40deg)
+  width: 30px
+  transition: width .4s ease, transform .4s ease
+
+.line-menu
+  display: block
+  height: 3px
+  left: 0
+  background: #333
+  pointer-events: none
+  position: absolute
+  transform: translateX(0)
+  transition: $transition
+
+
+.line-btn1, .line-btn3
+  width: 100%
+  transition: width .4s ease, transform .4s ease
+
+
+.line-btn1, .line-btn2
+  top: 0
+
+.line-btn2
+  width: 40px
+  margin: auto
+  transition: $transition
+
+.line-btn2, .line-btn3
+  bottom: 0
+
+.header__mobile-menu, .button-mobile
+  display: none
+
+
+
+.header__right-menu.mobile
+  opacity: 0
+  visibility: hidden
+  position: relative
+  transform: translateX(50px)
+  transition: $transition, visibility .4s ease
+
+.button-mobile
+  position: absolute
+  top: 0
+  left: 0
+  text-align: center
+  font-size: 40px
+  color: #a2a2a2
+  height: 60px
+  line-height: 35px
+  border: 0
+
+.header__right-menu.mobile.show
+  opacity: 1
+  visibility: visible
+  transform: translateX(0)
+  transition: $transition, visibility .4s ease
+
+.header__right-menu.mobile ul
+  position: absolute
+  right: 0
+  top: 30px
+  background: #fff
+  min-width: 400px
+  height: 500px
+  flex-flow: column wrap
+  padding: 50px
+  align-items: flex-end
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+  transition: $transition
+
+.header__social span
+  display: none
+  transition: $transition
+
+
+.adobe-link
+  color: #101010
+  display: flex
+  position: relative
+
+.adobe-link + span
+  color: #a2a2a2
+  font-size: 12px
+
+.adobe-text:hover .adobe-link
+  color: $main-color
+
+.adobe-link:after
+  content: ""
+  position: absolute
+  left: 0
+  bottom: 0
+  height: 2px
+  background: $main-color
+  width: 100%
+  transform-origin: left top
+  transform: scale(0, 1)
+  opacity: 0
+  z-index: 0
+  transition: $transition
+
+.adobe-link:after
+  transform-origin: left top
+  height: 2px
+
+.adobe-text:hover .adobe-link:after
+  opacity: 1
+  transform: scale(1)
+
+.adobe-text
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  margin: 10px 0 0
+  position: relative
+
+  svg
+    width: 30px
+    height: 30px
+    fill: #a2a2a2
+    transition: fill .4s ease
+
+.adobe-text-inner
+  flex-flow: column wrap
+  padding-left: 5px
+
+
+// JS
+
+
+.header:before
+  content: ''
+  position: absolute
+  pointer-events: none
+  opacity: 0
+  width: 100%
+  height: 0
+  left: 0
+  top: 0
+  z-index: -1
+  box-shadow: 0 0 100px 100px #fff
+  transition: all 1.2s ease
+
+.header.scroll-on:before
+  opacity: 1
+  transition: opacity .4s ease
+
+
+.top-menu.hide
+  opacity: 0
+  transform: translateX(50px)
+  transition: $transition
+
+.top-menu.show
+  opacity: 1
+  transform: translateX(0)
+  transition: $transition
+
+.main-menu
+  display: none
+
+.main-menu.show
+  opacity: 1
+  transform: translateX(0)
+  transition: $transition
+
+.main-menu.hide
+  opacity: 0
+  transform: translateX(50px)
+  transition: $transition
+
+.footer__subscribe
+  flex-flow: column wrap
+
+  svg
+    width: 20px
+    height: 20px
+
+
+// RESPONSIVE
+
+@media only screen and (max-width: 1600px)
+  .content__about-blocks, .content__video-blocks
+    padding: 0
+
+  .content__main-menu
+    margin: 40px 0 40px
+
+  .footer__button
+    width: 220px
+
+@media only screen and (max-width: 1366px)
+  .content__new-soc
+    padding-right: 100px
+
+  .content__main-menu .menu-item
+    font-size: .8rem
+
+  .content__main-trainings-title h2
+    font-size: 20px
+
+  .content__main-photo
+    margin: 0
+
+  .content__main-menu .menu-item
+    font-size: 1rem
+
+@media only screen and (max-width: 1280px)
+
+  .content__main-trainings-title
+  margin-bottom: 20px
+  h2
+    font-size: 30px
+
+  .content__main-trainings-blocks
+    flex-flow: column wrap
+    height: 300px
+    justify-content: space-between
+
+  .content__main-trainings-block
+    width: calc(100% - 52%)
+    height: 130px
+
+  .content__main-trainings-block:first-child
+    margin-right: 20px
+
+  .content__main-trainings-block:nth-child(even) a
+    margin-top: -20px
+
+  .content__new-soc
+    padding: 0
+
+  .content__blog-posts
+    padding: 0 130px
+
+  .content__blog-post
+    width: 340px
+
+  .footer__content
+    flex-flow: row wrap
+
+  .footer__logo
+    width: 100%
+    justify-content: center
+    padding-bottom: 40px
+    margin: 0
+
+  .footer__menu
+    width: 33.33%
+    margin: 0
+
+  .footer__contacts
+    width: 33.33%
+    margin: 0
+
+  .footer__subscribe
+    width: 33.33%
+
+  .footer__copyright
+    justify-content: center
+
+@media only screen and (max-width: 1200px)
+
+  .over-arrow
+    justify-content: center
+
+  .content__new-soc
+    align-items: center
+
+  .content__new-video
+    justify-content: center
+    padding-right: 0
+
+  .content__new-video
+    padding-top: 45px
+
+  .content__blog-posts
+    padding: 0
+
+  .section-new .content
+    flex-flow: column wrap
+    align-items: center
+
+  .header__button
+    min-width: 100px
+
+  .header__right-menu ul
+    min-width: 700px
+    transition: $transition
+
+
+@media only screen and (max-width: 1024px)
+
+  .header__right-menu
+    display: none
+    transition: $transition
+
+  //.header__right-menu.mobile ul
+  //  min-width: calc(100% - 180px)
+
+  .header__mobile-menu
+    display: block
+
+  .main-menu .header__link, .header__link, .header__link *
+    font-size: 20px
+
+  .header__right-menu svg
+    height: 30px
+    width: 30px
+
+  .header__button
+    width: 100%
+    font-size: 20px
+
+  .section-main .content
+    padding-top: 0
+
+  .content__main-block
+    //margin-top: 80px
+    display: flex
+    flex-flow: column wrap
+    justify-content: flex-end
+
+  .content__main-menu
+    display: none
+
+  .footer__contacts .footer__button
+    width: 210px
+
+  .header__social svg
+    margin-right: 10px
+
+  .header__social span, .button-mobile
+    display: inline-block
+
+@media only screen and (max-width: 990px)
+
+  .content__main-photo
+    display: none
+
+  .content__main-block
+    justify-content: center
+
+  .content__main-block
+    margin-top: 140px
+    width: 100%
+
+  .content__new-soc-info
+    width: 300px
+
+  .content__new-soc-info .link
+    width: 270px
+
+@media only screen and (max-width: 800px)
+  .content__main-title
+    display: flex
+    justify-content: center
+
+  .footer__menu
+    width: 100%
+    margin: 0
+    align-items: center
+
+  .footer__menu ul
+    height: 80px
+    width: 100%
+    flex-flow: row wrap
+    justify-content: center
+
+  .footer__contacts
+    width: 50%
+    margin: 0
+    align-items: center
+    padding-top: 40px
+
+  .footer__subscribe
+    width: 50%
+    padding-top: 40px
+    align-items: center
+
+  .footer__form input
+    width: 150px
+
+  .content__new-soc-info .text
+    text-align: center
+
+  .content__new-soc-info .link
+    padding-top: 10px
+
+  .content__new-soc-info .title
+    margin-bottom: 10px
+
+  .content__new-soc-info .title:after
+    width: 100%
+
+@media only screen and (max-width: 768px)
+  .content__new-soc-info
+    width: 270px
+
+  .content__main-trainings-block:nth-child(even) a
+    margin-top: 0
+
+  .content__main-trainings-blocks
+    height: 100%
+
+
+  .content__main-trainings-block:first-child
+    margin-right: 0
+
+  .content__main-trainings-block
+    width: 100%
+    margin-bottom: 20px
+
+  .bg-column:after
+    opacity: .3
+
+
+@media only screen and (max-width: 640px)
+
+  .content__new-soc-img
+    width: 100%
+
+  .content__new-soc-info
+    width: 100%
+    padding-left: 0
+    align-items: center
+
+  .content-title
+    font-size: 18px
+
+  .footer__contacts, .footer__subscribe
+    width: 100%
+
+  .header, .content, .footer
+    padding: 0 30px
+
+  .open-menu
+    right: 45px
+
+  .content__new-video-blocks
+    align-items: center
+
+  .header__right-menu.mobile ul
+    min-width: 320px
+
+@media only screen and (max-width: 425px)
+
+  .open-menu
+    right: 35px
+
+  .content-title
+    font-size: 16px
+    flex-flow: column wrap
+  .arrows
+    padding-top: 20px
+    width: 100%
+
+  .content__new-video .content__video-block
+    margin: 15px
+
+  .footer__menu li
+    padding: 10px 20px 10px 0
+
+  .content__main-title img
+    width: 280px
+
+  .header__right-menu.mobile ul
+    min-width: 280px
+
+@media only screen and (max-width: 360px)
+  .content__new-video-blocks .content__video-block
+    width: 220px
+
+  .header__right-menu.mobile ul
+    min-width: 240px
+
+@media only screen and (max-width: 320px)
+
+  .about-info
+    margin: -20px 0 0 -50px
+
+  .about-info
+    width: 150px
+
+  .content__video-block
+    width: 240px
+
+  .footer__contacts
+    padding-top: 60px

@@ -1,0 +1,1273 @@
+$font-extra: ProximaNovaExtraBold, sans-serif
+$font-semi: ProximaNovaSemiBold, sans-serif
+$main-bg-color: #20aa97
+$main-color: #20aa97
+
+@font-face
+  font-family: ProximaNovaBold
+  src: url('../fonts/ProximaNovaBold/proximanova-bold.eot')
+  src: url('../fonts/ProximaNovaBold/proximanova-bold.eot?iefix') format('eot'),
+  url('../fonts/ProximaNovaBold/proximanova-bold.woff') format('woff'),
+  url('../fonts/ProximaNovaBold/proximanova-bold.ttf') format('truetype'),
+  url('../fonts/ProximaNovaBold/proximanova-bold.svg#webfont') format('svg')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: ProximaNovaExtraBold
+  src: url('../fonts/ProximaNovaExtraBold/proximanova-extrabold.eot')
+  src: url('../fonts/ProximaNovaExtraBold/proximanova-extrabold.eot?iefix') format('eot'),
+  url('../fonts/ProximaNovaExtraBold/proximanova-extrabold.woff') format('woff'),
+  url('../fonts/ProximaNovaExtraBold/proximanova-extrabold.ttf') format('truetype'),
+  url('../fonts/ProximaNovaExtraBold/proximanova-extrabold.svg#webfont') format('svg')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: ProximaNovaSemiBold
+  src: url('../fonts/ProximaNovaSemiBold/proximanova-semibold.eot')
+  src: url('../fonts/ProximaNovaSemiBold/proximanova-semibold.eot?iefix') format('eot'),
+  url('../fonts/ProximaNovaSemiBold/proximanova-semibold.woff') format('woff'),
+  url('../fonts/ProximaNovaSemiBold/proximanova-semibold.ttf') format('truetype'),
+  url('../fonts/ProximaNovaSemiBold/proximanova-semibold.svg#webfont') format('svg')
+  font-weight: 400
+  font-style: normal
+
+::selection
+  background: $main-bg-color
+  color: #fff
+
+*
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  min-width: 300px
+  font-family: $font-extra
+
+body, html
+  width: 100%
+  position: relative
+  margin: 0
+  padding: 0
+
+b, h1, h2, h3, h4, h5, h6
+  font-weight: 400
+
+p
+  margin: 0
+
+b
+  font-family: $font-extra
+
+button:active, button:focus
+  outline: 0
+
+a
+  text-decoration: none
+
+#global
+  width: 100%
+  position: absolute
+  overflow-x: hidden
+  z-index: 1
+
+.header
+  height: 110px
+  position: fixed
+  top: 0
+  margin: 0 auto
+  padding: 0 110px
+  z-index: 10
+  border-bottom: 1px dashed #ECECEC
+
+.header, .center-header
+  width: 100%
+
+.header__inside-head
+  width: 100%
+  height: 100%
+  position: relative
+
+.header__inside-head.menu-open
+  display: block
+  opacity: 1
+  visibility: visible
+  transform: translateY(0)
+  transition: all .5s ease
+
+.header__centred
+  height: 100%
+  position: relative
+  max-width: 1700px
+  padding: 0 20px
+  margin: 0 auto
+  display: flex
+  flex-flow: row nowrap
+  -webkit-box-pack: justify
+  justify-content: space-between
+
+#logo-header, .header__centred, .header__right
+  -webkit-box-orient: horizontal
+  -webkit-box-direction: normal
+
+#logo-header, .header__left, .header__right
+  width: auto
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  align-items: center
+
+#logo-header
+  color: #000
+  font: 20px $font-extra
+  transition: color .3s ease
+
+#logo-header, .header__right
+  flex-flow: row nowrap
+
+.header__logo-icon
+  width: 56px
+  height: 40px
+  transition: transform .3s ease
+
+#logo-icon-svg
+  height: 100%
+
+.footer, #logo-icon-svg
+  width: 100%
+  position: relative
+
+.header__logo
+  display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  flex-flow: column nowrap
+  line-height: 20px
+  padding: 0 0 0 12px
+
+#logo-header:hover
+  color: #20AA97
+
+.header__menu li span, .header__logo span
+  display: inline
+
+.header__logo i
+  font-style: normal
+  font-size: 30px
+
+.footer, .header__menu
+  display: -webkit-box
+  display: -ms-flexbox
+  -webkit-box-orient: horizontal
+  -webkit-box-direction: normal
+
+.header__menu
+  width: auto
+  display: flex
+  flex-flow: row nowrap
+  padding: 0
+  margin: 0
+  list-style: none
+
+.header__menu li:first-child
+  margin-left: 0
+
+.header__menu li
+  width: auto
+  display: inline-block
+  font: 16px $font-extra
+  margin: 0 0 0 53px
+  padding: 10px 0
+  overflow: hidden
+  position: relative
+
+.header__menu li a
+  position: relative
+  color: #000
+  transition: color .3s ease
+
+.header__menu li a:before
+  content: ''
+  position: absolute
+  width: 15px
+  height: 2px
+  background: #000
+  left: 0
+  top: -10px
+  transform: translateY(10px)
+  opacity: 0
+  transform-origin: right center
+  transition: transform .3s ease, opacity .3s ease
+
+.header__menu li a i
+  font-style: normal
+  font-size: 24px
+  margin-left: -3px
+
+.header__menu li.active a, html:not(.mobile-platform) .header__menu li a:hover
+  color: $main-color
+
+.header__menu li.active a:before, html:not(.mobile-platform) .header__menu li a:hover:before
+  opacity: 1
+  transform: translateY(0)
+  transform-origin: left center
+
+
+.header__mobile-head
+  height: 100%
+  z-index: 2
+  display: none
+  transition: background 1ms cubic-bezier(.4, 0, 0, 1) .2s
+
+.header__logo-mobile
+  width: 151px
+  height: 38px
+  display: flex
+  align-items: center
+  flex-flow: row nowrap
+  color: #000
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+  margin: auto
+  font: 19px $font-extra
+
+.header__icon-mobile
+  width: 53px
+  height: 38px
+  background: url(../img/svg/logo.svg) center no-repeat
+  background-size: 100% 100%
+
+.header__icon-mobile.animate-logo, #logo-icon.animate-logo
+  animation: loader-icon 1s cubic-bezier(.455, .03, .515, .955)
+
+.header__title-mobile
+  display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  flex-flow: column nowrap
+  line-height: 21px
+  padding: 1px 0 0 10px
+
+.header__title-mobile span
+  display: inline
+
+.header__title-mobile i
+  font-style: normal
+  font-size: 29px
+
+.close-menu, .open-menu
+  padding: 0
+  border: none
+  position: absolute
+  right: 0
+  top: 0
+  bottom: 0
+  margin: auto 0
+  cursor: pointer
+  z-index: 100
+
+.open-menu
+  width: 25px
+  height: 20px
+  opacity: 0
+  visibility: hidden
+  background: 0 0
+  transform: translateY(100px)
+  transition: all .5s ease
+
+.open-menu.show
+  opacity: 1
+  visibility: visible
+  transform: translateY(0)
+  transition: all .5s ease
+
+
+.line-menu
+  display: block
+  height: 3px
+  left: 0
+  pointer-events: none
+  position: absolute
+  background: #000
+  transition: all .3s ease-out
+
+.line-btn1, .line-btn3
+  width: 100%
+
+.line-btn1, .line-btn2
+  top: 0
+
+.line-btn2
+  width: 20px
+  margin: auto
+
+.line-btn2, .line-btn3
+  bottom: 0
+
+.close-menu
+  width: 21px
+  height: 21px
+  opacity: 0
+  visibility: hidden
+  background: 0 0
+  transform: translateY(-100px)
+  transition: all .5s ease
+
+.close-menu.show
+  opacity: 1
+  visibility: visible
+  transform: translateY(0)
+  transition: all .5s ease
+
+
+.close-menu:before
+  content: ''
+  position: absolute
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+  transition: all .3s ease-out
+
+.close-menu:before
+  background: url(../img/svg/close.svg) center no-repeat
+  background-size: 100% 100%
+
+.dashed-lines, .dashed-line
+  top: 0
+  height: 100%
+  margin: 0 auto
+  position: absolute
+
+.dashed-lines
+  width: 100%
+  z-index: -1
+  right: 0
+  left: 0
+  pointer-events: none
+
+.dashed-lines, .dashed-line
+  top: 0
+  height: 100%
+  margin: 0 auto
+  position: absolute
+  color: black
+
+.dashed-line
+  width: 0
+  border-right: 1px dashed #ECECEC
+
+.line-1
+  left: 109px
+
+.line-2
+  left: 28%
+
+.header, .line-3
+  right: 0
+  left: 0
+
+.line-4
+  right: 28%
+
+.dashed-line
+  border-color: #b2b2b2
+  transition: all 1.2s ease
+
+.dashed-line, .line-1, .line-2, .line-3
+  height: 0
+
+.dashed-lines .dashed-line
+  border-color: #ECECEC
+
+.dashed-lines .dashed-line, .line-1, .line-2, .line-3
+  height: 100%
+
+.header:before
+  content: ''
+  position: absolute
+  pointer-events: none
+  opacity: 0
+  width: 100%
+  height: 0
+  left: 0
+  top: 0
+  z-index: 0
+  box-shadow: 0 0 100px 100px #fff
+  transition: all 1.2s ease
+
+.header.scroll:before
+  opacity: 1
+  transition: all .5s ease
+
+.content__centred-inside-page, .content__inside-page, .content__title
+  width: 100%
+  position: relative
+
+.content__inside-page
+  height: auto
+  z-index: 2
+  overflow: hidden
+
+.content__centred-inside-page
+  max-width: 1700px
+  margin: 0 auto
+
+.content__title
+  padding:  217px 0 0 0
+  z-index: 2
+
+.content__title h1
+  width: 100%
+  margin: 0
+  font: 100px ProximaNovaExtraBold, sans-serif
+  color: #000
+  text-align: center
+  letter-spacing: 1px
+
+.content__title h1 i
+  font-style: normal
+  color: #20aa97
+
+
+.content__services
+  width: 100%
+  position: relative
+  margin: 90px 0 130px
+
+.content__desc-services
+  width: 100%
+  position: relative
+  margin: 0
+
+.content__centred-desc-services
+  text-overflow: ellipsis
+  width: 1000px
+  margin: 0 auto
+  color: #585858
+
+.content__centred-desc-services p
+  text-overflow: ellipsis
+  text-align: center
+  font-size: 20px
+  line-height: 28px
+  width: 100%
+  margin: 16px 0
+  font-family: $font-extra
+
+.content:before
+  content: ''
+  position: absolute
+  width: 20.26vw
+  border-radius: 100%
+  height: 20.26vw
+  right: -5.26vw
+  top: -1.5vw
+  z-index: 2
+  overflow: hidden
+  background: #E3F6F4
+  transition: all .3s ease
+
+.content__top-services
+  -webkit-box-orient: horizontal
+  -webkit-box-direction: normal
+  flex-direction: row
+
+.content__top-services
+  width: 100%
+  max-width: 1700px
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
+  margin: 22px auto 0
+  padding: 0 110px
+
+.content__item-service
+  width: 15%
+  margin: 100px 1.622222% 0
+
+.content__icon-top-service
+  width: 100%
+  height: 70px
+  overflow: hidden
+  text-align: center
+  margin: 0 0 50px
+  position: relative
+
+.content__icon-top-service img
+  width: auto
+  max-width: 100%
+  height: 100%
+  display: inline-block
+  vertical-align: top
+  margin: 0
+
+.content__desc-top-service b
+  width: 100%
+  display: inline-block
+  color: #000
+  font: 16px $font-extra
+
+.content__desc-top-service
+  width: 100%
+  font-size: 18px
+  color: #585858
+
+.content__desc-top-service > *
+  width: 100%
+  text-align: center
+
+.content__desc-top-service b, .content__desc-top-service p
+  line-height: 24px
+
+.content__desc-top-service p
+  font-size: 16px
+  font-family: $font-semi
+
+.content__icon-top-service
+  transition: transform .3s ease
+
+.content__item-service:hover .content__icon-top-service
+  transform: translateY(10px)
+  transition: transform .3s ease
+
+.content__circle-gray-a, .content__circle-gray-b
+  position: absolute
+  border-radius: 50%
+  z-index: -1
+
+.content__circle-gray-a
+  width: 42.5vw
+  height: 42.5vw
+  top: 29%
+  left: -20vw
+  background: rgba(249, 249, 249, .4)
+
+.content__circle-gray-b
+  width: 30vw
+  height: 30vw
+  bottom: -5vw
+  right: -5vw
+  background: #FCFEFD
+
+.offers
+  width: 100%
+  position: relative
+  margin: 121px 0 0
+
+.offers__title
+  width: 100%
+
+.offers__title h2
+  width: 100%
+  margin: 0
+  font: 60px $font-extra
+  color: #000
+  text-align: center
+  letter-spacing: -.01em
+
+.offers__title h2 span
+  display: inline
+
+.offers__title h2 i
+  font-style: normal
+  color: #20aa97
+
+.offers__title.anim-elem.done h2 i
+  color: #20aa97
+
+.offers__centred
+  width: 1200px
+  position: relative
+  margin: 0 auto
+
+.offers__list
+  width: 100%
+  position: relative
+  display: flex
+  -webkit-box-orient: horizontal
+  -webkit-box-direction: normal
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: flex-start
+  margin: 11px 0 0
+
+.offers__item-offer
+  width: 50%
+  position: relative
+  margin: 77px 0 0
+  padding: 0 5% 0 0
+
+.offers__item-offer:hover .offers__icon-circle
+  border: 1px solid $main-color
+  transition: all .3s ease
+
+.offers__item-offer:nth-child(2n+2)
+  padding: 0 0 0 5%
+
+.offers__icon
+  width: 100%
+  overflow: hidden
+  position: relative
+  margin: 0 0 45px
+
+.offers__icon-circle
+  width: 107px
+  height: 107px
+  border-radius: 100%
+  background: #FAFDFD
+  position: relative
+  overflow: hidden
+  border: 1px solid rgba(0,0,0,0)
+  transition: all .3s ease
+
+.offers__icon-circle img
+  display: block
+  position: absolute
+  width: auto
+  height: auto
+  max-width: 50%
+  max-height: 50%
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  transition: all .3s ease
+
+.offers__title-offer
+  margin: 0 0 6px
+
+.offers__desc-offer, .offers__title-offer
+  position: relative
+
+.offers__title-offer, .offers__title-offer > *
+  font: 20px $font-extra
+  line-height: 28px
+  margin: 0
+
+.offers__desc-offer, .offers__desc-offer > *, .offers__title-offer, .offers__title-offer > *
+  width: 100%
+  overflow: hidden
+  text-overflow: ellipsis
+
+.offers__desc-offer p
+  font-size: 14px
+  font-family: $font-semi
+  color: #585858
+
+.footer
+  height: 130px
+  background: #000
+  z-index: 10
+  display: flex
+  flex-wrap: nowrap
+  align-items: center
+  flex-direction: row
+  -webkit-box-pack: center
+  justify-content: center
+
+.footer__info
+  width: auto
+  max-width: 1000px
+  color: #fff
+  font-size: 14px
+  line-height: 1
+  text-align: center
+
+.footer__info, .footer__info > *
+  overflow: hidden
+  text-overflow: ellipsis
+  padding: 6px 0
+
+.footer__info a
+  color: #20aa97
+  position: relative
+  overflow: hidden
+
+.footer__info a, .footer__info b
+  font-family: $font-extra
+
+
+#preloader
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background: #fff
+  z-index: 20
+  visibility: visible
+  opacity: 1
+  transition: all .5s ease
+
+.loader
+  width: 130px
+  height: 130px
+  position: absolute
+  top: 50%
+  left: 50%
+  margin: 0 auto
+  color: #000
+  -webkit-transition: all .5s ease
+  -o-transition: all .5s ease
+  transition: all .5s ease
+  transform: translate(-50%, -50%)
+
+
+.loader__logo-icon
+  width: 60px
+  height: 60px
+  margin: 0 auto
+  position: absolute
+  top: 50%
+  left: 0
+  transform: translate(-50%, -50%)
+
+.loader__logo-icon img
+  position: relative
+  top: 10px
+  animation: loader-icon 1s cubic-bezier(.455, .03, .515, .955) infinite
+
+
+.loader-text
+  font-size: 30px
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 50px
+  transform: translate(-50%, -50%)
+
+.loader-text span i
+  color: $main-color
+  font-style: normal
+
+.ok
+  transform: translateY(-100px)
+  opacity: 0 !important
+  visibility: hidden !important
+
+@keyframes loader
+  0%
+    transform: translate(-50%, -50%) rotate(0)
+  50%
+    transform: translate(-50%, -50%) rotate(360deg)
+  100%
+    transform: translate(-50%, -50%) rotate(0)
+
+@keyframes loader-icon
+  from
+    transform: rotate(0)
+  to
+    transform: rotate(-360deg)
+
+
+.animate
+  opacity: 0
+  visibility: hidden
+  transform: translateY(100px)
+  transition: all  .6s cubic-bezier(.4, 0, .2, 1)
+
+.show
+  opacity: 1 !important
+  visibility: visible !important
+  transform: translateY(0) !important
+  transition: all .6s cubic-bezier(.4, 0, .2, 1)
+
+
+
+@media only screen and (max-width: 1680px)
+  .header
+    padding: 0 130px
+
+  .header, .footer
+    height: 90px
+
+  #logo-header
+    font-size: 17px
+
+  .header__logo-icon
+    width: 48px
+    height: 34px
+
+
+  .header__logo
+    line-height: 15px
+    padding: 2px 0 0 10px
+
+  .header__logo i
+    font-size: 25px
+
+  .header__menu li
+    font-size: 14px
+    margin: 0 0 0 41px
+    padding: 4px 0
+
+  .header__menu li a:before
+    width: 12px
+    top: -8px
+
+  .header__menu li a i
+    font-size: 22px
+
+  .line-1
+    left: 91px
+
+  .footer__info
+    max-width: 800px
+    font-size: 12px
+    font-family: $font-semi
+
+  .footer__info, .footer__info > *
+    padding: 4px 0
+
+  .content__title
+    padding:  180px 0 0 0
+
+  .content__title h1
+    font-size: 80px
+
+  .content__services
+    margin: 70px 0 100px
+
+  .content__centred-desc-services
+    width: 760px
+
+  .content__centred-desc-services p
+    margin: 13px 0
+    font-size: 16px
+    line-height: 30px
+
+  .content__top-services
+    margin: 0
+    padding: 0 100px
+
+  .content__item-service
+    margin: 75px 1.622222% 0
+
+  .content__icon-top-service
+    height: 60px
+    margin: 0 0 35px
+
+  .content__desc-top-service
+    font-size: 16px
+
+  .content__desc-top-service b, .content__desc-top-service p
+    line-height: 22px
+
+  .content__desc-top-service b
+    font-size: 16px
+
+  .offers
+    margin: 88px 0 0
+
+  .offers__centred
+    width: 1000px
+
+  .offers__title h2
+    font-size: 50px
+
+  .offers__list
+    margin: 0
+
+  .offers__item-offer
+    margin: 63px 0 0
+
+  .offers__icon
+    margin: 0 0 35px
+
+  .offers__icon-circle
+    width: 87px
+    height: 87px
+
+  .offers__title-offer
+    margin: 0 0 4px
+
+  .offers__title-offer, .offers__title-offer > *
+    font-size: 16px
+    line-height: 23px
+
+  .offers__desc-offer
+    font-size: 16px
+    line-height: 22px
+
+@media only screen and (max-width: 1440px)
+  .header
+    padding: 0 85px
+
+  .footer, .header
+    height: 85px
+
+  .header__centred
+    padding: 0 15px
+
+  #logo-header
+    font-size: 16px
+
+  .header__logo-icon
+    width: 40px
+    height: 29px
+
+  .header__logo
+    line-height: 14px
+    padding: 0 0 0 10px
+
+  .header__menu li
+    font-size: 14px
+    margin: 0 0 0 36px
+    padding: 2px 0
+
+  .header__menu li a:before
+    width: 11px
+    top: -7px
+
+  .content__title
+    padding: 177px 0 0
+
+  .content__title h1
+    font-size: 60px
+
+  .content__services
+    margin: 60px 0 85px
+
+  .content__centred-desc-services
+    width: 740px
+
+  .content__centred-desc-services p
+    font-size: 16px
+    line-height: 22px
+    margin: 10px 0
+
+  .content__icon-top-service
+    height: 50px
+    margin: 0 0 28px
+
+  .content__desc-top-service
+    font-size: 14px
+
+  .content__desc-top-service b, .content__desc-top-service p
+    line-height: 20px
+
+  .offers
+    margin: 85px 0 0
+
+  .offers__centred
+    width: 950px
+
+  .offers__list
+    margin: 15px 0 0
+
+  .offers__item-offer
+    margin: 55px 0 0
+    padding: 0 3.5% 0 0
+
+  .offers__icon
+    margin: 0 0 30px
+
+  .offers__icon-circle
+    width: 75px
+    height: 75px
+
+  .offers__title-offer, .offers__title-offer > *
+    font-size: 17px
+    line-height: 22px
+
+  .offers__title-offer
+    margin: 0 0 4px
+
+  .offers__desc-offer
+    font-size: 15px
+    line-height: 21px
+
+  .line-1
+    left: 84px
+
+  .footer__info, .footer__info > *
+    padding: 3px 0
+
+@media only screen and (max-width: 1152px)
+  .header
+    height: 88px
+    padding: 0 38px
+
+  .dashed-lines
+    display: none
+
+  .header__inside-head
+    visibility: hidden
+    opacity: 0
+    transform: translateY(-100px)
+    transition: all .5s ease
+
+  .header__mobile-head
+    position: relative
+    display: block
+
+  .header__centred
+    justify-content: flex-end
+
+  .header__left
+    display: none
+
+  .header__right
+    position: relative
+
+  .header__menu
+    padding: 40px
+    position: absolute
+    right: -18px
+    top: 0
+    width: 300px
+    align-items: flex-end
+    flex-flow: column
+    background: #fff
+    box-shadow: 0 0 20px rgba(0,0,0, .1)
+
+  .header__menu li a:before
+    width: 100%
+    top: inherit !important
+    bottom: -5px
+
+  .header__menu li
+    font-size: 30px
+    padding: 10px 0
+
+  .content:before
+    width: 40.52vw
+    height: 40.52vw
+    right: -15.26vw
+    top: -20vw
+
+  .content__inside-page
+    max-width: 100%
+    margin: 0
+
+  .content__title
+    padding: 152px 0 0
+
+  .content__title h1
+    font-size: 70px
+
+  .content__services
+    margin: 33px 0 69px
+
+  .content__desc-services
+    width: 100%
+    padding: 0 38px
+
+  .content__centred-desc-services
+    width: 540px
+
+  .content__centred-desc-services p
+    margin: 13px 0
+    font-family: $font-semi
+    font-size: 17px
+    line-height: 23px
+
+  .content__top-services
+    margin: 78px 0 0
+    padding: 0
+
+  .content__item-service:nth-child(5n+1)
+    margin-left: 0
+
+  .content__item-service:nth-child(2n+2)
+    margin-left: 0
+    padding: 0 0 0 10%
+
+  .content__item-service
+    width: 50%
+    margin: 0 0 59px
+    padding: 0 10% 0 0
+
+  .content__icon-top-service
+    height: 69px
+    margin: 0 0 31px
+
+  .content__desc-top-service
+    font-size: 17px
+
+  .content__desc-top-service p, .content__desc-top-service b
+    line-height: 23px
+
+  .offers
+    margin: 123px 0 0
+
+  .offers__title
+    font-size: 60px
+
+  .offers__centred
+    width: calc(100% - 96px)
+
+  .offers__list
+    margin: 0
+
+  .offers__item-offer
+    margin: 40px auto 25px
+    padding: 0
+    width: 100%
+    max-width: 600px
+
+  .offers__icon
+    margin: 0 0 37px
+
+  .offers__icon-circle
+    width: 107px
+    height: 107px
+    display: inline-block
+
+  .offers__item-offer:nth-child(2n+2)
+    padding: 0
+
+  .offers__title-offer, .offers__title-offer > *
+    font-size: 20px
+    line-height: 26px
+
+  .footer
+    height: 96px
+
+  .footer__info
+    max-width: calc(100% - 76px)
+
+  .footer__info, .footer__info > *
+    padding: 0
+
+@media only screen and (max-width: 640px)
+  .content__centred-desc-services
+    width: 100%
+
+  .content__item-service:nth-child(2n+2)
+    padding: 0 0 0 7%
+
+  .offers__centred
+    width: 100%
+
+  .footer__info, .footer__info > *
+    padding: 2px 0 0
+
+@media only screen and (max-width: 425px)
+  .header
+    height: 68px
+    padding: 0 20px
+
+  .header__logo-mobile
+    width: 128px
+    height: 31px
+    font-size: 16px
+
+  .header__icon-mobile
+    width: 43px
+    height: 31px
+
+  .header__title-mobile
+    line-height: 15px
+    padding: 1px 0 0 9px
+
+  .open-menu
+    width: 20px
+    height: 17px
+
+  .close-menu
+    width: 18px
+    height: 18px
+
+  .content:before
+    width: 43.52vw
+    height: 43.52vw
+    right: -20.26vw
+    top: -12vw
+
+  .content__title
+    padding: 132px 20px 0
+
+  .content__title h1
+    text-align: left
+
+  .content__services
+    margin: 36px 0 62px
+
+  .content__desc-services
+    padding: 0 20px
+
+  .content__centred-desc-services p
+    font-size: 16px
+    line-height: 22px
+    text-align: left
+
+  .content__top-services
+    margin: 70px 0 0
+
+  .content__item-service
+    width: 100%
+    margin: 0 0 56px
+    padding: 0
+
+  .content__icon-top-service
+    height: 62px
+    margin: 0 0 22px
+
+  .content__desc-top-service
+    font-size: 16px
+    padding: 0 10%
+
+  .content__desc-top-service p
+    line-height: 21px
+
+  .offers
+    margin: 83px 0 0
+
+  .offers__title h2
+    font-size: 45px
+    text-align: left
+
+  .offers__centred
+    width: 100%
+
+  .offers__list
+    margin: 22px 0 0
+
+  .offers__item-offer
+    margin: 40px 0 15px
+    text-align: left
+
+  .offers__icon
+    margin: 0 0 27px
+
+  .offers__icon-circle
+    width: 87px
+    height: 87px
+    display: inline-block
+
+  .offers__title-offer, .offers__title-offer > *
+    font-size: 18px
+    line-height: 24px
+
+  .offers__desc-offer
+    font-size: 16px
+    line-height: 22px
+
+  .footer
+    height: 96px
+
+  .footer__info
+    max-width: 100%
+    font-size: 13px
+    width: 255px
+    line-height: 22px
+
+  .footer__info, .footer__info > *
+    padding: 5px 0 0
+    white-space: normal
+
+  .mobile-space
+    display: block
+    padding-top: 20px
+
+  .header__menu
+    width: 250px
+
+  .header__menu li
+    font-size: 20px
