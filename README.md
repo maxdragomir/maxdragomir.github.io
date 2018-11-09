@@ -15,4 +15,3 @@
 - [**Test (XMLshop)**](https://maxdragomir.github.io/portfolio/xmlshop-test/index.html)
 - [**Spring Admin Panel (XMLshop)**](https://maxdragomir.github.io/portfolio/spring/index.html)
 - [**Vue (my sandbox)**](https://pricecomparer.tk)
-- [**test**](https://maxdragomir.github.io/portfolio/test/index.html)
