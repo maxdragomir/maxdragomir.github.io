@@ -7,11 +7,12 @@
 ### My Works
 - [**Old portfolio**](https://maxdragomir.github.io/portfolio/old/index.html)
 - [**Md Logistic (Searates)**](http://md-logistic.com/)
-- [**Seven Seas Shipping (Searates)**](https://sssusainc.com/)
+-
 - [**Pride Club (Freelance)**](https://maxdragomir.github.io/portfolio/pride-club/index.html)
 - [**Leader Group (Freelance)**](https://maxdragomir.github.io/portfolio/leader-group/index.html)
+-
 - [**Test (Sponge Digital & Design)**](https://maxdragomir.github.io/portfolio/sponge-test/index.html)
 - [**Academy (Sponge Digital & Design)**](https://maxdragomir.github.io/portfolio/academy/index.html)
+-
 - [**Test (XMLshop)**](https://maxdragomir.github.io/portfolio/xmlshop-test/index.html)
 - [**Spring Admin Panel (XMLshop)**](https://maxdragomir.github.io/portfolio/spring/index.html)
-- [**Vue (my sandbox)**](https://pricecomparer.tk)
