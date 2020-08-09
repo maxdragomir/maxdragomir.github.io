@@ -18,8 +18,8 @@
 - [**Test (XMLshop)**](https://maxdragomir.github.io/portfolio/xmlshop-test/index.html)
 - [**Spring Admin Panel (XMLshop)**](https://maxdragomir.github.io/portfolio/spring/index.html)
 ##### DIVISION
-- [**hot bet**]()
-- [**hot btc**]()
+- [**hot bet**](https://maxdragomir.github.io/portfolio/division/hot-bet) - 
+- [**hot btc**]() -
 - [**boomerang**]()
 - [**area**]()
 - [**super-qiwi**]()
