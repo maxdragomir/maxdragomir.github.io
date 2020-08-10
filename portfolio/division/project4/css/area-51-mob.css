@@ -1442,7 +1442,7 @@ dd {
   align-items: flex-end;
   background: url(../img/area/top/stars.jpg) no-repeat;
   background-size: 100% 95%; }
-  .area-screen__main.area-turnOn .area-alien, .area-screen__main.area-turnOn .area-base, .area-screen__main.area-turnOn .area-ship, .area-screen__main.area-turnOn .area-overlay {
+  .area-screen__main.area-turnOn .area-alien, .area-screen__main.area-turnOn .area-base, .area-screen__main.area-turnOn .area-ship {
     -webkit-animation: turnOn 3s ease forwards;
     animation: turnOn 3s ease forwards; }
   .area-screen__main.area-turnOn .area-alien {
@@ -1454,9 +1454,9 @@ dd {
   .area-screen__main.area-turnOn .area-ship {
     -webkit-animation-duration: 5s;
     animation-duration: 5s; }
-  .area-screen__main.area-turnOn .area-overlay {
-    -webkit-animation-duration: 7s;
-    animation-duration: 7s; }
+  /*.area-screen__main.area-turnOn .area-overlay {*/
+  /*  -webkit-animation-duration: 7s;*/
+  /*  animation-duration: 7s; }*/
   .area-screen__main.area-turnOn .area-info__title {
     opacity: 1;
     -webkit-transition: all 5s ease;
@@ -1534,16 +1534,13 @@ dd {
 .area-overlay {
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 0;
   z-index: 4;
   width: 100%;
   height: 101.5%;
-  opacity: 0;
+  opacity: 1;
   overflow: hidden;
-  pointer-events: none;
-  -webkit-transform: scale(1) translateX(-50%);
-  -ms-transform: scale(1) translateX(-50%);
-  transform: scale(1) translateX(-50%); }
+  pointer-events: none; }
   .area-overlay:before {
     content: '';
     width: 100%;
@@ -1551,18 +1548,13 @@ dd {
     top: -5px;
     left: -5px;
     position: absolute;
-    -webkit-filter: brightness(5%);
-    filter: brightness(5%);
     background: -webkit-repeating-linear-gradient(bottom, rgba(255, 255, 255, 0.2), transparent 2px, rgba(255, 255, 255, 0.5) 10px, transparent 10px);
     background: -o-repeating-linear-gradient(bottom, rgba(255, 255, 255, 0.2), transparent 2px, rgba(255, 255, 255, 0.5) 10px, transparent 10px);
     background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.2), transparent 2px, rgba(255, 255, 255, 0.5) 10px, transparent 10px);
-    -webkit-animation: jitter 3s ease-in-out infinite 1s;
-    animation: jitter 3s ease-in-out infinite 1s;
+    /*-webkit-animation: jitter s ease-in-out infinite 1s;*/
+    /*animation: jitter s ease-in-out infinite 1s;*/
     opacity: .1;
-    z-index: 3;
-    -webkit-transform-origin: center center;
-    -ms-transform-origin: center center;
-    transform-origin: center center; }
+    z-index: 3;}
   .area-overlay:after {
     content: '';
     width: 100%;
@@ -1570,16 +1562,11 @@ dd {
     top: -2px;
     left: -2px;
     position: absolute;
-    -webkit-animation: jitter 2s ease-in-out infinite;
-    animation: jitter 2s ease-in-out infinite;
     background: -webkit-repeating-linear-gradient(bottom, rgba(255, 255, 255, 0.2), transparent 2px, rgba(255, 255, 255, 0.5) 10px, transparent 10px);
     background: -o-repeating-linear-gradient(bottom, rgba(255, 255, 255, 0.2), transparent 2px, rgba(255, 255, 255, 0.5) 10px, transparent 10px);
     background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.2), transparent 2px, rgba(255, 255, 255, 0.5) 10px, transparent 10px);
     opacity: .1;
-    z-index: 3;
-    -webkit-transform-origin: center center;
-    -ms-transform-origin: center center;
-    transform-origin: center center; }
+    z-index: 3;}
 
 .area-glitch {
   position: relative;
