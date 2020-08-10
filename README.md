@@ -19,9 +19,9 @@
 - [**Spring Admin Panel**](https://maxdragomir.github.io/portfolio/spring/index.html)
 ##### DIVISION
 - [**Test Assignment**](https://maxdragomir.github.io/portfolio/division/test/index.html)
-- [**Project 1**](https://maxdragomir.github.io/portfolio/division/hot-bet/index.html)
-- [**Project 2**](https://maxdragomir.github.io/portfolio/division/hot-btc/index.html)
-- [**Project 3**](https://maxdragomir.github.io/portfolio/division/boomerang/index.html)
+- [**Project 1**](https://maxdragomir.github.io/portfolio/division/project1/index.html)
+- [**Project 2**](https://maxdragomir.github.io/portfolio/division/project2/index.html)
+- [**Project 3**](https://maxdragomir.github.io/portfolio/division/project3/index.html)
 - [**area**](https://maxdragomir.github.io/portfolio/division/)
 - [**super-qiwi**](https://maxdragomir.github.io/portfolio/division/)
 - [**big-helmet**](https://maxdragomir.github.io/portfolio/division/)
