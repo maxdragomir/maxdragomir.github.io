@@ -20,8 +20,8 @@
 ##### DIVISION
 - [**Test Assignment**](https://maxdragomir.github.io/portfolio/division/test)
 - [**Project 1**](https://maxdragomir.github.io/portfolio/division/hot-bet)
-- [**hot btc**](https://maxdragomir.github.io/portfolio/division/)
-- [**boomerang**](https://maxdragomir.github.io/portfolio/division/)
+- [**Project 2**](https://maxdragomir.github.io/portfolio/division/hot-btc)
+- [**Project 3**](https://maxdragomir.github.io/portfolio/division/boomerang)
 - [**area**](https://maxdragomir.github.io/portfolio/division/)
 - [**super-qiwi**](https://maxdragomir.github.io/portfolio/division/)
 - [**big-helmet**](https://maxdragomir.github.io/portfolio/division/)
