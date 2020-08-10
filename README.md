@@ -1,8 +1,6 @@
 # Front-End Developer
 
-
-## Maxim Dragomiretskiy
-
+## [Maxim Dragomiretskiy](https://github.com/maxdragomir)
 
 ### My Works
 - [**Old portfolio**](https://maxdragomir.github.io/portfolio/old/index.html)
@@ -24,7 +22,7 @@
 - [**Project 3**](https://maxdragomir.github.io/portfolio/division/project3/index.html)
 - [**Project 4**](https://maxdragomir.github.io/portfolio/division/project4/index.html)
 - [**Project 5**](https://maxdragomir.github.io/portfolio/division/project5/index.html)
-- [**big-helmet**](https://maxdragomir.github.io/portfolio/division/)
+- [**Project 6**](https://maxdragomir.github.io/portfolio/division/project6/index.html)
 - [**nyQwest**](https://maxdragomir.github.io/portfolio/division/)
 - [**winterExpress**](https://maxdragomir.github.io/portfolio/division/)
 - [**wgames**](https://maxdragomir.github.io/portfolio/division/)
