@@ -5,7 +5,9 @@
 
 
 ### My Works
+- [**Old portfolio**](https://maxdragomir.github.io/portfolio/old/index.html)
 ##### SeaRates
+- [**Md Logistic**](http://md-logistic.com/)
 ##### Freelance
 - [**Pride Club**](https://maxdragomir.github.io/portfolio/pride-club/index.html)
 - [**Leader Group**](https://maxdragomir.github.io/portfolio/leader-group/index.html)
