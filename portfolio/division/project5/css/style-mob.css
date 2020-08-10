@@ -1,0 +1,3737 @@
+/* IMPORT */
+@import "https://unpkg.com/aos@2.3.1/dist/aos.css";
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic");
+/* END IMPORT */
+/*! Reset */
+/*======================================================================================================================*/
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "MuseoSansCyrl-100";
+  src: url(../fonts/MuseoSansCyrl/MuseoSansCyrl-100.eot);
+  src: url(../fonts/MuseoSansCyrl/MuseoSansCyrl-100.eot?#iefix) format("embedded-opentype"), url(../fonts/MuseoSansCyrl/MuseoSansCyrl-100.svg) format("svg"), url(../fonts/MuseoSansCyrl/MuseoSansCyrl-100.ttf) format("truetype"), url(../fonts/MuseoSansCyrl/MuseoSansCyrl-100.woff) format("woff"), url(../fonts/MuseoSansCyrl/MuseoSansCyrl-100.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "MuseoSansCyrl-300";
+  src: url(../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot);
+  src: url(../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot?#iefix) format("embedded-opentype"), url(../fonts/MuseoSansCyrl/MuseoSansCyrl-300.svg) format("svg"), url(../fonts/MuseoSansCyrl/MuseoSansCyrl-300.ttf) format("truetype"), url(../fonts/MuseoSansCyrl/MuseoSansCyrl-300.woff) format("woff"), url(../fonts/MuseoSansCyrl/MuseoSansCyrl-300.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "MuseoSansCyrl-900";
+  src: url(../fonts/MuseoSansCyrl/MuseoSansCyrl-900.eot);
+  src: url(../fonts/MuseoSansCyrl/MuseoSansCyrl-900.eot?#iefix) format("embedded-opentype"), url(../fonts/MuseoSansCyrl/MuseoSansCyrl-900.svg) format("svg"), url(../fonts/MuseoSansCyrl/MuseoSansCyrl-900.ttf) format("truetype"), url(../fonts/MuseoSansCyrl/MuseoSansCyrl-900.woff) format("woff"), url(../fonts/MuseoSansCyrl/MuseoSansCyrl-900.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+/* END IMPORT */
+/* ANIMATION */
+@-webkit-keyframes fillActive {
+  0% {
+    opacity: 0.2;
+    -webkit-transform: translate(-50%, -50%) scale(1.1, 1.3);
+    transform: translate(-50%, -50%) scale(1.1, 1.3); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1); } }
+@keyframes fillActive {
+  0% {
+    opacity: 0.2;
+    -webkit-transform: translate(-50%, -50%) scale(1.1, 1.3);
+    transform: translate(-50%, -50%) scale(1.1, 1.3); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1); } }
+
+@-webkit-keyframes fill {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(1.1, 1.3);
+    transform: translate(-50%, -50%) scale(1.1, 1.3); } }
+
+@keyframes fill {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(1.1, 1.3);
+    transform: translate(-50%, -50%) scale(1.1, 1.3); } }
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: .8; } }
+
+@keyframes opacity {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: .8; } }
+
+@-webkit-keyframes opacityActive {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: .8; } }
+
+@keyframes opacityActive {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: .8; } }
+
+@-webkit-keyframes light {
+  20%, 100% {
+    width: 50%;
+    opacity: 0;
+    -webkit-transform: translateX(150%) skew(-20deg);
+    transform: translateX(150%) skew(-20deg); } }
+
+@keyframes light {
+  20%, 100% {
+    width: 50%;
+    opacity: 0;
+    -webkit-transform: translateX(150%) skew(-20deg);
+    transform: translateX(150%) skew(-20deg); } }
+
+@-webkit-keyframes iphone {
+  0% {
+    -webkit-transform: translate3d(0px, -377px, 0);
+    transform: translate3d(0px, -377px, 0);
+    z-index: 0;
+    opacity: 0; }
+  25% {
+    -webkit-transform: translate3d(-185px, -377px, 0);
+    transform: translate3d(-185px, -377px, 0);
+    z-index: 0;
+    opacity: 1; }
+  70% {
+    z-index: 1; }
+  100% {
+    -webkit-transform: translate3d(-85px, -377px, 0);
+    transform: translate3d(-85px, -377px, 0);
+    z-index: 1;
+    opacity: 1; } }
+
+@keyframes iphone {
+  0% {
+    -webkit-transform: translate3d(0px, -377px, 0);
+    transform: translate3d(0px, -377px, 0);
+    z-index: 0;
+    opacity: 0; }
+  25% {
+    -webkit-transform: translate3d(-185px, -377px, 0);
+    transform: translate3d(-185px, -377px, 0);
+    z-index: 0;
+    opacity: 1; }
+  70% {
+    z-index: 1; }
+  100% {
+    -webkit-transform: translate3d(-85px, -377px, 0);
+    transform: translate3d(-85px, -377px, 0);
+    z-index: 1;
+    opacity: 1; } }
+
+@-webkit-keyframes move-forever {
+  from {
+    -webkit-transform: translate3d(-90px, 0, 0);
+    transform: translate3d(-90px, 0, 0); }
+  to {
+    -webkit-transform: translate3d(85px, 0, 0);
+    transform: translate3d(85px, 0, 0); } }
+
+@keyframes move-forever {
+  from {
+    -webkit-transform: translate3d(-90px, 0, 0);
+    transform: translate3d(-90px, 0, 0); }
+  to {
+    -webkit-transform: translate3d(85px, 0, 0);
+    transform: translate3d(85px, 0, 0); } }
+
+@-webkit-keyframes tabs {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes tabs {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+/* END ANIMATION */
+/* DEFAULT STYLES */
+.super_qiwi * {
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.super_qiwi a {
+  text-decoration: none;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  will-change: transform;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease; }
+  .super_qiwi a:active {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease; }
+
+.super_qiwi .breadcrumbs {
+  font-style: normal;
+  z-index: 1100; }
+  .super_qiwi .breadcrumbs a {
+    color: #000; }
+
+.super_qiwi ol.breadcrumbs li:not(:last-child):after,
+.super_qiwi ol.breadcrumbs li {
+  font-size: 16px;
+  color: #000; }
+
+.super_qiwi-addition {
+  position: fixed;
+  left: 0;
+  bottom: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  z-index: 999;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .super_qiwi-addition__btn {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    min-width: 40px;
+    height: 40px;
+    font-weight: 900;
+    font-size: 22px;
+    background: #fff;
+    color: #1e1e32;
+    border: 2px solid #fff;
+    outline: none;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    will-change: transform;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .super_qiwi-addition__btn span {
+      display: block; }
+    .super_qiwi-addition__btn:last-child {
+      margin-bottom: 0; }
+    .super_qiwi-addition__btn:hover {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #ff8c00), color-stop(90%, #ff6200));
+      background: -webkit-linear-gradient(top, #ff8c00 30%, #ff6200 90%);
+      background: -o-linear-gradient(top, #ff8c00 30%, #ff6200 90%);
+      background: linear-gradient(to bottom, #ff8c00 30%, #ff6200 90%);
+      color: #fff;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    .super_qiwi-addition__btn:active {
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
+      -webkit-transition: all 0.1s ease;
+      -o-transition: all 0.1s ease;
+      transition: all 0.1s ease; }
+
+.super_qiwi-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #000;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff6300), to(#ff8b00));
+  background: -webkit-linear-gradient(bottom, #ff6300 0%, #ff8b00 100%);
+  background: -o-linear-gradient(bottom, #ff6300 0%, #ff8b00 100%);
+  background: linear-gradient(to top, #ff6300 0%, #ff8b00 100%);
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-smooth: antialiased; }
+
+.super_qiwi-inner__box {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-box-shadow: 5px 5px 100px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 100px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background-size: auto;
+  z-index: 1;
+  background: #fff; }
+
+/* END DEFAULT STYLES */
+/* MAIN STYLES */
+.super_qiwi-screen {
+  position: relative;
+  font-weight: 400;
+  z-index: 2; }
+
+.super_qiwi-container {
+  position: relative;
+  width: 1300px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  z-index: 1; }
+  .super_qiwi-container__big {
+    width: 100%; }
+  .super_qiwi-container__small {
+    width: 900px;
+    padding: 0 20px;
+    margin: 0 auto; }
+
+.super_qiwi-title {
+  position: relative;
+  font-size: 60px;
+  text-align: center;
+  text-transform: initial;
+  font-family: "MuseoSansCyrl-900", sans-serif;
+  color: #000;
+  font-weight: 900; }
+
+.super_qiwi-logo {
+  position: relative;
+  top: 90px;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 1708px;
+  height: 620px;
+  -webkit-transform: translateX(-52%) scale(1);
+  -ms-transform: translateX(-52%) scale(1);
+  transform: translateX(-52%) scale(1); }
+  .super_qiwi-logo.animate .super_qiwi-logo__q {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: all 1s cubic-bezier(0.3, 1.3, 0.3, 1) 0.2s;
+    -o-transition: all 1s cubic-bezier(0.3, 1.3, 0.3, 1) 0.2s;
+    transition: all 1s cubic-bezier(0.3, 1.3, 0.3, 1) 0.2s;
+    pointer-events: none; }
+    .super_qiwi-logo.animate .super_qiwi-logo__q_prize {
+      position: relative;
+      -webkit-transform: translate3d(-55px, 10px, 0);
+      transform: translate3d(-55px, 10px, 0);
+      opacity: 1;
+      -webkit-transition: all 1.5s ease 1.6s;
+      -o-transition: all 1.5s ease 1.6s;
+      transition: all 1.5s ease 1.6s; }
+  .super_qiwi-logo.animate .super_qiwi-logo__i {
+    -webkit-transform: translate3d(-45px, 0, 0);
+    transform: translate3d(-45px, 0, 0);
+    -webkit-transition: all 1s cubic-bezier(0.3, 1.3, 0.3, 1) 0.4s;
+    -o-transition: all 1s cubic-bezier(0.3, 1.3, 0.3, 1) 0.4s;
+    transition: all 1s cubic-bezier(0.3, 1.3, 0.3, 1) 0.4s;
+    pointer-events: none; }
+  .super_qiwi-logo.animate .super_qiwi-logo__w {
+    -webkit-transform: translate3d(-96px, 0, 0);
+    transform: translate3d(-96px, 0, 0);
+    -webkit-transition: all 1s cubic-bezier(0.3, 1.3, 0.3, 1) 0.6s;
+    -o-transition: all 1s cubic-bezier(0.3, 1.3, 0.3, 1) 0.6s;
+    transition: all 1s cubic-bezier(0.3, 1.3, 0.3, 1) 0.6s;
+    pointer-events: none; }
+    .super_qiwi-logo.animate .super_qiwi-logo__w_prize {
+      -webkit-transform: translate3d(-340px, 70px, 0) rotate(0);
+      transform: translate3d(-340px, 70px, 0) rotate(0);
+      opacity: 1;
+      -webkit-transition: all 1.5s ease 1.8s;
+      -o-transition: all 1.5s ease 1.8s;
+      transition: all 1.5s ease 1.8s; }
+  .super_qiwi-logo.animate .super_qiwi-logo__iLast {
+    -webkit-transform: translate3d(-151px, 0, 0);
+    transform: translate3d(-151px, 0, 0);
+    -webkit-transition: all 1s cubic-bezier(0.3, 1.3, 0.3, 1) 0.8s;
+    -o-transition: all 1s cubic-bezier(0.3, 1.3, 0.3, 1) 0.8s;
+    transition: all 1s cubic-bezier(0.3, 1.3, 0.3, 1) 0.8s;
+    pointer-events: none; }
+    .super_qiwi-logo.animate .super_qiwi-logo__iLast_prize {
+      -webkit-animation: iphone 1.5s ease 2s forwards;
+      animation: iphone 1.5s ease 2s forwards; }
+  .super_qiwi-logo__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .super_qiwi-logo__q {
+    position: relative;
+    -webkit-transform: translate3d(-1000%, 0, 0);
+    transform: translate3d(-1000%, 0, 0);
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease; }
+    .super_qiwi-logo__q > img {
+      position: relative;
+      z-index: 0; }
+    .super_qiwi-logo__q_part {
+      position: relative;
+      -webkit-transform: translate3d(73px, 63px, 0);
+      transform: translate3d(73px, 63px, 0);
+      z-index: 1; }
+    .super_qiwi-logo__q_prize {
+      position: relative;
+      -webkit-transform: translate3d(-155px, -30px, 0);
+      transform: translate3d(-155px, -30px, 0);
+      z-index: 0;
+      opacity: 0;
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease; }
+  .super_qiwi-logo__i {
+    position: relative;
+    -webkit-transform: translate3d(-1000%, 0, 0);
+    transform: translate3d(-1000%, 0, 0);
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease; }
+  .super_qiwi-logo__w {
+    position: relative;
+    -webkit-transform: translate3d(-1000%, 0, 0);
+    transform: translate3d(-1000%, 0, 0);
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease; }
+    .super_qiwi-logo__w > img {
+      position: relative;
+      z-index: 0; }
+    .super_qiwi-logo__w_part {
+      position: relative;
+      -webkit-transform: translate3d(259px, 45px, 0);
+      transform: translate3d(259px, 45px, 0);
+      z-index: 1; }
+    .super_qiwi-logo__w_prize {
+      position: relative;
+      -webkit-transform: translate3d(-340px, 70px, 0) rotate(50deg);
+      transform: translate3d(-340px, 70px, 0) rotate(50deg);
+      -webkit-transform-origin: right;
+      -ms-transform-origin: right;
+      transform-origin: right;
+      z-index: 0;
+      opacity: 0;
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease; }
+  .super_qiwi-logo__iLast {
+    position: relative;
+    -webkit-transform: translate3d(-1200%, 0, 0);
+    transform: translate3d(-1200%, 0, 0);
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease; }
+    .super_qiwi-logo__iLast > img {
+      position: relative;
+      z-index: 0; }
+    .super_qiwi-logo__iLast_part {
+      position: relative;
+      -webkit-transform: translate3d(74px, 45px, 0);
+      transform: translate3d(74px, 45px, 0);
+      z-index: 1; }
+    .super_qiwi-logo__iLast_prize {
+      position: relative;
+      -webkit-transform: translate3d(-85px, -377px, 0);
+      transform: translate3d(-85px, -377px, 0);
+      z-index: 0;
+      opacity: 0;
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease; }
+
+.super_qiwi-wave__bottom {
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 170px;
+  background: transparent;
+  z-index: 0;
+  -webkit-transform: translate3d(0, 0, 0) scaleY(-1);
+  transform: translate3d(0, 0, 0) scaleY(-1); }
+
+.super_qiwi-wave__top {
+  position: absolute;
+  top: -120px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 170px;
+  background: transparent;
+  z-index: 0; }
+  .super_qiwi-wave__top .super_qiwi-effect > use {
+    animation-direction: reverse; }
+
+.super_qiwi-effect > use {
+  fill: #f7f7f7;
+  -webkit-animation: move-forever 5s linear infinite;
+  animation: move-forever 5s linear infinite; }
+
+.super_qiwi-screen__main {
+  position: relative;
+  width: 100%;
+  min-height: 855px;
+  z-index: 2; }
+  .super_qiwi-screen__main:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: #f7f7f7;
+    -webkit-transform: translate3d(-50%, -55%, 0);
+    transform: translate3d(-50%, -55%, 0);
+    z-index: -1; }
+
+.super_qiwi-info {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 100px;
+  z-index: 1;
+  color: #000;
+  text-transform: uppercase; }
+  .super_qiwi-info__subtitle {
+    font-family: "MuseoSansCyrl-300", sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-top: -40px;
+    font-weight: 300; }
+  .super_qiwi-info__action {
+    margin: 40px auto 0; }
+
+.super_qiwi-btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  color: #fff;
+  background: #98c60d;
+  border-radius: 50px;
+  font-size: 24px;
+  text-transform: initial;
+  font-family: "MuseoSansCyrl-300", sans-serif;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
+  -webkit-box-shadow: 10px 10px 20px 3px rgba(80, 143, 7, 0.2);
+  box-shadow: 10px 10px 20px 3px rgba(80, 143, 7, 0.2);
+  z-index: 2; }
+  .super_qiwi-btn__inner {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 50px;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    z-index: 1; }
+    .super_qiwi-btn__inner > span {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 23px 50px;
+      z-index: 1; }
+    .super_qiwi-btn__inner:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      -webkit-transform: translateX(-100%) skew(0deg);
+      -ms-transform: translateX(-100%) skew(0deg);
+      transform: translateX(-100%) skew(0deg);
+      width: 100%;
+      height: 100%;
+      background-color: #b2e30d;
+      border: 1px solid transparent;
+      z-index: 0;
+      opacity: 1;
+      -webkit-animation: light 3s ease infinite 1s;
+      animation: light 3s ease infinite 1s; }
+  .super_qiwi-btn:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: -webkit-gradient(linear, left top, right top, from(#98c60d), to(#688e3e));
+    background: -webkit-linear-gradient(left, #98c60d 0%, #688e3e 100%);
+    background: -o-linear-gradient(left, #98c60d 0%, #688e3e 100%);
+    background: linear-gradient(to right, #98c60d 0%, #688e3e 100%);
+    z-index: 1;
+    border-radius: 50px;
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+  .super_qiwi-btn:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    -ms-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    width: 100%;
+    height: 100%;
+    background: #98c60d;
+    border-radius: 50px;
+    z-index: -1;
+    opacity: .5;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    -webkit-animation: fillActive .6s linear forwards;
+    animation: fillActive .6s linear forwards;
+    pointer-events: none; }
+  .super_qiwi-btn:hover {
+    -webkit-box-shadow: 10px 10px 20px 0 rgba(80, 143, 7, 0.2);
+    box-shadow: 10px 10px 20px 0 rgba(80, 143, 7, 0.2);
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease; }
+    .super_qiwi-btn:hover:before {
+      -webkit-animation: opacity .6s ease infinite forwards;
+      animation: opacity .6s ease infinite forwards; }
+    .super_qiwi-btn:hover:after {
+      -webkit-animation: fill .6s ease infinite forwards;
+      animation: fill .6s ease infinite forwards; }
+  .super_qiwi-btn:active {
+    -webkit-box-shadow: 5px 5px 10px 0 rgba(80, 143, 7, 0.2);
+    box-shadow: 5px 5px 10px 0 rgba(80, 143, 7, 0.2);
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease; }
+    .super_qiwi-btn:active:before {
+      -webkit-animation: opacityActive .6s linear forwards;
+      animation: opacityActive .6s linear forwards; }
+    .super_qiwi-btn:active:after {
+      -webkit-animation: fillActive .6s linear forwards;
+      animation: fillActive .6s linear forwards; }
+
+.super_qiwi-btn__rules {
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 100px;
+  margin: 15px auto 0;
+  text-transform: initial;
+  will-change: transform; }
+  .super_qiwi-btn__rules span {
+    position: relative;
+    display: inline-block;
+    font-weight: 900; }
+    .super_qiwi-btn__rules span:after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #000;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+      -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+      transform-origin: center;
+      opacity: 1;
+      z-index: 0;
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease; }
+  .super_qiwi-btn__rules:hover span:after {
+    opacity: 0;
+    -webkit-transform: scale(0, 2);
+    -ms-transform: scale(0, 2);
+    transform: scale(0, 2);
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease; }
+
+.super_qiwi-wrap__top {
+  position: absolute;
+  top: -50px;
+  right: 50px;
+  z-index: 5; }
+
+.super_qiwi-btn__top {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  color: #fff;
+  background: #ff8c00;
+  border-radius: 50px;
+  font-size: 20px;
+  text-transform: initial;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
+  font-family: "MuseoSansCyrl-300", sans-serif;
+  -webkit-box-shadow: 10px 10px 20px 3px rgba(255, 140, 0, 0.2);
+  box-shadow: 10px 10px 20px 3px rgba(255, 140, 0, 0.2);
+  z-index: 2;
+  overflow: hidden; }
+  .super_qiwi-btn__top span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 17px 46px;
+    z-index: 1; }
+  .super_qiwi-btn__top:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: -webkit-gradient(linear, right top, left top, from(#ff8c00), color-stop(80%, #ff6200));
+    background: -webkit-linear-gradient(right, #ff8c00 0%, #ff6200 80%);
+    background: -o-linear-gradient(right, #ff8c00 0%, #ff6200 80%);
+    background: linear-gradient(to left, #ff8c00 0%, #ff6200 80%);
+    z-index: 1;
+    border-radius: 50px;
+    opacity: 1;
+    -webkit-transform: translate3d(-50%, -50%, 0) scale(1);
+    transform: translate3d(-50%, -50%, 0) scale(1);
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+  .super_qiwi-btn__top:hover {
+    -webkit-box-shadow: 10px 10px 20px 0 rgba(255, 140, 0, 0.2);
+    box-shadow: 10px 10px 20px 0 rgba(255, 140, 0, 0.2);
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease; }
+    .super_qiwi-btn__top:hover:before {
+      -webkit-transform: translate3d(-200%, -50%, 0) scale(1);
+      transform: translate3d(-200%, -50%, 0) scale(1);
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease; }
+
+.super_qiwi-screen__timer {
+  position: relative;
+  margin-top: 150px; }
+
+.super_qiwi-countdown {
+  width: 475px;
+  margin: 0 auto; }
+  .super_qiwi-countdown__title {
+    text-align: center;
+    font-size: 20px;
+    font-family: "MuseoSansCyrl-300", sans-serif; }
+  .super_qiwi-countdown__list {
+    position: relative;
+    list-style: none;
+    margin: 20px auto 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    line-height: 1; }
+    .super_qiwi-countdown__list li {
+      position: relative;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+      font-size: 70px;
+      font-weight: 900;
+      font-family: "MuseoSansCyrl-900", sans-serif;
+      text-align: center; }
+      .super_qiwi-countdown__list li b {
+        color: #6c923a;
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(20%, #6c923a), color-stop(90%, #98c60d));
+        background: -webkit-linear-gradient(bottom, #6c923a 20%, #98c60d 90%);
+        background: -o-linear-gradient(bottom, #6c923a 20%, #98c60d 90%);
+        background: linear-gradient(to top, #6c923a 20%, #98c60d 90%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900; }
+      .super_qiwi-countdown__list li span {
+        display: block;
+        margin-top: 10px;
+        text-transform: capitalize;
+        font-size: 16px;
+        color: #000;
+        font-family: "MuseoSansCyrl-900", sans-serif; }
+      .super_qiwi-countdown__list li + li:before {
+        content: ':';
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        color: #ebebeb; }
+
+.super_qiwi-screen__steps {
+  position: relative;
+  margin-top: 150px; }
+  .super_qiwi-screen__steps:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 583px;
+    height: 602px;
+    background: url(../img/bg/bg-qiwi.png) no-repeat;
+    background-size: 100%;
+    -webkit-transform: translate3d(-25%, -40%, 0);
+    transform: translate3d(-25%, -40%, 0);
+    z-index: -1;
+    pointer-events: none; }
+  .super_qiwi-screen__steps:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 516px;
+    height: 1045px;
+    background: url(../img/bg/bg-iphone.png) no-repeat;
+    background-size: 100%;
+    -webkit-transform: translate3d(40%, -25%, 0);
+    transform: translate3d(40%, -25%, 0);
+    z-index: -1;
+    pointer-events: none; }
+
+.super_qiwi-title__steps {
+  position: relative;
+  font-size: 60px;
+  font-weight: 100;
+  text-align: right;
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
+  z-index: 2; }
+  .super_qiwi-title__steps span {
+    display: block; }
+
+.super_qiwi-steps {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 250px 0 0; }
+
+.super_qiwi-step__wrap {
+  position: relative;
+  width: auto; }
+  .super_qiwi-step__wrap:first-child .super_qiwi-step__img:after {
+    display: none; }
+
+.super_qiwi-step {
+  position: relative;
+  display: block;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  text-align: center; }
+  .super_qiwi-step__img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, -75%);
+    -ms-transform: translate(-50%, -75%);
+    transform: translate(-50%, -75%); }
+    .super_qiwi-step__img:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -30%;
+      width: 78px;
+      height: 31px;
+      background: url(../img/steps/arrow.png) no-repeat;
+      background-size: 100%;
+      -webkit-transform: translate3d(0%, -50%, 0);
+      transform: translate3d(0%, -50%, 0);
+      pointer-events: none; }
+  .super_qiwi-step__text {
+    position: relative;
+    display: block;
+    font-family: "MuseoSansCyrl-300", sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    z-index: 1;
+    color: #000; }
+    .super_qiwi-step__text_underline {
+      position: relative; }
+      .super_qiwi-step__text_underline span {
+        position: relative;
+        display: inline-block !important; }
+        .super_qiwi-step__text_underline span:after {
+          content: '';
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: #000;
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          -webkit-transform-origin: center;
+          -ms-transform-origin: center;
+          transform-origin: center;
+          opacity: 1;
+          z-index: 0;
+          -webkit-transition: all .5s ease;
+          -o-transition: all .5s ease;
+          transition: all .5s ease; }
+    .super_qiwi-step__text_big {
+      font-family: "MuseoSansCyrl-900", sans-serif;
+      font-size: 20px;
+      margin-bottom: 5px; }
+    .super_qiwi-step__text span {
+      display: block;
+      font-weight: 900; }
+  .super_qiwi-step:hover .super_qiwi-step__text_underline span:after {
+    opacity: 0;
+    -webkit-transform: scale(0, 2);
+    -ms-transform: scale(0, 2);
+    transform: scale(0, 2);
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease; }
+
+.super_qiwi-screen__prizes {
+  position: relative;
+  margin-top: 130px;
+  padding-bottom: 50px; }
+  .super_qiwi-screen__prizes:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 583px;
+    height: 602px;
+    background: url(../img/bg/bg-gamepad.png) no-repeat;
+    background-size: 100%;
+    -webkit-transform: translate3d(-65%, 40%, 0);
+    transform: translate3d(-65%, 40%, 0);
+    z-index: 1;
+    pointer-events: none; }
+  .super_qiwi-screen__prizes:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 90%;
+    background: #f7f7f7;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    z-index: -1;
+    pointer-events: none; }
+  .super_qiwi-screen__prizes .super_qiwi-container {
+    padding: 0; }
+
+.super_qiwi-prizes {
+  position: relative;
+  z-index: 1; }
+  .super_qiwi-prizes__title {
+    padding-top: 70px; }
+  .super_qiwi-prizes__nav {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 50px 0 0; }
+    .super_qiwi-prizes__nav_period > span {
+      display: block;
+      margin-top: 15px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 900;
+      font-family: "MuseoSansCyrl-900", sans-serif; }
+    .super_qiwi-prizes__nav_button {
+      display: block;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      font-size: 20px;
+      background: #e6e6e6;
+      color: #000;
+      overflow: hidden;
+      will-change: transform;
+      border-radius: 50px; }
+      .super_qiwi-prizes__nav_button span {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 17px 95px;
+        font-family: "MuseoSansCyrl-300", sans-serif;
+        margin: 0;
+        z-index: 1; }
+      .super_qiwi-prizes__nav_button:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        background: -webkit-gradient(linear, right top, left top, from(#ff8c00), color-stop(80%, #ff6200));
+        background: -webkit-linear-gradient(right, #ff8c00 0%, #ff6200 80%);
+        background: -o-linear-gradient(right, #ff8c00 0%, #ff6200 80%);
+        background: linear-gradient(to left, #ff8c00 0%, #ff6200 80%);
+        z-index: 0;
+        border-radius: 0 50px 50px 0;
+        will-change: transform;
+        opacity: 0;
+        -webkit-transform: translate3d(0%, -50%, 0) scaleX(0);
+        transform: translate3d(0%, -50%, 0) scaleX(0);
+        -webkit-transform-origin: left;
+        -ms-transform-origin: left;
+        transform-origin: left;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease; }
+      .super_qiwi-prizes__nav_button:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        background: -webkit-gradient(linear, right top, left top, from(#ff8c00), color-stop(80%, #ff6200));
+        background: -webkit-linear-gradient(right, #ff8c00 0%, #ff6200 80%);
+        background: -o-linear-gradient(right, #ff8c00 0%, #ff6200 80%);
+        background: linear-gradient(to left, #ff8c00 0%, #ff6200 80%);
+        z-index: 0;
+        border-radius: 50px 0 0 50px;
+        will-change: transform;
+        opacity: 0;
+        -webkit-transform: translate3d(0%, -50%, 0) scaleX(0);
+        transform: translate3d(0%, -50%, 0) scaleX(0);
+        -webkit-transform-origin: right;
+        -ms-transform-origin: right;
+        transform-origin: right;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease; }
+      .super_qiwi-prizes__nav_button:hover {
+        color: #fff;
+        background: rgba(0, 0, 0, 0);
+        -webkit-box-shadow: 10px 10px 20px 0 rgba(255, 140, 0, 0.2);
+        box-shadow: 10px 10px 20px 0 rgba(255, 140, 0, 0.2);
+        -webkit-transition: background .5s ease, color .5s ease, -webkit-box-shadow .5s ease .3s, -webkit-transform .5s ease;
+        transition: background .5s ease, color .5s ease, -webkit-box-shadow .5s ease .3s, -webkit-transform .5s ease;
+        -o-transition: background .5s ease, color .5s ease, box-shadow .5s ease .3s, transform .5s ease;
+        transition: background .5s ease, color .5s ease, box-shadow .5s ease .3s, transform .5s ease;
+        transition: background .5s ease, color .5s ease, box-shadow .5s ease .3s, transform .5s ease, -webkit-box-shadow .5s ease .3s, -webkit-transform .5s ease; }
+        .super_qiwi-prizes__nav_button:hover:after {
+          opacity: 1;
+          -webkit-transform: translate3d(0%, -50%, 0) scaleX(1);
+          transform: translate3d(0%, -50%, 0) scaleX(1);
+          -webkit-transition: all .5s ease;
+          -o-transition: all .5s ease;
+          transition: all .5s ease; }
+        .super_qiwi-prizes__nav_button:hover:before {
+          opacity: 1;
+          -webkit-transform: translate3d(0%, -50%, 0) scaleX(1);
+          transform: translate3d(0%, -50%, 0) scaleX(1);
+          -webkit-transition: all .5s ease;
+          -o-transition: all .5s ease;
+          transition: all .5s ease; }
+      .super_qiwi-prizes__nav_button.is-active {
+        color: #fff;
+        background: rgba(0, 0, 0, 0);
+        -webkit-box-shadow: 10px 10px 20px 0 rgba(255, 140, 0, 0.2);
+        box-shadow: 10px 10px 20px 0 rgba(255, 140, 0, 0.2);
+        -webkit-transition: background .5s ease, color .5s ease, -webkit-box-shadow .5s ease .3s, -webkit-transform .5s ease;
+        transition: background .5s ease, color .5s ease, -webkit-box-shadow .5s ease .3s, -webkit-transform .5s ease;
+        -o-transition: background .5s ease, color .5s ease, box-shadow .5s ease .3s, transform .5s ease;
+        transition: background .5s ease, color .5s ease, box-shadow .5s ease .3s, transform .5s ease;
+        transition: background .5s ease, color .5s ease, box-shadow .5s ease .3s, transform .5s ease, -webkit-box-shadow .5s ease .3s, -webkit-transform .5s ease; }
+        .super_qiwi-prizes__nav_button.is-active:after {
+          opacity: 1;
+          -webkit-transform: translate3d(0%, -50%, 0) scaleX(1);
+          transform: translate3d(0%, -50%, 0) scaleX(1);
+          -webkit-transition: all .5s ease;
+          -o-transition: all .5s ease;
+          transition: all .5s ease; }
+        .super_qiwi-prizes__nav_button.is-active:before {
+          opacity: 1;
+          -webkit-transform: translate3d(0%, -50%, 0) scaleX(1);
+          transform: translate3d(0%, -50%, 0) scaleX(1);
+          -webkit-transition: all .5s ease;
+          -o-transition: all .5s ease;
+          transition: all .5s ease; }
+  .super_qiwi-prizes__tabs {
+    position: relative;
+    border-top: 1px solid #e6e6e6;
+    margin: 30px 0 0;
+    padding: 30px 0 0;
+    text-align: center; }
+  .super_qiwi-prizes__tab {
+    display: none;
+    -webkit-animation: tabs 1s ease;
+    animation: tabs 1s ease; }
+    .super_qiwi-prizes__tab_title {
+      text-align: center;
+      font-size: 40px;
+      font-family: "MuseoSansCyrl-900", sans-serif;
+      font-weight: 900; }
+  .super_qiwi-prizes__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .super_qiwi-prizes__inner .super_qiwi-countdown {
+      margin: 80px 0 30px; }
+  .super_qiwi-prizes__prize {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 300px 0 0; }
+    .super_qiwi-prizes__prize:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 1px;
+      height: 90%;
+      background: #e6e6e6; }
+    .super_qiwi-prizes__prize_img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -60%);
+      -ms-transform: translate(-50%, -60%);
+      transform: translate(-50%, -60%); }
+    .super_qiwi-prizes__prize_text {
+      text-align: center;
+      font-family: "MuseoSansCyrl-900", sans-serif;
+      font-size: 18px;
+      font-weight: 900; }
+      .super_qiwi-prizes__prize_text span {
+        display: block; }
+    .super_qiwi-prizes__prize_big {
+      font-size: 30px;
+      font-family: "MuseoSansCyrl-300", sans-serif;
+      margin-bottom: 15px; }
+  .super_qiwi-prizes__bonus {
+    width: 440px;
+    padding-left: 20px; }
+    .super_qiwi-prizes__bonus_title {
+      position: relative;
+      text-align: center;
+      font-size: 30px;
+      font-family: "MuseoSansCyrl-300", sans-serif;
+      margin-top: 50px; }
+      .super_qiwi-prizes__bonus_title img {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0); }
+    .super_qiwi-prizes__bonus_block {
+      font-size: 16px;
+      margin-top: 50px; }
+    .super_qiwi-prizes__bonus_row {
+      margin-bottom: 15px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .super_qiwi-prizes__bonus_row:last-child {
+        margin-bottom: 0; }
+      .super_qiwi-prizes__bonus_row span {
+        display: block;
+        text-align: left;
+        font-family: "MuseoSansCyrl-300", sans-serif;
+        width: 225px; }
+      .super_qiwi-prizes__bonus_row b {
+        display: block;
+        text-align: left;
+        font-family: "MuseoSansCyrl-900", sans-serif;
+        font-weight: 900;
+        width: 150px; }
+
+.super_qiwi-btn__prize {
+  margin: 70px auto 50px; }
+  .super_qiwi-btn__prize .super_qiwi-btn__inner span {
+    padding: 22px 33px; }
+
+.super_qiwi-screen__info {
+  position: relative;
+  margin-top: 150px; }
+  .super_qiwi-screen__info:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 386px;
+    height: 361px;
+    background: url(../img/bg/bg-scooter.png) no-repeat;
+    background-size: 100%;
+    -webkit-transform: translate3d(-10%, 60%, 0);
+    transform: translate3d(-10%, 60%, 0);
+    z-index: 1;
+    pointer-events: none; }
+  .super_qiwi-screen__info .super_qiwi-container {
+    padding: 0; }
+
+.super_qiwi-info__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .super_qiwi-info__block_title {
+    font-size: 46px;
+    text-align: left; }
+
+.super_qiwi-how {
+  position: relative; }
+  .super_qiwi-how ul {
+    list-style: none;
+    padding: 0;
+    margin: 90px 0 0;
+    text-align: left; }
+    .super_qiwi-how ul li {
+      font-size: 18px;
+      font-family: "MuseoSansCyrl-300", sans-serif;
+      margin-bottom: 25px;
+      line-height: 2; }
+      .super_qiwi-how ul li span {
+        margin-right: 10px; }
+
+.super_qiwi-summ {
+  position: relative;
+  width: 640px; }
+  .super_qiwi-summ__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .super_qiwi-summ ul {
+    list-style: none;
+    padding: 0;
+    margin: 50px 0 0;
+    text-align: left; }
+    .super_qiwi-summ ul:first-child li b {
+      width: 145px; }
+    .super_qiwi-summ ul:last-child li b {
+      width: 190px; }
+    .super_qiwi-summ ul li {
+      font-size: 18px;
+      font-family: "MuseoSansCyrl-300", sans-serif;
+      margin-bottom: 20px; }
+      .super_qiwi-summ ul li b {
+        display: inline-block;
+        font-family: "MuseoSansCyrl-900", sans-serif;
+        font-weight: 900; }
+      .super_qiwi-summ ul li span {
+        display: inline-block;
+        width: auto; }
+
+.super_qiwi-btn__wrap {
+  position: relative;
+  text-align: center;
+  z-index: 3;
+  margin: 100px 0; }
+
+.super_qiwi-modal {
+  position: relative;
+  margin: 0 auto;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #fff;
+  background-size: 100% 100%; }
+  .super_qiwi-modal * {
+    outline: none; }
+  .super_qiwi-modal a, .super_qiwi-modal button {
+    text-decoration: none;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease; }
+    .super_qiwi-modal a:active, .super_qiwi-modal button:active {
+      -webkit-transform: scale(0.97);
+      -ms-transform: scale(0.97);
+      transform: scale(0.97);
+      -webkit-transition: all .2s ease;
+      -o-transition: all .2s ease;
+      transition: all .2s ease; }
+  .super_qiwi-modal__body {
+    position: relative;
+    width: 100%;
+    z-index: 2; }
+  .super_qiwi-modal__close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 50%;
+    right: -20px;
+    top: -20px;
+    background: -webkit-gradient(linear, left bottom, left top, from(#ff8c00), to(#ff6200));
+    background: -webkit-linear-gradient(bottom, #ff8c00 0%, #ff6200 100%);
+    background: -o-linear-gradient(bottom, #ff8c00 0%, #ff6200 100%);
+    background: linear-gradient(to top, #ff8c00 0%, #ff6200 100%);
+    cursor: pointer;
+    z-index: 1;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: scale(1) rotate(0);
+    -ms-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+    -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease; }
+    .super_qiwi-modal__close:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: url(../img/modal/close.png) center no-repeat;
+      -webkit-background-size: 40%;
+      background-size: 40%; }
+    .super_qiwi-modal__close:hover {
+      -webkit-transform: scale(1) rotate(90deg);
+      -ms-transform: scale(1) rotate(90deg);
+      transform: scale(1) rotate(90deg); }
+    .super_qiwi-modal__close:active {
+      -webkit-transform: scale(0.8) rotate(90deg);
+      -ms-transform: scale(0.8) rotate(90deg);
+      transform: scale(0.8) rotate(90deg);
+      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      -webkit-transition: all .2s ease;
+      -o-transition: all .2s ease;
+      transition: all .2s ease; }
+  .super_qiwi-modal__scroll.ps-active-y .ps-scrollbar-y-rail {
+    position: absolute;
+    display: block;
+    width: 1px ;
+    background: #f0f0f0 ;
+    opacity: 1 ;
+    right: 6px !important; }
+  .super_qiwi-modal__scroll.ps-active-y .ps-scrollbar-y {
+    position: absolute;
+    display: block;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff6300), to(#ff8b00)) ;
+    background: -webkit-linear-gradient(top, #ff6300 0%, #ff8b00 100%) ;
+    background: -o-linear-gradient(top, #ff6300 0%, #ff8b00 100%) ;
+    background: linear-gradient(to bottom, #ff6300 0%, #ff8b00 100%) ;
+    width: 5px ;
+    opacity: 1 ;
+    right: -2px ;
+    cursor: pointer;
+    border-radius: 2px ;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    -o-transition: transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease, -webkit-transform .5s ease; }
+  .super_qiwi-modal__scroll .ps-scrollbar-y:hover,
+   .super_qiwi-modal__scroll .ps-scrollbar-y:active {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff6300), to(#ff8b00));
+    background: -webkit-linear-gradient(top, #ff6300 0%, #ff8b00 100%);
+    background: -o-linear-gradient(top, #ff6300 0%, #ff8b00 100%);
+    background: linear-gradient(to bottom, #ff6300 0%, #ff8b00 100%); }
+  .super_qiwi-modal__scroll .ps-scrollbar-x-rail {
+    display: none  }
+
+
+  .super_qiwi-modal .is-animating {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease; }
+    .super_qiwi-modal .is-animating.show {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+      -webkit-transition: all .5s ease .1s;
+      -o-transition: all .5s ease .1s;
+      transition: all .5s ease .1s; }
+  .super_qiwi-modal__enter {
+    width: 500px;
+    min-height: 235px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 20px 10px; }
+    .super_qiwi-modal__enter .super_qiwi-modal__text {
+      text-align: center;
+      font-size: 22px;
+      line-height: 1.5;
+      font-family: "MuseoSansCyrl-900", sans-serif;
+      margin-top: 10px; }
+      .super_qiwi-modal__enter .super_qiwi-modal__text_color:last-child {
+        display: block; }
+    .super_qiwi-modal__enter .super_qiwi-modal__footer {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin: 40px 0 0; }
+    .super_qiwi-modal__enter .super_qiwi-modal__btn_entry {
+      position: relative;
+      display: block;
+      cursor: pointer;
+      outline: none;
+      padding: 0;
+      border: 0;
+      margin: 0 15px;
+      text-align: center;
+      width: 180px;
+      color: #fff;
+      background: #98c60d;
+      border-radius: 50px;
+      font-size: 18px;
+      text-transform: uppercase;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      will-change: transform;
+      -webkit-box-shadow: 10px 10px 20px 3px rgba(80, 143, 7, 0.2);
+      box-shadow: 10px 10px 20px 3px rgba(80, 143, 7, 0.2);
+      z-index: 1; }
+      .super_qiwi-modal__enter .super_qiwi-modal__btn_entry span {
+        position: relative;
+        display: block;
+        padding: 17px;
+        z-index: 1; }
+      .super_qiwi-modal__enter .super_qiwi-modal__btn_entry:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        background: -webkit-gradient(linear, left top, right top, from(#98c60d), to(#688e3e));
+        background: -webkit-linear-gradient(left, #98c60d 0%, #688e3e 100%);
+        background: -o-linear-gradient(left, #98c60d 0%, #688e3e 100%);
+        background: linear-gradient(to right, #98c60d 0%, #688e3e 100%);
+        z-index: 1;
+        border-radius: 50px;
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease; }
+      .super_qiwi-modal__enter .super_qiwi-modal__btn_entry:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        -ms-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        width: 100%;
+        height: 100%;
+        background: #98c60d;
+        border-radius: 50px;
+        z-index: -1;
+        opacity: .5;
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+        pointer-events: none;
+        -webkit-animation: fill-active .6s linear forwards;
+        animation: fill-active .6s linear forwards; }
+      .super_qiwi-modal__enter .super_qiwi-modal__btn_entry:hover {
+        -webkit-box-shadow: 10px 10px 20px 0 rgba(80, 143, 7, 0.2);
+        box-shadow: 10px 10px 20px 0 rgba(80, 143, 7, 0.2);
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease; }
+        .super_qiwi-modal__enter .super_qiwi-modal__btn_entry:hover:before {
+          -webkit-animation: opacity .6s ease infinite forwards;
+          animation: opacity .6s ease infinite forwards; }
+        .super_qiwi-modal__enter .super_qiwi-modal__btn_entry:hover:after {
+          -webkit-animation: fill .6s ease infinite forwards;
+          animation: fill .6s ease infinite forwards; }
+      .super_qiwi-modal__enter .super_qiwi-modal__btn_entry:active {
+        -webkit-box-shadow: 5px 5px 10px 0 rgba(80, 143, 7, 0.2);
+        box-shadow: 5px 5px 10px 0 rgba(80, 143, 7, 0.2);
+        -webkit-transition: all .2s ease;
+        -o-transition: all .2s ease;
+        transition: all .2s ease; }
+        .super_qiwi-modal__enter .super_qiwi-modal__btn_entry:active:before {
+          -webkit-animation: opacity-active .6s linear forwards;
+          animation: opacity-active .6s linear forwards; }
+        .super_qiwi-modal__enter .super_qiwi-modal__btn_entry:active:after {
+          -webkit-animation: fill-active .6s linear forwards;
+          animation: fill-active .6s linear forwards; }
+    .super_qiwi-modal__enter .super_qiwi-modal__btn_register {
+      position: relative;
+      display: block;
+      cursor: pointer;
+      outline: none;
+      padding: 0;
+      width: 160px;
+      border: 0;
+      margin: 0 15px;
+      text-align: center;
+      color: #fff;
+      background: #ff7a00;
+      border-radius: 50px;
+      font-size: 14px;
+      text-transform: uppercase;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      will-change: transform;
+      -webkit-box-shadow: 10px 10px 20px 3px rgba(255, 140, 0, 0.2);
+      box-shadow: 10px 10px 20px 3px rgba(255, 140, 0, 0.2);
+      z-index: 1; }
+      .super_qiwi-modal__enter .super_qiwi-modal__btn_register span {
+        position: relative;
+        display: block;
+        padding: 11px;
+        z-index: 1; }
+      .super_qiwi-modal__enter .super_qiwi-modal__btn_register:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        background: -webkit-gradient(linear, left top, left bottom, from(#ff7a00), to(#ff6200));
+        background: -webkit-linear-gradient(top, #ff7a00 0%, #ff6200 100%);
+        background: -o-linear-gradient(top, #ff7a00 0%, #ff6200 100%);
+        background: linear-gradient(to bottom, #ff7a00 0%, #ff6200 100%);
+        z-index: 1;
+        border-radius: 50px;
+        opacity: 1;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease; }
+      .super_qiwi-modal__enter .super_qiwi-modal__btn_register:hover {
+        -webkit-box-shadow: 10px 10px 20px 0 rgba(255, 140, 0, 0.2);
+        box-shadow: 10px 10px 20px 0 rgba(255, 140, 0, 0.2);
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease; }
+        .super_qiwi-modal__enter .super_qiwi-modal__btn_register:hover:before {
+          opacity: 0;
+          -webkit-transition: all .5s ease;
+          -o-transition: all .5s ease;
+          transition: all .5s ease; }
+      .super_qiwi-modal__enter .super_qiwi-modal__btn_register:active {
+        -webkit-box-shadow: 5px 5px 10px 0 rgba(255, 140, 0, 0.2);
+        box-shadow: 5px 5px 10px 0 rgba(255, 140, 0, 0.2);
+        -webkit-transition: all .2s ease;
+        -o-transition: all .2s ease;
+        transition: all .2s ease; }
+  .super_qiwi-modal__rules {
+    width: 700px;
+    height: auto;
+    padding: 20px; }
+    .super_qiwi-modal__rules ul, .super_qiwi-modal__rules ol, .super_qiwi-modal__rules p {
+      padding: 0;
+      margin: 0; }
+    .super_qiwi-modal__rules .super_qiwi-modal__table {
+      border: 1px solid #e6e6e6;
+      font-size: 12px;
+      font-family: "MuseoSansCyrl-300", sans-serif; 
+      display: flex;
+    }
+    .super_qiwi-modal__table-cell {
+      flex-basis: 25%;
+    }
+    .super_qiwi-modal__table-cell + .super_qiwi-modal__table-cell {
+      border-left: 1px solid #e6e6e6;
+    }
+      .super_qiwi-modal__table-cell div:first-child {
+        text-align: center;
+        padding: 10px;
+        background: #f5f5f5; 
+        border-bottom: 1px solid #e6e6e6;
+      }
+      .super_qiwi-modal__table-cell div + div {
+        padding: 5px;
+      }
+    .super_qiwi-modal__rules .super_qiwi-modal__list {
+      position: relative;
+      height: 310px;
+      overflow: hidden;
+      font-size: 14px;
+      padding: 0 35px 0 15px; }
+    .super_qiwi-modal__rules .super_qiwi-modal__text_color {
+      color: #fff; }
+    .super_qiwi-modal__rules .super_qiwi-modal__text_title {
+      font-size: 36px;
+      text-align: center;
+      font-family: "MuseoSansCyrl-900", sans-serif;
+      color: #000; }
+    .super_qiwi-modal__rules .super_qiwi-modal__text_big {
+      font-size: 20px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #000; }
+      .super_qiwi-modal__rules .super_qiwi-modal__text_big:not(:first-child) {
+        margin-top: 20px; }
+    .super_qiwi-modal__rules .super_qiwi-modal__text_normal {
+      font-size: 14px;
+      margin-bottom: 0; }
+    .super_qiwi-modal__rules .super_qiwi-modal__text_medium {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #000; }
+    .super_qiwi-modal__rules .super_qiwi-modal__text_italic {
+      font-style: italic; }
+    .super_qiwi-modal__rules .super_qiwi-modal__text_list {
+      padding-left: 20px; }
+      .super_qiwi-modal__rules .super_qiwi-modal__text_list li {
+        margin-bottom: 10px; }
+    .super_qiwi-modal__rules .super_qiwi-modal__text_disc {
+      list-style: disc;
+      padding-left: 30px; }
+    .super_qiwi-modal__rules .super_qiwi-modal__text_decimal {
+      list-style: decimal;
+      padding-left: 30px; }
+    .super_qiwi-modal__rules .super_qiwi-modal__text_list_none {
+      list-style: none; }
+
+    .super_qiwi-modal__tickets ul, .super_qiwi-modal__tickets ol, .super_qiwi-modal__tickets p {
+      padding: 0;
+      margin: 0; }
+    .super_qiwi-modal__list {
+      position: relative;
+      font-size: 16px;
+      margin: 0 auto 0;
+     }
+     .super_qiwi-tickets__list {
+      position: relative;
+      font-size: 16px;
+      max-width: 650px;
+      margin: 83px auto 0;
+     }
+    .super_qiwi-tickets__text_title {
+      font-size: 36px;
+      text-align: center;
+      font-family: "MuseoSansCyrl-900", sans-serif;
+      margin-top: 25px; }
+      .super_qiwi-tickets__tickets_wrap {
+        padding: 10px 0 ;
+        border: 1px solid #e6e6e6;
+        margin-top: 33px;
+      }
+    .super_qiwi-tickets__tickets {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: wrap;
+      flex-flow: wrap;
+      list-style: none;
+      padding-top: 5px;
+      width: 100%;
+      height: 190px;
+      overflow: hidden;
+      position: relative;
+      font-style: normal; 
+      padding: 0 25px 0 15px; 
+    }
+    .super_qiwi-tickets__ticket {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: center;
+      margin: 5px 0 0 0;
+      width: 100px;
+      height: 26px;
+      font-size: 15px;
+      color: #000;
+      font-family: "MuseoSansCyrl-300", sans-serif; }
+      .super_qiwi-tickets__ticket.win {
+        font-family: "MuseoSansCyrl-900", sans-serif; }
+  .super_qiwi-modal__hello {
+    width: 700px;
+    min-height: 300px;
+    padding: 20px;
+    background: #fff url(../img/modal/hello-bg.jpg) no-repeat center;
+    background-size: cover;
+    border: 0; }
+    .super_qiwi-modal__hello:after {
+      display: none; }
+    .super_qiwi-modal__hello .super_qiwi-modal__info {
+      position: relative;
+      width: 100%;
+      text-transform: uppercase;
+      text-align: center; }
+    .super_qiwi-modal__hello .super_qiwi-modal__logo {
+      position: absolute;
+      top: -190px;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      -webkit-transform: translate3d(-53%, 0, 0);
+      transform: translate3d(-53%, 0, 0); }
+    .super_qiwi-modal__hello .super_qiwi-modal__subtitle {
+      display: block;
+      font-size: 22px;
+      text-align: center;
+      margin-top: 160px;
+      font-family: "MuseoSansCyrl-900", sans-serif; }
+    .super_qiwi-modal__hello .super_qiwi-modal__btn {
+      font-size: 18px;
+      margin-top: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+      .super_qiwi-modal__hello .super_qiwi-modal__btn span > span {
+        padding: 19px 47px;
+        width: auto;
+        height: auto;
+        font-family: 'Roboto', sans-serif; }
+  .super_qiwi-modal__win {
+    width: 500px;
+    min-height: 235px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 20px 10px;
+    background: #fff; }
+    .super_qiwi-modal__win .super_qiwi-modal__title {
+      text-align: center;
+      font-size: 30px;
+      font-family: "MuseoSansCyrl-900", sans-serif;
+      width: 100%;
+      margin: 0 auto; }
+    .super_qiwi-modal__win .super_qiwi-modal__info {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-top: 0; }
+    .super_qiwi-modal__win .super_qiwi-modal__img img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto; }
+    .super_qiwi-modal__win .super_qiwi-modal__text {
+      font-size: 34px;
+      font-family: "MuseoSansCyrl-300", sans-serif; }
+      .super_qiwi-modal__win .super_qiwi-modal__text span {
+        display: block; }
+  .super_qiwi-modal__win1 .super_qiwi-modal__img {
+    position: relative;
+    top: 20px;
+    margin-left: -50px;
+    width: 147px;
+    height: 173px; }
+  .super_qiwi-modal__win2 .super_qiwi-modal__info {
+    padding: 20px 0; }
+  .super_qiwi-modal__win2 .super_qiwi-modal__img {
+    position: relative;
+    top: 20px;
+    width: 167px;
+    height: 113px;
+    padding-right: 20px; }
+  .super_qiwi-modal__win3 .super_qiwi-modal__info {
+    padding: 20px 0; }
+  .super_qiwi-modal__win3 .super_qiwi-modal__img {
+    position: relative;
+    top: 0;
+    width: 121px;
+    height: 138px;
+    padding-right: 40px; }
+  .super_qiwi-modal__win4 .super_qiwi-modal__info {
+    display: block;
+    text-align: center;
+    line-height: 1;
+    padding-top: 25px; }
+  .super_qiwi-modal__win4 .super_qiwi-modal__big {
+    font-size: 80px;
+    font-weight: 900;
+    font-style: normal;
+    padding-bottom: 15px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #ff8c00), color-stop(90%, #ff6200));
+    background: -webkit-linear-gradient(top, #ff8c00 20%, #ff6200 90%);
+    background: -o-linear-gradient(top, #ff8c00 20%, #ff6200 90%);
+    background: linear-gradient(to bottom, #ff8c00 20%, #ff6200 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "MuseoSansCyrl-900", sans-serif; }
+  .super_qiwi-modal__win4 .super_qiwi-modal__small {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "MuseoSansCyrl-300", sans-serif;
+    padding-bottom: 10px; }
+  .super_qiwi-modal__result {
+    width: 700px;
+    height: auto;
+    padding: 20px;
+    background: #fff; }
+    .super_qiwi-modal__result .super_qiwi-modal__text_title {
+      font-size: 36px;
+      text-align: center;
+      font-family: "MuseoSansCyrl-900", sans-serif; }
+    .super_qiwi-modal__result .super_qiwi-modal__list {
+      position: relative;
+      height: 310px;
+      overflow: hidden; }
+    .super_qiwi-modal__result .super_qiwi-modal__prizes {
+      position: relative;
+      z-index: 1;
+      padding-right: 25px;
+      overflow: hidden; }
+      .super_qiwi-modal__result .super_qiwi-modal__prizes_countdown_title {
+        font-size: 20px;
+        font-family: "MuseoSansCyrl-300", sans-serif;
+        margin: 40px 0 0; }
+      .super_qiwi-modal__result .super_qiwi-modal__prizes_nav {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin: 15px 0 0; }
+        .super_qiwi-modal__result .super_qiwi-modal__prizes_nav_button {
+          position: relative;
+          display: block;
+          text-align: center;
+          padding: 0;
+          margin: 0;
+          font-size: 16px;
+          background: #e6e6e6;
+          color: #000;
+          overflow: hidden;
+          will-change: transform;
+          border-radius: 50px; }
+          .super_qiwi-modal__result .super_qiwi-modal__prizes_nav_button span {
+            position: relative;
+            display: block;
+            padding: 8px 28px;
+            font-family: "MuseoSansCyrl-300", sans-serif;
+            margin: 0;
+            z-index: 1; }
+          .super_qiwi-modal__result .super_qiwi-modal__prizes_nav_button:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            background: -webkit-gradient(linear, right top, left top, from(#ff8c00), color-stop(80%, #ff6200));
+            background: -webkit-linear-gradient(right, #ff8c00 0%, #ff6200 80%);
+            background: -o-linear-gradient(right, #ff8c00 0%, #ff6200 80%);
+            background: linear-gradient(to left, #ff8c00 0%, #ff6200 80%);
+            z-index: 0;
+            border-radius: 0 50px 50px 0;
+            will-change: transform;
+            opacity: 0;
+            -webkit-transform: translate3d(0%, -50%, 0) scaleX(0);
+            transform: translate3d(0%, -50%, 0) scaleX(0);
+            -webkit-transform-origin: left;
+            -ms-transform-origin: left;
+            transform-origin: left;
+            -webkit-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease; }
+          .super_qiwi-modal__result .super_qiwi-modal__prizes_nav_button:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            background: -webkit-gradient(linear, right top, left top, from(#ff8c00), color-stop(80%, #ff6200));
+            background: -webkit-linear-gradient(right, #ff8c00 0%, #ff6200 80%);
+            background: -o-linear-gradient(right, #ff8c00 0%, #ff6200 80%);
+            background: linear-gradient(to left, #ff8c00 0%, #ff6200 80%);
+            z-index: 0;
+            border-radius: 50px 0 0 50px;
+            will-change: transform;
+            opacity: 0;
+            -webkit-transform: translate3d(0%, -50%, 0) scaleX(0);
+            transform: translate3d(0%, -50%, 0) scaleX(0);
+            -webkit-transform-origin: right;
+            -ms-transform-origin: right;
+            transform-origin: right;
+            -webkit-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease; }
+          .super_qiwi-modal__result .super_qiwi-modal__prizes_nav_button:hover {
+            color: #fff;
+            background: rgba(0, 0, 0, 0);
+            -webkit-box-shadow: 10px 10px 20px 0 rgba(255, 140, 0, 0.2);
+            box-shadow: 10px 10px 20px 0 rgba(255, 140, 0, 0.2);
+            -webkit-transition: background .5s ease, color .5s ease, -webkit-box-shadow .5s ease .3s, -webkit-transform .5s ease;
+            transition: background .5s ease, color .5s ease, -webkit-box-shadow .5s ease .3s, -webkit-transform .5s ease;
+            -o-transition: background .5s ease, color .5s ease, box-shadow .5s ease .3s, transform .5s ease;
+            transition: background .5s ease, color .5s ease, box-shadow .5s ease .3s, transform .5s ease;
+            transition: background .5s ease, color .5s ease, box-shadow .5s ease .3s, transform .5s ease, -webkit-box-shadow .5s ease .3s, -webkit-transform .5s ease; }
+            .super_qiwi-modal__result .super_qiwi-modal__prizes_nav_button:hover:after {
+              opacity: 1;
+              -webkit-transform: translate3d(0%, -50%, 0) scaleX(1);
+              transform: translate3d(0%, -50%, 0) scaleX(1);
+              -webkit-transition: all .5s ease;
+              -o-transition: all .5s ease;
+              transition: all .5s ease; }
+            .super_qiwi-modal__result .super_qiwi-modal__prizes_nav_button:hover:before {
+              opacity: 1;
+              -webkit-transform: translate3d(0%, -50%, 0) scaleX(1);
+              transform: translate3d(0%, -50%, 0) scaleX(1);
+              -webkit-transition: all .5s ease;
+              -o-transition: all .5s ease;
+              transition: all .5s ease; }
+          .super_qiwi-modal__result .super_qiwi-modal__prizes_nav_button.is-active {
+            color: #fff;
+            background: rgba(0, 0, 0, 0);
+            -webkit-box-shadow: 10px 10px 20px 0 rgba(255, 140, 0, 0.2);
+            box-shadow: 10px 10px 20px 0 rgba(255, 140, 0, 0.2);
+            -webkit-transition: background .5s ease, color .5s ease, -webkit-box-shadow .5s ease .3s, -webkit-transform .5s ease;
+            transition: background .5s ease, color .5s ease, -webkit-box-shadow .5s ease .3s, -webkit-transform .5s ease;
+            -o-transition: background .5s ease, color .5s ease, box-shadow .5s ease .3s, transform .5s ease;
+            transition: background .5s ease, color .5s ease, box-shadow .5s ease .3s, transform .5s ease;
+            transition: background .5s ease, color .5s ease, box-shadow .5s ease .3s, transform .5s ease, -webkit-box-shadow .5s ease .3s, -webkit-transform .5s ease; }
+            .super_qiwi-modal__result .super_qiwi-modal__prizes_nav_button.is-active:after {
+              opacity: 1;
+              -webkit-transform: translate3d(0%, -50%, 0) scaleX(1);
+              transform: translate3d(0%, -50%, 0) scaleX(1);
+              -webkit-transition: all .5s ease;
+              -o-transition: all .5s ease;
+              transition: all .5s ease; }
+            .super_qiwi-modal__result .super_qiwi-modal__prizes_nav_button.is-active:before {
+              opacity: 1;
+              -webkit-transform: translate3d(0%, -50%, 0) scaleX(1);
+              transform: translate3d(0%, -50%, 0) scaleX(1);
+              -webkit-transition: all .5s ease;
+              -o-transition: all .5s ease;
+              transition: all .5s ease; }
+      .super_qiwi-modal__result .super_qiwi-modal__prizes_tabs {
+        position: relative;
+        margin: 10px 0 0;
+        text-align: center; }
+      .super_qiwi-modal__result .super_qiwi-modal__prizes_tab {
+        display: none;
+        -webkit-animation: tabs 1s ease;
+        animation: tabs 1s ease; }
+        .super_qiwi-modal__result .super_qiwi-modal__prizes_tab_title {
+          text-align: center;
+          font-size: 40px;
+          font-family: "MuseoSansCyrl-900", sans-serif; }
+      .super_qiwi-modal__result .super_qiwi-modal__prizes_inner {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: flex-start; }
+        .super_qiwi-modal__result .super_qiwi-modal__prizes_inner .super_qiwi-countdown {
+          margin: 10px 0 30px; }
+          .super_qiwi-modal__result .super_qiwi-modal__prizes_inner .super_qiwi-countdown__list li {
+            font-size: 60px; }
+            .super_qiwi-modal__result .super_qiwi-modal__prizes_inner .super_qiwi-countdown__list li span {
+              font-size: 15px; }
+    .super_qiwi-modal__result .super_qiwi-modal__prize {
+      position: relative;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      padding: 170px 0 0; }
+      .super_qiwi-modal__result .super_qiwi-modal__prize:not(:last-child):after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 1px;
+        height: 90%;
+        background: #e6e6e6; }
+      .super_qiwi-modal__result .super_qiwi-modal__prize:first-child {
+        padding-bottom: 44px; }
+      .super_qiwi-modal__result .super_qiwi-modal__prize_img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -80%);
+        -ms-transform: translate(-50%, -80%);
+        transform: translate(-50%, -80%);
+        width: 130px; }
+        .super_qiwi-modal__result .super_qiwi-modal__prize_img img {
+          max-width: 100%; }
+      .super_qiwi-modal__result .super_qiwi-modal__prize_text {
+        text-align: center;
+        font-family: "MuseoSansCyrl-300", sans-serif; }
+        .super_qiwi-modal__result .super_qiwi-modal__prize_text span {
+          display: block; }
+        .super_qiwi-modal__result .super_qiwi-modal__prize_text_big {
+          font-size: 24px;
+          font-family: "MuseoSansCyrl-300", sans-serif;
+          margin-bottom: 5px; }
+      .super_qiwi-modal__result .super_qiwi-modal__prize_ticket {
+        font-size: 16px;
+        padding: 2px; }
+        .super_qiwi-modal__result .super_qiwi-modal__prize_ticket.win {
+          font-family: "MuseoSansCyrl-900", sans-serif; }
+    .super_qiwi-modal__result .super_qiwi-modal__bonus {
+      padding-left: 20px; }
+      .super_qiwi-modal__result .super_qiwi-modal__bonus_title {
+        position: relative;
+        text-align: left;
+        font-size: 24px;
+        font-family: "MuseoSansCyrl-300", sans-serif;
+        margin-top: 20px; }
+      .super_qiwi-modal__result .super_qiwi-modal__bonus_tickets {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: wrap;
+        flex-flow: wrap;
+        list-style: none;
+        padding-top: 5px;
+        width: 100%;
+        font-style: normal; }
+      .super_qiwi-modal__result .super_qiwi-modal__bonus_ticket {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        margin: 5px 0 0 0;
+        width: 100px;
+        height: 30px;
+        font-size: 16px;
+        color: #000;
+        font-family: "MuseoSansCyrl-300", sans-serif; }
+        .super_qiwi-modal__result .super_qiwi-modal__bonus_ticket.win {
+          font-family: "MuseoSansCyrl-900", sans-serif; }
+
+/* END MAIN STYLES */
+/* DEFAULT FONT */
+.super_qiwi.defaultfont * {
+  font-family: 'Roboto', sans-serif !important; }
+
+/* END DEFAULT FONT */
+
+
+/* END RTL */
+/* ACCOUNT */
+.super_qiwi-account {
+  position: relative;
+  margin: 10px 0 20px;
+  border-radius: 5px;
+  background: #000;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.super_qiwi-account__body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: auto;
+  padding: 20px 20px;
+  z-index: 2; }
+  .super_qiwi-account__body:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: url(../img/account/bg.png) no-repeat 50% 50%, -webkit-gradient(linear, right top, left top, from(#67269f), to(#9f3ed3));
+    background: url(../img/account/bg.png) no-repeat 50% 50%, -webkit-linear-gradient(right, #67269f 0%, #9f3ed3 100%);
+    background: url(../img/account/bg.png) no-repeat 50% 50%, -o-linear-gradient(right, #67269f 0%, #9f3ed3 100%);
+    background: url(../img/account/bg.png) no-repeat 50% 50%, linear-gradient(to left, #67269f 0%, #9f3ed3 100%);
+    background-size: 1235px 100%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: -1; }
+
+.super_qiwi-account__info {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  height: 100%; }
+
+.super_qiwi-account__logo {
+  position: relative;
+  top: 20px;
+  margin-left: -100px; }
+
+.super_qiwi-account__action {
+  position: relative;
+  display: block;
+  font-size: 36px;
+  margin: 0 0 0;
+  text-align: center; }
+  .super_qiwi-account__action span {
+    display: block;
+    font-weight: 700; }
+
+.super_qiwi-account__btn {
+  font-size: 20px;
+  margin-top: 130px; }
+  .super_qiwi-account__btn span > span {
+    padding: 20px 41px; }
+
+.super_qiwi-account__text {
+  font-size: 26px;
+  font-weight: 900;
+  text-align: center;
+  font-family: "MuseoSansCyrl-900", sans-serif; }
+  .super_qiwi-account__text span {
+    font-size: 20px;
+    display: block;
+    font-family: "MuseoSansCyrl-300", sans-serif;
+    margin-bottom: 20px; }
+  .super_qiwi-account__text .super_qiwi-account__gradient {
+    margin-bottom: 25px;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(20%, #ff6300), color-stop(90%, #ff8b00));
+    background: -webkit-linear-gradient(bottom, #ff6300 20%, #ff8b00 90%);
+    background: -o-linear-gradient(bottom, #ff6300 20%, #ff8b00 90%);
+    background: linear-gradient(to top, #ff6300 20%, #ff8b00 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-family: "MuseoSansCyrl-900", sans-serif;
+    font-size: 26px; }
+
+.super_qiwi-account__tickets .super_qiwi-account__body {
+  display: block; }
+  .super_qiwi-account__tickets .super_qiwi-account__body:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: url(../img/account/bg2.png) no-repeat 50% 50%, -webkit-gradient(linear, right top, left top, from(#67269f), to(#9f3ed3));
+    background: url(../img/account/bg2.png) no-repeat 50% 50%, -webkit-linear-gradient(right, #67269f 0%, #9f3ed3 100%);
+    background: url(../img/account/bg2.png) no-repeat 50% 50%, -o-linear-gradient(right, #67269f 0%, #9f3ed3 100%);
+    background: url(../img/account/bg2.png) no-repeat 50% 50%, linear-gradient(to left, #67269f 0%, #9f3ed3 100%);
+    background-size: 1235px 100%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: -1; }
+
+.super_qiwi-account__tickets .super_qiwi-account__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding-left: 370px;
+  width: 100%; }
+
+.super_qiwi-account__tickets .super_qiwi-account__block_logo {
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  width: 428px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+  .super_qiwi-account__tickets .super_qiwi-account__block_logo img {
+    max-width: 100%; }
+
+.super_qiwi-account__tickets .super_qiwi-account__block_action {
+  text-align: center;
+  color: #fff; }
+
+.super_qiwi-account__tickets .super_qiwi-account__block_text {
+  font-size: 24px;
+  margin-bottom: 10px; }
+
+.super_qiwi-account__tickets .super_qiwi-account__block_number {
+  font-weight: 900;
+  font-size: 40px;
+  margin-bottom: 30px; }
+
+.super_qiwi-account__tickets .super_qiwi-account__btn {
+  margin-top: 0; }
+
+.super_qiwi-account__tickets .super_qiwi-account__tickets_wrap {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  padding: 0 10px 0 20px;
+  z-index: 1;
+  margin-left: 20px; }
+
+.super_qiwi-account__tickets .super_qiwi-account__tickets_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  width: 100%;
+  position: relative;
+  height: 215px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  overflow: hidden;
+  z-index: 1; }
+
+.super_qiwi-account__tickets .super_qiwi-account__ticket {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  margin: 5px 0 0 0;
+  width: 120px;
+  height: 30px;
+  font-size: 18px;
+  color: #fff;
+  font-family: "MuseoSansCyrl-300", sans-serif; }
+  .super_qiwi-account__tickets .super_qiwi-account__ticket.win {
+    font-family: "MuseoSansCyrl-900", sans-serif; }
+
+.super_qiwi-account__tickets .super_qiwi-account__scroll .ps-scrollbar-y-rail {
+  position: absolute;
+  display: block;
+  width: 1px !important;
+  background: #f0f0f0 !important;
+  opacity: 1 !important;
+  right: 6px !important; }
+
+.super_qiwi-account__tickets .super_qiwi-account__scroll .ps-scrollbar-y {
+  position: absolute;
+  display: block;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff6300), to(#ff8b00)) !important;
+  background: -webkit-linear-gradient(top, #ff6300 0%, #ff8b00 100%) !important;
+  background: -o-linear-gradient(top, #ff6300 0%, #ff8b00 100%) !important;
+  background: linear-gradient(to bottom, #ff6300 0%, #ff8b00 100%) !important;
+  width: 5px !important;
+  opacity: 1 !important;
+  right: -2px !important;
+  cursor: pointer;
+  border-radius: 2px !important;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  -o-transition: transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease; }
+
+.super_qiwi-account__tickets .super_qiwi-account__scroll .ps-scrollbar-y:hover, .super_qiwi-account__tickets .super_qiwi-account__scroll .ps-scrollbar-y:active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff6300), to(#ff8b00)) !important;
+  background: -webkit-linear-gradient(top, #ff6300 0%, #ff8b00 100%) !important;
+  background: -o-linear-gradient(top, #ff6300 0%, #ff8b00 100%) !important;
+  background: linear-gradient(to bottom, #ff6300 0%, #ff8b00 100%) !important; }
+
+.super_qiwi-account__tickets .super_qiwi-account__scroll .ps-scrollbar-x-rail {
+  display: none !important; }
+
+@media only screen and (max-width: 1800px) {
+  .super_qiwi-account__logo {
+    margin-left: -50px;
+    width: 400px; }
+    .super_qiwi-account__logo img {
+      max-width: 100%; }
+  .super_qiwi-btn.super_qiwi-account__btn {
+    font-size: 16px; }
+    .super_qiwi-btn.super_qiwi-account__btn span > span {
+      padding: 15px 25px; }
+  .super_qiwi-account__text {
+    font-size: 22px; }
+    .super_qiwi-account__text .super_qiwi-account__gradient {
+      font-size: 22px; }
+    .super_qiwi-account__text span {
+      font-size: 18px; }
+  .super_qiwi-account__tickets .super_qiwi-account__block {
+    padding-left: 340px; }
+  .super_qiwi-account__tickets .super_qiwi-account__block_logo {
+    width: 400px;
+    left: -40px; }
+  .super_qiwi-account__tickets .super_qiwi-account__block_text {
+    font-size: 20px; }
+  .super_qiwi-account__tickets .super_qiwi-account__block_number {
+    font-size: 30px; }
+  .super_qiwi-account__tickets .super_qiwi-account__ticket {
+    width: 113px; } }
+
+@media only screen and (max-width: 1200px) {
+  .super_qiwi-account__logo {
+    margin-left: -50px;
+    width: 300px; }
+  .super_qiwi-btn.super_qiwi-account__btn {
+    font-size: 16px; }
+    .super_qiwi-btn.super_qiwi-account__btn span > span {
+      padding: 13px 23px; }
+  .super_qiwi-account__text {
+    font-size: 18px; }
+    .super_qiwi-account__text .super_qiwi-account__gradient {
+      font-size: 18px; }
+    .super_qiwi-account__text span {
+      font-size: 16px; }
+  .super_qiwi-account__tickets .super_qiwi-account__block {
+    padding-left: 245px; }
+  .super_qiwi-account__tickets .super_qiwi-account__block_logo {
+    width: 300px;
+    left: -30px; }
+  .super_qiwi-account__tickets .super_qiwi-account__block_text {
+    font-size: 18px; }
+  .super_qiwi-account__tickets .super_qiwi-account__block_number {
+    font-size: 25px; }
+  .super_qiwi-account__tickets .super_qiwi-account__tickets_wrap {
+    padding: 0 10px 0 0;
+    z-index: 1;
+    margin-left: 10px; }
+  .super_qiwi-account__tickets .super_qiwi-account__ticket {
+    width: 113px; } }
+
+/* END ACCOUNT */
+/* RESPONSIVE */
+@media only screen and (max-width: 1800px) {
+  .super_qiwi-account__logo {
+    margin-left: -50px;
+    width: 400px; }
+  .super_qiwi-account__logo img {
+    max-width: 100%; }
+  .super_qiwi-btn.super_qiwi-account__btn {
+    font-size: 16px; }
+  .super_qiwi-btn.super_qiwi-account__btn span > span {
+    padding: 15px 25px; }
+  .super_qiwi-account__text {
+    font-size: 22px; }
+  .super_qiwi-account__text .super_qiwi-account__gradient {
+    font-size: 22px; }
+  .super_qiwi-account__text span {
+    font-size: 18px; }
+  .super_qiwi-account__tickets .super_qiwi-account__block {
+    padding-left: 340px; }
+  .super_qiwi-account__tickets .super_qiwi-account__block_logo {
+    width: 400px;
+    left: -40px; }
+  .super_qiwi-account__tickets .super_qiwi-account__block_text {
+    font-size: 20px; }
+  .super_qiwi-account__tickets .super_qiwi-account__block_number {
+    font-size: 30px; }
+  .super_qiwi-account__tickets .super_qiwi-account__ticket {
+    width: 113px; } }
+
+@media only screen and (max-width: 1200px) {
+  .super_qiwi-account__logo {
+    margin-left: -50px;
+    width: 300px; }
+  .super_qiwi-btn.super_qiwi-account__btn {
+    font-size: 16px; }
+  .super_qiwi-btn.super_qiwi-account__btn span > span {
+    padding: 13px 23px; }
+  .super_qiwi-account__text {
+    font-size: 18px; }
+  .super_qiwi-account__text .super_qiwi-account__gradient {
+    font-size: 18px; }
+  .super_qiwi-account__text span {
+    font-size: 16px; }
+  .super_qiwi-account__tickets .super_qiwi-account__block {
+    padding-left: 245px; }
+  .super_qiwi-account__tickets .super_qiwi-account__block_logo {
+    width: 300px;
+    left: -30px; }
+  .super_qiwi-account__tickets .super_qiwi-account__block_text {
+    font-size: 18px; }
+  .super_qiwi-account__tickets .super_qiwi-account__block_number {
+    font-size: 25px; }
+  .super_qiwi-account__tickets .super_qiwi-account__tickets_wrap {
+    padding: 0 10px 0 0;
+    z-index: 1;
+    margin-left: 10px; }
+  .super_qiwi-account__tickets .super_qiwi-account__ticket {
+    width: 113px; } }
+
+/* END ACCOUNT */
+/* RESPONSIVE */
+@media only screen and (min-width: 1900px) {
+  .super_qiwi-inner__box {
+    width: 1920px; } }
+
+@media only screen and (max-width: 1650px) {
+  .righttoleft .super_qiwi-logo {
+    -webkit-transform: translateX(7.5%) scale(-0.62, 0.62);
+    -ms-transform: translateX(7.5%) scale(-0.62, 0.62);
+    transform: translateX(7.5%) scale(-0.62, 0.62); }
+  .righttoleft .super_qiwi-wrap__top {
+    top: -100px; }
+  .super_qiwi-container {
+    width: 970px;
+    padding: 0 20px; }
+  .super_qiwi-container__small {
+    width: 700px; }
+  .super_qiwi-title {
+    font-size: 44px; }
+  .super_qiwi-logo {
+    top: 15px;
+    height: 465px;
+    -webkit-transform: translateX(-50.5%) scale(0.62);
+    -ms-transform: translateX(-50.5%) scale(0.62);
+    transform: translateX(-50.5%) scale(0.62); }
+  .super_qiwi-wave__bottom {
+    position: absolute;
+    bottom: -110px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 150px;
+    background: transparent;
+    z-index: 0;
+    -webkit-transform: translate3d(0, 0, 0) scaleY(-1);
+    transform: translate3d(0, 0, 0) scaleY(-1); }
+  .super_qiwi-wave__top {
+    position: absolute;
+    top: -120px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 170px;
+    background: transparent;
+    z-index: 0; }
+  .super_qiwi-wave__top .super_qiwi-effect > use {
+    animation-direction: reverse; }
+  .super_qiwi-screen__main {
+    min-height: 544px; }
+  .super_qiwi-screen__main:after {
+    -webkit-transform: translate3d(-50%, -55%, 0);
+    transform: translate3d(-50%, -55%, 0); }
+  .super_qiwi-info {
+    padding-top: 0; }
+  .super_qiwi-info__subtitle {
+    font-size: 28px;
+    margin-top: -40px; }
+  .super_qiwi-info__action {
+    margin: 15px auto 0; }
+  .super_qiwi-btn {
+    font-size: 18px; }
+  .super_qiwi-btn__inner > span {
+    padding: 16px 33px; }
+  .super_qiwi-btn__rules {
+    font-size: 16px;
+    margin: 10px auto 0; }
+  .super_qiwi-wrap__top {
+    position: absolute;
+    top: -120px;
+    right: 50px;
+    z-index: 5; }
+  .super_qiwi-screen__timer {
+    margin-top: 100px; }
+  .super_qiwi-countdown {
+    width: 360px; }
+  .super_qiwi-countdown__title {
+    font-size: 16px; }
+  .super_qiwi-countdown__list {
+    margin: 20px auto 0; }
+  .super_qiwi-countdown__list li {
+    font-size: 50px; }
+  .super_qiwi-countdown__list li span {
+    margin-top: 10px;
+    font-size: 14px; }
+  .super_qiwi-screen__steps {
+    margin-top: 100px; }
+  .super_qiwi-screen__steps:after {
+    width: 333px;
+    height: 344px;
+    -webkit-transform: translate3d(-55%, -40%, 0);
+    transform: translate3d(-55%, -40%, 0); }
+  .super_qiwi-screen__steps:before {
+    width: 332px;
+    height: 733px;
+    -webkit-transform: translate3d(65%, -25%, 0);
+    transform: translate3d(65%, -25%, 0); }
+  .super_qiwi-steps {
+    padding: 200px 0 0; }
+  .super_qiwi-step__img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, -75%);
+    -ms-transform: translate(-50%, -75%);
+    transform: translate(-50%, -75%); }
+  .super_qiwi-step__img img {
+    width: 241px; }
+  .super_qiwi-step__img:after {
+    left: -18%;
+    width: 57px;
+    height: 22px;
+    -webkit-transform: translate3d(0%, -50%, 0);
+    transform: translate3d(0%, -50%, 0); }
+  .super_qiwi-step__text {
+    font-size: 14px; }
+  .super_qiwi-step__text_big {
+    font-size: 16px;
+    margin-bottom: 5px; }
+  .super_qiwi-screen__prizes {
+    position: relative;
+    margin-top: 100px;
+    padding-bottom: 50px; }
+  .super_qiwi-screen__prizes:before {
+    width: 560px;
+    height: 590px;
+    -webkit-transform: translate3d(-70%, 30%, 0);
+    transform: translate3d(-70%, 30%, 0); }
+  .super_qiwi-screen__prizes:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 90%;
+    background: #f7f7f7;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    z-index: -1;
+    pointer-events: none; }
+  .super_qiwi-prizes {
+    position: relative;
+    z-index: 1; }
+  .super_qiwi-prizes__title {
+    padding-top: 70px; }
+  .super_qiwi-prizes__nav {
+    margin: 50px 0 0; }
+  .super_qiwi-prizes__nav_period > span {
+    margin-top: 10px;
+    font-size: 14px; }
+  .super_qiwi-prizes__nav_button {
+    font-size: 16px; }
+  .super_qiwi-prizes__nav_button span {
+    padding: 10px 61px; }
+  .super_qiwi-prizes__tabs {
+    margin: 30px 0 0;
+    padding: 30px 0 0; }
+  .super_qiwi-prizes__tab_title {
+    font-size: 30px; }
+  .super_qiwi-prizes__inner .super_qiwi-countdown {
+    margin-top: 50px;
+    margin-bottom: 20px; }
+  .super_qiwi-prizes__prize {
+    padding: 200px 0 0; }
+  .super_qiwi-prizes__prize:first-child .super_qiwi-prizes__prize_img {
+    width: 160px; }
+  .super_qiwi-prizes__prize:nth-child(2) .super_qiwi-prizes__prize_img {
+    width: 179px; }
+  .super_qiwi-prizes__prize:last-child .super_qiwi-prizes__prize_img {
+    width: 152px; }
+  .super_qiwi-prizes__prize_img {
+    -webkit-transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    transform: translate(-50%, -60%); }
+  .super_qiwi-prizes__prize_img img {
+    max-width: 100%; }
+  .super_qiwi-prizes__prize_text {
+    font-size: 14px; }
+  .super_qiwi-prizes__prize_text span {
+    display: block; }
+  .super_qiwi-prizes__prize_big {
+    font-size: 22px;
+    margin-bottom: 15px; }
+  .super_qiwi-prizes__bonus {
+    width: 330px;
+    padding-left: 20px; }
+  .super_qiwi-prizes__bonus_title {
+    font-size: 22px;
+    margin-top: 20px; }
+  .super_qiwi-prizes__bonus_title img {
+    top: 50%;
+    left: 10px;
+    width: 60px;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0); }
+  .super_qiwi-prizes__bonus_block {
+    font-size: 13px;
+    margin-top: 40px; }
+  .super_qiwi-prizes__bonus_row {
+    margin-bottom: 10px; }
+  .super_qiwi-prizes__bonus_row span {
+    width: 180px; }
+  .super_qiwi-prizes__bonus_row b {
+    width: 150px; }
+  .super_qiwi-btn__prize {
+    margin: 40px auto 20px;
+    font-size: 18px; }
+  .super_qiwi-btn__prize .super_qiwi-btn__inner span {
+    padding: 15px 22px; }
+  .super_qiwi-screen__info {
+    margin-top: 140px; }
+  .super_qiwi-screen__info:before {
+    width: 278px;
+    height: 260px;
+    -webkit-transform: translate3d(-5%, 85%, 0);
+    transform: translate3d(-5%, 85%, 0); }
+  .super_qiwi-info__block_title {
+    font-size: 34px; }
+  .super_qiwi-how ul {
+    margin: 90px 0 0; }
+  .super_qiwi-how ul li {
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.5; }
+  .super_qiwi-how ul li span {
+    margin-right: 10px; }
+  .super_qiwi-summ {
+    width: 460px; }
+  .super_qiwi-summ ul {
+    margin: 60px 0 0; }
+  .super_qiwi-summ ul:first-child li b {
+    width: 110px; }
+  .super_qiwi-summ ul:last-child li b {
+    width: 130px; }
+  .super_qiwi-summ ul li {
+    font-size: 14px;
+    margin-bottom: 10px; }
+  .super_qiwi-btn__wrap {
+    position: relative;
+    text-align: center;
+    z-index: 3;
+    margin: 70px 0; } }
+@media only screen and (max-width: 1000px) {
+  .super_qiwi-container {
+    width: 970px;
+    padding: 0 20px; }
+    .super_qiwi-container__small {
+      width: 700px; }
+  .super_qiwi-title {
+    font-size: 44px; }
+  .super_qiwi-logo {
+    top: -9px;
+    height: 380px;
+    -webkit-transform: translateX(-50.5%) scale(0.56);
+    -ms-transform: translateX(-50.5%) scale(0.56);
+    transform: translateX(-50.5%) scale(0.56); }
+  .super_qiwi-wave__bottom {
+    position: absolute;
+    bottom: -110px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 150px;
+    background: transparent;
+    z-index: 0;
+    -webkit-transform: translate3d(0, 0, 0) scaleY(-1);
+    transform: translate3d(0, 0, 0) scaleY(-1); }
+  .super_qiwi-wave__top {
+    position: absolute;
+    top: -120px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 170px;
+    background: transparent;
+    z-index: 0; }
+    .super_qiwi-wave__top .super_qiwi-effect > use {
+      animation-direction: reverse; }
+  .super_qiwi-screen__main {
+    min-height: 446px; }
+    .super_qiwi-screen__main:after {
+      -webkit-transform: translate3d(-50%, -55%, 0);
+      transform: translate3d(-50%, -55%, 0); }
+  .super_qiwi-info {
+    padding-top: 0; }
+    .super_qiwi-info__subtitle {
+      font-size: 28px;
+      margin-top: -40px; }
+    .super_qiwi-info__action {
+      margin: 15px auto 0; }
+  .super_qiwi-btn {
+    font-size: 18px; }
+    .super_qiwi-btn__inner > span {
+      padding: 16px 33px; }
+  .super_qiwi-btn__rules {
+    font-size: 15px;
+    margin: 3px auto 0; }
+  .super_qiwi-wrap__top {
+    position: absolute;
+    top: -120px;
+    right: 50px;
+    z-index: 5; }
+  .super_qiwi-screen__timer {
+    margin-top: 95px; }
+  .super_qiwi-countdown {
+    width: 360px; }
+    .super_qiwi-countdown__title {
+      font-size: 16px; }
+    .super_qiwi-countdown__list {
+      margin: 14px auto 0; }
+      .super_qiwi-countdown__list li {
+        font-size: 50px; }
+        .super_qiwi-countdown__list li span {
+          margin-top: 4px;
+          font-size: 14px; }
+  .super_qiwi-screen__steps {
+    margin-top: 80px; }
+    .super_qiwi-screen__steps:after {
+      width: 333px;
+      height: 344px;
+      -webkit-transform: translate3d(-55%, -40%, 0);
+      transform: translate3d(-55%, -40%, 0); }
+    .super_qiwi-screen__steps:before {
+      width: 332px;
+      height: 733px;
+      -webkit-transform: translate3d(65%, -25%, 0);
+      transform: translate3d(65%, -25%, 0); }
+  .super_qiwi-steps {
+    padding: 200px 0 0; }
+  .super_qiwi-step__img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, -75%);
+    -ms-transform: translate(-50%, -75%);
+    transform: translate(-50%, -75%); }
+    .super_qiwi-step__img img {
+      width: 241px; }
+    .super_qiwi-step__img:after {
+      left: -18%;
+      width: 57px;
+      height: 22px;
+      -webkit-transform: translate3d(0%, -50%, 0);
+      transform: translate3d(0%, -50%, 0); }
+  .super_qiwi-step__text {
+    font-size: 14px; }
+    .super_qiwi-step__text_big {
+      font-size: 16px;
+      margin-bottom: 5px; }
+  .super_qiwi-screen__prizes {
+    position: relative;
+    margin-top: 100px;
+    padding-bottom: 50px; }
+    .super_qiwi-screen__prizes:before {
+      width: 560px;
+      height: 590px;
+      -webkit-transform: translate3d(-70%, 30%, 0);
+      transform: translate3d(-70%, 30%, 0); }
+    .super_qiwi-screen__prizes:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 90%;
+      background: #f7f7f7;
+      -webkit-transform: translate3d(-50%, -50%, 0);
+      transform: translate3d(-50%, -50%, 0);
+      z-index: -1;
+      pointer-events: none; }
+  .super_qiwi-prizes {
+    position: relative;
+    z-index: 1; }
+    .super_qiwi-prizes__title {
+      padding-top: 70px; }
+    .super_qiwi-prizes__nav {
+      margin: 50px 0 0; }
+      .super_qiwi-prizes__nav_period > span {
+        margin-top: 10px;
+        font-size: 14px; }
+      .super_qiwi-prizes__nav_button {
+        font-size: 16px; }
+        .super_qiwi-prizes__nav_button span {
+          padding: 10px 61px; }
+    .super_qiwi-prizes__tabs {
+      margin: 30px 0 0;
+      padding: 30px 0 0; }
+    .super_qiwi-prizes__tab_title {
+      font-size: 30px; }
+    .super_qiwi-prizes__inner .super_qiwi-countdown {
+      margin-top: 50px;
+      margin-bottom: 20px; }
+    .super_qiwi-prizes__prize {
+      padding: 200px 0 0; }
+      .super_qiwi-prizes__prize:first-child .super_qiwi-prizes__prize_img {
+        width: 160px; }
+      .super_qiwi-prizes__prize:nth-child(2) .super_qiwi-prizes__prize_img {
+        width: 179px; }
+      .super_qiwi-prizes__prize:last-child .super_qiwi-prizes__prize_img {
+        width: 152px; }
+      .super_qiwi-prizes__prize_img {
+        -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+        transform: translate(-50%, -60%); }
+        .super_qiwi-prizes__prize_img img {
+          max-width: 100%; }
+      .super_qiwi-prizes__prize_text {
+        font-size: 14px; }
+        .super_qiwi-prizes__prize_text span {
+          display: block; }
+      .super_qiwi-prizes__prize_big {
+        font-size: 22px;
+        margin-bottom: 15px; }
+    .super_qiwi-prizes__bonus {
+      width: 330px;
+      padding-left: 20px; }
+      .super_qiwi-prizes__bonus_title {
+        font-size: 22px;
+        margin-top: 20px; }
+        .super_qiwi-prizes__bonus_title img {
+          top: 50%;
+          left: 10px;
+          width: 60px;
+          -webkit-transform: translate3d(0, -50%, 0);
+          transform: translate3d(0, -50%, 0); }
+      .super_qiwi-prizes__bonus_block {
+        font-size: 13px;
+        margin-top: 40px; }
+      .super_qiwi-prizes__bonus_row {
+        margin-bottom: 10px; }
+        .super_qiwi-prizes__bonus_row span {
+          width: 180px; }
+        .super_qiwi-prizes__bonus_row b {
+          width: 150px; }
+  .super_qiwi-btn__prize {
+    margin: 40px auto 20px;
+    font-size: 18px; }
+    .super_qiwi-btn__prize .super_qiwi-btn__inner span {
+      padding: 15px 22px; }
+  .super_qiwi-screen__info {
+    margin-top: 140px; }
+    .super_qiwi-screen__info:before {
+      width: 278px;
+      height: 260px;
+      -webkit-transform: translate3d(-5%, 85%, 0);
+      transform: translate3d(-5%, 85%, 0); }
+  .super_qiwi-info__block_title {
+    font-size: 34px; }
+  .super_qiwi-how ul {
+    margin: 90px 0 0; }
+    .super_qiwi-how ul li {
+      font-size: 14px;
+      margin-bottom: 15px;
+      line-height: 1.5; }
+      .super_qiwi-how ul li span {
+        margin-right: 10px; }
+  .super_qiwi-summ {
+    width: 460px; }
+    .super_qiwi-summ ul {
+      margin: 60px 0 0; }
+      .super_qiwi-summ ul:first-child li b {
+        width: 110px; }
+      .super_qiwi-summ ul:last-child li b {
+        width: 130px; }
+      .super_qiwi-summ ul li {
+        font-size: 14px;
+        margin-bottom: 10px; }
+  .super_qiwi-btn__wrap {
+    position: relative;
+    text-align: center;
+    z-index: 3;
+    margin: 70px 0; }
+}
+
+@media only screen and (max-width: 1250px) {
+  .super_qiwi-screen__prizes:before {
+    display: none; } }
+
+
+@media only screen and (max-width: 1000px) {
+  .super_qiwi-container {
+    width: 600px;
+  }
+
+  .super_qiwi-logo {
+    height: 230px;
+    top: -31px;
+    -webkit-transform: translateX(-50.5%) scale(0.3);
+    -ms-transform: translateX(-50.5%) scale(0.3);
+    transform: translateX(-50.5%) scale(0.26);
+  }
+  .super_qiwi-info__subtitle {
+    font-size: 18px;
+    margin-top: -76px;
+  }
+  .super_qiwi-btn {
+    font-size: 14px;
+  }
+  .super_qiwi-btn__inner > span {
+    padding: 9px 18px;
+  }
+  .super_qiwi-btn__rules {
+    font-size: 12px;
+  }
+  .super_qiwi-info__action {
+    margin-top: 5px;
+  }
+  .super_qiwi-screen__main {
+    min-height: auto;
+  }
+  .super_qiwi-wave__bottom {
+    width: 130%;
+    height: 100px;
+    bottom: -87px;
+  }
+  .super_qiwi-screen__timer {
+    margin-top: 58px;
+  }
+  .super_qiwi-countdown__title {
+    font-size: 14px;
+  }
+  .super_qiwi-countdown__list li {
+    font-size: 31px;
+  }
+  .super_qiwi-countdown__list li span {
+    font-size: 12px;
+    margin-top: -1px;
+  }
+  .super_qiwi-countdown__list {
+    margin-top: 9px;
+  }
+  .super_qiwi-screen__steps {
+    margin-top: 38px;
+  }
+  .super_qiwi-title {
+    font-size: 30px;
+  }
+  .super_qiwi-screen__steps:before {
+    width: 218px;
+    height: 450px;
+    -webkit-transform: translate3d(63%, 2%, 0);
+    transform: translate3d(63%, 2%, 0);
+  }
+  .super_qiwi-step__text_big {
+    font-size: 12px;
+  }
+  .super_qiwi-step__text {
+    font-size: 12px;
+  }
+  .super_qiwi-step__img img {
+    width: 125px;
+  }
+  .super_qiwi-container__small {
+    width: 500px;
+  }
+  .super_qiwi-step__img:after {
+    left: -47%;
+  }
+  .super_qiwi-screen__steps:after {
+    width: 160px;
+    height: 168px;
+    -webkit-transform: translate3d(-46%, -30%, 0);
+    transform: translate3d(-46%, -30%, 0);
+  }
+  .super_qiwi-steps {
+    padding: 115px 0 0;
+  }
+  .super_qiwi-tickets__text_title {
+    font-size: 24px;
+  }
+  .super_qiwi-tickets__list {
+    margin-top: 37px;
+    max-width: 410px;
+  }
+  .super_qiwi-tickets__tickets_wrap {
+    margin-top: 19px;
+  }
+  .super_qiwi-tickets__tickets {
+    padding: 0 13px 0 5px;
+    height: 108px;
+  }
+  .super_qiwi-tickets__ticket {
+    font-size: 12px;
+    height: 14px;
+    width: 64px;
+  }
+  .super_qiwi-screen__prizes {
+    margin-top: 20px;
+    padding-bottom: 1px;
+  }
+  .super_qiwi-wave__top {
+    top: -19px;
+    width: 150%;
+    height: 58px;
+  }
+  .super_qiwi-prizes__nav {
+    margin: 24px 0 0;
+  }
+  .super_qiwi-prizes__nav_button {
+    font-size: 14px;
+  }
+  .super_qiwi-prizes__nav_button span {
+    padding: 6px 30px;
+  }
+  .super_qiwi-prizes__nav_period > span {
+    font-size: 12px;
+  }
+  .super_qiwi-prizes__tabs {
+    margin: 14px 0 0;
+    padding: 14px 0 0;
+  }
+  .super_qiwi-prizes__tab_title {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  .super_qiwi-prizes__bonus {
+    width: 100%;
+  }
+  .super_qiwi-prizes__inner {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .super_qiwi-prizes__prize_big {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .super_qiwi-prizes__prize_text {
+    font-size: 12px;
+  }
+  .super_qiwi-prizes__prize:first-child .super_qiwi-prizes__prize_img {
+      width: 108px;
+      -webkit-transform: translate(-50%, -46%);
+    -ms-transform: translate(-50%, -46%);
+    transform: translate(-50%, -46%);
+  }
+  .super_qiwi-prizes__prize {
+    padding: 126px 0 0;
+  }
+  .super_qiwi-prizes__prize:nth-child(2) .super_qiwi-prizes__prize_img {
+    width: 115px;
+     -webkit-transform: translate(-50%, -40%);
+    -ms-transform: translate(-50%, -40%);
+    transform: translate(-50%, -40%);
+  }
+  .super_qiwi-prizes__prize:nth-child(3) .super_qiwi-prizes__prize_img {
+    width: 95px;
+  }
+  .super_qiwi-prizes__bonus_title img {
+    width: 40px;
+    position: static;
+    -webkit-transform: translate3d(0, -43%, 0);
+    transform: translate3d(0, 43%, 0);
+  }
+  .super_qiwi-prizes__bonus_title {
+    font-size: 18px;
+    margin-top: 16px;
+  }
+  .super_qiwi-prizes__bonus_block {
+    margin-top: 33px;
+  }
+  .super_qiwi-prizes__bonus_row {
+    margin-bottom: 5px;
+  }
+  .super_qiwi-countdown {
+    width: 300px;
+  }
+  .super_qiwi-screen__prizes:after {
+    height: 98%;
+  }
+  .super_qiwi-btn__prize .super_qiwi-btn__inner span {
+    padding: 9px 16px;
+  }
+  .super_qiwi-info__block {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .super_qiwi-info__block_title {
+    text-align: center;
+    font-size: 22px;
+  }
+  .super_qiwi-screen__info {
+    margin-top: 76px;
+  }
+  .super_qiwi-how ul {
+    margin: 25px 0 0;
+  }
+  .super_qiwi-summ__list {
+    display: block;
+  }
+  .super_qiwi-summ ul {
+    width: 50%;
+    margin: 30px auto 0;
+  }
+  .super_qiwi-summ ul li {
+    margin-bottom: 4px;
+  }
+  .super_qiwi-btn__wrap {
+    margin: 36px 0;
+  }
+  .super_qiwi-screen__info:before {
+    width: 176px;
+  }
+  .super_qiwi-modal__result {
+    width: 500px;
+    padding: 10px 20px 10px;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__list {
+    height: 56vh;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__text_title {
+    font-size: 28px;
+    line-height: 1;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prizes_nav_button {
+    font-size: 14px;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prizes_nav_button span {
+    padding: 5px 19px;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prize_text_big {
+    font-size: 16px;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prize_ticket {
+    font-size: 12px;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__bonus_title {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__bonus_ticket {
+    width: 68px;
+    height: 16px;
+    font-size: 12px;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prize:first-child {
+    padding-bottom: 0;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prize {
+    padding: 90px 0 0;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prize_img {
+    width: 78px;
+    -webkit-transform: translate(-50%, -100%);
+    -ms-transform: translate(-50%, -100%);
+    transform: translate(-50%, -100%);
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prize_img_prize1 {
+    -webkit-transform: translate(-50%, -67%);
+    -ms-transform: translate(-50%, -67%);
+    transform: translate(-50%, -67%);
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prizes_nav {
+    margin: 8px 0 0;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prizes_countdown_title {
+    margin: 15px 0 0 ;
+    font-size: 18px;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prizes_inner .super_qiwi-countdown__list li {
+    font-size: 46px;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prizes_inner .super_qiwi-countdown__list li span {
+    font-size: 14px;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prizes_inner .super_qiwi-countdown {
+    margin: 0;
+  }
+  .super_qiwi-modal__enter {
+    min-height: 200px;
+  }
+  .super_qiwi-modal__enter .super_qiwi-modal__footer {
+    margin: 16px 0 0;
+  }
+  .super_qiwi-modal__enter .super_qiwi-modal__btn_entry span {
+    padding: 10px 17px;
+  }
+  .super_qiwi-modal__enter .super_qiwi-modal__btn_register span {
+    padding: 10px;
+  }
+  .super_qiwi-modal__rules {
+    width: 500px;
+  }
+  .super_qiwi-modal__rules .super_qiwi-modal__text_title {
+    font-size: 30px;
+  }
+  .super_qiwi-modal__rules .super_qiwi-modal__text_big:not(:first-child) {
+    margin-top: 10px;
+  }
+  .super_qiwi-modal__rules .super_qiwi-modal__list {
+    height: 56vh;
+    padding-left: 0;
+    padding-right: 20px;
+  }
+  .super_qiwi-modal__win {
+    min-height: 200px;
+    padding: 5px;
+  }
+  .super_qiwi-modal__win1 .super_qiwi-modal__img {
+    height: 165px;
+    margin-top: -20px;
+  }
+  .super_qiwi-modal__win3 .super_qiwi-modal__img {
+    margin-bottom: -50px;
+  }
+  .super_qiwi-modal__win4 .super_qiwi-modal__info {
+    padding-top: 10px;
+  }
+  .super_qiwi-modal__rules .super_qiwi-modal__table {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border: none;
+  }
+  .super_qiwi-modal__table-cell {
+    flex-basis: 50%;
+    margin-bottom: 30px;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .super_qiwi-modal__table-cell:nth-child(odd) {
+    border-left: 1px solid #e6e6e6;
+  }
+  .super_qiwi-modal__table-cell:nth-child(even) {
+    border-right: 1px solid #e6e6e6;
+  }
+
+  .super_qiwi-modal__hello {
+    width: 500px;
+    min-height: 200px;
+    padding-bottom: 10px;
+  }
+  .super_qiwi-modal__hello .super_qiwi-modal__logo {
+    position: static;
+    transform: none;
+    margin-top: -39px;
+  }
+  .super_qiwi-modal__logo img {
+    width: 82%;
+  }
+  .super_qiwi-modal__hello .super_qiwi-modal__subtitle {
+    margin-top: -53px;
+    font-size: 18px;
+  }
+  .super_qiwi-modal__hello .super_qiwi-modal__btn {
+    font-size: 15px;
+    margin-top: 7px;
+  }
+  .super_qiwi-modal__hello .super_qiwi-modal__btn span > span {
+    padding: 12px 33px;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .super_qiwi-container {
+    width: 320px;
+    padding: 0 12px;
+  }
+  .super_qiwi-logo {
+    height: 209px;
+    top: -35px;
+    -webkit-transform: translateX(-50.5%) scale(0.185);
+    -ms-transform: translateX(-50.5%) scale(0.185);
+    transform: translateX(-50.5%) scale(0.185);
+  }
+  .super_qiwi-wave__bottom {
+    width: 250%;
+    height: 57px;
+    bottom: -42px;
+  }
+  .super_qiwi-steps {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-top: 0;
+  }
+  .super_qiwi-step__wrap {
+    width: 100%;
+    padding: 200px 0 0;
+  }
+  .super_qiwi-step__wrap +.super_qiwi-step__wrap {
+    margin-top: 20px;
+  }
+  .super_qiwi-container__small {
+    width: 100%;
+  }
+  .super_qiwi-step__text {
+    font-size: 16px;
+  }
+  .super_qiwi-step__text_big {
+    font-size: 18px;
+  }
+  .super_qiwi-step__img img {
+    width: 241px;
+  }
+  .super_qiwi-tickets__list {
+    max-width: 300px;
+  }
+  .super_qiwi-tickets__ticket {
+    width: 70px;
+  }
+
+  .super_qiwi-prizes__nav_period {
+    text-align: center;
+  }
+  .super_qiwi-modal__prizes_nav_period {
+    text-align: center;
+    flex-basis: 48%;
+  }
+  .super_qiwi-prizes__nav_button {
+    max-width: 180px;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prizes_nav_button {
+    max-width: 180px;
+    margin: 14px auto 0;
+    font-size: 16px;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prizes_nav_button.is-active,
+  .super_qiwi-modal__result .super_qiwi-modal__prizes_nav_button:hover {
+    -webkit-box-shadow: 5px 5px 10px 0 rgba(255, 140, 0, 0.2);
+    box-shadow: 5px 5px 10px 0 rgba(255, 140, 0, 0.2);
+  }
+  .super_qiwi-prizes__nav_button span,
+  .super_qiwi-modal__prizes_nav_button span {
+    padding: 9px 14px;
+  }
+  .super_qiwi-prizes__tab {
+    padding: 0 10px;
+  }
+  .super_qiwi-prizes__prize {
+    width: 100%;
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+     flex: auto;
+     padding: 200px 0 0;
+  }
+  .super_qiwi-prizes__prize_text {
+    font-size: 14px;
+  }
+  .super_qiwi-prizes__prize_big {
+    font-size: 24px;
+  }
+  .super_qiwi-prizes__prize:nth-child(2) .super_qiwi-prizes__prize_img {
+    width: 179px;
+  }
+
+  .super_qiwi-prizes__prize:first-child .super_qiwi-prizes__prize_img {
+    width: auto;
+  }
+  .super_qiwi-prizes__prize:nth-child(3) .super_qiwi-prizes__prize_img {
+    width: auto;
+  }
+  .super_qiwi-prizes__prize:nth-child(3) {
+    margin-top: 30px;
+  }
+  .super_qiwi-wave__top {
+    top: -24px;
+    width: 250%;
+    height: 37px;
+  }
+  .super_qiwi-tickets__tickets {
+    height: 114px;
+  }
+  .super_qiwi-screen__info .super_qiwi-container {
+    padding: 0 12px;
+  }
+  .super_qiwi-summ ul {
+    width: 80%;
+  }
+  .super_qiwi-screen__info:before,
+  .super_qiwi-prizes__prize:after {
+    display: none;
+  }
+  .super_qiwi-modal__enter {
+    width: 298px;
+    min-height: 360px;
+  }
+  .super_qiwi-modal__enter .super_qiwi-modal__footer {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 65px 0 0;
+  }
+  .super_qiwi-modal__enter .super_qiwi-modal__btn_entry {
+    width: 160px;
+    margin-bottom: 20px;
+  }
+  .super_qiwi-modal__close {
+    width: 30px;
+    height: 30px;
+    right: -10px;
+    top: -10px;
+  }
+  .super_qiwi-modal__rules {
+    width: 298px;
+  }
+  .super_qiwi-modal__win {
+    width: 298px;
+    min-height: 360px;
+    background-image: url(../img/main/320win-bg.jpg);
+    background-size: cover;
+  }
+  .super_qiwi-modal__win1 .super_qiwi-modal__img {
+    height: 220px;
+    margin-left: -35px;
+    margin-top: 0;
+    width: 200px;
+  }
+  .super_qiwi-modal__win2 .super_qiwi-modal__img {
+    top: 36px;
+    width: 185px;
+    height: 192px;
+    padding-right: 0; 
+  }
+  .super_qiwi-modal__win3 .super_qiwi-modal__img {
+    width: 183px;
+    height: 220px;
+  }
+  .super_qiwi-modal__win4 .super_qiwi-modal__big {
+    margin: 63px 0;
+    font-size: 75px;
+  }
+  .super_qiwi-modal__win .super_qiwi-modal__info {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .super_qiwi-modal__win .super_qiwi-modal__text {
+    width: 100%;
+  }
+  .super_qiwi-modal__result {
+    width: 300px;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prizes_inner {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prize {
+    flex: auto;
+    width: 100%;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prize_text_big {
+    font-size: 24px;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prize_ticket {
+    font-size: 16px;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prize_img {
+    width: 140px;
+    -webkit-transform: translate(-50%, -84%);
+    -ms-transform: translate(-50%, -84%);
+    transform: translate(-50%, -84%);
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prize_img_prize1 {
+    -webkit-transform: translate(-50%, -67%);
+    -ms-transform: translate(-50%, -67%);
+    transform: translate(-50%, -67%);
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prize {
+    padding: 174px 0 0;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prize:not(:last-child):after {
+    content: none;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__bonus {
+    padding-left: 0;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__text_title {
+    font-size: 20px;
+    padding: 0 10px;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prizes {
+    padding-right: 12px;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prizes_inner .super_qiwi-countdown__list li {
+    font-size: 40px;
+  }
+  .super_qiwi-countdown__list li + li:before {
+    font-size: 36px;
+  }
+
+  .super_qiwi-modal__table-cell {
+    flex-basis: 100%;
+    border: 1px solid #e6e6e6;
+  }
+  .super_qiwi-modal__hello {
+    width: 300px;
+    min-height: 360px;
+    background-image: url(../img/modal/320hello-bg.jpg);
+  }
+  .super_qiwi-modal__hello .super_qiwi-modal__logo {
+    margin-top: 8px;
+  }
+  .super_qiwi-modal__logo img {
+    width: 128%;
+    margin-left: -45px;
+  }
+  .super_qiwi-modal__hello .super_qiwi-modal__subtitle {
+    margin-top: 0;
+  }
+  .super_qiwi-modal__hello .super_qiwi-modal__btn {
+    margin-top: 35px;
+  }
+  .super_qiwi-step__img:after {
+    display: none;
+  }
+  .super_qiwi-prizes__nav {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 12px;
+  }
+  .super_qiwi-modal__result .super_qiwi-modal__prizes_nav {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .super_qiwi-prizes__nav_period {
+    flex-basis: 48%;
+    margin-top: 16px;
+  }
+  .super_qiwi-prizes__nav_period > span {
+    display: none;
+  }
+}
+
+/* END RESPONSIVE 
+/* IE BUG FIX */
+@media all and (-ms-high-contrast: none) {
+  .super_qiwi-gradient__text, .super_qiwi-gradient__text b {
+    background: transparent !important; } 
+  }
+
+/* /IE BUG FIX */
