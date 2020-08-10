@@ -875,6 +875,7 @@ p.lang a.active {
   display: block;
   z-index: 14;
   position: fixed;
+  top: 0;
   font-size: 1.5em;
   font-weight: 400;
   left: 10px;

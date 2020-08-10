@@ -28,3 +28,4 @@
 - [**wgames**](https://maxdragomir.github.io/portfolio/division/)
 - [**1xcash**](https://maxdragomir.github.io/portfolio/division/)
 - [**kairat**](https://maxdragomir.github.io/portfolio/division/)
+- [**no-risk**](https://maxdragomir.github.io/portfolio/division/)
