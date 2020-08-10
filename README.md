@@ -23,7 +23,7 @@
 - [**Project 2**](https://maxdragomir.github.io/portfolio/division/project2/index.html)
 - [**Project 3**](https://maxdragomir.github.io/portfolio/division/project3/index.html)
 - [**Project 4**](https://maxdragomir.github.io/portfolio/division/project4/index.html)
-- [**super-qiwi**](https://maxdragomir.github.io/portfolio/division/)
+- [**Project 5**](https://maxdragomir.github.io/portfolio/division/project5/index.html)
 - [**big-helmet**](https://maxdragomir.github.io/portfolio/division/)
 - [**nyQwest**](https://maxdragomir.github.io/portfolio/division/)
 - [**winterExpress**](https://maxdragomir.github.io/portfolio/division/)
