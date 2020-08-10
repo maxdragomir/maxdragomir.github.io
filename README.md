@@ -23,7 +23,7 @@
 - [**Project 4**](https://maxdragomir.github.io/portfolio/division/project4/index.html)
 - [**Project 5**](https://maxdragomir.github.io/portfolio/division/project5/index.html)
 - [**Project 6**](https://maxdragomir.github.io/portfolio/division/project6/index.html)
-- [**nyQwest**](https://maxdragomir.github.io/portfolio/division/)
+- [**Project 7**](https://maxdragomir.github.io/portfolio/division/project7/index.html)
 - [**winterExpress**](https://maxdragomir.github.io/portfolio/division/)
 - [**wgames**](https://maxdragomir.github.io/portfolio/division/)
 - [**1xcash**](https://maxdragomir.github.io/portfolio/division/)
