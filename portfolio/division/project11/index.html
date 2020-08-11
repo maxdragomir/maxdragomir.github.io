@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Project 11</title>
+  <meta charset="utf-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+</head>
+<body>
+
+<!-- Styles ---------------------------------------------------------------------------------------------------------->
+<link href="styles/vendors.css" rel="stylesheet">
+<link href="styles/styles.css" rel="stylesheet" id="ltr">
+<!-- Styles -------------------------------------------------------------------------------------------------------->
+<!-- Landing ----------------------------------------------------------------------------------------------------->
+<div class="kairat kairat-lottery kairat-wrapper">
+  <div class="kairat-inner">
+    <!-- Content ------------------------------------------------------------------------------------------------------->
+    <!-- Section Main-->
+    <section class="kairat-section kairat-section--main">
+      <div class="kairat-bg">
+        <div class="kairat-bg__main"><img alt="" src="img/main/bg.jpg"></div>
+        <div class="kairat-bg__overlay"><img alt="" src="img/main/overlay.png" data-aos="fade-right" data-aos-delay="500" data-aos-anchor="#kairat-showMain"></div>
+      </div>
+      <div class="kairat-obj">
+        <div class="kairat-obj__elem1"><img alt="" src="img/elements/elem1.png" data-aos="fade-left" data-aos-delay="500" data-aos-anchor="#kairat-showMain"></div>
+        <div class="kairat-obj__elem2"><img alt="" src="img/elements/elem2.png" data-aos="fade-left" data-aos-delay="500" data-aos-anchor="#kairat-showMain"></div>
+        <div class="kairat-obj__elem3"><img alt="" src="img/elements/elem3.png" data-aos="fade-left" data-aos-delay="500" data-aos-anchor="#kairat-showMain"></div>
+        <div class="kairat-obj__elem4"><img alt="" src="img/elements/elem4.png" data-aos="fade-left" data-aos-delay="500" data-aos-anchor="#kairat-showMain"></div>
+      </div>
+      <div class="kairat-main" id="kairat-showMain">
+        <div class="kairat-main__img"><img alt="" src="img/main/car.png" data-aos="fade-left" data-aos-delay="100" data-aos-anchor="#kairat-showMain"></div>
+        <div class="kairat-main__result" data-aos="fade-left" data-aos-delay="100" data-aos-anchor="#kairat-showMain"><a class="kairat-btn kairat-btn--result" href="#!" @click="$modal.show('modal-result')"><span>Результаты</span></a>
+        </div>
+        <div class="kairat-main__info">
+          <div class="kairat-main__info_title" data-aos="fade-right" data-aos-delay="100" data-aos-anchor="#kairat-showMain">
+            <div class="kairat-main__info_logo"><img alt="" src="img/main/logo.png"></div>
+            <div class="kairat-main__info_text"><span class="kairat-main__info_text--normal"><span>Кайрат</span><span>Лига</span></span><span class="kairat-main__info_text--border" data-aos="animate-border" data-aos-anchor="#kairat-showMain"><span>Кайрат</span><span>Лига</span></span></div>
+          </div>
+          <div class="kairat-main__info_subtitle" data-aos="fade-right" data-aos-delay="300" data-aos-anchor="#kairat-showMain"><span>Оставляйте прогнозы - выигрывайте Toyota Camry</span></div>
+          <div class="kairat-main__info_action" data-aos="fade-right" data-aos-delay="500" data-aos-anchor="#kairat-showMain"><a class="kairat-btn kairat-btn--info kairat-jsScrollTo" href="#!"><span>Сделать прогноз</span></a><a class="kairat-main__info_action-link" href="#!" @click="$modal.show('modal-rules')"><span>Правила</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Main-->
+    <!-- Section Steps-->
+    <section class="kairat-section kairat-section--steps">
+      <div class="kairat-obj kairat-obj-steps">
+        <div class="kairat-obj-steps__elem1"><img alt="" src="img/steps/dots.png"></div>
+        <div class="kairat-obj-steps__elem2"><img alt="" src="img/elements/elem5.png"></div>
+        <div class="kairat-obj-steps__elem3"><img alt="" src="img/elements/elem7.png" data-aos="fade-right" data-aos-delay="100"></div>
+      </div>
+      <div class="kairat-container">
+        <div class="kairat-steps" id="kairat-showSteps">
+          <div class="kairat-step kairat-step--first">
+            <div class="kairat-step__info">
+              <div class="kairat-step__info_number"><span class="kairat-step__info_number--normal">1</span><span class="kairat-step__info_number--border" data-aos="fade-right" data-aos-delay="100" data-aos-anchor="#kairat-showSteps">1</span></div>
+              <div class="kairat-step__info_text" data-aos="fade-right" data-aos-delay="300" data-aos-anchor="#kairat-showSteps"><span>Составляйте прогноз на матчи ФК “Кайрат”</span></div>
+            </div>
+          </div>
+          <div class="kairat-step kairat-step--second">
+            <div class="kairat-step__info">
+              <div class="kairat-step__info_number"><span class="kairat-step__info_number--normal">2</span><span class="kairat-step__info_number--border" data-aos="fade-right" data-aos-delay="500" data-aos-anchor="#kairat-showSteps">2</span></div>
+              <div class="kairat-step__info_text" data-aos="fade-right" data-aos-delay="700" data-aos-anchor="#kairat-showSteps"><span>Подтверждайте прогноз ставкой от 3000 KZT</span></div>
+            </div>
+          </div>
+          <div class="kairat-step kairat-step--third">
+            <div class="kairat-step__info">
+              <div class="kairat-step__info_number"><span class="kairat-step__info_number--normal">3</span><span class="kairat-step__info_number--border" data-aos="fade-right" data-aos-delay="900" data-aos-anchor="#kairat-showSteps">3</span></div>
+              <div class="kairat-step__info_text" data-aos="fade-right" data-aos-delay="1100" data-aos-anchor="#kairat-showSteps"><span>Накапливайте<br>очки и выигрывайте призы!</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Steps-->
+    <!-- Section Slider-->
+    <section class="kairat-section kairat-section--slider">
+      <div class="kairat-bg kairat-bg-slider">
+        <div class="kairat-bg-slider__skew"></div>
+        <div class="kairat-bg-slider__overlay"><img alt="" src="img/slider/overlay.png"></div>
+        <div class="kairat-bg-slider__yellow"><img alt="" src="img/slider/yellow-dots.png"></div>
+      </div>
+      <div class="kairat-obj kairat-obj-slider">
+        <div class="kairat-obj-slider__elem1" data-aos="fade-left" data-aos-delay="100"><img alt="" src="img/elements/elem6.png"></div>
+        <div class="kairat-obj-slider__elem2" data-aos="fade-right" data-aos-delay="100"><img alt="" src="img/elements/elem8.png"></div>
+        <div class="kairat-obj-slider__elem3" data-aos="fade-left" data-aos-delay="100"><img alt="" src="img/elements/elem9.png"></div>
+      </div>
+      <div class="kairat-container">
+        <div class="kairat-title kairat-title--sliders" data-aos="fade-down" data-aos-delay="100"><span>Составьте свой прогноз на матч ФК “Кайрат”!</span></div>
+        <div class="kairat-slider" data-aos="fade-down" data-aos-delay="100">
+          <div class="kairat-slider__nav">
+            <div class="kairat-slider__controls">
+              <button class="kairat-slider__control kairat-slider__control--prev"><img alt="" src="img/slider/arrow.png"></button>
+              <button class="kairat-slider__control kairat-slider__control--next"><img alt="" src="img/slider/arrow.png"></button>
+            </div>
+            <div class="kairat-slider__nav_items">
+              <div class="kairat-slider__nav_item-wrapper">
+                <div class="kairat-slider__nav_item"><span>15.08 - 22.08</span></div>
+              </div>
+              <div class="kairat-slider__nav_item-wrapper">
+                <div class="kairat-slider__nav_item"><span>23.08 - 30.08</span></div>
+              </div>
+              <div class="kairat-slider__nav_item-wrapper">
+                <div class="kairat-slider__nav_item"><span>31.08 - 6.09</span></div>
+              </div>
+              <div class="kairat-slider__nav_item-wrapper">
+                <div class="kairat-slider__nav_item"><span>7.09 -14.09</span></div>
+              </div>
+              <div class="kairat-slider__nav_item-wrapper">
+                <div class="kairat-slider__nav_item"><span>15.08 - 22.09</span></div>
+              </div>
+              <div class="kairat-slider__nav_item-wrapper">
+                <div class="kairat-slider__nav_item"><span>22.09 - 29.09</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="kairat-slider__tabs">
+            <div class="kairat-slider__tab">
+              <div class="kairat-slider__tab_title"><span>чемпионат казахстана</span></div>
+              <div class="kairat-slider__tab_wrapper">
+                <div class="kairat-slider__tab_block">
+                  <div class="kairat-slider__tab_left">
+                    <div class="kairat-slider__tab_logo"><img alt="" src="img/slider/logo1.png"></div>
+                    <div class="kairat-slider__tab_name"><span>фк “кайрат”</span></div>
+                    <div class="kairat-slider__tab_btn" data-new-number="">
+                      <div class="kairat-slider__tab_numbers kairat-slider__tab_numbers--left">
+                        <div class="kairat-slider__tab_number" data-num="0"><span>0</span></div>
+                        <div class="kairat-slider__tab_number" data-num="1"><span>1</span></div>
+                        <div class="kairat-slider__tab_number" data-num="2"><span>2</span></div>
+                        <div class="kairat-slider__tab_number" data-num="3"><span>3</span></div>
+                        <div class="kairat-slider__tab_number" data-num="4"><span>4</span></div>
+                        <div class="kairat-slider__tab_number" data-num="5"><span>5</span></div>
+                        <div class="kairat-slider__tab_number" data-num="6"><span>6</span></div>
+                        <div class="kairat-slider__tab_number" data-num="7"><span>7</span></div>
+                        <div class="kairat-slider__tab_number" data-num="8"><span>8</span></div>
+                        <div class="kairat-slider__tab_number" data-num="9"><span>9</span></div>
+                      </div><img class="kairat-slider__tab_plus" alt="" src="img/slider/plus.png">
+                    </div>
+                  </div>
+                  <div class="kairat-slider__tab_right">
+                    <div class="kairat-slider__tab_btn" data-new-number="">
+                      <div class="kairat-slider__tab_numbers kairat-slider__tab_numbers--right">
+                        <div class="kairat-slider__tab_number" data-num="0"><span>0</span></div>
+                        <div class="kairat-slider__tab_number" data-num="1"><span>1</span></div>
+                        <div class="kairat-slider__tab_number" data-num="2"><span>2</span></div>
+                        <div class="kairat-slider__tab_number" data-num="3"><span>3</span></div>
+                        <div class="kairat-slider__tab_number" data-num="4"><span>4</span></div>
+                        <div class="kairat-slider__tab_number" data-num="5"><span>5</span></div>
+                        <div class="kairat-slider__tab_number" data-num="6"><span>6</span></div>
+                        <div class="kairat-slider__tab_number" data-num="7"><span>7</span></div>
+                        <div class="kairat-slider__tab_number" data-num="8"><span>8</span></div>
+                        <div class="kairat-slider__tab_number" data-num="9"><span>9</span></div>
+                      </div><img class="kairat-slider__tab_plus" alt="" src="img/slider/plus.png">
+                    </div>
+                    <div class="kairat-slider__tab_name"><span>АЕК Афины</span></div>
+                    <div class="kairat-slider__tab_logo"><img alt="" src="img/slider/logo2.png"></div>
+                  </div>
+                </div>
+                <div class="kairat-slider__tab_action"><a class="kairat-btn kairat-btn--tab kairat-btn--disabled" href="#!" @click="$modal.show('modal-forecast')"><span>подтвердить прогноз</span></a>
+                </div>
+              </div>
+              <div class="kairat-slider__tab_title"><span>Лига европы</span></div>
+              <div class="kairat-slider__tab_wrapper">
+                <div class="kairat-slider__tab_block">
+                  <div class="kairat-slider__tab_left">
+                    <div class="kairat-slider__tab_logo"><img alt="" src="img/slider/logo1.png"></div>
+                    <div class="kairat-slider__tab_name"><span>фк “кайрат”</span></div>
+                    <div class="kairat-slider__tab_btn" data-new-number="">
+                      <div class="kairat-slider__tab_numbers kairat-slider__tab_numbers--left">
+                        <div class="kairat-slider__tab_number" data-num="0"><span>0</span></div>
+                        <div class="kairat-slider__tab_number" data-num="1"><span>1</span></div>
+                        <div class="kairat-slider__tab_number" data-num="2"><span>2</span></div>
+                        <div class="kairat-slider__tab_number" data-num="3"><span>3</span></div>
+                        <div class="kairat-slider__tab_number" data-num="4"><span>4</span></div>
+                        <div class="kairat-slider__tab_number" data-num="5"><span>5</span></div>
+                        <div class="kairat-slider__tab_number" data-num="6"><span>6</span></div>
+                        <div class="kairat-slider__tab_number" data-num="7"><span>7</span></div>
+                        <div class="kairat-slider__tab_number" data-num="8"><span>8</span></div>
+                        <div class="kairat-slider__tab_number" data-num="9"><span>9</span></div>
+                      </div><img class="kairat-slider__tab_plus" alt="" src="img/slider/plus.png">
+                    </div>
+                  </div>
+                  <div class="kairat-slider__tab_right">
+                    <div class="kairat-slider__tab_btn" data-new-number="">
+                      <div class="kairat-slider__tab_numbers kairat-slider__tab_numbers--right">
+                        <div class="kairat-slider__tab_number" data-num="0"><span>0</span></div>
+                        <div class="kairat-slider__tab_number" data-num="1"><span>1</span></div>
+                        <div class="kairat-slider__tab_number" data-num="2"><span>2</span></div>
+                        <div class="kairat-slider__tab_number" data-num="3"><span>3</span></div>
+                        <div class="kairat-slider__tab_number" data-num="4"><span>4</span></div>
+                        <div class="kairat-slider__tab_number" data-num="5"><span>5</span></div>
+                        <div class="kairat-slider__tab_number" data-num="6"><span>6</span></div>
+                        <div class="kairat-slider__tab_number" data-num="7"><span>7</span></div>
+                        <div class="kairat-slider__tab_number" data-num="8"><span>8</span></div>
+                        <div class="kairat-slider__tab_number" data-num="9"><span>9</span></div>
+                      </div><img class="kairat-slider__tab_plus" alt="" src="img/slider/plus.png">
+                    </div>
+                    <div class="kairat-slider__tab_name"><span>baern munchen</span></div>
+                    <div class="kairat-slider__tab_logo"><img alt="" src="img/slider/logo3.png"></div>
+                  </div>
+                </div>
+                <div class="kairat-slider__tab_action"><a class="kairat-btn kairat-btn--tab kairat-btn--disabled" href="#!" @click="$modal.show('modal-forecast')"><span>подтвердить прогноз</span></a>
+                </div>
+              </div>
+              <div class="kairat-slider__tab_title"><span>кубок казахстана</span></div>
+              <div class="kairat-slider__tab_wrapper">
+                <div class="kairat-slider__tab_block">
+                  <div class="kairat-slider__tab_left">
+                    <div class="kairat-slider__tab_logo"><img alt="" src="img/slider/logo1.png"></div>
+                    <div class="kairat-slider__tab_name"><span>фк “кайрат”</span></div>
+                    <div class="kairat-slider__tab_btn" data-new-number="">
+                      <div class="kairat-slider__tab_numbers kairat-slider__tab_numbers--left">
+                        <div class="kairat-slider__tab_number" data-num="0"><span>0</span></div>
+                        <div class="kairat-slider__tab_number" data-num="1"><span>1</span></div>
+                        <div class="kairat-slider__tab_number" data-num="2"><span>2</span></div>
+                        <div class="kairat-slider__tab_number" data-num="3"><span>3</span></div>
+                        <div class="kairat-slider__tab_number" data-num="4"><span>4</span></div>
+                        <div class="kairat-slider__tab_number" data-num="5"><span>5</span></div>
+                        <div class="kairat-slider__tab_number" data-num="6"><span>6</span></div>
+                        <div class="kairat-slider__tab_number" data-num="7"><span>7</span></div>
+                        <div class="kairat-slider__tab_number" data-num="8"><span>8</span></div>
+                        <div class="kairat-slider__tab_number" data-num="9"><span>9</span></div>
+                      </div><img class="kairat-slider__tab_plus" alt="" src="img/slider/plus.png">
+                    </div>
+                  </div>
+                  <div class="kairat-slider__tab_right">
+                    <div class="kairat-slider__tab_btn" data-new-number="">
+                      <div class="kairat-slider__tab_numbers kairat-slider__tab_numbers--right">
+                        <div class="kairat-slider__tab_number" data-num="0"><span>0</span></div>
+                        <div class="kairat-slider__tab_number" data-num="1"><span>1</span></div>
+                        <div class="kairat-slider__tab_number" data-num="2"><span>2</span></div>
+                        <div class="kairat-slider__tab_number" data-num="3"><span>3</span></div>
+                        <div class="kairat-slider__tab_number" data-num="4"><span>4</span></div>
+                        <div class="kairat-slider__tab_number" data-num="5"><span>5</span></div>
+                        <div class="kairat-slider__tab_number" data-num="6"><span>6</span></div>
+                        <div class="kairat-slider__tab_number" data-num="7"><span>7</span></div>
+                        <div class="kairat-slider__tab_number" data-num="8"><span>8</span></div>
+                        <div class="kairat-slider__tab_number" data-num="9"><span>9</span></div>
+                      </div><img class="kairat-slider__tab_plus" alt="" src="img/slider/plus.png">
+                    </div>
+                    <div class="kairat-slider__tab_name"><span>АЕК Афины</span></div>
+                    <div class="kairat-slider__tab_logo"><img alt="" src="img/slider/logo2.png"></div>
+                  </div>
+                </div>
+                <div class="kairat-slider__tab_action"><a class="kairat-btn kairat-btn--tab kairat-btn--disabled" href="#!" @click="$modal.show('modal-forecast')"><span>подтвердить прогноз</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="kairat-slider__tab">
+              <div class="kairat-slider__tab_title"><span>чемпионат казахстана</span></div>
+              <div class="kairat-slider__tab_wrapper">
+                <div class="kairat-slider__tab_block">
+                  <div class="kairat-slider__tab_left">
+                    <div class="kairat-slider__tab_logo"><img alt="" src="img/slider/logo1.png"></div>
+                    <div class="kairat-slider__tab_name"><span>фк “кайрат”</span></div>
+                    <div class="kairat-slider__tab_btn" data-new-number="">
+                      <div class="kairat-slider__tab_numbers kairat-slider__tab_numbers--left">
+                        <div class="kairat-slider__tab_number" data-num="0"><span>0</span></div>
+                        <div class="kairat-slider__tab_number" data-num="1"><span>1</span></div>
+                        <div class="kairat-slider__tab_number" data-num="2"><span>2</span></div>
+                        <div class="kairat-slider__tab_number" data-num="3"><span>3</span></div>
+                        <div class="kairat-slider__tab_number" data-num="4"><span>4</span></div>
+                        <div class="kairat-slider__tab_number" data-num="5"><span>5</span></div>
+                        <div class="kairat-slider__tab_number" data-num="6"><span>6</span></div>
+                        <div class="kairat-slider__tab_number" data-num="7"><span>7</span></div>
+                        <div class="kairat-slider__tab_number" data-num="8"><span>8</span></div>
+                        <div class="kairat-slider__tab_number" data-num="9"><span>9</span></div>
+                      </div><img class="kairat-slider__tab_plus" alt="" src="img/slider/plus.png">
+                    </div>
+                  </div>
+                  <div class="kairat-slider__tab_right">
+                    <div class="kairat-slider__tab_btn" data-new-number="">
+                      <div class="kairat-slider__tab_numbers kairat-slider__tab_numbers--right">
+                        <div class="kairat-slider__tab_number" data-num="0"><span>0</span></div>
+                        <div class="kairat-slider__tab_number" data-num="1"><span>1</span></div>
+                        <div class="kairat-slider__tab_number" data-num="2"><span>2</span></div>
+                        <div class="kairat-slider__tab_number" data-num="3"><span>3</span></div>
+                        <div class="kairat-slider__tab_number" data-num="4"><span>4</span></div>
+                        <div class="kairat-slider__tab_number" data-num="5"><span>5</span></div>
+                        <div class="kairat-slider__tab_number" data-num="6"><span>6</span></div>
+                        <div class="kairat-slider__tab_number" data-num="7"><span>7</span></div>
+                        <div class="kairat-slider__tab_number" data-num="8"><span>8</span></div>
+                        <div class="kairat-slider__tab_number" data-num="9"><span>9</span></div>
+                      </div><img class="kairat-slider__tab_plus" alt="" src="img/slider/plus.png">
+                    </div>
+                    <div class="kairat-slider__tab_name"><span>АЕК Афины</span></div>
+                    <div class="kairat-slider__tab_logo"><img alt="" src="img/slider/logo2.png"></div>
+                  </div>
+                </div>
+                <div class="kairat-slider__tab_action"><a class="kairat-btn kairat-btn--tab kairat-btn--disabled" href="#!" @click="$modal.show('modal-forecast')"><span>подтвердить прогноз</span></a>
+                </div>
+              </div>
+              <div class="kairat-slider__tab_title"><span>Лига европы</span></div>
+              <div class="kairat-slider__tab_wrapper">
+                <div class="kairat-slider__tab_block">
+                  <div class="kairat-slider__tab_left">
+                    <div class="kairat-slider__tab_logo"><img alt="" src="img/slider/logo1.png"></div>
+                    <div class="kairat-slider__tab_name"><span>фк “кайрат”</span></div>
+                    <div class="kairat-slider__tab_btn" data-new-number="">
+                      <div class="kairat-slider__tab_numbers kairat-slider__tab_numbers--left">
+                        <div class="kairat-slider__tab_number" data-num="0"><span>0</span></div>
+                        <div class="kairat-slider__tab_number" data-num="1"><span>1</span></div>
+                        <div class="kairat-slider__tab_number" data-num="2"><span>2</span></div>
+                        <div class="kairat-slider__tab_number" data-num="3"><span>3</span></div>
+                        <div class="kairat-slider__tab_number" data-num="4"><span>4</span></div>
+                        <div class="kairat-slider__tab_number" data-num="5"><span>5</span></div>
+                        <div class="kairat-slider__tab_number" data-num="6"><span>6</span></div>
+                        <div class="kairat-slider__tab_number" data-num="7"><span>7</span></div>
+                        <div class="kairat-slider__tab_number" data-num="8"><span>8</span></div>
+                        <div class="kairat-slider__tab_number" data-num="9"><span>9</span></div>
+                      </div><img class="kairat-slider__tab_plus" alt="" src="img/slider/plus.png">
+                    </div>
+                  </div>
+                  <div class="kairat-slider__tab_right">
+                    <div class="kairat-slider__tab_btn" data-new-number="">
+                      <div class="kairat-slider__tab_numbers kairat-slider__tab_numbers--right">
+                        <div class="kairat-slider__tab_number" data-num="0"><span>0</span></div>
+                        <div class="kairat-slider__tab_number" data-num="1"><span>1</span></div>
+                        <div class="kairat-slider__tab_number" data-num="2"><span>2</span></div>
+                        <div class="kairat-slider__tab_number" data-num="3"><span>3</span></div>
+                        <div class="kairat-slider__tab_number" data-num="4"><span>4</span></div>
+                        <div class="kairat-slider__tab_number" data-num="5"><span>5</span></div>
+                        <div class="kairat-slider__tab_number" data-num="6"><span>6</span></div>
+                        <div class="kairat-slider__tab_number" data-num="7"><span>7</span></div>
+                        <div class="kairat-slider__tab_number" data-num="8"><span>8</span></div>
+                        <div class="kairat-slider__tab_number" data-num="9"><span>9</span></div>
+                      </div><img class="kairat-slider__tab_plus" alt="" src="img/slider/plus.png">
+                    </div>
+                    <div class="kairat-slider__tab_name"><span>baern munchen</span></div>
+                    <div class="kairat-slider__tab_logo"><img alt="" src="img/slider/logo3.png"></div>
+                  </div>
+                </div>
+                <div class="kairat-slider__tab_action"><a class="kairat-btn kairat-btn--tab kairat-btn--disabled" href="#!" @click="$modal.show('modal-forecast')"><span>подтвердить прогноз</span></a>
+                </div>
+              </div>
+              <div class="kairat-slider__tab_title"><span>кубок казахстана</span></div>
+              <div class="kairat-slider__tab_wrapper">
+                <div class="kairat-slider__tab_block">
+                  <div class="kairat-slider__tab_left">
+                    <div class="kairat-slider__tab_logo"><img alt="" src="img/slider/logo1.png"></div>
+                    <div class="kairat-slider__tab_name"><span>фк “кайрат”</span></div>
+                    <div class="kairat-slider__tab_btn" data-new-number="">
+                      <div class="kairat-slider__tab_numbers kairat-slider__tab_numbers--left">
+                        <div class="kairat-slider__tab_number" data-num="0"><span>0</span></div>
+                        <div class="kairat-slider__tab_number" data-num="1"><span>1</span></div>
+                        <div class="kairat-slider__tab_number" data-num="2"><span>2</span></div>
+                        <div class="kairat-slider__tab_number" data-num="3"><span>3</span></div>
+                        <div class="kairat-slider__tab_number" data-num="4"><span>4</span></div>
+                        <div class="kairat-slider__tab_number" data-num="5"><span>5</span></div>
+                        <div class="kairat-slider__tab_number" data-num="6"><span>6</span></div>
+                        <div class="kairat-slider__tab_number" data-num="7"><span>7</span></div>
+                        <div class="kairat-slider__tab_number" data-num="8"><span>8</span></div>
+                        <div class="kairat-slider__tab_number" data-num="9"><span>9</span></div>
+                      </div><img class="kairat-slider__tab_plus" alt="" src="img/slider/plus.png">
+                    </div>
+                  </div>
+                  <div class="kairat-slider__tab_right">
+                    <div class="kairat-slider__tab_btn" data-new-number="">
+                      <div class="kairat-slider__tab_numbers kairat-slider__tab_numbers--right">
+                        <div class="kairat-slider__tab_number" data-num="0"><span>0</span></div>
+                        <div class="kairat-slider__tab_number" data-num="1"><span>1</span></div>
+                        <div class="kairat-slider__tab_number" data-num="2"><span>2</span></div>
+                        <div class="kairat-slider__tab_number" data-num="3"><span>3</span></div>
+                        <div class="kairat-slider__tab_number" data-num="4"><span>4</span></div>
+                        <div class="kairat-slider__tab_number" data-num="5"><span>5</span></div>
+                        <div class="kairat-slider__tab_number" data-num="6"><span>6</span></div>
+                        <div class="kairat-slider__tab_number" data-num="7"><span>7</span></div>
+                        <div class="kairat-slider__tab_number" data-num="8"><span>8</span></div>
+                        <div class="kairat-slider__tab_number" data-num="9"><span>9</span></div>
+                      </div><img class="kairat-slider__tab_plus" alt="" src="img/slider/plus.png">
+                    </div>
+                    <div class="kairat-slider__tab_name"><span>АЕК Афины</span></div>
+                    <div class="kairat-slider__tab_logo"><img alt="" src="img/slider/logo2.png"></div>
+                  </div>
+                </div>
+                <div class="kairat-slider__tab_action"><a class="kairat-btn kairat-btn--tab kairat-btn--disabled" href="#!" @click="$modal.show('modal-forecast')"><span>подтвердить прогноз</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="kairat-slider__link-wrapper" data-aos="fade-down" data-aos-delay="100"><a class="kairat-slider__link" href="#!"><span>Подтвержденные прогнозы</span></a></div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Slider-->
+    <!-- Section Prizes-->
+    <section class="kairat-section kairat-section--prizes">
+      <div class="kairat-bg kairat-bg-prizes">
+        <div class="kairat-bg-prizes__skew"></div>
+      </div>
+      <div class="kairat-obj kairat-obj-prizes">
+        <div class="kairat-obj-prizes__elem1" data-aos="fade-left" data-aos-delay="100"><img alt="" src="img/elements/elem10.png"></div>
+      </div>
+      <div class="kairat-prizes">
+        <div class="kairat-title kairat-prizes__title" data-aos="fade-down" data-aos-delay="100"><span>суперпризы</span></div>
+        <div class="kairat-prizes__flex">
+          <div class="kairat-prizes__item kairat-prizes__item--first">
+            <div class="kairat-prizes__place kairat-prizes__place-first">
+              <div class="kairat-prizes__place-first_bg" data-aos="fade-right" data-aos-delay="100"><img src="img/prizes/overlay-big.png"></div>
+              <div class="kairat-prizes__place-first_number" data-aos="fade-right" data-aos-delay="500"><span>1</span></div>
+              <div class="kairat-prizes__place-first_text" data-aos="fade-right" data-aos-delay="500"><span>Место</span></div>
+              <div class="kairat-prizes__place-first_prize" data-aos="fade-right" data-aos-delay="700"><img src="img/prizes/prize1.png"></div>
+            </div>
+            <div class="kairat-prizes__info kairat-prizes__info-first" data-aos="fade-right" data-aos-delay="900">
+              <div class="kairat-prizes__info-first_text"><span> автомобиль</span></div>
+              <div class="kairat-prizes__info-first_text kairat-prizes__info-first_text--color kairat-prizes__info-first_text--big"><span>Toyota Camry</span></div>
+              <div class="kairat-prizes__info-first_text"><span>70 Comfort</span></div>
+              <div class="kairat-prizes__info-first_text kairat-prizes__info-first_text--small"><span>(1 победитель)</span></div>
+            </div>
+          </div>
+          <div class="kairat-prizes__item" id="kairat-showPrizes">
+            <div class="kairat-prizes__place">
+              <div class="kairat-prizes__bg" data-aos="fade-left" data-aos-delay="100" data-aos-anchor="#kairat-showPrizes"><img src="img/prizes/overlay-small.png"></div>
+              <div class="kairat-prizes__number" data-aos="fade-left" data-aos-delay="500" data-aos-anchor="#kairat-showPrizes"><span>2</span></div>
+              <div class="kairat-prizes__number-text" data-aos="fade-left" data-aos-delay="500" data-aos-anchor="#kairat-showPrizes"><span>Место</span></div>
+              <div class="kairat-prizes__prize kairat-prizes__prize--second"><img src="img/prizes/prize2.png" data-aos="fade-left" data-aos-delay="700" data-aos-anchor="#kairat-showPrizes"></div>
+            </div>
+            <div class="kairat-prizes__info" data-aos="fade-left" data-aos-delay="700" data-aos-anchor="#kairat-showPrizes">
+              <div class="kairat-prizes__text"><span>телевизор</span></div>
+              <div class="kairat-prizes__text kairat-prizes__text--color kairat-prizes__text--big"><span>Samsung The Frame</span></div>
+              <div class="kairat-prizes__text kairat-prizes__text--small"><span>(1 победитель)</span></div>
+            </div>
+          </div>
+          <div class="kairat-prizes__item">
+            <div class="kairat-prizes__place">
+              <div class="kairat-prizes__bg" data-aos="fade-left" data-aos-delay="300" data-aos-anchor="#kairat-showPrizes"><img src="img/prizes/overlay-small.png"></div>
+              <div class="kairat-prizes__number" data-aos="fade-left" data-aos-delay="700" data-aos-anchor="#kairat-showPrizes"><span>3</span></div>
+              <div class="kairat-prizes__number-text" data-aos="fade-left" data-aos-delay="700" data-aos-anchor="#kairat-showPrizes"><span>Место</span></div>
+              <div class="kairat-prizes__prize kairat-prizes__prize--third"><img src="img/prizes/prize3.png" data-aos="fade-left" data-aos-delay="900" data-aos-anchor="#kairat-showPrizes"></div>
+            </div>
+            <div class="kairat-prizes__info" data-aos="fade-left" data-aos-delay="900" data-aos-anchor="#kairat-showPrizes">
+              <div class="kairat-prizes__text"><span>ноутбук</span></div>
+              <div class="kairat-prizes__text kairat-prizes__text--color kairat-prizes__text--big"><span>MacBook Pro 16"</span></div>
+              <div class="kairat-prizes__text kairat-prizes__text--small"><span>(1 победитель)</span></div>
+            </div>
+          </div>
+          <div class="kairat-prizes__item">
+            <div class="kairat-prizes__place">
+              <div class="kairat-prizes__bg" data-aos="fade-left" data-aos-delay="500" data-aos-anchor="#kairat-showPrizes"><img src="img/prizes/overlay-small.png"></div>
+              <div class="kairat-prizes__number" data-aos="fade-left" data-aos-delay="900" data-aos-anchor="#kairat-showPrizes"><span>4</span></div>
+              <div class="kairat-prizes__number-text" data-aos="fade-left" data-aos-delay="900" data-aos-anchor="#kairat-showPrizes"><span>Место</span></div>
+              <div class="kairat-prizes__prize kairat-prizes__prize--fourth"><img src="img/prizes/prize4.png" data-aos="fade-left" data-aos-delay="1100" data-aos-anchor="#kairat-showPrizes"></div>
+            </div>
+            <div class="kairat-prizes__info" data-aos="fade-left" data-aos-delay="1100" data-aos-anchor="#kairat-showPrizes">
+              <div class="kairat-prizes__text"><span>смартфон</span></div>
+              <div class="kairat-prizes__text kairat-prizes__text--color kairat-prizes__text--big"><span>iPhone 11 Pro Max</span></div>
+              <div class="kairat-prizes__text kairat-prizes__text--small"><span>(1 победитель)</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Prizes-->
+    <!-- Section Incentive-->
+    <section class="kairat-section kairat-section--iSlider">
+      <div class="kairat-obj kairat-obj-iSlider">
+        <div class="kairat-obj-iSlider__elem1" data-aos="fade-right" data-aos-delay="100"><img alt="" src="img/elements/elem11.png"></div>
+      </div>
+      <div class="kairat-container kairat-container--iSlider">
+        <div class="kairat-iSlider">
+          <div class="kairat-title kairat-iSlider__title" data-aos="fade-down" data-aos-delay="100"><span>Поощрительные призы</span></div>
+          <div class="kairat-iSlider__wrapper" data-aos="fade-down" data-aos-delay="100">
+            <div class="kairat-iSlider__controls">
+              <button class="kairat-iSlider__control kairat-iSlider__control--prev"><img alt="" src="img/prizes/arrow.png"></button>
+              <button class="kairat-iSlider__control kairat-iSlider__control--next"><img alt="" src="img/prizes/arrow.png"></button>
+            </div>
+            <div class="kairat-iSlider__body">
+              <div class="kairat-iSlide">
+                <div class="kairat-iSlide__place"><span>5 - 24 место</span></div>
+                <div class="kairat-iSlide__bonus"><span>5000</span></div>
+                <div class="kairat-iSlide__text"><span>бонусных баллов</span></div>
+                <div class="kairat-iSlide__winners"><span>(20 победителей)</span></div>
+              </div>
+              <div class="kairat-iSlide">
+                <div class="kairat-iSlide__place"><span>25 - 54 место</span></div>
+                <div class="kairat-iSlide__bonus"><span>4000</span></div>
+                <div class="kairat-iSlide__text"><span>бонусных баллов</span></div>
+                <div class="kairat-iSlide__winners"><span>(30 победителей)</span></div>
+              </div>
+              <div class="kairat-iSlide">
+                <div class="kairat-iSlide__place"><span>55 - 94 место</span></div>
+                <div class="kairat-iSlide__bonus"><span>3000</span></div>
+                <div class="kairat-iSlide__text"><span>бонусных баллов</span></div>
+                <div class="kairat-iSlide__winners"><span>(40 победителей)</span></div>
+              </div>
+              <div class="kairat-iSlide">
+                <div class="kairat-iSlide__place"><span>95 - 144 место</span></div>
+                <div class="kairat-iSlide__bonus"><span>2000</span></div>
+                <div class="kairat-iSlide__text"><span>бонусных баллов</span></div>
+                <div class="kairat-iSlide__winners"><span>(50 победителей)</span></div>
+              </div>
+              <div class="kairat-iSlide">
+                <div class="kairat-iSlide__place"><span>145 - 244 место</span></div>
+                <div class="kairat-iSlide__bonus"><span>1000</span></div>
+                <div class="kairat-iSlide__text"><span>бонусных баллов</span></div>
+                <div class="kairat-iSlide__winners"><span>(100 победителей)</span></div>
+              </div>
+              <div class="kairat-iSlide">
+                <div class="kairat-iSlide__place"><span>245 - 444 место</span></div>
+                <div class="kairat-iSlide__bonus"><span>500</span></div>
+                <div class="kairat-iSlide__text"><span>бонусных баллов</span></div>
+                <div class="kairat-iSlide__winners"><span>(200 победителей)</span></div>
+              </div>
+              <div class="kairat-iSlide">
+                <div class="kairat-iSlide__place"><span>445 - 744 место</span></div>
+                <div class="kairat-iSlide__bonus"><span>300</span></div>
+                <div class="kairat-iSlide__text"><span>бонусных баллов</span></div>
+                <div class="kairat-iSlide__winners"><span>(300 победителей)</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Incentive-->
+    <!-- Section Action-->
+    <section class="kairat-section kairat-section--action" data-aos="fade-down" data-aos-delay="100">
+      <div class="kairat-action"><a class="kairat-btn kairat-btn--info kairat-jsScrollTo kairat-btn--action" href="#!"><span>Сделать прогноз</span></a>
+      </div>
+    </section>
+    <!-- Section Action-->
+    <!-- Content End --------------------------------------------------------------------------------------------------------->
+    <!-- Modal --------------------------------------------------------------------------------------------------------->
+    <!-- Enter-->
+    <modal name="modal-enter" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+      <div class="kairat-modal kairat-mEnter">
+        <div class="kairat-modal__close" @click="$modal.hide(&quot;modal-enter&quot;)">
+          <div class="kairat-modal__close_img"></div>
+        </div>
+        <div class="kairat-modal__bg kairat-mEnter__bg"><img alt="" src="img/modal/overlay-small.png"></div>
+        <div class="kairat-modal__body kairat-mEnter__body">
+          <div class="kairat-mEnter__title"><span class="kairat-mEnter__title_text kairat-mEnter__title_text--big kairat-mEnter__title_text--color">Спасибо за ваш прогноз!</span>
+            <div><span class="kairat-mEnter__title_text">Для того чтобы ваш прогноз был сохранен - вам необходимо</span><span class="kairat-mEnter__title_text kairat-mEnter__title_text--color kairat-mEnter__title_text--ml5 kairat-mEnter__title_text--mr5">зарегистрироваться</span><span class="kairat-mEnter__title_text">или</span><span class="kairat-mEnter__title_text kairat-mEnter__title_text--color kairat-mEnter__title_text--ml5">войти!</span></div>
+          </div>
+          <div class="kairat-mEnter__action"><a class="kairat-btn kairat-btn--custom kairat-modal__btn kairat-mEnter__btn--login" href="#!"><span>Войти</span></a><a class="kairat-btn kairat-btn--custom kairat-modal__btn kairat-mEnter__btn--registr" href="#!"><span>Регистрация</span></a>
+          </div>
+        </div>
+      </div>
+    </modal>
+    <!-- Enter-->
+    <!-- Rules-->
+    <modal name="modal-rules" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+      <div class="kairat-modal kairat-mRules">
+        <div class="kairat-modal__close" @click="$modal.hide(&quot;modal-rules&quot;)">
+          <div class="kairat-modal__close_img"></div>
+        </div>
+        <div class="kairat-modal__bg kairat-mRules__bg"><img alt="" src="img/modal/overlay-big.png"></div>
+        <div class="kairat-modal__body kairat-mRules__body">
+          <scroll class="kairat-mRules__scroll" ref="modalScroll">
+            <div class="kairat-mRules__list">
+              <div class="kairat-mRules__list_title"><span>Как принять участие?</span></div>
+              <ul class="kairat-mRules__list_ul">
+                <li>Делайте прогноз на точный счёт ближайшего матча ФК “Кайрат”.</li>
+                <li>Подтверждайте прогноз ставкой на любое событие (минимальная сумма ставки 3000 KZT).</li>
+                <li>За правильный прогноз начисляются очки.</li>
+                <li>Накапливайте очки и выигрывайте призы!</li>
+              </ul>
+              <div class="kairat-mRules__list_title"><span>Как начисляются очки?</span></div>
+              <ul class="kairat-mRules__list_ul">
+                <li>За каждый угаданный счет матча ФК “Кайрат” участнику акции начисляются очки.</li>
+                <li>В зависимости от турнира очки начисляются следующим образом:</li>
+                <ul class="kairat-mRules__list_ul kairat-mRules__list_ul--circle">
+                  <li>Кубок Казахстана: 5 очков.</li>
+                  <li>КПЛ: 10 очков.</li>
+                  <li>ЛЕ: 20 очков.</li>
+                </ul>
+              </ul>
+              <div class="kairat-mRules__list_title"><span>Правила и условия:</span></div>
+              <ul class="kairat-mRules__list_ul">
+                <li>Период проведения акции с _____.2020 года 03:00 (+6 UTC) по ___.2020 года 02:59 (+6 UTC).</li>
+                <li>Только зарегистрированные участники могут принимать участие в акции. Обязательны для заполнения поля: Фамилия Имя Отчество, номер мобильного телефона (активация обязательна), электронный адрес (email), страна и город проживания.</li>
+                <li>Участник акции может выиграть 1 приз только 1 раз.</li>
+                <li>Количество прогнозов не ограничено.</li>
+                <li>Для подтверждения каждого прогноза необходимо сделать ставку. В случае, если участник сделал несколько прогнозов подряд без их подтверждения, первая сделанная ставка подтвердит только последний прогноз.</li>
+                <li>Прогноз не может быть изменен после того, как был сделан.</li>
+                <li>Прогноз должен быть подтвержден любой ставкой на спорт с коэффициентом не ниже 1.5 в тот же день до 02:59 (для удобства расчета данной акции «день» считается периодом с 03:00 +6 UTC по 02:59 +6 UTC) на сумму не менее 3000 KZT, иначе он считается недействительным и не учитывается в данной акции. Ставки из раздела Cyber-Live не учитываются для подтверждения прогноза.</li>
+                <li>Прогноз на матч должен быть составлен до начала соответствующего матча. После старта матча прогнозы на него не принимаются.</li>
+                <li>В акции учитываются исключительно ставки на реальные денежные средства участника пари. Ставки за авансовые и бонусные средства (в том числе промокоды) не учитываются.</li>
+                <li>Статус прогноза (подтвержден или не подтверждён) будет отмечен в Личном кабинете.</li>
+                <li>Для участия в акции пользователь должен дать согласие на участие в бонусных акциях в Личном кабинете в настройках аккаунта (Настройки аккаунта — Участие в бонусных акциях).</li>
+                <li>Акция действует только для одного IP-адреса, одного ПК, одной семьи и одного аккаунта.</li>
+              </ul>
+              <div class="kairat-mRules__list_title"><span>Призы:</span></div>
+              <ul class="kairat-mRules__list_ul kairat-mRules__list_ul--none">
+                <li><span class="kairat-mRules__list_text kairat-mRules__list_text--color kairat-mRules__list_text--upper kairat-mRules__list_text--mr10">1 место:</span><span>автомобиль Toyota Camry 70 Comfort (1 победитель).</span></li>
+                <li><span class="kairat-mRules__list_text kairat-mRules__list_text--color kairat-mRules__list_text--upper kairat-mRules__list_text--mr10">2 место:</span><span>телевизор Samsung The Frame 165 см. (1 победитель).</span></li>
+                <li><span class="kairat-mRules__list_text kairat-mRules__list_text--color kairat-mRules__list_text--upper kairat-mRules__list_text--mr10">3 место:</span><span>ноутбук MacBook Pro 16" (1 победитель).</span></li>
+                <li><span class="kairat-mRules__list_text kairat-mRules__list_text--color kairat-mRules__list_text--upper kairat-mRules__list_text--mr10">4 место:</span><span>смартфон iPhone 11 Pro Max (1 победитель).</span></li>
+              </ul>
+              <div class="kairat-mRules__list_title"><span>Поощрительные призы:</span></div>
+              <ul class="kairat-mRules__list_ul kairat-mRules__list_ul--none">
+                <li><span class="kairat-mRules__list_text kairat-mRules__list_text--color kairat-mRules__list_text--upper kairat-mRules__list_text--mr10">5 - 24 место:</span><span>5 000 бонусных баллов (20 победителей).</span></li>
+                <li><span class="kairat-mRules__list_text kairat-mRules__list_text--color kairat-mRules__list_text--upper kairat-mRules__list_text--mr10">25 - 54 место:</span><span>4 000 бонусных баллов (30 победителей).</span></li>
+                <li><span class="kairat-mRules__list_text kairat-mRules__list_text--color kairat-mRules__list_text--upper kairat-mRules__list_text--mr10">55 - 94 место:</span><span>3 000 бонусных баллов (40 победителей).</span></li>
+                <li><span class="kairat-mRules__list_text kairat-mRules__list_text--color kairat-mRules__list_text--upper kairat-mRules__list_text--mr10">95 - 144 место:</span><span>2 000 бонусных баллов (50 победителей).</span></li>
+                <li><span class="kairat-mRules__list_text kairat-mRules__list_text--color kairat-mRules__list_text--upper kairat-mRules__list_text--mr10">145 - 244 место:</span><span>1000 бонусных баллов (100 победителей).</span></li>
+                <li><span class="kairat-mRules__list_text kairat-mRules__list_text--color kairat-mRules__list_text--upper kairat-mRules__list_text--mr10">245 - 444 место:</span><span>500 бонусных баллов (200 победителей).</span></li>
+                <li><span class="kairat-mRules__list_text kairat-mRules__list_text--color kairat-mRules__list_text--upper kairat-mRules__list_text--mr10">445 - 744 место:</span><span>300 бонусных баллов (300 победителей).</span></li>
+              </ul>
+              <div class="kairat-mRules__list_title"><span>Получение призов:</span></div>
+              <ul class="kairat-mRules__list_ul">
+                <li>Главный приз получает участник, который по результатам акции накопил больше всего очков.</li>
+                <li>В случае, если двое или более участников набрали одинаковое количество очков, призовое место занимает участник, который первым сделал прогноз соответствующий условиям акции. Остальные участники, которые набрали аналогичное количество очков, занимают следующие призовые места согласно рейтингу по очкам и времени составления прогнозов.</li>
+                <li>Все победители, выигравшие приз, будут исключены из розыгрыша остальных дополнительных и поощрительных призов.</li>
+                <li>Призы в виде бонусных баллов начисляются автоматически.</li>
+              </ul>
+            </div>
+          </scroll>
+        </div>
+      </div>
+    </modal>
+    <!-- Rules-->
+    <!-- forecast-->
+    <modal name="modal-forecast" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+      <div class="kairat-modal kairat-mForecast">
+        <div class="kairat-modal__close" @click="$modal.hide(&quot;modal-forecast&quot;)">
+          <div class="kairat-modal__close_img"></div>
+        </div>
+        <div class="kairat-modal__bg kairat-mForecast__bg"><img alt="" src="img/modal/overlay-small.png"></div>
+        <div class="kairat-modal__body kairat-mForecast__body">
+          <div class="kairat-mForecast__title"><span class="kairat-mForecast__title_text kairat-mForecast__title_text--big kairat-mForecast__title_text--color">Спасибо, прогноз сохранен!</span>
+            <div><span class="kairat-mForecast__title_text kairat-mForecast__title_text--block">Чтобы подтвердить ваш прогноз</span><span class="kairat-mForecast__title_text">вам необходимо</span><span class="kairat-mForecast__title_text kairat-mForecast__title_text--color kairat-mForecast__title_text--ml5">сделать ставку<span class="kairat-mForecast__title_text--mob-block kairat-mForecast__title_text--ml5">(от 3000 KZT)</span></span></div>
+          </div>
+          <div class="kairat-mForecast__action"><a class="kairat-btn kairat-btn--custom kairat-modal__btn kairat-mForecast__btn--login" href="#!"><span>Сделать ставку</span></a>
+          </div>
+        </div>
+      </div>
+    </modal>
+    <!-- forecast-->
+    <modal name="modal-win1" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+      <div class="kairat-modal kairat-mWin">
+        <div class="kairat-modal__close" @click="$modal.hide(&quot;modal-win1&quot;)">
+          <div class="kairat-modal__close_img"></div>
+        </div>
+        <div class="kairat-modal__bg kairat-mWin__bg"><img alt="" src="img/modal/overlay.png"></div>
+        <div class="kairat-modal__body kairat-mWin__body">
+          <div class="kairat-mWin__wrapper">
+            <div class="kairat-mWin__block">
+              <div class="kairat-mWin__text kairat-mWin__text--big"><span>поздравляем!</span></div>
+              <div class="kairat-mWin__text"><span>Вы выиграли:</span></div>
+              <div class="kairat-mWin__prize"><span class="kairat-mWin__prize_text">автомобиль</span><span class="kairat-mWin__prize_text kairat-mWin__prize_text--big">Toyota Camry</span><span class="kairat-mWin__prize_text">70 Comfort</span></div>
+            </div>
+            <div class="kairat-mWin__img kairat-mWin__img--first"><img src="img/modal/prize1.png"></div>
+          </div>
+        </div>
+      </div>
+    </modal>
+    <modal name="modal-win2" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+      <div class="kairat-modal kairat-mWin">
+        <div class="kairat-modal__close" @click="$modal.hide(&quot;modal-win2&quot;)">
+          <div class="kairat-modal__close_img"></div>
+        </div>
+        <div class="kairat-modal__bg kairat-mWin__bg"><img alt="" src="img/modal/overlay.png"></div>
+        <div class="kairat-modal__body kairat-mWin__body">
+          <div class="kairat-mWin__wrapper">
+            <div class="kairat-mWin__block">
+              <div class="kairat-mWin__text kairat-mWin__text--big"><span>поздравляем!</span></div>
+              <div class="kairat-mWin__text"><span>Вы выиграли:</span></div>
+              <div class="kairat-mWin__prize kairat-mWin__prize--one-size"><span class="kairat-mWin__prize_text">телевизор</span><span class="kairat-mWin__prize_text kairat-mWin__prize_text--color">Samsung The Frame</span></div>
+            </div>
+            <div class="kairat-mWin__img kairat-mWin__img--second"><img src="img/modal/prize2.png"></div>
+          </div>
+        </div>
+      </div>
+    </modal>
+    <modal name="modal-win3" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+      <div class="kairat-modal kairat-mWin">
+        <div class="kairat-modal__close" @click="$modal.hide(&quot;modal-win3&quot;)">
+          <div class="kairat-modal__close_img"></div>
+        </div>
+        <div class="kairat-modal__bg kairat-mWin__bg"><img alt="" src="img/modal/overlay.png"></div>
+        <div class="kairat-modal__body kairat-mWin__body">
+          <div class="kairat-mWin__wrapper">
+            <div class="kairat-mWin__block">
+              <div class="kairat-mWin__text kairat-mWin__text--big"><span>поздравляем!</span></div>
+              <div class="kairat-mWin__text"><span>Вы выиграли:</span></div>
+              <div class="kairat-mWin__prize kairat-mWin__prize--one-size"><span class="kairat-mWin__prize_text">ноутбук</span><span class="kairat-mWin__prize_text kairat-mWin__prize_text--color">MacBook Pro 16"</span></div>
+            </div>
+            <div class="kairat-mWin__img kairat-mWin__img--third"><img src="img/modal/prize3.png"></div>
+          </div>
+        </div>
+      </div>
+    </modal>
+    <modal name="modal-win4" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+      <div class="kairat-modal kairat-mWin">
+        <div class="kairat-modal__close" @click="$modal.hide(&quot;modal-win4&quot;)">
+          <div class="kairat-modal__close_img"></div>
+        </div>
+        <div class="kairat-modal__bg kairat-mWin__bg"><img alt="" src="img/modal/overlay.png"></div>
+        <div class="kairat-modal__body kairat-mWin__body">
+          <div class="kairat-mWin__wrapper">
+            <div class="kairat-mWin__block">
+              <div class="kairat-mWin__text kairat-mWin__text--big"><span>поздравляем!</span></div>
+              <div class="kairat-mWin__text"><span>Вы выиграли:</span></div>
+              <div class="kairat-mWin__prize kairat-mWin__prize--one-size"><span class="kairat-mWin__prize_text">смартфон</span><span class="kairat-mWin__prize_text kairat-mWin__prize_text--color">iPhone 11 Pro Max</span></div>
+            </div>
+            <div class="kairat-mWin__img kairat-mWin__img--fourth"><img src="img/modal/prize4.png"></div>
+          </div>
+        </div>
+      </div>
+    </modal>
+    <modal name="modal-win5" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+      <div class="kairat-modal kairat-mWin">
+        <div class="kairat-modal__close" @click="$modal.hide(&quot;modal-win5&quot;)">
+          <div class="kairat-modal__close_img"></div>
+        </div>
+        <div class="kairat-modal__bg kairat-mWin__bg"><img alt="" src="img/modal/overlay.png"></div>
+        <div class="kairat-modal__body kairat-mWin__body">
+          <div class="kairat-mWin__wrapper">
+            <div class="kairat-mWin__block">
+              <div class="kairat-mWin__text kairat-mWin__text--big"><span>поздравляем!</span></div>
+              <div class="kairat-mWin__text"><span>Вы выиграли:</span></div>
+              <div class="kairat-mWin__prize"><span class="kairat-mWin__prize_text kairat-mWin__prize_text--bigger">5000</span><span class="kairat-mWin__prize_text kairat-mWin__prize_text--color kairat-mWin__prize_text--bonus">бонусных баллов</span></div>
+            </div>
+            <div class="kairat-mWin__img kairat-mWin__img--bonus"><img src="img/modal/prize5.png"></div>
+          </div>
+        </div>
+      </div>
+    </modal>
+    <!-- Result-->
+    <modal name="modal-result" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+      <div class="kairat-modal kairat-mResult">
+        <div class="kairat-modal__close" @click="$modal.hide(&quot;modal-result&quot;)">
+          <div class="kairat-modal__close_img"></div>
+        </div>
+        <div class="kairat-modal__bg kairat-mResult__bg"><img alt="" src="img/modal/overlay.png"></div>
+        <div class="kairat-modal__body kairat-mResult__body">
+          <div class="kairat-mResult__table">
+            <div class="kairat-mResult__table_row">
+              <div class="kairat-mResult__table_col kairat-mResult__table_col--header kairat-mResult__table_place"><span>Место</span></div>
+              <div class="kairat-mResult__table_col kairat-mResult__table_col--header kairat-mResult__table_winner"><span>ID победителя</span></div>
+              <div class="kairat-mResult__table_col kairat-mResult__table_col--header kairat-mResult__table_points"><span>Очки</span></div>
+            </div>
+          </div>
+          <scroll class="kairat-mResult__scroll" ref="modalScroll">
+            <div class="kairat-mResult__table kairat-mResult__table--no-header">
+              <div class="kairat-mResult__table_row">
+                <div class="kairat-mResult__table_col kairat-mResult__table_place"><span>1</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_winner"><span>* * * * 6 2 4 3</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_points"><span>1407.08</span></div>
+              </div>
+              <div class="kairat-mResult__table_row">
+                <div class="kairat-mResult__table_col kairat-mResult__table_place"><span>2</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_winner"><span>* * * * 6 2 4 3</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_points"><span>1407.08</span></div>
+              </div>
+              <div class="kairat-mResult__table_row">
+                <div class="kairat-mResult__table_col kairat-mResult__table_place"><span>3</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_winner"><span>* * * * 6 2 4 3</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_points"><span>1407.08</span></div>
+              </div>
+              <div class="kairat-mResult__table_row">
+                <div class="kairat-mResult__table_col kairat-mResult__table_place"><span>4</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_winner"><span>* * * * 6 2 4 3</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_points"><span>1407.08</span></div>
+              </div>
+              <div class="kairat-mResult__table_row">
+                <div class="kairat-mResult__table_col kairat-mResult__table_place"><span>5</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_winner"><span>* * * * 6 2 4 3</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_points"><span>1407.08</span></div>
+              </div>
+              <div class="kairat-mResult__table_row">
+                <div class="kairat-mResult__table_col kairat-mResult__table_place"><span>6</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_winner"><span>* * * * 6 2 4 3</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_points"><span>1407.08</span></div>
+              </div>
+              <div class="kairat-mResult__table_row">
+                <div class="kairat-mResult__table_col kairat-mResult__table_place"><span>7</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_winner"><span>* * * * 6 2 4 3</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_points"><span>1407.08</span></div>
+              </div>
+              <div class="kairat-mResult__table_row">
+                <div class="kairat-mResult__table_col kairat-mResult__table_place"><span>8</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_winner"><span>* * * * 6 2 4 3</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_points"><span>1407.08</span></div>
+              </div>
+              <div class="kairat-mResult__table_row">
+                <div class="kairat-mResult__table_col kairat-mResult__table_place"><span>9</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_winner"><span>* * * * 6 2 4 3</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_points"><span>1407.08</span></div>
+              </div>
+              <div class="kairat-mResult__table_row">
+                <div class="kairat-mResult__table_col kairat-mResult__table_place"><span>10</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_winner"><span>* * * * 6 2 4 3</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_points"><span>1407.08</span></div>
+              </div>
+              <div class="kairat-mResult__table_row">
+                <div class="kairat-mResult__table_col kairat-mResult__table_place"><span>11</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_winner"><span>* * * * 6 2 4 3</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_points"><span>1407.08</span></div>
+              </div>
+              <div class="kairat-mResult__table_row">
+                <div class="kairat-mResult__table_col kairat-mResult__table_place"><span>12</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_winner"><span>* * * * 6 2 4 3</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_points"><span>1407.08</span></div>
+              </div>
+              <div class="kairat-mResult__table_row">
+                <div class="kairat-mResult__table_col kairat-mResult__table_place"><span>13</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_winner"><span>* * * * 6 2 4 3</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_points"><span>1407.08</span></div>
+              </div>
+              <div class="kairat-mResult__table_row">
+                <div class="kairat-mResult__table_col kairat-mResult__table_place"><span>14</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_winner"><span>* * * * 6 2 4 3</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_points"><span>1407.08</span></div>
+              </div>
+              <div class="kairat-mResult__table_row">
+                <div class="kairat-mResult__table_col kairat-mResult__table_place"><span>15</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_winner"><span>* * * * 6 2 4 3</span></div>
+                <div class="kairat-mResult__table_col kairat-mResult__table_points"><span>1407.08</span></div>
+              </div>
+            </div>
+          </scroll>
+          <div class="kairat-mResult__table kairat-mResult__table--no-header kairat-mResult__table--user">
+            <div class="kairat-mResult__table_row kairat-mResult__table_row--active">
+              <div class="kairat-mResult__table_col kairat-mResult__table_place"><span>363</span></div>
+              <div class="kairat-mResult__table_col kairat-mResult__table_winner"><span>* * * * 6 2 4 3</span></div>
+              <div class="kairat-mResult__table_col kairat-mResult__table_points"><span>1407.08</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </modal>
+    <!-- Result-->
+    <!-- Hello-->
+    <modal name="modal-hello" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+      <div class="kairat-modal kairat-mHello">
+        <div class="kairat-modal__close kairat-mHello__close" @click="$modal.hide(&quot;modal-hello&quot;)">
+          <div class="kairat-modal__close_img kairat-mHello__close_img"></div>
+        </div>
+        <div class="kairat-modal__body kairat-mHello__body">
+          <div class="kairat-mHello__info">
+            <div class="kairat-mHello__title"><span class="kairat-mHello__title_text kairat-mHello__title_text--normal"><span>Кайрат</span><span>Лига</span></span><span class="kairat-mHello__title_text kairat-mHello__title_text--border"><span>Кайрат</span><span>Лига</span></span></div>
+            <div class="kairat-mHello__subtitle"><span class="kairat-mHello__subtitle_text">Оставляйте прогнозы - выигрывайте Toyota Camry</span>
+              <!--span(class=`${lotteryName}-mHello__subtitle_text`) Ставьте на-->
+              <!--span(class=`${lotteryName}-mHello__subtitle_text`) Кайрат – выигрывайте-->
+              <!--span(class=`${lotteryName}-mHello__subtitle_text`) Toyota Camry!-->
+            </div>
+            <div class="kairat-mHello__action"><a class="kairat-btn kairat-btn--custom kairat-modal__btn kairat-mHello__btn--main" href="#!"><span>Сделать прогноз</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </modal>
+    <!-- Hello-->
+    <!-- Modal ----------------------------------------------------------------------------------------------------------->
+    <!-- Addition Buttons ---------------------------------------------------------------------------------------------->
+    <div class="kairat-addition kairat-addition--show">
+      <div class="kairat-addition__svg">
+        <svg class="kairat-addition__svg-icon kairat-addition__svg-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 57">
+          <path d="M40.5,23V11.601C40.5,5.204,34.893,0,28,0S15.5,5.204,15.5,11.601v3.22c0,0.553,0.448,1,1,1s1-0.447,1-1v-3.22C17.5,6.307,22.21,2,28,2s10.5,4.307,10.5,9.601V23h-32v26v8h44v-8V23H40.5z M48.5,55h-40v-4h40V55z M8.5,49V25h40v24H8.5z"></path>
+          <path d="M28.5,31c-2.206,0-4,1.794-4,4v6c0,2.206,1.794,4,4,4s4-1.794,4-4v-6C32.5,32.794,30.706,31,28.5,31z M30.5,41c0,1.103-0.897,2-2,2s-2-0.897-2-2v-6c0-1.103,0.897-2,2-2s2,0.897,2,2V41z"></path>
+        </svg>
+        <svg class="kairat-addition__svg-icon  kairat-addition__svg-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 57">
+          <path d="M40.5,23V11.601C40.5,5.204,34.893,0,28,0S15.5,5.204,15.5,11.601V23h-9v26v8h44v-8V23H40.5z M17.5,11.601C17.5,6.307,22.21,2,28,2s10.5,4.307,10.5,9.601V23h-21V11.601z M48.5,55h-40v-4h40V55z M8.5,49V25h7h25h8v24H8.5z"></path>
+          <path d="M28.5,31c-2.206,0-4,1.794-4,4v6c0,2.206,1.794,4,4,4s4-1.794,4-4v-6C32.5,32.794,30.706,31,28.5,31z M30.5,41c0,1.103-0.897,2-2,2s-2-0.897-2-2v-6c0-1.103,0.897-2,2-2s2,0.897,2,2V41z"></path>
+        </svg>
+      </div>
+      <button class="kairat-addition__btn" type="button" @click="$modal.show('modal-enter')"><span>E</span></button>
+      <button class="kairat-addition__btn" type="button" @click="$modal.show('modal-forecast')"><span>F</span></button>
+      <button class="kairat-addition__btn" type="button" @click="$modal.show('modal-rules')"><span>R</span></button>
+      <button class="kairat-addition__btn" type="button" @click="$modal.show('modal-win1')"><span>W1</span></button>
+      <button class="kairat-addition__btn" type="button" @click="$modal.show('modal-win2')"><span>W2</span></button>
+      <button class="kairat-addition__btn" type="button" @click="$modal.show('modal-win3')"><span>W3</span></button>
+      <button class="kairat-addition__btn" type="button" @click="$modal.show('modal-win4')"><span>W4</span></button>
+      <button class="kairat-addition__btn" type="button" @click="$modal.show('modal-win5')"><span>W5</span></button>
+      <button class="kairat-addition__btn" type="button" @click="$modal.show('modal-result')"><span>RS</span></button>
+      <button class="kairat-addition__btn" type="button" @click="$modal.show('modal-hello')"><span>H</span></button>
+    </div>
+    <!-- Addition Buttons ------------------------------------------------------------------------------------------------>
+  </div>
+</div>
+<!-- Landing ------------------------------------------------------------------------------------------------------->
+<!-- Javascript -------------------------------------------------------------------------------------------------->
+<script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js" type="text/javascript"></script>
+<script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver" type="text/javascript"></script>
+<script src="js/vendors-lottery.js" type="text/javascript"></script>
+<script src="js/lottery.js" type="text/javascript"></script>
+<!-- Javascript ---------------------------------------------------------------------------------------------------->
+</body>
+</html>

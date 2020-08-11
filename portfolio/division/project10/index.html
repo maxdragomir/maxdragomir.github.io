@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Project 10</title>
+  <meta charset="utf-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+</head>
+<body>
+
+<!-- ------------------------------------------------------------------------------------------------------------------->
+<link href="styles/vendors.css" rel="stylesheet"/>
+<link href="styles/styles.css" rel="stylesheet" id="ltr"/>
+<link href="styles/rtl.css" rel="stylesheet" id="rtl"/>
+<!-- ------------------------------------------------------------------------------------------------------------------->
+<!-- Landing-->
+<div class="xcash xcash-lottery xcash-wrapper">
+  <div class="xcash-bg"><img src="img/bg/bg.jpg"/></div>
+  <!-- Section Main-->
+  <section class="xcash-section xcash-section--main">
+    <div class="xcash-images xcash-images--elements">
+      <div class="xcash-images__elem1"><img src="img/main/bg/elem1.png"/></div>
+      <div class="xcash-images__elem2"><img src="img/main/bg/elem2.png"/></div>
+      <div class="xcash-images__elem3"><img src="img/main/bg/elem3.png"/></div>
+      <div class="xcash-images__elem4"><img src="img/main/bg/elem4.png"/></div>
+      <div class="xcash-images__elem5"><img src="img/main/bg/elem5.png"/></div>
+      <div class="xcash-images__elem6"><img src="img/main/bg/elem6.png"/></div>
+      <div class="xcash-images__elem7"><img src="img/main/bg/elem7.png"/></div>
+      <div class="xcash-images__elem8"><img src="img/main/bg/elem8.png"/></div>
+    </div>
+    <div class="xcash-container">
+      <div class="xcash-images xcash-images--main">
+        <div class="xcash-images__circle1 "><img src="img/main/circle1.png" data-aos="zoom-in" data-aos-delay="100"/></div>
+        <div class="xcash-images__circle2"><img src="img/main/circle2.png" data-aos="zoom-in" data-aos-delay="300"/></div>
+        <div class="xcash-images__layer7"><img src="img/main/layer3-4.png" data-aos="fade-up" data-aos-delay="700"/></div>
+        <div class="xcash-images__coin xcash-images__coin5"><img src="img/main/coin3-3.png" data-aos="zoom-in-up" data-aos-delay="900"/></div>
+        <div class="xcash-images__coin xcash-images__coin6"><img src="img/main/coin3-2.png" data-aos="zoom-in-left" data-aos-delay="900"/></div>
+        <div class="xcash-images__coin xcash-images__coin4"><img src="img/main/coin3.png" data-aos="zoom-in-right" data-aos-delay="900"/></div>
+        <div class="xcash-images__layer6"><img src="img/main/layer3-3.png" data-aos="fade-up" data-aos-delay="650"/></div>
+        <div class="xcash-images__layer5"><img src="img/main/layer3-2.png" data-aos="fade-right" data-aos-delay="700"/></div>
+        <div class="xcash-images__layer4"><img src="img/main/layer2-2.png" data-aos="fade-up" data-aos-delay="600"/></div>
+        <div class="xcash-images__layer3"><img src="img/main/layer3-1.png" data-aos="fade-left" data-aos-delay="700"/></div>
+        <div class="xcash-images__layer2"><img src="img/main/layer2-1.png" data-aos="fade-up" data-aos-delay="550"/></div>
+        <div class="xcash-images__coin xcash-images__coin3"><img src="img/main/coin2.png" data-aos="zoom-in-right" data-aos-delay="900"/></div>
+        <div class="xcash-images__layer1"><img src="img/main/layer1.png" data-aos="fade-up" data-aos-delay="500"/></div>
+        <div class="xcash-images__coin xcash-images__coin1"><img src="img/main/coin1.png" data-aos="zoom-in-left" data-aos-delay="900"/></div>
+        <div class="xcash-images__coin xcash-images__coin2"><img src="img/main/coin1-2.png" data-aos="zoom-in-right" data-aos-delay="900"/></div>
+      </div>
+      <div class="xcash-tickets" data-aos="fade-up" data-aos-delay="700"><a class="xcash-btn xcash-btn--secondary" href="#!" @click="$modal.show('modal-tickets')"><span>Мои билеты</span></a>
+      </div>
+      <div class="xcash-main" data-aos="fade-left" data-aos-delay="700">
+        <div class="xcash-main__title"><span class="xcash-main__title_text">Охота &nbsp;<br/>на кэш!</span></div>
+        <div class="xcash-main__subtitle"><span class="xcash-main__subtitle_text">Играйте в Lorem ipsum. – выигрывайте реальный кэш!</span></div>
+        <div class="xcash-main__action"><a class="xcash-btn xcash-btn--main" href="#!"><span>Сделать ставку</span></a><a class="xcash-main__action_link" href="#!" @click="$modal.show('modal-rules')"><span>Правила</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section Main End-->
+  <!-- Section Steps-->
+  <section class="xcash-section xcash-section--steps" id="xcash-showSteps">
+    <div class="xcash-container">
+      <div class="xcash-wrapper--flex">
+        <div class="xcash-steps">
+          <div class="xcash-steps__elem"><img src="img/steps/elem1.png" data-aos="zoom-in" data-aos-delay="100"/></div>
+          <div class="xcash-step" data-aos="fade-down-left" data-aos-delay="100" data-aos-anchor="#xcash-showSteps">
+            <div class="xcash-step__img">
+              <div class="xcash-step__img_elemB"></div>
+              <div class="xcash-step__img_elemS"></div>
+              <div class="xcash-step__img_icon"><img src="img/steps/step2.png"/></div>
+            </div>
+            <div class="xcash-step__info">
+              <div class="xcash-step__info_number"><span>1</span></div>
+              <div class="xcash-step__info_text"><span class="xcash-step__info_big">Делайте ставки в играх<a href="#!">Games</a></span><span class="xcash-step__info_small">(сумма ставки от 300 RUB)</span></div>
+            </div>
+          </div>
+          <div class="xcash-step xcash-step--second" id="xcash-showTimer" data-aos="fade-left" data-aos-delay="200" data-aos-anchor="#xcash-showSteps">
+            <div class="xcash-step__img">
+              <div class="xcash-step__img_elemB"></div>
+              <div class="xcash-step__img_elemS"></div>
+              <div class="xcash-step__img_icon"><img src="img/steps/step1.png"/></div>
+            </div>
+            <div class="xcash-step__info">
+              <div class="xcash-step__info_number"><span>2</span></div>
+              <div class="xcash-step__info_text"><span class="xcash-step__info_big">Получайте</span><span class="xcash-step__info_big">акционные билеты</span></div>
+            </div>
+          </div>
+          <div class="xcash-step xcash-step--third" data-aos="fade-up-left" data-aos-delay="300" data-aos-anchor="#xcash-showSteps">
+            <div class="xcash-step__img">
+              <div class="xcash-step__img_elemB"></div>
+              <div class="xcash-step__img_elemS"></div>
+              <div class="xcash-step__img_icon"><img src="img/steps/step3.png"/></div>
+            </div>
+            <div class="xcash-step__info">
+              <div class="xcash-step__info_number"><span>3</span></div>
+              <div class="xcash-step__info_text"><span class="xcash-step__info_big">Участвуйте в</span><span class="xcash-step__info_big">розыгрыше призов!</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="xcash-timer">
+          <div class="xcash-timer__elem1"><img src="img/timer/elem1.png"/></div>
+          <div class="xcash-timer__elem2"><img src="img/timer/elem2.png"/></div>
+          <div class="xcash-timer__elemB" data-aos="custom-show-elemB" data-aos-delay="100" data-aos-anchor="#xcash-showTimer"></div>
+          <div class="xcash-timer__elemS" data-aos="custom-show-elemS" data-aos-delay="200" data-aos-anchor="#xcash-showTimer"></div>
+          <div class="xcash-timer__images">
+            <div class="xcash-timer__images_wrapper" data-aos="custom-show-image" data-aos-delay="800" data-aos-anchor="#xcash-showTimer">
+              <div class="xcash-timer__elem3"><img src="img/timer/elem3.png"/></div>
+              <div class="xcash-timer__elem4"><img src="img/timer/elem3.png"/></div>
+            </div>
+          </div>
+          <div class="xcash-timer__title" data-aos="fade-up" data-aos-delay="600" data-aos-anchor="#xcash-showTimer"><span>до розыгрыша</span><span>осталось:</span></div>
+          <div class="xcash-timer__body xcash-jsTimer" data-aos="fade-up" data-aos-delay="700" data-aos-anchor="#xcash-showTimer">
+            <div class="xcash-timer__body_days"><span>00</span><small>дней</small></div>
+            <div class="xcash-timer__body_hours"><span>00</span><small>часов</small></div>
+            <div class="xcash-timer__body_minutes"><span>00</span><small>минут</small></div>
+            <div class="xcash-timer__body_seconds"><span>00</span><small>секунд</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section Steps End-->
+  <!-- Section Slider-->
+  <section class="xcash-section xcash-section--slider">
+    <div class="xcash-elem1-slider"><img src="img/slider/triagle-left.png"/></div>
+    <div class="xcash-elem2-slider"><img src="img/slider/triagle-right.png"/></div>
+    <div class="xcash-bg-slider"><img src="img/slider/bg.png"/></div>
+    <div class="xcash-container">
+      <div class="xcash-slider">
+        <div class="xcash-slider__title" id="xcash-showSlider" data-aos="fade-up" data-aos-delay="100"><span>СУПЕРПРИЗЫ:</span></div>
+        <div class="xcash-slider__wrapper" data-aos="fade-up" data-aos-delay="400" data-aos-anchor="#xcash-showSlider">
+          <div class="xcash-slider__rtl-wrapper">
+            <div class="xcash-slider__body">
+              <div class="xcash-slide">
+                <div class="xcash-slide__wrapper">
+                  <div class="xcash-slide__img">
+                    <div class="xcash-slide__img_elemB"></div>
+                    <div class="xcash-slide__img_elemS"></div>
+                    <div class="xcash-slide__img_iconB"><img src="img/slider/coin-bg.png"/></div>
+                    <div class="xcash-slide__img_iconS"><img src="img/slider/coin-bg.png"/></div>
+                    <div class="xcash-slide__img_icon-coin"><img src="img/slider/coin.png"/></div>
+                    <div class="xcash-slide__img_icon-money xcash-slide__img_icon-money--5000"><img src="img/slider/coin5000.png"/></div>
+                  </div>
+                  <div class="xcash-slide__info">
+                    <div class="xcash-slide__bg"></div>
+                    <div class="xcash-slide__info_place"><span>1</span><span>место</span></div>
+                    <div class="xcash-slide__info_money"><span>5000</span><span>USD</span></div>
+                    <div class="xcash-slide__info_winners"><span>(1 победителей)</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="xcash-slide">
+                <div class="xcash-slide__wrapper">
+                  <div class="xcash-slide__img">
+                    <div class="xcash-slide__img_elemB"></div>
+                    <div class="xcash-slide__img_elemS"></div>
+                    <div class="xcash-slide__img_iconB"><img src="img/slider/coin-bg.png"/></div>
+                    <div class="xcash-slide__img_iconS"><img src="img/slider/coin-bg.png"/></div>
+                    <div class="xcash-slide__img_icon-coin"><img src="img/slider/coin.png"/></div>
+                    <div class="xcash-slide__img_icon-money xcash-slide__img_icon-money--3000"><img src="img/slider/coin3000.png"/></div>
+                  </div>
+                  <div class="xcash-slide__info">
+                    <div class="xcash-slide__bg"></div>
+                    <div class="xcash-slide__info_place"><span>2</span><span>место</span></div>
+                    <div class="xcash-slide__info_money"><span>3000</span><span>USD</span></div>
+                    <div class="xcash-slide__info_winners"><span>(3 победителей)</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="xcash-slide">
+                <div class="xcash-slide__wrapper">
+                  <div class="xcash-slide__img">
+                    <div class="xcash-slide__img_elemB"></div>
+                    <div class="xcash-slide__img_elemS"></div>
+                    <div class="xcash-slide__img_iconB"><img src="img/slider/coin-bg.png"/></div>
+                    <div class="xcash-slide__img_iconS"><img src="img/slider/coin-bg.png"/></div>
+                    <div class="xcash-slide__img_icon-coin"><img src="img/slider/coin.png"/></div>
+                    <div class="xcash-slide__img_icon-money xcash-slide__img_icon-money--1000"><img src="img/slider/coin2000.png"/></div>
+                  </div>
+                  <div class="xcash-slide__info">
+                    <div class="xcash-slide__bg"></div>
+                    <div class="xcash-slide__info_place"><span>3</span><span>место</span></div>
+                    <div class="xcash-slide__info_money"><span>2000</span><span>USD</span></div>
+                    <div class="xcash-slide__info_winners"><span>(5 победителей)</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="xcash-slide">
+                <div class="xcash-slide__wrapper">
+                  <div class="xcash-slide__img">
+                    <div class="xcash-slide__img_elemB"></div>
+                    <div class="xcash-slide__img_elemS"></div>
+                    <div class="xcash-slide__img_iconB"><img src="img/slider/coin-bg.png"/></div>
+                    <div class="xcash-slide__img_iconS"><img src="img/slider/coin-bg.png"/></div>
+                    <div class="xcash-slide__img_icon-coin"><img src="img/slider/coin.png"/></div>
+                    <div class="xcash-slide__img_icon-money xcash-slide__img_icon-money--1000"><img src="img/slider/coin1000.png"/></div>
+                  </div>
+                  <div class="xcash-slide__info">
+                    <div class="xcash-slide__bg"></div>
+                    <div class="xcash-slide__info_place"><span>4</span><span>место</span></div>
+                    <div class="xcash-slide__info_money"><span>1000</span><span>USD</span></div>
+                    <div class="xcash-slide__info_winners"><span>(7 победителей)</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="xcash-slide">
+                <div class="xcash-slide__wrapper">
+                  <div class="xcash-slide__img">
+                    <div class="xcash-slide__img_elemB"></div>
+                    <div class="xcash-slide__img_elemS"></div>
+                    <div class="xcash-slide__img_iconB"><img src="img/slider/coin-bg.png"/></div>
+                    <div class="xcash-slide__img_iconS"><img src="img/slider/coin-bg.png"/></div>
+                    <div class="xcash-slide__img_icon-coin"><img src="img/slider/coin.png"/></div>
+                    <div class="xcash-slide__img_icon-money xcash-slide__img_icon-money--500"><img src="img/slider/coin500.png"/></div>
+                  </div>
+                  <div class="xcash-slide__info">
+                    <div class="xcash-slide__bg"></div>
+                    <div class="xcash-slide__info_place"><span>5</span><span>место</span></div>
+                    <div class="xcash-slide__info_money"><span>500</span><span>USD</span></div>
+                    <div class="xcash-slide__info_winners"><span>(15 победителей)</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section Slider End-->
+  <!-- Section Bonus-->
+  <section class="xcash-section xcash-section--bonus">
+    <div class="xcash-bg-bonus"><img src="img/new-img-mobile/bonus-elements.png" data-aos="fade-up" data-aos-delay="200"/></div>
+    <div class="xcash-container">
+      <div class="xcash-coinBg1"><img src="img/bonus/coinBg1.png"/></div>
+      <div class="xcash-coinBg2"><img src="img/bonus/coinBg2.png"/></div>
+      <div class="xcash-bonus">
+        <div class="xcash-bonus__title" data-aos="fade-up" data-aos-delay="100"><span>Бонусные баллы:</span></div>
+        <div class="xcash-bonus__block xcash-block">
+          <div class="xcash-block__row">
+            <div class="xcash-block__item" data-aos="fade-up" data-aos-delay="100">
+              <div class="xcash-block__left">
+                <div class="xcash-block__pulse"><img src="img/bonus/pulse.png"/></div>
+                <div class="xcash-block__triagle"><img src="img/bonus/triagle.png"/></div>
+                <div class="xcash-block__number"><span>5 000</span></div>
+                <div class="xcash-block__coin1"><img src="img/bonus/coin1.png"/></div>
+                <div class="xcash-block__coin3"><img src="img/bonus/coin3.png"/></div>
+                <div class="xcash-block__coin2"><img src="img/bonus/coin2.png"/></div>
+              </div>
+              <div class="xcash-block__right">
+                <div class="xcash-block__textB"><span>5 000</span></div>
+                <div class="xcash-block__textM"><span>бонусных баллов</span></div>
+                <div class="xcash-block__textS"><span>(20 победителей)</span></div>
+              </div>
+            </div>
+            <div class="xcash-block__item" data-aos="fade-up" data-aos-delay="200">
+              <div class="xcash-block__left">
+                <div class="xcash-block__pulse"><img src="img/bonus/pulse.png"/></div>
+                <div class="xcash-block__triagle"><img src="img/bonus/triagle.png"/></div>
+                <div class="xcash-block__number"><span>2 000</span></div>
+                <div class="xcash-block__coin1"><img src="img/bonus/coin1.png"/></div>
+                <div class="xcash-block__coin4"><img src="img/bonus/coin4.png"/></div>
+                <div class="xcash-block__coin5"><img src="img/bonus/coin2.png"/></div>
+              </div>
+              <div class="xcash-block__right">
+                <div class="xcash-block__textB"><span>2 000</span></div>
+                <div class="xcash-block__textM"><span>бонусных баллов</span></div>
+                <div class="xcash-block__textS"><span>(30 победителей)</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="xcash-block__row xcash-block__row--second">
+            <div class="xcash-block__item" data-aos="fade-up" data-aos-delay="100">
+              <div class="xcash-block__left">
+                <div class="xcash-block__pulse"><img src="img/bonus/pulse.png"/></div>
+                <div class="xcash-block__triagle"><img src="img/bonus/triagle.png"/></div>
+                <div class="xcash-block__number"><span>1 000</span></div>
+                <div class="xcash-block__coin6"><img src="img/bonus/coin2.png"/></div>
+                <div class="xcash-block__coin7"><img src="img/bonus/coin4.png"/></div>
+                <div class="xcash-block__coin8"><img src="img/bonus/coin6.png"/></div>
+              </div>
+              <div class="xcash-block__right">
+                <div class="xcash-block__textB"><span>1 000</span></div>
+                <div class="xcash-block__textM"><span>бонусных баллов</span></div>
+                <div class="xcash-block__textS"><span>(40 победителей)</span></div>
+              </div>
+            </div>
+            <div class="xcash-block__item" data-aos="fade-up" data-aos-delay="200">
+              <div class="xcash-block__left">
+                <div class="xcash-block__pulse"><img src="img/bonus/pulse.png"/></div>
+                <div class="xcash-block__triagle"><img src="img/bonus/triagle.png"/></div>
+                <div class="xcash-block__number"><span>500</span></div>
+                <div class="xcash-block__coin1"><img src="img/bonus/coin1.png"/></div>
+                <div class="xcash-block__coin3"><img src="img/bonus/coin3.png"/></div>
+                <div class="xcash-block__coin2"><img src="img/bonus/coin2.png"/></div>
+              </div>
+              <div class="xcash-block__right">
+                <div class="xcash-block__textB"><span>500</span></div>
+                <div class="xcash-block__textM"><span>бонусных баллов</span></div>
+                <div class="xcash-block__textS"><span>(50 победителей)</span></div>
+              </div>
+            </div>
+            <div class="xcash-block__item" data-aos="fade-up" data-aos-delay="300">
+              <div class="xcash-block__left">
+                <div class="xcash-block__pulse"><img src="img/bonus/pulse.png"/></div>
+                <div class="xcash-block__triagle"><img src="img/bonus/triagle.png"/></div>
+                <div class="xcash-block__number"><span>200</span></div>
+                <div class="xcash-block__coin6"><img src="img/bonus/coin2.png"/></div>
+                <div class="xcash-block__coin3"><img src="img/bonus/coin3.png"/></div>
+                <div class="xcash-block__coin9"><img src="img/bonus/coin7.png"/></div>
+              </div>
+              <div class="xcash-block__right">
+                <div class="xcash-block__textB"><span>200</span></div>
+                <div class="xcash-block__textM"><span>бонусных баллов</span></div>
+                <div class="xcash-block__textS"><span>(100 победителей)</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="xcash-block__row xcash-block__row--third">
+            <div class="xcash-block__item xcash-block__item--move" data-aos="fade-up" data-aos-delay="100">
+              <div class="xcash-block__left">
+                <div class="xcash-block__pulse"><img src="img/bonus/pulse.png"/></div>
+                <div class="xcash-block__triagle"><img src="img/bonus/triagle.png"/></div>
+                <div class="xcash-block__number"><span>100</span></div>
+                <div class="xcash-block__coin10"><img src="img/bonus/coin8.png"/></div>
+                <div class="xcash-block__coin3"><img src="img/bonus/coin1.png"/></div>
+                <div class="xcash-block__coin11"><img src="img/bonus/coin5.png"/></div>
+              </div>
+              <div class="xcash-block__right">
+                <div class="xcash-block__textB"><span>100</span></div>
+                <div class="xcash-block__textM"><span>бонусных баллов</span></div>
+                <div class="xcash-block__textS"><span>(200 победителей)</span></div>
+              </div>
+            </div>
+            <div class="xcash-block__item" data-aos="fade-up" data-aos-delay="200">
+              <div class="xcash-block__left">
+                <div class="xcash-block__pulse"><img src="img/bonus/pulse.png"/></div>
+                <div class="xcash-block__triagle"><img src="img/bonus/triagle.png"/></div>
+                <div class="xcash-block__number"><span>50</span></div>
+                <div class="xcash-block__coin1"><img src="img/bonus/coin1.png"/></div>
+                <div class="xcash-block__coin3"><img src="img/bonus/coin3.png"/></div>
+                <div class="xcash-block__coin2"><img src="img/bonus/coin2.png"/></div>
+              </div>
+              <div class="xcash-block__right">
+                <div class="xcash-block__textB"><span>50</span></div>
+                <div class="xcash-block__textM"><span>бонусных баллов</span></div>
+                <div class="xcash-block__textS"><span>(300 победителей)</span></div>
+              </div>
+            </div>
+          </div>
+          <!--div(class=`${lotteryName}-block__row`)-->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section Bonus End-->
+  <!-- Section Wheel-->
+  <section class="xcash-section xcash-section--wheel">
+    <div class="xcash-container">
+      <div class="xcash-wheel-elem1"><img src="img/wheel/elem1.png"/></div>
+      <div class="xcash-wheel-elem2"><img src="img/wheel/elem1.png"/></div>
+      <div class="xcash-wheel-elem3"><img src="img/wheel/elem2.png"/></div>
+      <div class="xcash-wheel">
+        <div class="xcash-wheel__title" data-aos="fade-up" data-aos-delay="100"><span>Прокрутки Lucky Wheel:</span></div>
+        <div class="xcash-wheel__block xcash-block">
+          <div class="xcash-block__row">
+            <div class="xcash-block__item" id="xcash-showWheel" data-aos="fade-up" data-aos-delay="100">
+              <div class="xcash-block__left">
+                <div class="xcash-block__triagle"><img src="img/bonus/triagle.png"/></div>
+                <div class="xcash-block__wheel"><img src="img/wheel/wheelBg.png"/></div>
+                <div class="xcash-block__wheel_part"><img src="img/wheel/wheel1.png" data-aos="wheel-custom" data-aos-delay="600" data-aos-anchor="#xcash-showWheel"/></div>
+              </div>
+              <div class="xcash-block__right">
+                <div class="xcash-block__textB"><span>15</span><span>прокруток</span></div>
+                <div class="xcash-block__textM"><span>Lucky Wheel</span></div>
+                <div class="xcash-block__textS"><span>(50 победителей)</span></div>
+              </div>
+            </div>
+            <div class="xcash-block__item" data-aos="fade-up" data-aos-delay="200">
+              <div class="xcash-block__left">
+                <div class="xcash-block__triagle"><img src="img/bonus/triagle.png"/></div>
+                <div class="xcash-block__wheel"><img src="img/wheel/wheelBg.png"/></div>
+                <div class="xcash-block__wheel_part"><img src="img/wheel/wheel2.png" data-aos="wheel-custom" data-aos-delay="700" data-aos-anchor="#xcash-showWheel"/></div>
+              </div>
+              <div class="xcash-block__right">
+                <div class="xcash-block__textB"><span>10</span><span>прокруток</span></div>
+                <div class="xcash-block__textM"><span>Lucky Wheel</span></div>
+                <div class="xcash-block__textS"><span>(50 победителей)</span></div>
+              </div>
+            </div>
+            <div class="xcash-block__item" data-aos="fade-up" data-aos-delay="300">
+              <div class="xcash-block__left">
+                <div class="xcash-block__triagle"><img src="img/bonus/triagle.png"/></div>
+                <div class="xcash-block__wheel"><img src="img/wheel/wheelBg.png"/></div>
+                <div class="xcash-block__wheel_part"><img src="img/wheel/wheel3.png" data-aos="wheel-custom" data-aos-delay="800" data-aos-anchor="#xcash-showWheel"/></div>
+              </div>
+              <div class="xcash-block__right">
+                <div class="xcash-block__textB"><span>5</span><span>прокруток</span></div>
+                <div class="xcash-block__textM"><span>Lucky Wheel</span></div>
+                <div class="xcash-block__textS"><span>(100 победителей)</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section Wheel End-->
+  <!-- Section Rules-->
+  <section class="xcash-section xcash-section--rules">
+    <div class="xcash-bg-rules"><img src="img/new-img-mobile/rules-elements.png"/></div>
+    <div class="xcash-container">
+      <div class="xcash-rules">
+        <div class="xcash-coin1"><img src="img/rules/coin1.png"/></div>
+        <div class="xcash-coin2"><img src="img/rules/coin2.png"/></div>
+        <div class="xcash-elem1"><img src="img/rules/elem1.png"/></div>
+        <div class="xcash-mario"><img src="img/rules/mario.png" data-aos="fade-right" data-aos-delay="100"/></div>
+        <div class="xcash-rules__title" data-aos="fade-up" data-aos-delay="100"><span>Правила и условия:</span></div>
+        <div class="xcash-rules__body" data-aos="fade-up" data-aos-delay="200">
+          <ul class="xcash-rules__list">
+            <li>Акция проводится в период с _____ (00:00 +3 UTC) по _____ 2020 года (23:59 +3 UTC).</li>
+            <li>Только зарегистрированные участники могут принимать участие в акции. Обязательны для заполнения поля: Фамилия Имя Отчество, номер мобильного телефона (активация обязательна), электронный адрес (email), страна и город проживания.</li>
+            <li>Для участия в акции пользователь должен дать согласие на участие в бонусных акциях в Личном кабинете в настройках аккаунта (Настройки аккаунта — Участие в бонусных акциях).</li>
+            <li>Билеты начисляются автоматически в личном кабинете за ставки от 300 RUB в играх раздела 1xGames. Ставки с бонусного счета не учитываются в акции.</li>
+            <li>В акции не участвуют следующие ставки в играх из раздела 1xGames: Рулетка, ИКЧ Dice, ИКЧ Рулетка, ИКЧ Poker Light, African Roulette.</li>
+            <li>Билеты не начисляются за ставки, сделанные в играх из раздела 1xGames с использованием удвоения, бесплатных ставок и возвратов.</li>
+            <li>Количество ставок и билетов не ограничено.</li>
+            <li>Выигрышные билеты выбираются случайным образом.</li>
+            <li>Розыгрыш призов состоится _____ 2020 года (18:00 +3 UTC) на странице акции.</li>
+            <li>Победители, выигравшие главные призы, будут исключены из розыгрыша поощрительных призов.</li>
+            <li>Денежные призы обладателям выигрышных билетов начисляются автоматически. У денежного приза нет требований к выводу.</li>
+            <li>Призы в виде бонусных баллов и прокруток Lucky Wheel начисляются обладателям выигрышных билетов автоматически.</li>
+            <li>Компания lorem имеет право отменить или отозвать настоящее предложение либо изменить любое из его положений в любое время без предварительного уведомления или указания причин.</li>
+            <li>Акция действует только для одного IP-адреса, одного ПК, одной семьи и одного аккаунта.</li>
+            <li>lorem может изменить, отменить, возобновить или отказать в акции в любое время без предварительного предупреждения.</li>
+            <li>lorem оставляет за собой право просматривать данные о транзакциях и посещении сайта по любой причине. Если вследствие проверки окажется, что пользователь играет по стратегии, которую  lorem (по своему собственному усмотрению) считает нечестной, то  lorem вправе запретить пользователю участвовать в бонусной программе и аннулировать бонус.</li>
+            <li>При необходимости пользователь обязан предоставить идентификационные документы для верификации (KYC). Если он не предоставит документы по запросу  lorem, то бонусное предложение и выигрыш аннулируются. Компания имеет право в любое время потребовать фото пользователя со своим документом (чтобы видно было лицо) или идентификацию по телефону.</li>
+            <li>Если lorem обнаружит, что он стал жертвой мошенничества или отмывания денег, то он имеет право закрыть аккаунт пользователя и заморозить остаток на счету.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section Rules End-->
+  <!-- Section Points-->
+  <section class="xcash-section xcash-section--points">
+    <div class="xcash-bg-points-left"><img src="img/points/bgLeft.png" data-aos="fade-right" data-aos-delay="100" data-aos-anchor="#xcash-showCenter"/></div>
+    <div class="xcash-bg-points-right"><img src="img/points/bgRight.png" data-aos="fade-left" data-aos-delay="100" data-aos-anchor="#xcash-showCenter"/></div>
+    <div class="xcash-bg-points-bottomL"><img src="img/points/bgBottomLeft.png" data-aos="fade-up" data-aos-delay="400" data-aos-anchor="#xcash-showBottom"/></div>
+    <div class="xcash-bg-points-bottomR"><img src="img/points/bgBottomRight.png" data-aos="fade-up" data-aos-delay="400" data-aos-anchor="#xcash-showBottom"/></div>
+    <div class="xcash-container">
+      <div class="xcash-points">
+        <div class="xcash-points__bg" id="xcash-showCenter" data-aos="fade-up" data-aos-delay="100">
+          <div class="xcash-points__bg-elem"></div>
+        </div>
+        <div class="xcash-points__coin"><img src="img/points/coin.png"/></div>
+        <div class="xcash-points__elem1"><img src="img/points/elem1.png" data-aos="fade-up" data-aos-delay="400" data-aos-anchor="#xcash-showBottom"/></div>
+        <div class="xcash-points__elem2"><img src="img/points/elem2.png"/></div>
+        <div class="xcash-points__elem3"><img src="img/points/elem3.png"/></div>
+        <div class="xcash-points__title" data-aos="fade-up" data-aos-delay="100"><span>На какую сумму выгоднее</span><span>сделать ставку?</span></div>
+        <div class="xcash-points__text" data-aos="fade-up" data-aos-delay="100"><span>Билеты предоставляются в качестве бонуса за сделанную ставку в играх раздела games. Разумеется, чем крупнее ваша ставка, тем больше билетов вы получите. Если ваша ставка в игре превышает сумму:</span></div>
+        <div class="xcash-points__body">
+          <div class="xcash-points__col">
+            <div class="xcash-points__item" id="xcash-showLine" data-aos="fade-up" data-aos-delay="100"><span>300 RUB</span><span>–</span><span>1 билет</span></div>
+            <div class="xcash-points__item" data-aos="fade-up" data-aos-delay="200" data-aos-anchor="#xcash-showItem"><span>500 RUB</span><span>–</span><span>3 билета</span></div>
+            <div class="xcash-points__item" data-aos="fade-up" data-aos-delay="300" data-aos-anchor="#xcash-showItem"><span>1000 RUB</span><span>–</span><span>10 билетов</span></div>
+            <div class="xcash-points__item" data-aos="fade-up" data-aos-delay="400" data-aos-anchor="#xcash-showItem"><span>2 000 RUB</span><span>–</span><span>25 билетов</span></div>
+            <div class="xcash-points__item" data-aos="fade-up" data-aos-delay="500" data-aos-anchor="#xcash-showItem"><span>3 000 RUB</span><span>–</span><span>60 билетов</span></div>
+          </div>
+          <div class="xcash-points__line">
+            <div class="xcash-points__line-elem" data-aos="custom-line" data-aos-anchor="#xcash-showLine"></div>
+          </div>
+          <div class="xcash-points__col xcash-points__col--second">
+            <div class="xcash-points__item" id="xcash-showItem" data-aos="fade-up" data-aos-delay="100"><span>5 000 RUB</span><span>–</span><span>90 билетов</span></div>
+            <div class="xcash-points__item" data-aos="fade-up" data-aos-delay="200" data-aos-anchor="#xcash-showItem"><span>10 000 RUB</span><span>–</span><span>160 билетов</span></div>
+            <div class="xcash-points__item" data-aos="fade-up" data-aos-delay="300" data-aos-anchor="#xcash-showItem"><span>15 000 RUB</span><span>–</span><span>350 билетов</span></div>
+            <div class="xcash-points__item" data-aos="fade-up" data-aos-delay="400" data-aos-anchor="#xcash-showItem"><span>30 000 RUB</span><span>–</span><span>600 билетов</span></div>
+            <div class="xcash-points__item" data-aos="fade-up" data-aos-delay="500" data-aos-anchor="#xcash-showItem"><span>>35 000 RUB</span><span>–</span><span>1000 билетов</span></div>
+          </div>
+        </div>
+        <div class="xcash-points__text--big" id="xcash-showBottom" data-aos="fade-up" data-aos-delay="300"><span>Чем больше билетов - тем выше шансы на победу!</span></div>
+        <div class="xcash-points__action" data-aos="fade-up" data-aos-delay="100" data-aos-anchor="#xcash-showBottom"><a class="xcash-btn xcash-btn--main" href="#!"><span>Сделать ставку</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section Points End-->
+  <!-- Addition Btn start-->
+  <div class="xcash-addition">
+    <button class="xcash-addition__btn" type="button" @click="$modal.show('modal-enter')"><span>E</span></button>
+    <button class="xcash-addition__btn" type="button" @click="$modal.show('modal-rules')"><span>R</span></button>
+    <button class="xcash-addition__btn" type="button" @click="$modal.show('modal-hello')"><span>H</span></button>
+  </div>
+  <!-- Addition Btn end-->
+  <!-- Modal Start-->
+  <modal name="modal-enter" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+    <div class="xcash-modal xcash-mEnter">
+      <div class="xcash-modal__close">
+        <button class="xcash-modal__close_img" @click="$modal.hide('modal-enter')"></button>
+      </div>
+      <div class="xcash-modal__body xcash-mEnter__body">
+        <div class="xcash-mEnter__title"><span>Для участия Вам необходимо войти или зарегистрироваться!</span></div>
+        <div class="xcash-mEnter__action"><a class="xcash-btn xcash-btn--custom xcash-modal__btn xcash-mEnter__btn--login" href="#!"><span>Вход</span></a><a class="xcash-btn xcash-btn--custom xcash-modal__btn xcash-mEnter__btn--registr" href="#!"><span>Регистрация</span></a>
+        </div>
+      </div>
+    </div>
+  </modal>
+  <modal name="modal-rules" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+    <div class="xcash-modal xcash-mRules">
+      <div class="xcash-modal__close">
+        <button class="xcash-modal__close_img" @click="$modal.hide('modal-rules')"></button>
+      </div>
+      <div class="xcash-modal__body xcash-mRules__body">
+        <scroll class="xcash-mRules__scroll" ref="rulesScroll">
+          <div class="xcash-mRules__list">
+            <div class="xcash-mRules__list_title"><span>Как принять участие?</span></div>
+            <ul class="xcash-mRules__list_ul">
+              <li>Зарегистрируйтесь или авторизируйтесь на сайте.</li>
+              <li>Делайте ставки в играх games (сумма ставки от 300 RUB).</li>
+              <li>Получайте акционные билеты за каждую ставку с ___ по ___  2020 года.</li>
+              <li>Участвуйте в розыгрышах призов на странице акции!</li>
+            </ul>
+            <div class="xcash-mRules__list_title"><span>Какие призы разыгрываются?</span></div>
+            <div class="xcash-mRules__list_text xcash-mRules__list_text--color"><span>По итогам акции среди всех акционных билетов случайным образом выбираются победители, которые получат призы:</span></div>
+            <div class="xcash-mRules__list_text xcash-mRules__list_text--mt20 xcash-mRules__list_text--mb5"><span>Суперпризы:</span></div>
+            <ul class="xcash-mRules__list_ul xcash-mRules__list_ul--none">
+              <li>1 место: 5 000 USD (1 победитель)</li>
+              <li>2 место: 3 000 USD (3 победителя)</li>
+              <li>3 место: 2 000 USD (5 победителей)</li>
+              <li>4 место: 1 000 USD (7 победителей)</li>
+              <li>5 место: 500 USD (15 победителей)</li>
+            </ul>
+            <div class="xcash-mRules__list_text xcash-mRules__list_text--mt20 xcash-mRules__list_text--mb5"><span>Бонусные баллы:</span></div>
+            <ul class="xcash-mRules__list_ul xcash-mRules__list_ul--circle">
+              <li>5 000 бонусных баллов (20 победителей)</li>
+              <li>2 000 бонусных баллов (30 победителей)</li>
+              <li>1 000 бонусных баллов (40 победителей)</li>
+              <li>500 бонусных баллов (50 победителей)</li>
+              <li>200 бонусных баллов (100 победителей)</li>
+              <li>100 бонусных баллов (200 победителей)</li>
+              <li>50 бонусных баллов (300 победителей)</li>
+            </ul>
+
+            <ul class="xcash-mRules__list_ul xcash-mRules__list_ul--decimal">
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi corporis cumque cupiditate minima minus numquam optio perspiciatis ratione velit?</li>
+            </ul>
+          </div>
+        </scroll>
+      </div>
+    </div>
+  </modal>
+  <modal name="modal-hello" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+    <div class="xcash-modal xcash-mHello">
+      <div class="xcash-modal__close">
+        <button class="xcash-modal__close_img" @click="$modal.hide('modal-hello')"></button>
+      </div>
+      <div class="xcash-modal__body xcash-mHello__body">
+        <div class="xcash-mHello__title"><span class="xcash-mHello__title_text">Охота</span><span class="xcash-mHello__title_text">на кэш!</span></div>
+        <div class="xcash-mHello__subtitle"><span class="xcash-mHello__subtitle_text">Играйте в games – выигрывайте реальный кэш!</span></div>
+        <div class="xcash-mHello__action"><a class="xcash-btn xcash-btn--custom xcash-modal__btn xcash-mHello__btn--main" href="#!"><span>Сделать ставку</span></a>
+        </div>
+      </div>
+    </div>
+  </modal>
+  <!-- Modal End-->
+</div>
+<!-- ------------------------------------------------------------------------------------------------------------------->
+<script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver" type="text/javascript"></script>
+<script src="js/vendors-lottery.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<!-- ------------------------------------------------------------------------------------------------------------------->
+</body>
+</html>

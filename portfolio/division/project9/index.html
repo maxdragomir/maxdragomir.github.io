@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Project 9</title>
+  <meta charset="utf-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+</head>
+<body>
+
+<!-- ------------------------------------------------------------------------------------------------------------------->
+<link href="styles/vendors.css" rel="stylesheet"/>
+<link href="styles/styles.css" rel="stylesheet" id="ltr"/>
+<!--link(href="styles/rtl.css", rel="stylesheet", id='rtl')-->
+<!-- ------------------------------------------------------------------------------------------------------------------->
+<!-- Landing-->
+<div class="wgames wgames-lottery wgames-wrapper">
+  <div class="wgames-inner">
+    <!-- Section Main-->
+    <section class="wgames-section wgames-section--main" id="wgames-showMain">
+      <div class="wgames-bg">
+        <div class="wgames-bg__overlay" data-aos="fade-down" data-aos-delay="200">
+          <div class="wgames-bg__overlay-img"></div>
+        </div>
+        <div class="wgames-bg__img" data-aos="fade-down" data-aos-delay="400"><img src="img/main/bg.png"/></div>
+        <div class="wgames-bg__text" data-aos="fade-down" data-aos-delay="600"><img src="img/main/bg-text.png"/></div>
+      </div>
+      <div class="wgames-obj">
+        <div class="wgames-obj__elem1"><img src="img/elements/elem1.png"/></div>
+        <div class="wgames-obj__elem2"><img src="img/elements/elem1.png"/></div>
+        <div class="wgames-obj__elem3"><img src="img/elements/elem2.png"/></div>
+        <div class="wgames-obj__elem4"><img src="img/elements/elem2.png"/></div>
+      </div>
+      <div class="wgames-tickets" data-aos="fade-down" data-aos-delay="600"><a class="wgames-btn wgames-btn--secondary" href="#!" @click="$modal.show('modal-tickets')"><span>Мои билеты</span></a>
+      </div>
+      <div class="wgames-container">
+        <div class="wgames-main-img" data-aos="fade-left" data-aos-delay="800">
+          <div class="wgames-main-img__prize wgames-main-img__prize1"><img src="img/main/prize1.png"/></div>
+          <div class="wgames-main-img__prize wgames-main-img__prize2"><img src="img/main/prize2.png"/></div>
+          <div class="wgames-main-img__prize wgames-main-img__prize3"><img src="img/main/prize3.png"/></div>
+        </div>
+        <div class="wgames-main-logo" data-aos="fade-right" data-aos-delay="800">
+          <div class="wgames-main-logo__title"><img src="img/main/title.png"/></div>
+          <div class="wgames-main-logo__lightning wgames-main-logo__lightning1"><img src="img/elements/elem8.png"/></div>
+          <div class="wgames-main-logo__lightning wgames-main-logo__lightning2"><img src="img/elements/elem8.png"/></div>
+          <div class="wgames-main-logo__lightning wgames-main-logo__lightning3"><img src="img/elements/elem8.png"/></div>
+          <div class="wgames-main-logo__lightning wgames-main-logo__lightning4"><img src="img/elements/elem8.png"/></div>
+          <div class="wgames-main-logo__lightning wgames-main-logo__lightning5"><img src="img/elements/elem8.png"/></div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Main End-->
+    <!-- Section Steps-->
+    <section class="wgames-section wgames-section--steps">
+      <div class="wgames-bg wgames-bg-steps" data-aos="fade-up" data-aos-delay="800"><img src="img/steps/bg.png"/></div>
+      <div class="wgames-obj wgames-obj-steps">
+        <div class="wgames-obj-steps__elem1"><img src="img/elements/elem1.png"/></div>
+        <div class="wgames-obj-steps__elem2"><img src="img/elements/elem2.png"/></div>
+        <div class="wgames-obj-steps__elem3"><img src="img/elements/elem8.png"/></div>
+        <div class="wgames-obj-steps__elem4"><img src="img/elements/elem3.png"/></div>
+        <div class="wgames-obj-steps__elem5"><img src="img/elements/elem5.png"/></div>
+        <div class="wgames-obj-steps__elem6"><img src="img/elements/elem3.png"/></div>
+        <div class="wgames-obj-steps__elem7"><img src="img/elements/elem5.png"/></div>
+        <div class="wgames-obj-steps__elem8"><img src="img/elements/elem4.png"/></div>
+      </div>
+      <div class="wgames-info" data-aos="fade-down" data-aos-delay="200" data-aos-anchor="#wgames-showMain">
+        <div class="wgames-info__subtitle"><span>Много играешь – много побеждаешь!</span></div>
+        <div class="wgames-info__action">
+          <div class="wgames-btn__lightning wgames-btn__lightning1"><img src="img/main/btn-lightning1.png"/></div>
+          <div class="wgames-btn__lightning wgames-btn__lightning2"><img src="img/main/btn-lightning2.png"/></div><a class="wgames-btn wgames-btn--info" href="#!"><span>Играть сейчас</span></a><a class="wgames-info__action_link" href="#!" @click="$modal.show('modal-rules')"><span>Правила</span></a>
+        </div>
+      </div>
+      <div class="wgames-container">
+        <div class="wgames-wrapper--flex">
+          <div class="wgames-steps" id="wgames-showSteps">
+            <div class="wgames-step" data-aos="fade-right" data-aos-delay="200" data-aos-anchor="#wgames-showSteps">
+              <div class="wgames-step__img">
+                <div class="wgames-step__img_elemB"></div>
+                <div class="wgames-step__img_elemS"></div>
+                <div class="wgames-step__img_icon"><img src="img/steps/step1.png"/></div>
+              </div>
+              <div class="wgames-step__info"><span class="wgames-step__info_text"><a class="wgames-step__info_text" href="#!">Делайте ставки</a><br/>в играх WIN GAMES от 300 RUB</span></div>
+            </div>
+            <div class="wgames-step wgames-step--second" data-aos="fade-right" data-aos-delay="400" data-aos-anchor="#wgames-showSteps">
+              <div class="wgames-step__img">
+                <div class="wgames-step__img_elemB"></div>
+                <div class="wgames-step__img_elemS"></div>
+                <div class="wgames-step__img_icon"><img src="img/steps/step2.png"/></div>
+              </div>
+              <div class="wgames-step__info"><span class="wgames-step__info_text">Получайте<br/>акционные билеты</span></div>
+            </div>
+            <div class="wgames-step wgames-step--third" data-aos="fade-right" data-aos-delay="600" data-aos-anchor="#wgames-showSteps">
+              <div class="wgames-step__img">
+                <div class="wgames-step__img_elemB"></div>
+                <div class="wgames-step__img_elemS"></div>
+                <div class="wgames-step__img_icon"><img src="img/steps/step3.png"/></div>
+              </div>
+              <div class="wgames-step__info"><span class="wgames-step__info_text">Выигрывайте<br/>крутые призы!</span></div>
+            </div>
+          </div>
+          <div class="wgames-timer" data-aos="fade-left" data-aos-delay="200">
+            <div class="wgames-timer__elem1"><img src="img/steps/timer-bg1.png"/></div>
+            <div class="wgames-timer__elem2"><img src="img/steps/timer-bg2.png"/></div>
+            <div class="wgames-timer__title"><span>до розыгрыша осталось:</span></div>
+            <div class="wgames-timer__body wgames-jsTimer">
+              <div class="wgames-timer__body_days"><span>00</span><small>дней</small></div>
+              <div class="wgames-timer__body_hours"><span>00</span><small>часов</small></div>
+              <div class="wgames-timer__body_minutes"><span>00</span><small>минут</small></div>
+              <div class="wgames-timer__body_seconds"><span>00</span><small>секунд</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Steps End-->
+    <!-- Section Prizes-->
+    <section class="wgames-section wgames-section--prizes">
+      <div class="wgames-bg wgames-bg-gradient" data-aos="fade-up" data-aos-delay="200">
+        <div class="wgames-bg-gradient__overlay"></div>
+      </div>
+      <div class="wgames-obj wgames-obj-prizes">
+        <div class="wgames-obj-prizes__elem1"><img src="img/elements/elem1.png"/></div>
+        <div class="wgames-obj-prizes__elem2"><img src="img/elements/elem2.png"/></div>
+        <div class="wgames-obj-prizes__elem3"><img src="img/elements/elem4.png"/></div>
+        <div class="wgames-obj-prizes__elem4"><img src="img/elements/elem4.png"/></div>
+        <div class="wgames-obj-prizes__elem5"><img src="img/elements/elem5.png"/></div>
+        <div class="wgames-obj-prizes__elem6"><img src="img/elements/elem5.png"/></div>
+        <div class="wgames-obj-prizes__elem7"><img src="img/elements/elem6.png"/></div>
+      </div>
+      <div class="wgames-container">
+        <div class="wgames-prizes">
+          <div class="wgames-title wgames-prizes__title" data-aos="fade-up" data-aos-delay="200"><span>Суперпризы:</span></div>
+          <div class="wgames-prizes__flex">
+            <div class="wgames-prizes__item wgames-item wgames-item--first" data-aos="fade-up" data-aos-delay="200">
+              <div class="wgames-item__left">
+                <div class="wgames-item__pulse"><img src="img/prizes/pulse.png"/></div>
+                <div class="wgames-item__img wgames-item__img--first"><img src="img/prizes/prize1.png"/></div>
+              </div>
+              <div class="wgames-item__right wgames-item__right--first">
+                <div class="wgames-item__textB wgames-item__textB--first"><span>1</span><span>место</span></div>
+                <div class="wgames-item__textM wgames-item__textM--first"><span>Samsung Galaxy<br/>S20 Ultra</span></div>
+                <div class="wgames-item__textS"><span>(3 победителя)</span></div>
+              </div>
+            </div>
+            <div class="wgames-prizes__item wgames-item wgames-item--second" data-aos="fade-up" data-aos-delay="200">
+              <div class="wgames-item__left">
+                <div class="wgames-item__pulse"><img src="img/prizes/pulse.png"/></div>
+                <div class="wgames-item__img wgames-item__img--second"><img src="img/prizes/prize2.png"/></div>
+              </div>
+              <div class="wgames-item__right wgames-item__right--second">
+                <div class="wgames-item__textB"><span>2</span><span>место</span></div>
+                <div class="wgames-item__textM"><span>Игровая приставка<br/>Sony PlayStation 4 PRO</span></div>
+                <div class="wgames-item__textS"><span>(5 победителей)</span></div>
+              </div>
+            </div>
+            <div class="wgames-prizes__item wgames-item wgames-item--third" data-aos="fade-up" data-aos-delay="400">
+              <div class="wgames-item__left">
+                <div class="wgames-item__pulse"><img src="img/prizes/pulse.png"/></div>
+                <div class="wgames-item__img wgames-item__img--third"><img src="img/prizes/prize3.png"/></div>
+              </div>
+              <div class="wgames-item__right wgames-item__right--third">
+                <div class="wgames-item__textB"><span>3</span><span>место</span></div>
+                <div class="wgames-item__textM"><span>Наушники Beats<br/>Studio 3</span></div>
+                <div class="wgames-item__textS"><span>(15 победителя)</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Prizes End-->
+    <!-- Section Bonus-->
+    <section class="wgames-section wgames-section--bonus">
+      <div class="wgames-bg wgames-bg-bonus" data-aos="fade-up" data-aos-delay="800"><img src="img/bonus/bg.png"/></div>
+      <div class="wgames-obj wgames-obj-bonus">
+        <div class="wgames-obj-bonus__elem1"><img src="img/elements/elem8.png"/></div>
+        <div class="wgames-obj-bonus__elem2"><img src="img/elements/elem4.png"/></div>
+      </div>
+      <div class="wgames-container">
+        <div class="wgames-bonus">
+          <div class="wgames-title wgames-bonus__title" data-aos="fade-up" data-aos-delay="200"><span>Бонусные баллы:</span></div>
+          <div class="wgames-bonus__flex">
+            <div class="wgames-bonus__item wgames-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="wgames-item__left">
+                <div class="wgames-item__square wgames-item__square1"><img src="img/bonus/square1.png"/></div>
+                <div class="wgames-item__square wgames-item__square2"><img src="img/bonus/square2.png"/></div>
+                <div class="wgames-item__coin1"><img src="img/bonus/coin1.png"/></div>
+                <div class="wgames-item__coin2"><img src="img/bonus/coin2.png"/></div>
+                <div class="wgames-item__coin3"><img src="img/bonus/coin3.png"/></div>
+                <div class="wgames-item__coin"><img src="img/bonus/coin.png"/></div>
+                <div class="wgames-item__number"><span>1000</span></div>
+              </div>
+              <div class="wgames-item__right">
+                <div class="wgames-item-bonus__textB"><span>1 000</span></div>
+                <div class="wgames-item-bonus__textM"><span>бонусных баллов</span></div>
+                <div class="wgames-item-bonus__textS"><span>(30 победителей)</span></div>
+              </div>
+            </div>
+            <div class="wgames-bonus__item wgames-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="wgames-item__left">
+                <div class="wgames-item__square wgames-item__square3"><img src="img/bonus/square1.png"/></div>
+                <div class="wgames-item__square wgames-item__square4"><img src="img/bonus/square2.png"/></div>
+                <div class="wgames-item__coin4"><img src="img/bonus/coin3.png"/></div>
+                <div class="wgames-item__coin5"><img src="img/bonus/coin1.png"/></div>
+                <div class="wgames-item__coin6"><img src="img/bonus/coin4.png"/></div>
+                <div class="wgames-item__coin"><img src="img/bonus/coin.png"/></div>
+                <div class="wgames-item__number"><span>500</span></div>
+              </div>
+              <div class="wgames-item__right">
+                <div class="wgames-item-bonus__textB"><span>500</span></div>
+                <div class="wgames-item-bonus__textM"><span>бонусных баллов</span></div>
+                <div class="wgames-item-bonus__textS"><span>(50 победителей)</span></div>
+              </div>
+            </div>
+            <div class="wgames-item-break"></div>
+            <div class="wgames-bonus__item wgames-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="wgames-item__left">
+                <div class="wgames-item__square wgames-item__square5"><img src="img/bonus/square1.png"/></div>
+                <div class="wgames-item__square wgames-item__square6"><img src="img/bonus/square2.png"/></div>
+                <div class="wgames-item__coin4"><img src="img/bonus/coin2.png"/></div>
+                <div class="wgames-item__coin5"><img src="img/bonus/coin1.png"/></div>
+                <div class="wgames-item__coin6"><img src="img/bonus/coin3.png"/></div>
+                <div class="wgames-item__coin"><img src="img/bonus/coin.png"/></div>
+                <div class="wgames-item__number"><span>200</span></div>
+              </div>
+              <div class="wgames-item__right">
+                <div class="wgames-item-bonus__textB"><span>200</span></div>
+                <div class="wgames-item-bonus__textM"><span>бонусных баллов</span></div>
+                <div class="wgames-item-bonus__textS"><span>(100 победителей)</span></div>
+              </div>
+            </div>
+            <div class="wgames-bonus__item wgames-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="wgames-item__left">
+                <div class="wgames-item__square wgames-item__square7"><img src="img/bonus/square1.png"/></div>
+                <div class="wgames-item__square wgames-item__square8"><img src="img/bonus/square2.png"/></div>
+                <div class="wgames-item__coin7"><img src="img/bonus/coin3.png"/></div>
+                <div class="wgames-item__coin8"><img src="img/bonus/coin3.png"/></div>
+                <div class="wgames-item__coin9"><img src="img/bonus/coin3.png"/></div>
+                <div class="wgames-item__coin"><img src="img/bonus/coin.png"/></div>
+                <div class="wgames-item__number"><span>100</span></div>
+              </div>
+              <div class="wgames-item__right">
+                <div class="wgames-item-bonus__textB"><span>100</span></div>
+                <div class="wgames-item-bonus__textM"><span>бонусных баллов</span></div>
+                <div class="wgames-item-bonus__textS"><span>(150 победителей)</span></div>
+              </div>
+            </div>
+            <div class="wgames-bonus__item wgames-item" data-aos="fade-up" data-aos-delay="600">
+              <div class="wgames-item__left">
+                <div class="wgames-item__square wgames-item__square9"><img src="img/bonus/square1.png"/></div>
+                <div class="wgames-item__square wgames-item__square10"><img src="img/bonus/square2.png"/></div>
+                <div class="wgames-item__coin10"><img src="img/bonus/coin3.png"/></div>
+                <div class="wgames-item__coin11"><img src="img/bonus/coin2.png"/></div>
+                <div class="wgames-item__coin12"><img src="img/bonus/coin1.png"/></div>
+                <div class="wgames-item__coin"><img src="img/bonus/coin.png"/></div>
+                <div class="wgames-item__number"><span>50</span></div>
+              </div>
+              <div class="wgames-item__right">
+                <div class="wgames-item-bonus__textB"><span>50</span></div>
+                <div class="wgames-item-bonus__textM"><span>бонусных баллов</span></div>
+                <div class="wgames-item-bonus__textS"><span>(200 победителей)</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Bonus End-->
+    <!-- Section Slider-->
+    <section class="wgames-section wgames-section--slider">
+      <div class="wgames-bg wgames-bg-slider" data-aos="fade-up" data-aos-delay="200"><img src="img/slider/bg.png"/></div>
+      <div class="wgames-obj wgames-obj-slider">
+        <div class="wgames-obj-slider__elem1"><img src="img/elements/elem1.png"/></div>
+        <div class="wgames-obj-slider__elem2"><img src="img/elements/elem2.png"/></div>
+        <div class="wgames-obj-slider__elem3"><img src="img/elements/elem5.png"/></div>
+      </div>
+      <div class="wgames-container">
+        <div class="wgames-slider">
+          <div class="wgames-title wgames-slider__title" data-aos="fade-up" data-aos-delay="200"><span>Бесплатные прокрутки Lucky Wheel:</span></div>
+          <div class="wgames-slider__wrapper" data-aos="fade-up" data-aos-delay="200">
+            <div class="wgames-slider__body">
+              <div class="wgames-slide">
+                <div class="wgames-slide__wrapper">
+                  <div class="wgames-slide__img">
+                    <div class="wgames-slide__img_wheel"><img src="img/slider/slide1.png"/></div>
+                    <div class="wgames-slide__img_logo"><img src="img/slider/logo-wheel.png"/></div>
+                  </div>
+                  <div class="wgames-slide__info">
+                    <div class="wgames-slide__info_number"><span>10</span></div>
+                    <div class="wgames-slide__info_wrapper">
+                      <div class="wgames-slide__info_wheel"><span>прокруток</span></div>
+                      <div class="wgames-slide__info_winners"><span>(200 победителей)</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wgames-slide">
+                <div class="wgames-slide__wrapper">
+                  <div class="wgames-slide__img">
+                    <div class="wgames-slide__img_wheel"><img src="img/slider/slide2.png"/></div>
+                    <div class="wgames-slide__img_logo"><img src="img/slider/logo-wheel.png"/></div>
+                  </div>
+                  <div class="wgames-slide__info">
+                    <div class="wgames-slide__info_number"><span>20</span></div>
+                    <div class="wgames-slide__info_wrapper">
+                      <div class="wgames-slide__info_wheel"><span>прокруток</span></div>
+                      <div class="wgames-slide__info_winners"><span>(150 победителей)</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wgames-slide">
+                <div class="wgames-slide__wrapper">
+                  <div class="wgames-slide__img">
+                    <div class="wgames-slide__img_wheel"><img src="img/slider/slide3.png"/></div>
+                    <div class="wgames-slide__img_logo"><img src="img/slider/logo-wheel.png"/></div>
+                  </div>
+                  <div class="wgames-slide__info">
+                    <div class="wgames-slide__info_number"><span>30</span></div>
+                    <div class="wgames-slide__info_wrapper">
+                      <div class="wgames-slide__info_wheel"><span>прокруток</span></div>
+                      <div class="wgames-slide__info_winners"><span>(100 победителей)</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Slider End-->
+    <!-- Section Rules-->
+    <section class="wgames-section wgames-section--rules">
+      <div class="wgames-bg wgames-bg-rules"><img src="img/slider/bg-elem.png"/></div>
+      <div class="wgames-obj wgames-obj-rules">
+        <div class="wgames-obj-rules__elem1"><img src="img/elements/elem6.png"/></div>
+      </div>
+      <div class="wgames-container">
+        <div class="wgames-rules">
+          <div class="wgames-title wgames-rules__title" data-aos="fade-up" data-aos-delay="200"><span>Правила и условия:</span></div>
+          <div class="wgames-rules__body" data-aos="fade-up" data-aos-delay="200">
+            <ul class="wgames-rules__list">
+              <li>Акция проводится в период с_____ (00:00 +3 UTC) по ____ 2020 года (23:59 +3 UTC).</li>
+              <li>Только зарегистрированные участники могут принимать участие в акции. Обязательны для заполнения поля: Фамилия Имя Отчество, номер мобильного телефона (активация обязательна), электронный адрес (email), страна и город проживания.</li>
+              <li>Билеты начисляются автоматически в личном кабинете за ставки от 300 RUB в играх раздела WIN GAMES. Ставки с бонусного счета не учитываются в акции.</li>
+              <li>Количество ставок и билетов не ограничено.</li>
+              <li>Розыгрыш призов будет проводиться на странице акции ___ 2020 года в 18:00 (+3 UTC) среди всех билетов.</li>
+              <li>Выигрышные билеты выбираются случайным образом.</li>
+              <li>Победители, выигравшие главные призы, будут исключены из розыгрыша поощрительных призов.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Rules End-->
+    <!-- Section Points-->
+    <section class="wgames-section wgames-section--points">
+      <div class="wgames-bg wgames-bg-gradient" data-aos="fade-up" data-aos-delay="200">
+        <div class="wgames-bg-gradient__overlay wgames-bg-points__overlay"></div>
+      </div>
+      <div class="wgames-obj wgames-obj-points">
+        <div class="wgames-obj-points__elem1"><img src="img/elements/elem1.png"/></div>
+        <div class="wgames-obj-points__elem2"><img src="img/elements/elem7.png"/></div>
+        <div class="wgames-obj-points__elem3"><img src="img/elements/elem8.png"/></div>
+      </div>
+      <div class="wgames-container">
+        <div class="wgames-points">
+          <div class="wgames-points__title" data-aos="fade-up" data-aos-delay="200"><span>На какую сумму выгоднее</span><span>сделать ставку?</span></div>
+          <div class="wgames-points__text" data-aos="fade-up" data-aos-delay="200"><span>Чем крупнее ставка в играх раздела WIN GAMES,<br/>тем больше билетов вы получаете. Если ставка превышает сумму:</span></div>
+          <div class="wgames-points__body">
+            <div class="wgames-points__col" data-aos="fade-right" data-aos-delay="200">
+              <div class="wgames-points__item"><span>300 рублей</span><span>–</span><span>1 билет</span></div>
+              <div class="wgames-points__item"><span>500 рублей</span><span>–</span><span>3 билета</span></div>
+              <div class="wgames-points__item"><span>1000 рублей</span><span>–</span><span>10 билетов</span></div>
+              <div class="wgames-points__item"><span>2 000 рублей</span><span>–</span><span>25 билетов</span></div>
+              <div class="wgames-points__item"><span>3 000 рублей</span><span>–</span><span>60 билетов</span></div>
+            </div>
+            <div class="wgames-points__line">
+              <div class="wgames-points__line-elem" data-aos="zoom-in" data-aos-delay="200"></div>
+            </div>
+            <div class="wgames-points__col wgames-points__col--second" data-aos="fade-left" data-aos-delay="200">
+              <div class="wgames-points__item"><span>5 000 рублей</span><span>–</span><span>90 билетов</span></div>
+              <div class="wgames-points__item"><span>10 000 рублей</span><span>–</span><span>160 билетов</span></div>
+              <div class="wgames-points__item"><span>15 000 рублей</span><span>–</span><span>350 билетов</span></div>
+              <div class="wgames-points__item"><span>30 000 рублей</span><span>–</span><span>600 билетов</span></div>
+              <div class="wgames-points__item"><span>>35 000 рублей</span><span>–</span><span>1000 билетов</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Points End-->
+    <!-- Section Action-->
+    <section class="wgames-section wgames-section--action">
+      <div class="wgames-bg wgames-bg-action"><img src="img/action/bg.png"/></div>
+      <div class="wgames-bg wgames-bg-elem-action"><img src="img/action/bg-elem.png"/></div>
+      <div class="wgames-obj wgames-obj-action">
+        <div class="wgames-obj-action__elem1"><img src="img/elements/elem2.png"/></div>
+        <div class="wgames-obj-action__elem2"><img src="img/elements/elem2.png"/></div>
+      </div>
+      <div class="wgames-action" id="wgames-showAction">
+        <div class="wgames-title wgames-action__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor="#wgames-showAction"><span>Чем больше билетов -<br/>тем выше шансы на победу!</span></div>
+        <div class="wgames-info__action" data-aos="fade-up" data-aos-delay="400" data-aos-anchor="#wgames-showAction">
+          <div class="wgames-btn__lightning wgames-btn__lightning1"><img src="img/main/btn-lightning1.png"/></div>
+          <div class="wgames-btn__lightning wgames-btn__lightning2"><img src="img/main/btn-lightning2.png"/></div><a class="wgames-btn wgames-btn--info" href="#!"><span>Играть сейчас</span></a>
+        </div>
+      </div>
+    </section>
+    <!-- Section Action End-->
+    <!-- Addition Btn start-->
+    <div class="wgames-addition">
+      <button class="wgames-addition__btn" type="button" @click="$modal.show('modal-enter')"><span>E</span></button>
+      <button class="wgames-addition__btn" type="button" @click="$modal.show('modal-rules')"><span>R</span></button>
+      <button class="wgames-addition__btn" type="button" @click="$modal.show('modal-hello')"><span>H</span></button>
+    </div>
+    <!-- Addition Btn end-->
+    <!-- Modal Start-->
+    <modal name="modal-enter" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+      <div class="wgames-modal wgames-mEnter">
+        <div class="wgames-modal__close">
+          <button class="wgames-modal__close_img" @click="$modal.hide('modal-enter')"></button>
+        </div>
+        <div class="wgames-modal__body wgames-mEnter__body">
+          <div class="wgames-modal__obj wgames-mEnter__obj">
+            <div class="wgames-mEnter__obj_elem1"><img src="img/elements/elem1.png"/></div>
+            <div class="wgames-mEnter__obj_elem2"><img src="img/elements/elem2.png"/></div>
+            <div class="wgames-mEnter__obj_elem3"><img src="img/elements/elem4.png"/></div>
+            <div class="wgames-mEnter__obj_elem4"><img src="img/elements/elem5.png"/></div>
+          </div>
+          <div class="wgames-mEnter__title"><span>Для участия Вам необходимо войти или зарегистрироваться!</span></div>
+          <div class="wgames-mEnter__action"><a class="wgames-btn wgames-btn--custom wgames-modal__btn wgames-mEnter__btn--login" href="#!"><span>Вход</span></a><a class="wgames-btn wgames-btn--custom wgames-modal__btn wgames-mEnter__btn--registr" href="#!"><span>Регистрация</span></a>
+          </div>
+        </div>
+      </div>
+    </modal>
+    <modal name="modal-rules" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+      <div class="wgames-modal wgames-mRules">
+        <div class="wgames-modal__close">
+          <button class="wgames-modal__close_img" @click="$modal.hide('modal-rules')"></button>
+        </div>
+        <div class="wgames-modal__body wgames-mRules__body">
+          <scroll class="wgames-mRules__scroll" ref="rulesScroll">
+            <div class="wgames-modal__obj wgames-mRules__obj">
+              <div class="wgames-mRules__obj_elem1"><img src="img/elements/elem4.png"/></div>
+              <div class="wgames-mRules__obj_elem2"><img src="img/elements/elem5.png"/></div>
+            </div>
+            <div class="wgames-mRules__list">
+              <div class="wgames-mRules__list_title"><span>Принимай участие</span></div>
+              <ul class="wgames-mRules__list_ul">
+                <li>Зарегистрируйтесь или авторизируйтесь на сайте.</li>
+                <li>Делайте ставки в играх WIN GAMES (сумма ставки от  300 RUB).</li>
+                <li>Получайте акционные билеты в период с ____ по _____ 2020 года.</li>
+                <li>Выигрывайте крутые призы!</li>
+              </ul>
+              <div class="wgames-mRules__list_title"><span>Призовой фонд акции</span></div>
+              <div class="wgames-mRules__list_text"><span>По итогам акции среди всех акционных билетов случайным образом выбираются победители, которые получат призы:</span></div>
+              <div class="wgames-mRules__list_titleS wgames-mRules__list_text--mt20 wgames-mRules__list_text--mb20"><span>Суперпризы:</span></div>
+              <ul class="wgames-mRules__list_ul">
+                <li>Samsung Galaxy S20 Ultra  (3 победителя)</li>
+                <li>Игровая приставка Sony PlayStation 4 PRO (5 победителей)</li>
+                <li>Наушники Beats Studio 3 (15 победителей)</li>
+              </ul>
+              <div class="wgames-mRules__list_titleS wgames-mRules__list_text--mt20 wgames-mRules__list_text--mb20"><span>Бонусные баллы:</span></div>
+              <ul class="wgames-mRules__list_ul wgames-mRules__list_ul--circle">
+                <li>1 000 бонусных баллов (30 победителей)</li>
+                <li>500 бонусных баллов (50 победителей)</li>
+                <li>200 бонусных баллов (100 победителей)</li>
+                <li>100 бонусных баллов (150 победителей)</li>
+                <li>50 бонусных баллов (200 победителей)</li>
+              </ul>
+              <div class="wgames-mRules__list_titleS wgames-mRules__list_text--mt20 wgames-mRules__list_text--mb20"><span>Бесплатные прокрутки Lucky Wheel:</span></div>
+              <ul class="wgames-mRules__list_ul wgames-mRules__list_ul--circle">
+                <li>30 прокруток (100 победителей)</li>
+                <li>20 прокруток (150 победителей)</li>
+                <li>10 прокруток (200 победителей)</li>
+              </ul>
+              <div class="wgames-mRules__list_title"><span>На какую сумму<br/>выгоднее сделать ставку?</span></div>
+              <div class="wgames-mRules__list_text wgames-mRules__list_text--mb5 "><span>Чем крупнее ставка в играх раздела WIN GAMES, тем больше билетов вы получаете. Если ставка превышает сумму:</span></div>
+              <ul class="wgames-mRules__list_ul wgames-mRules__list_ul--circle">
+                <li>300 RUB – 1 билет;</li>
+                <li>500 RUB – 3 билета;</li>
+                <li>1000 RUB – 10 билетов;</li>
+                <li>2 000 RUB – 25 билетов;</li>
+                <li>3 000 RUB – 60 билетов;</li>
+                <li>5 000 RUB  – 90 билетов;</li>
+                <li>10 000 RUB – 160 билетов;</li>
+                <li>15 000 RUB – 350 билетов;</li>
+                <li>30 000 RUB – 600 билетов;</li>
+                <li>Свыше 35 000 RUB — 1000 билетов.</li>
+              </ul>
+              <div class="wgames-mRules__list_text wgames-mRules__list_text--mt10 wgames-mRules__list_text--uppercase"><span>Чем больше билетов - тем выше шансы на победу!</span></div>
+              <div class="wgames-mRules__list_title"><span>Правила и условия:</span></div>
+              <ul class="wgames-mRules__list_ul">
+                <li>Акция проводится в период с_____ (00:00 +3 UTC) по ____ 2020 года (23:59 +3 UTC).</li>
+                <li>Только зарегистрированные участники могут принимать участие в акции. Обязательны для заполнения поля: Фамилия Имя Отчество, номер мобильного телефона (активация обязательна), электронный адрес (email), страна и город проживания.</li>
+                <li>Билеты начисляются автоматически в личном кабинете за ставки от 300 RUB в играх раздела WIN GAMES. Ставки с бонусного счета не учитываются в акции.</li>
+                <li>Количество ставок и билетов не ограничено.</li>
+                <li>Розыгрыш призов будет проводиться на странице акции ___ 2020 года в 18:00 (+3 UTC) среди всех билетов.</li>
+                <li>Выигрышные билеты выбираются случайным образом.</li>
+                <li>Победители, выигравшие главные призы, будут исключены из розыгрыша поощрительных призов.</li>
+                <li>В акции не участвуют следующие ставки в играх из раздела WIN GAMES: Рулетка.</li>
+              </ul>
+            </div>
+          </scroll>
+        </div>
+      </div>
+    </modal>
+    <modal name="modal-tickets" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+      <div class="wgames-modal wgames-mTickets">
+        <div class="wgames-modal__close">
+          <button class="wgames-modal__close_img" @click="$modal.hide('modal-tickets')"></button>
+        </div>
+        <div class="wgames-modal__body wgames-mTickets__body">
+          <scroll class="wgames-mTickets__scroll" ref="ticketsScroll">
+            <div class="wgames-modal__obj wgames-mTickets__obj">
+              <div class="wgames-mTickets__obj_elem1"><img src="img/elements/elem4.png"/></div>
+              <div class="wgames-mTickets__obj_elem2"><img src="img/elements/elem5.png"/></div>
+            </div>
+            <div class="wgames-mTickets__list">
+              <div class="wgames-mTickets__list_title"><span>Мои билеты: 12 367</span></div>
+              <div class="wgames-mTickets__list_flex">
+                <div class="wgames-mTickets__list_ticket win"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+                <div class="wgames-mTickets__list_ticket"><span>79542362</span></div>
+              </div>
+            </div>
+          </scroll>
+        </div>
+      </div>
+    </modal>
+    <modal name="modal-hello" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+      <div class="wgames-modal wgames-mHello">
+        <div class="wgames-modal__close">
+          <button class="wgames-modal__close_img" @click="$modal.hide('modal-hello')"></button>
+        </div>
+        <div class="wgames-modal__body wgames-mHello__body">
+          <div class="wgames-modal__obj wgames-mHello__obj">
+            <div class="wgames-mHello__obj_elem1"><img src="img/elements/elem1.png"/></div>
+            <div class="wgames-mHello__obj_elem2"><img src="img/elements/elem2.png"/></div>
+            <div class="wgames-mHello__obj_elem3"><img src="img/elements/elem4.png"/></div>
+            <div class="wgames-mHello__obj_elem4"><img src="img/elements/elem5.png"/></div>
+          </div>
+          <div class="wgames-mHello__image"><img src="img/modal/hello-img.png"/></div>
+          <div class="wgames-mHello__title"><img src="img/modal/hello-logo.png"/></div>
+          <div class="wgames-mHello__subtitle"><span class="wgames-mHello__subtitle_text">Много играешь –<br/>много побеждаешь!</span></div>
+          <div class="wgames-mHello__action"><a class="wgames-btn wgames-btn--custom wgames-modal__btn wgames-mHello__btn--main" href="#!"><span>Подробнее</span></a>
+          </div>
+        </div>
+      </div>
+    </modal>
+    <!-- Modal End-->
+  </div>
+</div>
+<!-- ------------------------------------------------------------------------------------------------------------------->
+<script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver" type="text/javascript"></script>
+<script src="js/vendors-lottery.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<!-- ------------------------------------------------------------------------------------------------------------------->
+</body>
+</html>
