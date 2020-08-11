@@ -28,4 +28,4 @@
 - [**Project 9**](https://maxdragomir.github.io/portfolio/division/project9/index.html)
 - [**Project 10**](https://maxdragomir.github.io/portfolio/division/project10/index.html)
 - [**Project 11**](https://maxdragomir.github.io/portfolio/division/project11/index.html)
-- [**no-risk**](https://maxdragomir.github.io/portfolio/division/)
+- [**Project 12**](https://maxdragomir.github.io/portfolio/division/project12/index.html)
