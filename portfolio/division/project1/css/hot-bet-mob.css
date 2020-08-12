@@ -38,32 +38,32 @@ dd {
 /* ANIMATION */
 @-webkit-keyframes ship-anim {
   0% {
-    -webkit-transform: translate(-5px, 0) perspective(600px) rotateY(0deg);
-    transform: translate(-5px, 0) perspective(600px) rotateY(0deg); }
+    -webkit-transform: translate3d(-5px, 0, 0) perspective(600px) rotateY(0deg);
+    transform: translate3d(-5px, 0, 0) perspective(600px) rotateY(0deg); }
   100% {
-    -webkit-transform: translate(5px, 0) perspective(600px) rotateY(-2deg);
-    transform: translate(5px, 0) perspective(600px) rotateY(-2deg); } }
+    -webkit-transform: translate3d(5px, 0, 0) perspective(600px) rotateY(-2deg);
+    transform: translate3d(5px, 0, 0) perspective(600px) rotateY(-2deg); } }
 @keyframes ship-anim {
   0% {
-    -webkit-transform: translate(-5px, 0) perspective(600px) rotateY(0deg);
-    transform: translate(-5px, 0) perspective(600px) rotateY(0deg); }
+    -webkit-transform: translate3d(-5px, 0, 0) perspective(600px) rotateY(0deg);
+    transform: translate3d(-5px, 0, 0) perspective(600px) rotateY(0deg); }
   100% {
-    -webkit-transform: translate(5px, 0) perspective(600px) rotateY(-2deg);
-    transform: translate(5px, 0) perspective(600px) rotateY(-2deg); } }
+    -webkit-transform: translate3d(5px, 0, 0) perspective(600px) rotateY(-2deg);
+    transform: translate3d(5px, 0, 0) perspective(600px) rotateY(-2deg); } }
 @-webkit-keyframes girl-anim {
   0% {
-    -webkit-transform: translate(10px, 0) rotate(0);
-    transform: translate(10px, 0) rotate(0); }
+    -webkit-transform: translate3d(10px, 0, 0) rotate(0);
+    transform: translate3d(10px, 0, 0) rotate(0); }
   100% {
-    -webkit-transform: translate(-10px, 0) rotate(360deg);
-    transform: translate(-10px, 0) rotate(360deg); } }
+    -webkit-transform: translate3d(10px, 0, 0) rotate(360deg);
+    transform: translate3d(10px, 0, 0) rotate(360deg); } }
 @keyframes girl-anim {
   0% {
-    -webkit-transform: translate(10px, 0) rotate(0);
-    transform: translate(10px, 0) rotate(0); }
+    -webkit-transform: translate3d(10px, 0, 0) rotate(0);
+    transform: translate3d(10px, 0, 0) rotate(0); }
   100% {
-    -webkit-transform: translate(-10px, 0) rotate(360deg);
-    transform: translate(-10px, 0) rotate(360deg); } }
+    -webkit-transform: translate3d(10px, 0, 0) rotate(360deg);
+    transform: translate3d(10px, 0, 0) rotate(360deg); } }
 @-webkit-keyframes light {
   0% {
     -webkit-transform: translateX(-100%);
@@ -305,8 +305,6 @@ dd {
     -webkit-animation: plane-anim 50s ease infinite 1s;
     animation: plane-anim 50s ease infinite 1s; }
 .hot_bet-screen__main {
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
   margin-top: 0;
   background: #103a6e url(../img/hot-bet/top/bg.jpg) no-repeat center 0;
   background-size: cover; }
@@ -332,6 +330,7 @@ dd {
   pointer-events: none; }
   .hot_bet-img__girl img {
     max-width: 100%;
+    will-change: transform;
     -webkit-animation: girl-anim 150s linear infinite alternate;
     animation: girl-anim 150s linear infinite alternate; }
 .hot_bet-img__yacht {
@@ -343,6 +342,7 @@ dd {
   z-index: 1; }
   .hot_bet-img__yacht img {
     max-width: 100%;
+    will-change: transform;
     -webkit-animation: ship-anim 5s ease-in-out infinite alternate;
     animation: ship-anim 5s ease-in-out infinite alternate; }
 .hot_bet-wrapp__btn {
@@ -977,19 +977,21 @@ dd {
     list-style: none;
     margin-top: 12px;
     overflow: hidden; }
-.hot_bet #bgAnimation {
+#bgAnimation {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 850px;
-  opacity: 0.2;
+  /*opacity: 0.2;*/
   pointer-events: none;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
+  background: #103a6e url(../img/hot-bet/top/bg.jpg) no-repeat center 0;
+  background-size: cover;
+  /*transform: scale(1.2);*/
+  filter: url("#turbulence");
+}
   .hot_bet-tickets__ticket {
     display: -webkit-box;
     display: -ms-flexbox;
