@@ -3621,6 +3621,9 @@ button:hover, button:focus, button:active, a:hover, a:focus, a:active {
             box-shadow: none;
   }
 }
+.kairat-slider__tabs {
+    display: flex;
+}
 .kairat-slider__tab {
   position: relative;
   padding: 0 1px;
