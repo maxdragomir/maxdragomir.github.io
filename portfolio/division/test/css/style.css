@@ -26,23 +26,25 @@ img {
     left: 0;
     top: 50%;
     width: 500px;
-    -webkit-transform: translate(-100%, -50%) rotate(-30deg);
-    -ms-transform: translate(-100%, -50%) rotate(-30deg);
-    transform: translate(-100%, -50%) rotate(-30deg);
+    -webkit-transform: translate3d(-100%, -50%, 0) rotate(-30deg);
+    -ms-transform: translate3d(-100%, -50%, 0) rotate(-30deg);
+    transform: translate3d(-100%, -50%, 0) rotate(-30deg);
     pointer-events: none;
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
 }
-.torch.show {
+.load {
+    will-change: transform, opacity;
+}
+.load .torch {
     -webkit-transform: translate(-20%, -50%) rotate(0deg);
     -ms-transform: translate(-20%, -50%) rotate(0deg);
     transform: translate(-20%, -50%) rotate(0deg);
-    -webkit-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: all 1s ease .5s;
+    -o-transition: all 1s ease .5s;
+    transition: all 1s ease .5s;
 }
-
 
 .container {
     position: relative;
@@ -73,9 +75,9 @@ img {
     width: calc(100% - 680px);
     height: 100%;
     opacity: 0;
-    -webkit-transform: translate(10%, 0%);
-    -ms-transform: translate(10%, 0%);
-    transform: translate(10%, 0%);
+    -webkit-transform: translate3d(10%, 0%, 0);
+    -ms-transform: translate3d(10%, 0%, 0);
+    transform: translate3d(10%, 0%, 0);
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
@@ -85,14 +87,14 @@ img {
         width: 100%;
     }
 }
-.content.show {
+.load .content, .load .sidebar{
     opacity: 1;
-    -webkit-transform: translate(0%, 0%);
-    -ms-transform: translate(0%, 0%);
-    transform: translate(0%, 0%);
-    -webkit-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease;
+    -webkit-transform: translate3d(0%, 0%, 0);
+    -ms-transform: translate3d(0%, 0%, 0);
+    transform: translate3d(0%, 0%, 0);
+    -webkit-transition: all .5s ease .3s;
+    -o-transition: all .5s ease .3s;
+    transition: all .5s ease .3s;
 }
 .content:before {
     content: '';
@@ -310,18 +312,18 @@ img {
     background-size: cover;
     z-index: 10;
     opacity: 0;
-    -webkit-transform: translate(10%, 0%);
-    -ms-transform: translate(10%, 0%);
-    transform: translate(10%, 0%);
+    -webkit-transform: translate3d(10%, 0%, 0);
+    -ms-transform: translate3d(10%, 0%, 0);
+    transform: translate3d(10%, 0%, 0);
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
 }
 .sidebar.show {
     opacity: 1;
-    -webkit-transform: translate(0%, 0%);
-    -ms-transform: translate(0%, 0%);
-    transform: translate(0%, 0%);
+    -webkit-transform: translate3d(0%, 0%, 0);
+    -ms-transform: translate3d(0%, 0%, 0);
+    transform: translate3d(0%, 0%, 0);
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
@@ -510,7 +512,9 @@ img {
     z-index: 999;
 }
 .hide {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
 }
 .modal.show {
     opacity: 1;
@@ -675,8 +679,7 @@ img {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0, .4);
-    z-index: 100;
+    background: rgba(0,0,0, .6);
 
     display: -webkit-box;
 
@@ -694,9 +697,6 @@ img {
     -webkit-transform-origin: top;
     -ms-transform-origin: top;
     transform-origin: top;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
     z-index: 999;
     pointer-events: none;
     -webkit-transition: all .5s ease;
@@ -707,7 +707,7 @@ img {
     width: 400px;
 }
 
-.loader.hide {
+.load .loader {
     opacity: 0;
     visibility: hidden;
     -webkit-transition: all .5s ease;

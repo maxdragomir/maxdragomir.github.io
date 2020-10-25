@@ -1,11 +1,12 @@
 $(document).ready(function() {
-	let count = 0,
+	var count = 0,
 		flag = false,
 		availableGames = 0,
 		modal = $('.modal'),
 		modalText = $('.game-text span'),
-		btnmodal = $('.btn-modal')
+		btnmodal = $('.btn-modal'),
 		torch = $('.torch'),
+		container = $('body'),
 		content = $('.content'),
 		sideBar = $('.sidebar'),
 		chest = $('.chest'),
@@ -18,7 +19,7 @@ $(document).ready(function() {
 		availableCount = $('.available-count span'),
 		btnPlay = $('.btn-play'),
 		sidebarInfo = $('.sidebar-info'),
-		chestContainer = $('.chests')
+		chestContainer = $('.chests'),
 		loader = $('.loader'),
 		dwarfElements = $('.dwarf-animating > div'),
 		imageCount = 0,
@@ -27,12 +28,11 @@ $(document).ready(function() {
 
 	//START
 	setTimeout(function() {
-		loader.addClass('hide');
-		content.addClass('show');
-		sideBar.addClass('show');
+		// loader.addClass('hide');
+		container.addClass('load');
 	}, 500);
 	setTimeout(function() {
-		torch.addClass('show');
+		// torch.addClass('show');
 	}, 1000);
 
 
@@ -126,7 +126,7 @@ $(document).ready(function() {
 
 	//GAME CHEST
 	function game() {
-		let randomIndex;
+		var randomIndex;
 			
 		$.each(chest, function(i, el) {
 		    setTimeout(function() {

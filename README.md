@@ -4,7 +4,7 @@
 
 ## My Works
 - [**Old portfolio**](https://maxdragomir.github.io/portfolio/old/index.html)
-#### SeaRates 
+#### Logistics 
 ###### 09.2016 – 12.2017
 - [**Md Logistic**](http://md-logistic.com/)
 ##### Freelance
