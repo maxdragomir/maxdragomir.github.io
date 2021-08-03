@@ -89,38 +89,39 @@ document.addEventListener("DOMContentLoaded", function () {
   } // Timer
 
 
-  var countDown = function countDown(theSelector, time) {
-    var output = "",
-        x;
-    var dTime = Date.parse(time);
-    var theDate = Date.parse(new Date());
-    var difference = dTime - theDate;
-    var milliseconds = difference % 1000;
-
-    function addZero(number) {
-      if (number <= 9) {
-        number = "0" + number;
-      }
-
-      return number;
-    }
-
-    x = difference / 1000;
-    var seconds = addZero(parseInt(x % 60));
-    x /= 60;
-    var minutes = addZero(parseInt(x % 60));
-    x /= 60;
-    var hours = addZero(parseInt(x % 24));
-    x /= 24;
-    var days = addZero(parseInt(x));
-    output = "<div class=\"".concat(lotteryName, "-timer__body_days\"><span>").concat(days, "</span><small>\u0434\u043D\u0435\u0439</small></div>\n\t\t\t\t\t\t\t<div class=\"").concat(lotteryName, "-timer__body_hours\"><span>").concat(hours, "</span><small>\u0447\u0430\u0441\u043E\u0432</small></div>\n\t\t\t\t\t\t\t<div class=\"").concat(lotteryName, "-timer__body_minutes\"><span>").concat(minutes, "</span><small>\u043C\u0438\u043D\u0443\u0442</small></div>\n\t\t\t\t\t\t\t<div class=\"").concat(lotteryName, "-timer__body_seconds\"><span>").concat(seconds, "</span><small>\u0441\u0435\u043A\u0443\u043D\u0434</small></div>");
-    document.querySelector(theSelector).innerHTML = output;
-  };
-
-  var Time = "9/10/2020 18:25:00";
-  setInterval(function () {
-    countDown(".".concat(lotteryName, "-jsTimer"), Time);
-  }, 1000); //Animation
+  // var countDown = function countDown(theSelector, time) {
+  //   var output = "",
+  //       x;
+  //   var dTime = Date.parse(time);
+  //   var theDate = Date.parse(new Date());
+  //   var difference = dTime - theDate;
+  //   var milliseconds = difference % 1000;
+  //
+  //   function addZero(number) {
+  //     if (number <= 9) {
+  //       number = "0" + number;
+  //     }
+  //
+  //     return number;
+  //   }
+  //
+  //   x = difference / 1000;
+  //   var seconds = addZero(parseInt(x % 60));
+  //   x /= 60;
+  //   var minutes = addZero(parseInt(x % 60));
+  //   x /= 60;
+  //   var hours = addZero(parseInt(x % 24));
+  //   x /= 24;
+  //   var days = addZero(parseInt(x));
+  //   output = "<div class=\"".concat(lotteryName, "-timer__body_days\"><span>").concat(days, "</span><small>\u0434\u043D\u0435\u0439</small></div>\n\t\t\t\t\t\t\t<div class=\"").concat(lotteryName, "-timer__body_hours\"><span>").concat(hours, "</span><small>\u0447\u0430\u0441\u043E\u0432</small></div>\n\t\t\t\t\t\t\t<div class=\"").concat(lotteryName, "-timer__body_minutes\"><span>").concat(minutes, "</span><small>\u043C\u0438\u043D\u0443\u0442</small></div>\n\t\t\t\t\t\t\t<div class=\"").concat(lotteryName, "-timer__body_seconds\"><span>").concat(seconds, "</span><small>\u0441\u0435\u043A\u0443\u043D\u0434</small></div>");
+  //   document.querySelector(theSelector).innerHTML = output;
+  // };
+  //
+  // var Time = "9/10/2021 18:25:00";
+  // setInterval(function () {
+  //   countDown(".".concat(lotteryName, "-jsTimer"), Time);
+  // }, 1000);
+  //Animation
 
   AOS.init({
     duration: 1000,

@@ -12,15 +12,15 @@
 - [**Leader Group**](https://maxdragomir.github.io/portfolio/leader-group/index.html)
 ##### Sponge Digital & Design 
 ###### 01.2018 – 02.2018
-- [**Test Assignment**](https://maxdragomir.github.io/portfolio/sponge-test/index.html)
+- [**Test**](https://maxdragomir.github.io/portfolio/sponge-test/index.html)
 - [**Academy**](https://maxdragomir.github.io/portfolio/academy/index.html)
 ##### XMLshop 
 ###### 02.2018 – 09.2018
-- [**Test Assignment**](https://maxdragomir.github.io/portfolio/xmlshop-test/index.html)
+- [**Test**](https://maxdragomir.github.io/portfolio/xmlshop-test/index.html)
 - [**Spring Admin Panel**](https://maxdragomir.github.io/portfolio/spring/index.html)
 ##### DIVISION 
 ###### 10.2018 - now
-- [**Test Assignment**](https://maxdragomir.github.io/portfolio/division/test/index.html)
+- [**Test**](https://maxdragomir.github.io/portfolio/division/test/index.html)
 - [**Project 1**](https://maxdragomir.github.io/portfolio/division/project1/index.html)
 - [**Project 2**](https://maxdragomir.github.io/portfolio/division/project2/index.html)
 - [**Project 3**](https://maxdragomir.github.io/portfolio/division/project3/index.html)
