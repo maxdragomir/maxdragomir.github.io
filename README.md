@@ -38,6 +38,9 @@
 - [**Project 15**](https://maxdragomir.github.io/portfolio/division/project15/index.html)
 - [**Project 16**](https://maxdragomir.github.io/portfolio/division/project16/index.html)
 - [**Project 17**](https://maxdragomir.github.io/portfolio/division/project17/index.html)
+- [**Project 18**](https://maxdragomir.github.io/portfolio/division/project18/index.html)
+- [**Project 19**](https://maxdragomir.github.io/portfolio/division/project19/index.html)
+- [**Project 20**](https://maxdragomir.github.io/portfolio/division/project20/index.html)
 
 [comment]: <> (##### SEARATES)
 [comment]: <> (###### 11.2020 - 09.2021)
