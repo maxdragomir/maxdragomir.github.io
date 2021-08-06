@@ -1,0 +1,3335 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic");
+:root {
+		--media: 1;
+}
+@media (max-width: 1500px) {
+		:root {
+				--media: 1.30148;
+		}
+}
+@media (max-width: 1300px) {
+		:root {
+				--media: 1.7362;
+		}
+}
+@media (max-width: 1000px) {
+		:root {
+				--media: 2.5;
+		}
+}
+@media (max-width: 560px) {
+		:root {
+				--media: 5;
+		}
+}
+
+/*! Fonts */
+/*======================================================================================================================*/
+/*! Reset */
+/*======================================================================================================================*/
+ul,
+ol {
+		padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+picture,
+figcaption,
+blockquote,
+dl,
+dd {
+		margin: 0;
+		font-size: inherit;
+}
+
+picture {
+		display: block;
+}
+
+body {
+		scroll-behavior: smooth;
+		text-rendering: optimizeSpeed;
+		line-height: 1.5;
+}
+
+ul,
+ol {
+		list-style: none;
+}
+
+a:not([class]) {
+		-webkit-text-decoration-skip: ink;
+		        text-decoration-skip-ink: auto;
+}
+
+img {
+		max-width: 100%;
+		display: block;
+}
+
+article > * + * {
+		margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+		font: inherit;
+}
+
+button, a {
+		cursor: pointer;
+		text-decoration: none;
+}
+button:hover, button:focus, button:active, a:hover, a:focus, a:active {
+		outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+		* {
+				-webkit-animation-duration: 0.01ms !important;
+				        animation-duration: 0.01ms !important;
+				-webkit-animation-iteration-count: 1 !important;
+				        animation-iteration-count: 1 !important;
+				-webkit-transition-duration: 0.01ms !important;
+				     -o-transition-duration: 0.01ms !important;
+				        transition-duration: 0.01ms !important;
+				scroll-behavior: auto !important;
+		}
+}
+/*! Animation */
+/*======================================================================================================================*/
+@-webkit-keyframes flicker {
+		20%, 100% {
+				-webkit-transform: translate3d(150%, 0, 0) skew(-50deg);
+				        transform: translate3d(150%, 0, 0) skew(-50deg);
+		}
+}
+@keyframes flicker {
+		20%, 100% {
+				-webkit-transform: translate3d(150%, 0, 0) skew(-50deg);
+				        transform: translate3d(150%, 0, 0) skew(-50deg);
+		}
+}
+@-webkit-keyframes levitation-x {
+		50% {
+				-webkit-transform: translate3d(10%, 0, 0);
+				        transform: translate3d(10%, 0, 0);
+		}
+}
+@keyframes levitation-x {
+		50% {
+				-webkit-transform: translate3d(10%, 0, 0);
+				        transform: translate3d(10%, 0, 0);
+		}
+}
+@-webkit-keyframes levitation-y {
+		50% {
+				-webkit-transform: translate3d(0, 10%, 0);
+				        transform: translate3d(0, 10%, 0);
+		}
+}
+@keyframes levitation-y {
+		50% {
+				-webkit-transform: translate3d(0, 10%, 0);
+				        transform: translate3d(0, 10%, 0);
+		}
+}
+@-webkit-keyframes scaleLight {
+		0% {
+				opacity: 0;
+				-webkit-transform: translate3d(0, 0, 0) scale(0);
+				        transform: translate3d(0, 0, 0) scale(0);
+		}
+		100% {
+				opacity: 1;
+				-webkit-transform: translate3d(0, 0, 0) scale(1);
+				        transform: translate3d(0, 0, 0) scale(1);
+		}
+}
+@keyframes scaleLight {
+		0% {
+				opacity: 0;
+				-webkit-transform: translate3d(0, 0, 0) scale(0);
+				        transform: translate3d(0, 0, 0) scale(0);
+		}
+		100% {
+				opacity: 1;
+				-webkit-transform: translate3d(0, 0, 0) scale(1);
+				        transform: translate3d(0, 0, 0) scale(1);
+		}
+}
+/*! Base */
+/*======================================================================================================================*/
+.battleCoupons {
+		position: relative;
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		font-weight: 400;
+		line-height: 1;
+		font-size: 16px;
+		font-family: "Roboto", sans-serif;
+		-webkit-text-size-adjust: 100%;
+		   -moz-text-size-adjust: 100%;
+		    -ms-text-size-adjust: 100%;
+		        text-size-adjust: 100%;
+		font-smooth: antialiased;
+		overflow: hidden;
+		scroll-behavior: smooth;
+		text-rendering: optimizeLegibility;
+		direction: rtl;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+}
+.battleCoupons *,
+.battleCoupons *::before,
+.battleCoupons *::after {
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+}
+.battleCoupons-inner {
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+		-webkit-box-shadow: 0.3125em 0.3125em 6.25em rgba(0, 0, 0, 0.5);
+		        box-shadow: 0.3125em 0.3125em 6.25em rgba(0, 0, 0, 0.5);
+		overflow: hidden;
+		background-size: auto;
+}
+@media only screen and (min-width: 1920px) {
+		.battleCoupons-inner {
+				width: 1920px;
+		}
+}
+.battleCoupons-section {
+		position: relative;
+		z-index: 1;
+}
+.battleCoupons-container {
+		position: relative;
+		margin: 0 auto;
+		max-width: 93.75em;
+		padding: 0 1.25em;
+}
+.battleCoupons-title {
+		position: relative;
+		text-align: center;
+		z-index: 1;
+}
+.battleCoupons [data-aos^=fade][data-aos^=fade] {
+		pointer-events: none;
+}
+.battleCoupons [data-aos^=fade][data-aos^=fade].aos-animate {
+		pointer-events: auto;
+}
+.battleCoupons-decor {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		z-index: 0;
+}
+.battleCoupons-decor__el {
+		position: absolute;
+}
+.battleCoupons-decor[data-aos^=fade][data-aos^=fade].aos-animate,
+.battleCoupons-decor [data-aos^=fade][data-aos^=fade].aos-animate {
+		pointer-events: none;
+}
+.battleCoupons-button {
+		position: relative;
+		display: inline-block;
+		text-align: center;
+		cursor: pointer;
+		outline: none;
+		padding: 0;
+		border: 0;
+		margin: 0 auto;
+		color: black;
+		background: black;
+		z-index: 2;
+		min-width: 12.5em;
+		will-change: transform;
+		-webkit-transform: scale(1);
+		    -ms-transform: scale(1);
+		        transform: scale(1);
+		-webkit-transition: -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+		transition: -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+		-o-transition: transform 0.5s ease, box-shadow 0.5s ease;
+		transition: transform 0.5s ease, box-shadow 0.5s ease;
+		transition: transform 0.5s ease, box-shadow 0.5s ease, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+}
+.battleCoupons-button span {
+		font-size: 1.125em;
+		position: relative;
+		display: block;
+		overflow: hidden;
+		z-index: 1;
+		padding: 0.5555555556em 0.5555555556em;
+}
+.battleCoupons-button span::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		-webkit-transform: translate3d(-100%, 0, 0) skew(0deg);
+		        transform: translate3d(-100%, 0, 0) skew(0deg);
+		width: 100%;
+		height: 100%;
+		will-change: transform;
+		border: 1px solid transparent;
+		opacity: 0.5;
+		background-color: rgba(255, 255, 255, 0.5);
+		-webkit-animation: flicker 4s ease-in-out infinite 1s;
+		        animation: flicker 4s ease-in-out infinite 1s;
+}
+.battleCoupons-button::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		background: #ededed;
+		z-index: 0;
+		opacity: 1;
+		-webkit-transform: translate3d(-50%, -50%, 0);
+		        transform: translate3d(-50%, -50%, 0);
+		-webkit-transition: opacity 0.5s ease;
+		-o-transition: opacity 0.5s ease;
+		transition: opacity 0.5s ease;
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.battleCoupons-button:hover {
+				-webkit-transition: -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+				transition: -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+				-o-transition: transform 0.5s ease, box-shadow 0.5s ease;
+				transition: transform 0.5s ease, box-shadow 0.5s ease;
+				transition: transform 0.5s ease, box-shadow 0.5s ease, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+		}
+		.battleCoupons-button:hover::before {
+				opacity: 0.5;
+				-webkit-transition: opacity 0.5s ease;
+				-o-transition: opacity 0.5s ease;
+				transition: opacity 0.5s ease;
+		}
+		.battleCoupons-button:hover span::after {
+				display: none;
+		}
+}
+.battleCoupons-button:active {
+		-webkit-transform: scale(0.95);
+		    -ms-transform: scale(0.95);
+		        transform: scale(0.95);
+		-webkit-transform-origin: center;
+		    -ms-transform-origin: center;
+		        transform-origin: center;
+		-webkit-box-shadow: 0.3125em 0.3125em 0.625em 0em rgba(0, 0, 0, 0.25);
+		        box-shadow: 0.3125em 0.3125em 0.625em 0em rgba(0, 0, 0, 0.25);
+		-webkit-transition: -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+		transition: -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+		-o-transition: box-shadow 0.2s ease, transform 0.2s ease;
+		transition: box-shadow 0.2s ease, transform 0.2s ease;
+		transition: box-shadow 0.2s ease, transform 0.2s ease, -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+}
+.battleCoupons-button:active::before {
+		opacity: 0.5;
+		-webkit-transition: opacity 0.5s ease;
+		-o-transition: opacity 0.5s ease;
+		transition: opacity 0.5s ease;
+}
+.battleCoupons-link {
+		display: block;
+		text-align: center;
+		color: white;
+		pointer-events: none;
+}
+.battleCoupons-link__text {
+		position: relative;
+		pointer-events: auto;
+}
+.battleCoupons-link__text::after {
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background: #fff;
+		-webkit-transform: scale(1);
+		    -ms-transform: scale(1);
+		        transform: scale(1);
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+@media only screen and (max-width: 1500px) {
+		.battleCoupons-link__text::after {
+				width: 100%;
+				height: 1px;
+		}
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.battleCoupons-link__text:hover::after {
+				-webkit-transform: scaleX(0);
+				    -ms-transform: scaleX(0);
+				        transform: scaleX(0);
+				-webkit-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+		}
+}
+.battleCoupons-test-page {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: column;
+		        flex-flow: column;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		height: 100vh;
+		font-size: 5vw;
+		text-transform: uppercase;
+		color: white;
+}
+.battleCoupons-test-text {
+		font-size: 3vw;
+		text-transform: uppercase;
+		color: inherit;
+}
+.battleCoupons--is-none {
+		display: none;
+}
+.battleCoupons--is-mobile button,
+.battleCoupons--is-mobile textarea,
+.battleCoupons--is-mobile input,
+.battleCoupons--is-mobile select,
+.battleCoupons--is-mobile a,
+.battleCoupons--is-mobile div,
+.battleCoupons--is-mobile span {
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		-webkit-tap-highlight-color: transparent;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+}
+.battleCoupons .no-animate {
+		-webkit-animation: none !important;
+		        animation: none !important;
+}
+.battleCoupons .breadcrumbs {
+		position: absolute;
+		font-style: normal;
+		z-index: 3;
+		top: 1.25em;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		right: 1.25em;
+}
+.battleCoupons .breadcrumbs li {
+		color: white;
+		text-transform: uppercase;
+		display: inline-block;
+		position: relative;
+		font-weight: bold;
+		font-size: 1.125em;
+}
+.battleCoupons .breadcrumbs li a, .battleCoupons .breadcrumbs li span {
+		color: inherit;
+		font-size: inherit;
+}
+.battleCoupons .breadcrumbs li:first-child::before {
+		content: none;
+}
+.battleCoupons .breadcrumbs li::before {
+		content: "/";
+		margin-right: 0.25em;
+		margin-left: 0.5em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons .breadcrumbs {
+				display: none;
+		}
+}
+.battleCoupons .v--modal {
+		top: auto !important;
+		left: auto !important;
+		overflow: visible !important;
+		height: auto !important;
+		width: auto !important;
+		background: none !important;
+		display: inline-block;
+		-webkit-box-shadow: none;
+		        box-shadow: none;
+}
+.battleCoupons .v--modal-background-click {
+		display: -ms-flexbox;
+		display: -webkit-box;
+		display: flex;
+		-ms-flex-pack: center;
+		-webkit-box-pack: center;
+		        justify-content: center;
+		-ms-flex-align: center;
+		-webkit-box-align: center;
+		        align-items: center;
+		height: 100%;
+}
+.battleCoupons .v--modal-overlay {
+		background: rgba(0, 0, 0, 0.7) !important;
+		z-index: 100010 !important;
+}
+
+/*! Demo */
+/*======================================================================================================================*/
+.battleCoupons-demo-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 998;
+		width: 100%;
+		height: 100%;
+		opacity: 1;
+		display: none;
+}
+.battleCoupons-demo {
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 100vh;
+		width: 25em;
+		z-index: 999;
+		direction: ltr;
+		-webkit-transform: translate3d(99%, 0, 0);
+		        transform: translate3d(99%, 0, 0);
+		-webkit-transition: -webkit-transform 0.5s ease;
+		transition: -webkit-transform 0.5s ease;
+		-o-transition: transform 0.5s ease;
+		transition: transform 0.5s ease;
+		transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-demo {
+				font-size: 1.5625em;
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-demo {
+				font-size: 3.125em;
+				width: 20em;
+		}
+}
+.battleCoupons-demo__switcher {
+		position: absolute;
+		bottom: 4.375em;
+		left: -4.375em;
+		width: 4.375em;
+		height: 4.375em;
+		display: block;
+		padding: 0.5em;
+		z-index: 2;
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-demo__switcher {
+				bottom: 12.5em;
+		}
+}
+.battleCoupons-demo__switch-button {
+		position: relative;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		background: #e6e7ed;
+		border: 1px solid #d1d9e6;
+		border-radius: 0.625em;
+		will-change: transform;
+		opacity: 0.2;
+		-webkit-transform: translate3d(0, 0, 0) scale(1);
+		        transform: translate3d(0, 0, 0) scale(1);
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-demo__switch-button {
+				opacity: 0.5;
+		}
+}
+.battleCoupons-demo__switch-button--is-active .battleCoupons-demo__switch-button-svg {
+		opacity: 1;
+		-webkit-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		transition: all 1s ease;
+}
+.battleCoupons-demo__switch-button--is-active .battleCoupons-demo__switch-button-svg path {
+		stroke-width: 0.625em;
+		stroke: #30334a;
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.battleCoupons-demo__switch-button:hover {
+				opacity: 1;
+				-webkit-transform: translate3d(0, 0, 0) scale(1.05);
+				        transform: translate3d(0, 0, 0) scale(1.05);
+				-webkit-transition: all 0.3s ease;
+				-o-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+		}
+}
+.battleCoupons-demo__switch-button:active {
+		-webkit-box-shadow: inset 0.125em 0.125em 0.3125em #b7b8bd, inset -0.1875em -0.1875em 0.4375em white;
+		        box-shadow: inset 0.125em 0.125em 0.3125em #b7b8bd, inset -0.1875em -0.1875em 0.4375em white;
+		-webkit-transform: translate3d(0, 0, 0) scale(1);
+		        transform: translate3d(0, 0, 0) scale(1);
+		-webkit-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+}
+.battleCoupons-demo__switch-button-svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: block;
+		width: 70%;
+		margin: 0 auto;
+		-webkit-transform: translate3d(-50%, -50%, 0) rotate(0);
+		        transform: translate3d(-50%, -50%, 0) rotate(0);
+		-webkit-transform-origin: center;
+		    -ms-transform-origin: center;
+		        transform-origin: center;
+		opacity: 0.5;
+		-webkit-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		transition: all 1s ease;
+}
+.battleCoupons-demo__switch-button-svg path {
+		fill: #30334a;
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+.battleCoupons-demo__content {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background: #e7e8ee;
+		border-left: 1px solid #d1d9e6;
+		-webkit-transform: translate3d(20%, 0, 0);
+		        transform: translate3d(20%, 0, 0);
+		-webkit-box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.5);
+		        box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.5);
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-demo__content {
+				padding-bottom: 3.125em;
+		}
+}
+.battleCoupons-demo__lock {
+		position: absolute;
+		top: 0.3125em;
+		left: 0.3125em;
+		opacity: 0.3;
+		cursor: pointer;
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+		z-index: 1;
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.battleCoupons-demo__lock:hover {
+				opacity: 0.5;
+				-webkit-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+		}
+}
+.battleCoupons-demo__lock-icon {
+		display: block;
+		width: 1.5625em;
+		height: 1.5625em;
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+.battleCoupons-demo__lock-icon--open {
+		-webkit-filter: drop-shadow(1px 1px 0 white);
+		        filter: drop-shadow(1px 1px 0 white);
+}
+.battleCoupons-demo__lock-icon--open path {
+		fill: #30334a;
+}
+.battleCoupons-demo__lock-icon--close {
+		display: none;
+}
+.battleCoupons-demo__settings {
+		position: absolute;
+		top: 0.3125em;
+		right: 0.3125em;
+		opacity: 0.3;
+		cursor: pointer;
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+		z-index: 1;
+		-webkit-transform: rotate(0);
+		    -ms-transform: rotate(0);
+		        transform: rotate(0);
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.battleCoupons-demo__settings:hover {
+				-webkit-transform: rotate(180deg);
+				    -ms-transform: rotate(180deg);
+				        transform: rotate(180deg);
+				opacity: 0.5;
+				-webkit-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+		}
+}
+.battleCoupons-demo__settings-icon {
+		display: block;
+		width: 1.5625em;
+		height: 1.5625em;
+}
+.battleCoupons-demo__toggle-wrapper {
+		position: relative;
+		display: inline-block;
+		padding: 0.3125em;
+}
+.battleCoupons-demo__toggle {
+		position: relative;
+		cursor: pointer;
+}
+.battleCoupons-demo__toggle input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+		visibility: hidden;
+		display: none;
+}
+.battleCoupons-demo__toggle input:checked + .battleCoupons-demo__slider-wrapper .battleCoupons-demo__slider {
+		background-color: #b38000;
+}
+.battleCoupons-demo__toggle input:checked + .battleCoupons-demo__slider-wrapper .battleCoupons-demo__slider::before {
+		-webkit-transform: translate3d(1.625em, -50%, 0);
+		        transform: translate3d(1.625em, -50%, 0);
+}
+.battleCoupons-demo__toggle input:checked + .battleCoupons-demo__slider-wrapper .battleCoupons-demo__slider--delay {
+		-webkit-transition-delay: 0.2s;
+		     -o-transition-delay: 0.2s;
+		        transition-delay: 0.2s;
+}
+.battleCoupons-demo__toggle input:checked + .battleCoupons-demo__slider-wrapper .battleCoupons-demo__slider--delay::before {
+		-webkit-transition-delay: 0.2s;
+		     -o-transition-delay: 0.2s;
+		        transition-delay: 0.2s;
+}
+.battleCoupons-demo__toggle input:checked + .battleCoupons-demo__slider-wrapper .battleCoupons-demo__side {
+		opacity: 0.2;
+		-webkit-transition-delay: 0.2s;
+		     -o-transition-delay: 0.2s;
+		        transition-delay: 0.2s;
+}
+.battleCoupons-demo__toggle input:checked + .battleCoupons-demo__slider-wrapper .battleCoupons-demo__side--right {
+		opacity: 1;
+		-webkit-transition-delay: 0.2s;
+		     -o-transition-delay: 0.2s;
+		        transition-delay: 0.2s;
+}
+.battleCoupons-demo__slider-wrapper {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		width: 100%;
+		height: 100%;
+}
+.battleCoupons-demo__slider {
+		position: relative;
+		display: block;
+		width: 3.125em;
+		height: 1.25em;
+		background: rgba(48, 51, 74, 0.3);
+		will-change: transform, opacity;
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+		-webkit-box-shadow: 1px 1px 1px white;
+		        box-shadow: 1px 1px 1px white;
+}
+.battleCoupons-demo__slider::before {
+		content: "";
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: 0;
+		width: 1.25em;
+		height: 0.9375em;
+		background-color: white;
+		-webkit-transform: translate3d(0.25em, -50%, 0);
+		        transform: translate3d(0.25em, -50%, 0);
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+		-webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+		        box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+.battleCoupons-demo__slider--delay {
+		-webkit-transition-delay: 0.2s;
+		     -o-transition-delay: 0.2s;
+		        transition-delay: 0.2s;
+}
+.battleCoupons-demo__slider--delay::before {
+		-webkit-transition-delay: 0.2s;
+		     -o-transition-delay: 0.2s;
+		        transition-delay: 0.2s;
+}
+.battleCoupons-demo__slider--color {
+		background-color: #b38000;
+}
+.battleCoupons-demo__slider--round {
+		border-radius: 50px;
+}
+.battleCoupons-demo__slider--round::before {
+		border-radius: 50px;
+}
+.battleCoupons-demo__side {
+		font-size: 0.875em;
+		position: absolute;
+		display: block;
+		top: 50%;
+		color: #b38000;
+		font-weight: 300;
+		text-transform: uppercase;
+		text-shadow: 1px 1px 0 white;
+		opacity: 1;
+		-webkit-transform: translateY(-50%);
+		    -ms-transform: translateY(-50%);
+		        transform: translateY(-50%);
+		-webkit-transition: all 0.5s ease 0.3s;
+		-o-transition: all 0.5s ease 0.3s;
+		transition: all 0.5s ease 0.3s;
+}
+.battleCoupons-demo__side--left {
+		right: 110%;
+}
+.battleCoupons-demo__side--right {
+		left: 110%;
+		opacity: 0.2;
+}
+.battleCoupons-demo__name {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		margin: 2.5em 0.9375em 1.875em;
+		z-index: 0;
+}
+.battleCoupons-demo__name-text {
+		font-size: 1.875em;
+		text-align: center;
+		text-transform: capitalize;
+		font-weight: 300;
+		color: #30334a;
+		text-shadow: 1px 1px 0 white;
+		margin-right: 0.1666666667em;
+}
+.battleCoupons-demo__name-info {
+		font-size: 1.125em;
+		position: relative;
+		display: block;
+		width: 1.1111111111em;
+		height: 1.1111111111em;
+		border-radius: 50%;
+		color: white;
+		background: #30334a;
+		text-transform: lowercase;
+		text-shadow: none;
+		padding: 0;
+		margin: 0;
+		border: 0;
+		opacity: 0.3;
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.battleCoupons-demo__name-info:hover {
+				opacity: 1;
+				-webkit-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+		}
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-demo__name-info {
+				display: none;
+		}
+}
+.battleCoupons-demo__block {
+		position: relative;
+		margin: 0.9375em 0.9375em 2.5em 0.9375em;
+}
+.battleCoupons-demo__block-settings {
+		display: none;
+}
+.battleCoupons-demo__block-settings--is-show {
+		display: block;
+}
+.battleCoupons-demo__block-keys {
+		display: none;
+}
+.battleCoupons-demo__block-keys--is-show {
+		display: block;
+}
+.battleCoupons-demo__title {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		color: #30334a;
+		margin-bottom: 0.3125em;
+		text-shadow: 1px 1px 0 white;
+}
+.battleCoupons-demo__title::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background: #d1d9e6;
+		-webkit-transform: translate3d(0, -50%, 0);
+		        transform: translate3d(0, -50%, 0);
+		z-index: 0;
+}
+.battleCoupons-demo__title--page {
+		color: #18634b;
+}
+.battleCoupons-demo__title--page::after {
+		background: rgba(24, 99, 75, 0.3);
+}
+.battleCoupons-demo__title--state {
+		color: #a91e2c;
+}
+.battleCoupons-demo__title--state::after {
+		background: rgba(169, 30, 44, 0.3);
+}
+.battleCoupons-demo__title--modal {
+		color: #0056b3;
+}
+.battleCoupons-demo__title--modal::after {
+		background: rgba(0, 86, 179, 0.3);
+}
+.battleCoupons-demo__title--settings {
+		color: #b38000;
+}
+.battleCoupons-demo__title--settings::after {
+		background: rgba(179, 128, 0, 0.3);
+}
+.battleCoupons-demo__title-icon {
+		position: relative;
+		display: none;
+		width: 7%;
+		background: #e7e8ee;
+		z-index: 1;
+}
+.battleCoupons-demo__title-icon path {
+		fill: #30334a;
+}
+.battleCoupons-demo__title-text {
+		position: relative;
+		display: inline-block;
+		padding: 0em 0.5em 0em 0.5em;
+		background: #e7e8ee;
+		font-size: 1.25em;
+		text-transform: capitalize;
+		font-weight: 300;
+		z-index: 1;
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+.battleCoupons-demo__wrapper {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: stretch;
+		    -ms-flex-pack: stretch;
+		        justify-content: stretch;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: row wrap;
+		        flex-flow: row wrap;
+		-webkit-box-shadow: inset 0.125em 0.125em 0.3125em #b7b8bd, inset -0.1875em -0.1875em 0.4375em white;
+		        box-shadow: inset 0.125em 0.125em 0.3125em #b7b8bd, inset -0.1875em -0.1875em 0.4375em white;
+		border: 1px solid #d1d9e6;
+		padding: 0.9375em 0.3125em 0em 0.9375em;
+		border-radius: 0.625em;
+}
+.battleCoupons-demo__setting {
+		position: relative;
+		-webkit-box-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+		-ms-flex-preferred-size: 100%;
+		    flex-basis: 100%;
+		text-align: center;
+		margin: 0em 0.9375em 1.125em 0em;
+		background: transparent;
+		border-radius: 0.625em;
+		padding: 0;
+		-webkit-box-shadow: 0.25em 0.25em 0.625em #b7b8bd, -0.25em -0.25em 0.625em white;
+		        box-shadow: 0.25em 0.25em 0.625em #b7b8bd, -0.25em -0.25em 0.625em white;
+		border: 1px solid #d1d9e6;
+		color: #30334a;
+		text-shadow: 1px 1px 0 white;
+}
+.battleCoupons-demo__setting-text {
+		display: block;
+		font-size: 1em;
+		padding: 0.3125em;
+		text-transform: uppercase;
+		font-weight: 600;
+}
+.battleCoupons-demo__setting-text--description {
+		text-transform: initial;
+		font-weight: 400;
+		opacity: 0.7;
+		color: #30334a;
+}
+.battleCoupons-demo__key {
+		position: relative;
+		-webkit-box-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+		-ms-flex-preferred-size: 100%;
+		    flex-basis: 100%;
+		text-align: center;
+		margin: 0em 0.9375em 1.125em 0em;
+		background: transparent;
+		border-radius: 0.625em;
+		padding: 0;
+		-webkit-box-shadow: 0.25em 0.25em 0.625em #b7b8bd, -0.25em -0.25em 0.625em white;
+		        box-shadow: 0.25em 0.25em 0.625em #b7b8bd, -0.25em -0.25em 0.625em white;
+		border: 1px solid #d1d9e6;
+		color: #30334a;
+		text-shadow: 1px 1px 0 white;
+		will-change: transform;
+		-webkit-transform: translate3d(0, 0, 0) scale(1);
+		        transform: translate3d(0, 0, 0) scale(1);
+		-webkit-transition: all 0.5s ease 0.2s;
+		-o-transition: all 0.5s ease 0.2s;
+		transition: all 0.5s ease 0.2s;
+}
+.battleCoupons-demo__key--page {
+		color: #18634b;
+}
+.battleCoupons-demo__key--state {
+		color: #a91e2c;
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.battleCoupons-demo__key:hover {
+				-webkit-transform: translate3d(0, -2px, 0) scale(1.015);
+				        transform: translate3d(0, -2px, 0) scale(1.015);
+				-webkit-transition: all 0.3s ease;
+				-o-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+		}
+}
+.battleCoupons-demo__key-text {
+		display: block;
+		font-size: 1em;
+		padding: 0.3125em;
+		text-transform: uppercase;
+		font-weight: 600;
+}
+.battleCoupons-demo__key-text--description {
+		text-transform: initial;
+		font-weight: 400;
+		opacity: 0.7;
+		color: #30334a;
+}
+.battleCoupons-demo__button {
+		position: relative;
+		display: block;
+		text-align: center;
+		-webkit-box-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+		-ms-flex-preferred-size: 30%;
+		    flex-basis: 30%;
+		margin: 0em 0.9375em 1.125em 0em;
+		background: transparent;
+		border-radius: 0.625em;
+		padding: 0.9375em 0em;
+		-webkit-box-shadow: 0.25em 0.25em 0.625em #b7b8bd, -0.25em -0.25em 0.625em white;
+		        box-shadow: 0.25em 0.25em 0.625em #b7b8bd, -0.25em -0.25em 0.625em white;
+		border: 1px solid #d1d9e6;
+		color: #30334a;
+		text-shadow: 1px 1px 0 white;
+		will-change: transform;
+		-webkit-transform: translate3d(0, 0, 0) scale(1);
+		        transform: translate3d(0, 0, 0) scale(1);
+		-webkit-transition: all 0.5s ease 0.2s;
+		-o-transition: all 0.5s ease 0.2s;
+		transition: all 0.5s ease 0.2s;
+}
+.battleCoupons-demo__button--page {
+		border: 1px solid rgba(24, 99, 75, 0.3);
+}
+.battleCoupons-demo__button--state {
+		border: 1px solid rgba(169, 30, 44, 0.3);
+}
+.battleCoupons-demo__button--modal {
+		border: 1px solid rgba(0, 86, 179, 0.3);
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.battleCoupons-demo__button:hover {
+				-webkit-transform: translate3d(0, -2px, 0) scale(1.015);
+				        transform: translate3d(0, -2px, 0) scale(1.015);
+				-webkit-transition: all 0.3s ease;
+				-o-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+		}
+		.battleCoupons-demo__button:hover.battleCoupons-demo__button--page {
+				color: #18634b;
+		}
+		.battleCoupons-demo__button:hover.battleCoupons-demo__button--state {
+				color: #a91e2c;
+		}
+		.battleCoupons-demo__button:hover.battleCoupons-demo__button--modal {
+				color: #0056b3;
+		}
+}
+.battleCoupons-demo__button:active {
+		-webkit-transform: translate3d(0, 0, 0) scale(1);
+		        transform: translate3d(0, 0, 0) scale(1);
+		-webkit-box-shadow: inset 0.125em 0.125em 0.3125em #b7b8bd, inset -0.1875em -0.1875em 0.4375em white;
+		        box-shadow: inset 0.125em 0.125em 0.3125em #b7b8bd, inset -0.1875em -0.1875em 0.4375em white;
+		-webkit-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-demo__button {
+				-ms-flex-preferred-size: 100%;
+				    flex-basis: 100%;
+		}
+}
+.battleCoupons-demo__button-text {
+		font-size: 1.125em;
+		display: inline-block;
+		text-transform: capitalize;
+		font-weight: 400;
+}
+.battleCoupons-demo--reverse {
+		right: auto;
+		left: 0;
+		-webkit-transform: translate3d(-99%, 0, 0);
+		        transform: translate3d(-99%, 0, 0);
+}
+.battleCoupons-demo--reverse .battleCoupons-demo__switcher {
+		left: auto;
+		right: -4.375em;
+}
+.battleCoupons-demo--reverse .battleCoupons-demo__content {
+		-webkit-transform: translate3d(-20%, 0, 0);
+		        transform: translate3d(-20%, 0, 0);
+}
+.battleCoupons-demo--is-show {
+		opacity: 1;
+		-webkit-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+		-webkit-transition: -webkit-transform 0.5s ease;
+		transition: -webkit-transform 0.5s ease;
+		-o-transition: transform 0.5s ease;
+		transition: transform 0.5s ease;
+		transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.battleCoupons-demo--is-show .battleCoupons-demo__switch-button {
+		opacity: 1;
+		-webkit-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+}
+.battleCoupons-demo--is-show .battleCoupons-demo__switch-button-svg {
+		-webkit-transform: translate3d(-50%, -50%, 0) rotate(0);
+		        transform: translate3d(-50%, -50%, 0) rotate(0);
+		-webkit-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		transition: all 1s ease;
+}
+.battleCoupons-demo--is-show .battleCoupons-demo__content {
+		-webkit-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+.battleCoupons-demo--is-fixed {
+		opacity: 1;
+		-webkit-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+		-webkit-transition: -webkit-transform 0.5s ease;
+		transition: -webkit-transform 0.5s ease;
+		-o-transition: transform 0.5s ease;
+		transition: transform 0.5s ease;
+		transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.battleCoupons-demo--is-fixed .battleCoupons-demo__switch-button {
+		opacity: 1;
+		-webkit-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+}
+.battleCoupons-demo--is-fixed .battleCoupons-demo__switch-button-svg {
+		-webkit-transform: translate3d(-50%, -50%, 0) rotate(180deg);
+		        transform: translate3d(-50%, -50%, 0) rotate(180deg);
+		-webkit-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		transition: all 1s ease;
+}
+.battleCoupons-demo--is-fixed .battleCoupons-demo__content {
+		-webkit-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.battleCoupons-demo:hover {
+				opacity: 1;
+				-webkit-transform: translate3d(0%, 0, 0);
+				        transform: translate3d(0%, 0, 0);
+				-webkit-transition: -webkit-transform 0.5s ease;
+				transition: -webkit-transform 0.5s ease;
+				-o-transition: transform 0.5s ease;
+				transition: transform 0.5s ease;
+				transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+		}
+		.battleCoupons-demo:hover .battleCoupons-demo__switch-button {
+				opacity: 1;
+				-webkit-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+		}
+		.battleCoupons-demo:hover .battleCoupons-demo__switch-button-svg {
+				-webkit-transform: translate3d(-50%, -50%, 0) rotate(180deg);
+				        transform: translate3d(-50%, -50%, 0) rotate(180deg);
+				-webkit-transition: all 1s ease;
+				-o-transition: all 1s ease;
+				transition: all 1s ease;
+		}
+		.battleCoupons-demo:hover .battleCoupons-demo__content {
+				-webkit-transform: translate3d(0%, 0, 0);
+				        transform: translate3d(0%, 0, 0);
+				-webkit-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+		}
+}
+
+/*! Lottery page */
+/*======================================================================================================================*/
+.battleCoupons {
+		background: -webkit-gradient(linear, left top, left bottom, from(#242438), to(#000014));
+		background: -o-linear-gradient(top, #242438 0%, #000014 100%);
+		background: linear-gradient(to bottom, #242438 0%, #000014 100%);
+		color: white;
+}
+@media only screen and (max-width: 1920px) {
+		.battleCoupons {
+				font-size: 0.8333333333vw;
+		}
+}
+@media only screen and (max-width: 1500px) {
+		.battleCoupons {
+				font-size: 0.9vw;
+		}
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons {
+				font-size: 1vw;
+		}
+}
+.battleCoupons-inner {
+		background: -webkit-gradient(linear, left top, left bottom, from(#242438), to(#18172c));
+		background: -o-linear-gradient(top, #242438 0%, #18172c 100%);
+		background: linear-gradient(to bottom, #242438 0%, #18172c 100%);
+}
+.battleCoupons-decor__el--bg {
+		top: -6.25em;
+		left: 0;
+		width: 120em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-decor__el--bg {
+				top: calc(-6.25em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor__el--bg {
+				top: calc(-0.625em * var(--media));
+				left: 50%;
+				width: calc(37.5em * var(--media));
+				-webkit-transform: translateX(-40%);
+				    -ms-transform: translateX(-40%);
+				        transform: translateX(-40%);
+		}
+}
+.battleCoupons-decor__el--top {
+		top: -65.625em;
+		right: 0;
+		width: 120em;
+		-webkit-transform: scaleX(-1);
+		    -ms-transform: scaleX(-1);
+		        transform: scaleX(-1);
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-decor__el--top {
+				display: none;
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor__el--top {
+				display: block;
+				top: -62.5em;
+		}
+}
+.battleCoupons-decor__el--bottom {
+		top: 16.875em;
+		right: 0;
+		width: 120em;
+		-webkit-transform: scaleX(-1);
+		    -ms-transform: scaleX(-1);
+		        transform: scaleX(-1);
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-decor__el--bottom {
+				top: calc(3.75em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor__el--bottom {
+				top: calc(11.25em * var(--media));
+		}
+}
+.battleCoupons-decor__el--left1 {
+		top: -9.375em;
+		right: -43.75em;
+		width: 65.8125em;
+		-webkit-transform: scaleX(-1);
+		    -ms-transform: scaleX(-1);
+		        transform: scaleX(-1);
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor__el--left1 {
+				display: none;
+		}
+}
+.battleCoupons-decor__el--left2 {
+		top: -9.375em;
+		right: -50em;
+		width: 65.8125em;
+		-webkit-transform: scaleX(-1);
+		    -ms-transform: scaleX(-1);
+		        transform: scaleX(-1);
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor__el--left2 {
+				display: none;
+		}
+}
+.battleCoupons-decor__el--right1 {
+		top: -9.375em;
+		left: -34.375em;
+		width: 54.25em;
+		-webkit-transform: scaleX(-1);
+		    -ms-transform: scaleX(-1);
+		        transform: scaleX(-1);
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor__el--right1 {
+				display: none;
+		}
+}
+.battleCoupons-decor__el--right2 {
+		top: -9.375em;
+		left: -40.625em;
+		width: 54.25em;
+		-webkit-transform: scaleX(-1);
+		    -ms-transform: scaleX(-1);
+		        transform: scaleX(-1);
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor__el--right2 {
+				display: none;
+		}
+}
+.battleCoupons-decor__el--light-left1 {
+		top: 21.25em;
+		right: -2.8125em;
+		width: 10.875em;
+		-webkit-transform: scaleX(-1);
+		    -ms-transform: scaleX(-1);
+		        transform: scaleX(-1);
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor__el--light-left1 {
+				display: none;
+		}
+}
+.battleCoupons-decor__el--light-left1 img {
+		-webkit-transform-origin: 44% 50%;
+		    -ms-transform-origin: 44% 50%;
+		        transform-origin: 44% 50%;
+		animation: scaleLight 0.7s ease infinite alternate-reverse;
+}
+.battleCoupons-decor__el--light-left2 {
+		top: 46.5625em;
+		right: 10.375em;
+		width: 10.875em;
+		-webkit-transform: scaleX(-1);
+		    -ms-transform: scaleX(-1);
+		        transform: scaleX(-1);
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor__el--light-left2 {
+				display: none;
+		}
+}
+.battleCoupons-decor__el--light-left2 img {
+		-webkit-transform-origin: 44% 50%;
+		    -ms-transform-origin: 44% 50%;
+		        transform-origin: 44% 50%;
+		-webkit-animation: scaleLight 0.7s ease infinite alternate;
+		        animation: scaleLight 0.7s ease infinite alternate;
+}
+.battleCoupons-decor__el--light-right1 {
+		top: 19.0625em;
+		left: 4.0625em;
+		width: 10.875em;
+		-webkit-transform: scaleX(-1);
+		    -ms-transform: scaleX(-1);
+		        transform: scaleX(-1);
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor__el--light-right1 {
+				display: none;
+		}
+}
+.battleCoupons-decor__el--light-right1 img {
+		-webkit-transform-origin: 44% 50%;
+		    -ms-transform-origin: 44% 50%;
+		        transform-origin: 44% 50%;
+		-webkit-animation: scaleLight 0.7s ease infinite alternate;
+		        animation: scaleLight 0.7s ease infinite alternate;
+}
+.battleCoupons-decor__el--light-right2 {
+		top: 28.125em;
+		left: -4.6875em;
+		width: 10.875em;
+		-webkit-transform: scaleX(-1);
+		    -ms-transform: scaleX(-1);
+		        transform: scaleX(-1);
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor__el--light-right2 {
+				display: none;
+		}
+}
+.battleCoupons-decor__el--light-right2 img {
+		-webkit-transform-origin: 44% 50%;
+		    -ms-transform-origin: 44% 50%;
+		        transform-origin: 44% 50%;
+		animation: scaleLight 0.7s ease infinite alternate-reverse;
+}
+.battleCoupons-decor__el--big-left {
+		top: -21.875em;
+		right: -68.75em;
+		width: 84.3125em;
+		-webkit-transform: scaleX(-1);
+		    -ms-transform: scaleX(-1);
+		        transform: scaleX(-1);
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-decor__el--big-left {
+				top: calc(-18.75em * var(--media));
+				width: calc(39.4375em * var(--media));
+				right: calc(-34.375em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor__el--big-left {
+				display: none;
+		}
+}
+.battleCoupons-decor__el--big-right {
+		top: 21.875em;
+		left: -62.5em;
+		width: 84.3125em;
+		-webkit-transform: scaleX(-1);
+		    -ms-transform: scaleX(-1);
+		        transform: scaleX(-1);
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-decor__el--big-right {
+				top: calc(5em * var(--media));
+				left: calc(-34.375em * var(--media));
+				width: calc(39.4375em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor__el--big-right {
+				display: none;
+		}
+}
+.battleCoupons-decor__el--light-left {
+		top: 53.125em;
+		right: 6.25em;
+		width: 10.875em;
+		-webkit-transform: scaleX(-1);
+		    -ms-transform: scaleX(-1);
+		        transform: scaleX(-1);
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-decor__el--light-left {
+				top: calc(17.5em * var(--media));
+				right: calc(1.3125em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor__el--light-left {
+				display: none;
+		}
+}
+.battleCoupons-decor__el--light-left img {
+		-webkit-transform-origin: 44% 50%;
+		    -ms-transform-origin: 44% 50%;
+		        transform-origin: 44% 50%;
+		-webkit-animation: scaleLight 0.7s ease infinite alternate;
+		        animation: scaleLight 0.7s ease infinite alternate;
+}
+.battleCoupons-decor__el--light-right {
+		top: 81.25em;
+		left: 1.875em;
+		width: 10.875em;
+		-webkit-transform: scaleX(-1);
+		    -ms-transform: scaleX(-1);
+		        transform: scaleX(-1);
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-decor__el--light-right {
+				display: none;
+		}
+}
+.battleCoupons-decor__el--light-right img {
+		-webkit-transform-origin: 44% 50%;
+		    -ms-transform-origin: 44% 50%;
+		        transform-origin: 44% 50%;
+		animation: scaleLight 0.7s ease infinite alternate-reverse;
+}
+.battleCoupons-decor--global {
+		z-index: 2;
+}
+.battleCoupons-title {
+		position: relative;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 200;
+}
+.battleCoupons-title__text {
+		display: block;
+		font-size: 3.75em;
+		text-shadow: 0.1666666667em 0.1666666667em 0.3333333333em rgba(0, 0, 0, 0.9);
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-title__text {
+				font-size: calc(1.875em * var(--media));
+				text-shadow: 0.3333333333em 0.3333333333em 0.6666666667em rgba(0, 0, 0, 0.9);
+		}
+}
+.battleCoupons-title__text--size-xl {
+		font-size: 5.625em;
+		text-shadow: 0.1111111111em 0.1111111111em 0.2222222222em rgba(0, 0, 0, 0.9);
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-title__text--size-xl {
+				font-size: calc(2.75em * var(--media));
+				text-shadow: 0.2272727273em 0.2272727273em 0.4545454545em rgba(0, 0, 0, 0.9);
+		}
+}
+.battleCoupons-container {
+		max-width: 56.25em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-container {
+				max-width: calc(25em * var(--media));
+		}
+}
+.battleCoupons-button--main {
+		min-width: 15.625em;
+		background: #97c50d;
+		border-radius: 3.125em;
+		-webkit-box-shadow: 0.625em 0.625em 1.25em 0.1875em rgba(0, 0, 0, 0.3);
+		        box-shadow: 0.625em 0.625em 1.25em 0.1875em rgba(0, 0, 0, 0.3);
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-button--main {
+				min-width: calc(8.75em * var(--media));
+				border-radius: calc(3.125em * var(--media));
+				-webkit-box-shadow: calc(0.625em * var(--media)) calc(0.625em * var(--media)) calc(1.25em * var(--media)) calc(0.1875em * var(--media)) rgba(0, 0, 0, 0.3);
+				        box-shadow: calc(0.625em * var(--media)) calc(0.625em * var(--media)) calc(1.25em * var(--media)) calc(0.1875em * var(--media)) rgba(0, 0, 0, 0.3);
+		}
+}
+.battleCoupons-button--main span {
+		text-transform: uppercase;
+		font-size: 1.125em;
+		padding: 1.1666666667em 0.5555555556em;
+		border-radius: 2.7777777778em;
+		color: white;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-button--main span {
+				font-size: calc(0.875em * var(--media));
+				padding: 0.7142857143em 0.3571428571em;
+				border-radius: 3.5714285714em;
+		}
+}
+.battleCoupons-button--main::before {
+		background: -webkit-gradient(linear, left top, right top, from(#97c50d), to(#698e3e));
+		background: -o-linear-gradient(left, #97c50d 0%, #698e3e 100%);
+		background: linear-gradient(to right, #97c50d 0%, #698e3e 100%);
+		border-radius: 3.125em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-button--main::before {
+				border-radius: calc(3.125em * var(--media));
+		}
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.battleCoupons-button--main:hover {
+				-webkit-transition: -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+				transition: -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+				-o-transition: transform 0.5s ease, box-shadow 0.5s ease;
+				transition: transform 0.5s ease, box-shadow 0.5s ease;
+				transition: transform 0.5s ease, box-shadow 0.5s ease, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+		}
+		.battleCoupons-button--main:hover::before {
+				opacity: 0.5;
+				-webkit-transition: opacity 0.5s ease;
+				-o-transition: opacity 0.5s ease;
+				transition: opacity 0.5s ease;
+		}
+		.battleCoupons-button--main:hover span::after {
+				display: none;
+		}
+}
+.battleCoupons-button--main:active {
+		-webkit-transform: scale(0.95);
+		    -ms-transform: scale(0.95);
+		        transform: scale(0.95);
+		-webkit-transform-origin: center;
+		    -ms-transform-origin: center;
+		        transform-origin: center;
+		-webkit-box-shadow: 0.625em 0.625em 1.25em 0.1875em rgba(0, 0, 0, 0.25);
+		        box-shadow: 0.625em 0.625em 1.25em 0.1875em rgba(0, 0, 0, 0.25);
+		-webkit-transition: -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+		transition: -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+		-o-transition: box-shadow 0.2s ease, transform 0.2s ease;
+		transition: box-shadow 0.2s ease, transform 0.2s ease;
+		transition: box-shadow 0.2s ease, transform 0.2s ease, -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-button--main:active {
+				-webkit-box-shadow: calc(0.625em * var(--media)) calc(0.625em * var(--media)) calc(1.25em * var(--media)) calc(0.1875em * var(--media)) rgba(0, 0, 0, 0.25);
+				        box-shadow: calc(0.625em * var(--media)) calc(0.625em * var(--media)) calc(1.25em * var(--media)) calc(0.1875em * var(--media)) rgba(0, 0, 0, 0.25);
+		}
+}
+.battleCoupons-button--main:active::before {
+		opacity: 0.5;
+		-webkit-transition: opacity 0.5s ease;
+		-o-transition: opacity 0.5s ease;
+		transition: opacity 0.5s ease;
+}
+.battleCoupons-button--secondary {
+		min-width: 10em;
+		background: #0057d1;
+		border-radius: 3.125em;
+		-webkit-box-shadow: 0.625em 0.625em 1.25em 0.1875em rgba(0, 0, 0, 0.3);
+		        box-shadow: 0.625em 0.625em 1.25em 0.1875em rgba(0, 0, 0, 0.3);
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-button--secondary {
+				min-width: calc(10em * var(--media));
+				border-radius: calc(3.125em * var(--media));
+				-webkit-box-shadow: calc(0.625em * var(--media)) calc(0.625em * var(--media)) calc(1.25em * var(--media)) calc(0.1875em * var(--media)) rgba(0, 0, 0, 0.3);
+				        box-shadow: calc(0.625em * var(--media)) calc(0.625em * var(--media)) calc(1.25em * var(--media)) calc(0.1875em * var(--media)) rgba(0, 0, 0, 0.3);
+		}
+}
+.battleCoupons-button--secondary span {
+		text-transform: uppercase;
+		font-size: 0.875em;
+		padding: 0.8571428571em 0.7142857143em;
+		border-radius: 3.5714285714em;
+		color: white;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-button--secondary span {
+				font-size: calc(0.875em * var(--media));
+				padding: 0.9285714286em 0.7142857143em;
+				border-radius: 3.5714285714em;
+		}
+}
+.battleCoupons-button--secondary span::after {
+		display: none;
+}
+.battleCoupons-button--secondary::before {
+		background: -webkit-gradient(linear, left top, left bottom, from(#0057d1), to(#14badb));
+		background: -o-linear-gradient(top, #0057d1 0%, #14badb 100%);
+		background: linear-gradient(to bottom, #0057d1 0%, #14badb 100%);
+		border-radius: 3.125em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-button--secondary::before {
+				border-radius: calc(3.125em * var(--media));
+		}
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.battleCoupons-button--secondary:hover {
+				-webkit-transition: -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+				transition: -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+				-o-transition: transform 0.5s ease, box-shadow 0.5s ease;
+				transition: transform 0.5s ease, box-shadow 0.5s ease;
+				transition: transform 0.5s ease, box-shadow 0.5s ease, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+		}
+		.battleCoupons-button--secondary:hover::before {
+				opacity: 0.5;
+				-webkit-transition: opacity 0.5s ease;
+				-o-transition: opacity 0.5s ease;
+				transition: opacity 0.5s ease;
+		}
+		.battleCoupons-button--secondary:hover span::after {
+				display: none;
+		}
+}
+.battleCoupons-button--secondary:active {
+		-webkit-transform: scale(0.95);
+		    -ms-transform: scale(0.95);
+		        transform: scale(0.95);
+		-webkit-transform-origin: center;
+		    -ms-transform-origin: center;
+		        transform-origin: center;
+		-webkit-box-shadow: 0.625em 0.625em 1.25em 0.1875em rgba(0, 0, 0, 0.25);
+		        box-shadow: 0.625em 0.625em 1.25em 0.1875em rgba(0, 0, 0, 0.25);
+		-webkit-transition: -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+		transition: -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+		-o-transition: box-shadow 0.2s ease, transform 0.2s ease;
+		transition: box-shadow 0.2s ease, transform 0.2s ease;
+		transition: box-shadow 0.2s ease, transform 0.2s ease, -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-button--secondary:active {
+				-webkit-box-shadow: calc(0.625em * var(--media)) calc(0.625em * var(--media)) calc(1.25em * var(--media)) calc(0.1875em * var(--media)) rgba(0, 0, 0, 0.25);
+				        box-shadow: calc(0.625em * var(--media)) calc(0.625em * var(--media)) calc(1.25em * var(--media)) calc(0.1875em * var(--media)) rgba(0, 0, 0, 0.25);
+		}
+}
+.battleCoupons-button--secondary:active::before {
+		opacity: 0.5;
+		-webkit-transition: opacity 0.5s ease;
+		-o-transition: opacity 0.5s ease;
+		transition: opacity 0.5s ease;
+}
+.battleCoupons-link {
+		margin: 0.9375em auto 0;
+		font-size: 1em;
+		text-transform: uppercase;
+		font-weight: 500;
+		color: white;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-link {
+				font-size: calc(0.75em * var(--media));
+				margin: 0.8333333333em auto 0;
+		}
+}
+.battleCoupons-main {
+		position: relative;
+		width: 81.25em;
+		margin: 0 auto;
+		padding: 0em 1.25em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-main {
+				width: calc(31.25em * var(--media));
+				padding: 0em calc(1.25em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-main {
+				width: 100%;
+				padding: 0em calc(1.25em * var(--media));
+		}
+}
+.battleCoupons-info {
+		position: relative;
+		width: 34.375em;
+		padding: 9.375em 0em 6.25em 3.125em;
+		text-transform: uppercase;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-info {
+				width: calc(14.0625em * var(--media));
+				padding: calc(0.625em * var(--media)) 0em calc(2.5em * var(--media)) 0em;
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-info {
+				width: 100%;
+				text-align: center;
+				padding: calc(1.25em * var(--media)) 0em calc(2.5em * var(--media)) 0em;
+		}
+}
+.battleCoupons-info__title {
+		font-weight: 300;
+		text-shadow: 0.625em 0.625em 1.25em rgba(0, 0, 0, 0.9);
+}
+.battleCoupons-info__title-text {
+		display: block;
+		font-size: 6.25em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-info__title-text {
+				font-size: calc(2.5em * var(--media));
+		}
+}
+.battleCoupons-info__subtitle {
+		font-weight: 200;
+		font-size: 1.875em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-info__subtitle {
+				font-size: calc(1em * var(--media));
+				margin-top: 0.3125em;
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-info__subtitle {
+				margin-top: 0.9375em;
+		}
+}
+.battleCoupons-info__timer {
+		position: relative;
+		margin: 6.25em auto;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-info__timer {
+				margin: calc(0.9375em * var(--media)) auto;
+		}
+}
+.battleCoupons-info__action {
+		position: relative;
+		width: 15.625em;
+		text-align: center;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-info__action {
+				width: calc(8.75em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-info__action {
+				width: 100%;
+				margin-top: calc(8.75em * var(--media));
+		}
+}
+.battleCoupons-images {
+		position: absolute;
+		top: 5em;
+		right: 53.125em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-images {
+				-webkit-transform: scale(0.9);
+				    -ms-transform: scale(0.9);
+				        transform: scale(0.9);
+				right: calc(20.625em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-images {
+				top: calc(12.5em * var(--media));
+				right: calc(8.75em * var(--media));
+				-webkit-transform: scale(1.5);
+				    -ms-transform: scale(1.5);
+				        transform: scale(1.5);
+		}
+}
+.battleCoupons-images__card {
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		width: 30.875em;
+		-webkit-filter: drop-shadow(1.875em 1.875em 7.5em rgba(0, 0, 0, 0.5));
+		-webkit-transition: -webkit-transform 0.5s ease;
+		transition: -webkit-transform 0.5s ease;
+		-o-transition: transform 0.5s ease;
+		transition: transform 0.5s ease;
+		transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.battleCoupons-images__card--blue {
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
+}
+.battleCoupons-images__card--black {
+		-webkit-transform: translate3d(-14.375em, 12.5em, 0);
+		        transform: translate3d(-14.375em, 12.5em, 0);
+}
+.battleCoupons-images__card--rtl {
+		display: none;
+}
+.battleCoupons-images--flip .battleCoupons-images__card--blue {
+		-webkit-transform: translate3d(-14.375em, 12.5em, 0);
+		        transform: translate3d(-14.375em, 12.5em, 0);
+		z-index: 0;
+}
+.battleCoupons-images--flip .battleCoupons-images__card--black {
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
+		z-index: 1;
+}
+.battleCoupons-block-timer__list {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		width: 25em;
+		height: 100%;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-block-timer__list {
+				width: calc(12.1875em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-block-timer__list {
+				margin: 0 auto;
+		}
+}
+.battleCoupons-block-timer__item {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: column;
+		        flex-flow: column;
+		-ms-flex-preferred-size: 25%;
+		    flex-basis: 25%;
+		height: 100%;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 900;
+		color: white;
+}
+.battleCoupons-block-timer__item::after {
+		content: ":";
+		position: absolute;
+		top: 0.25em;
+		left: 0;
+		font-size: 2.5em;
+		color: inherit;
+		-webkit-transform: translate3d(-60%, 0, 0);
+		        transform: translate3d(-60%, 0, 0);
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-block-timer__item::after {
+				font-size: calc(1.25em * var(--media));
+				top: 0.25em;
+		}
+}
+.battleCoupons-block-timer__item:last-child::after {
+		display: none;
+}
+.battleCoupons-block-timer__number {
+		display: block;
+		font-size: 3.75em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-block-timer__number {
+				font-size: calc(1.875em * var(--media));
+		}
+}
+.battleCoupons-block-timer__text {
+		display: block;
+		text-transform: lowercase;
+		font-weight: 200;
+		font-size: 1em;
+		margin-top: 0em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-block-timer__text {
+				font-size: calc(0.75em * var(--media));
+				margin-top: 0.4166666667em;
+		}
+}
+.battleCoupons-section--steps {
+		margin-top: -5em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-section--steps {
+				padding-top: calc(1.875em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-section--steps {
+				margin-top: calc(-6.25em * var(--media));
+				padding-top: calc(6.25em * var(--media));
+				z-index: 0;
+		}
+}
+.battleCoupons-decor-steps__el--bg {
+		top: -20.625em;
+		left: 0;
+		width: 120em;
+		-webkit-transform: scaleX(-1);
+		    -ms-transform: scaleX(-1);
+		        transform: scaleX(-1);
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor-steps__el--bg {
+				top: calc(8.75em * var(--media));
+				-webkit-transform: scaleX(-2.2) scaleY(2.2);
+				    -ms-transform: scaleX(-2.2) scaleY(2.2);
+				        transform: scaleX(-2.2) scaleY(2.2);
+		}
+}
+.battleCoupons-title--steps {
+		text-align: left;
+		margin-right: 1.875em;
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-title--steps {
+				text-align: center;
+				margin: 0;
+		}
+}
+.battleCoupons-container--steps {
+		max-width: 59.375em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-container--steps {
+				max-width: calc(28.125em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-container--steps {
+				max-width: 100%;
+		}
+}
+.battleCoupons-steps {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		-webkit-box-align: baseline;
+		    -ms-flex-align: baseline;
+		        align-items: baseline;
+		margin-top: 1.25em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-steps {
+				margin-top: calc(0.625em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-steps {
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				    -ms-flex-flow: column;
+				        flex-flow: column;
+				-webkit-box-align: center;
+				    -ms-flex-align: center;
+				        align-items: center;
+		}
+}
+.battleCoupons-step {
+		position: relative;
+		text-align: center;
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-step {
+				margin-top: calc(1.875em * var(--media));
+		}
+}
+.battleCoupons-step__image {
+		margin: 0 auto;
+}
+.battleCoupons-step__image--step1 {
+		width: 12.625em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-step__image--step1 {
+				width: calc(7.5625em * var(--media));
+		}
+}
+.battleCoupons-step__image--step2 {
+		width: 11.25em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-step__image--step2 {
+				width: calc(6.75em * var(--media));
+		}
+}
+.battleCoupons-step__image--step3 {
+		width: 10.625em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-step__image--step3 {
+				width: calc(6.375em * var(--media));
+		}
+}
+.battleCoupons-step__info {
+		line-height: 1.3;
+		margin-top: -0.9375em;
+}
+.battleCoupons-step__text {
+		font-size: 1.625em;
+		font-weight: 200;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-step__text {
+				font-size: calc(0.875em * var(--media));
+		}
+}
+.battleCoupons-section--line {
+		margin-top: 6.25em;
+		z-index: 3;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-section--line {
+				margin-top: calc(3.125em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-section--line {
+				margin-top: calc(6.25em * var(--media));
+		}
+}
+.battleCoupons-slider .swiper-container {
+		height: 100%;
+}
+.battleCoupons-slider__nav {
+		position: relative;
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-slider__nav {
+				width: 50%;
+				margin: 0 auto;
+		}
+}
+.battleCoupons-slider__nav .swiper-slide-thumb-active .battleCoupons-slider__item {
+		background-color: #041e48;
+		background-image: -o-linear-gradient(330deg, #05c1ff 30%, #041e48 100%);
+		background-image: linear-gradient(120deg, #05c1ff 30%, #041e48 100%);
+}
+.battleCoupons-slider__nav .swiper-slide-thumb-active .battleCoupons-slider__item::before {
+		opacity: 0;
+}
+.battleCoupons-slider__nav .swiper-slide-thumb-active .battleCoupons-slider__item::after {
+		opacity: 1;
+}
+.battleCoupons-slider__item {
+		position: relative;
+		display: block;
+		width: 16.25em;
+		height: 3.125em;
+		border: 0;
+		padding: 0.875em 0em;
+		background-color: #0b0b1d;
+		background-image: -o-linear-gradient(330deg, #4d5e80 30%, #0b0b1d 100%);
+		background-image: linear-gradient(120deg, #4d5e80 30%, #0b0b1d 100%);
+		color: #fff;
+		margin: 3.75em auto 2.5em;
+		text-align: center;
+		cursor: pointer;
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+		-webkit-box-shadow: 0.3125em 0.3125em 0.625em rgba(0, 0, 0, 0.3);
+		        box-shadow: 0.3125em 0.3125em 0.625em rgba(0, 0, 0, 0.3);
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-slider__item {
+				width: calc(7.5em * var(--media));
+				height: calc(1.5em * var(--media));
+		}
+}
+.battleCoupons-slider__item::before, .battleCoupons-slider__item::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 15.9375em;
+		height: 2.8125em;
+		-webkit-transform: translate3d(-50%, -50%, 0);
+		        transform: translate3d(-50%, -50%, 0);
+		-webkit-transition: opacity 0.5s ease-in-out;
+		-o-transition: opacity 0.5s ease-in-out;
+		transition: opacity 0.5s ease-in-out;
+		z-index: 0;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-slider__item::before, .battleCoupons-slider__item::after {
+				width: calc(7.3125em * var(--media));
+				height: calc(1.3125em * var(--media));
+		}
+}
+.battleCoupons-slider__item::before {
+		opacity: 1;
+		background-color: #000014;
+		background-image: -o-linear-gradient(330deg, #242438 0%, #000014 100%);
+		background-image: linear-gradient(120deg, #242438 0%, #000014 100%);
+}
+.battleCoupons-slider__item::after {
+		opacity: 0;
+		background-color: #041e48;
+		background-image: -o-linear-gradient(330deg, #0044cc 0%, #041e48 100%);
+		background-image: linear-gradient(120deg, #0044cc 0%, #041e48 100%);
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.battleCoupons-slider__item:hover {
+				background-color: #041e48;
+				background-image: -o-linear-gradient(330deg, #05c1ff 30%, #041e48 100%);
+				background-image: linear-gradient(120deg, #05c1ff 30%, #041e48 100%);
+		}
+		.battleCoupons-slider__item:hover::before {
+				opacity: 0;
+		}
+		.battleCoupons-slider__item:hover::after {
+				opacity: 1;
+		}
+}
+.battleCoupons-slider__item-text {
+		position: relative;
+		font-size: 1.375em;
+		font-weight: 100;
+		z-index: 2;
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-slider__item-text {
+				font-size: calc(0.75em * var(--media));
+		}
+}
+.battleCoupons-slider__arrow {
+		display: block;
+		top: 57%;
+		background: transparent;
+		border: 0;
+		margin: 0;
+		padding: 0;
+		-webkit-transform: translateY(-50%);
+		    -ms-transform: translateY(-50%);
+		        transform: translateY(-50%);
+		-webkit-transition: opacity 0.5s ease;
+		-o-transition: opacity 0.5s ease;
+		transition: opacity 0.5s ease;
+}
+.battleCoupons-slider__arrow--prev {
+		right: auto;
+		left: 100%;
+}
+.battleCoupons-slider__arrow--next {
+		right: 100%;
+		left: auto;
+}
+.battleCoupons-slider__arrow::after {
+		display: none;
+}
+.battleCoupons-slider__arrow-img {
+		width: 1.125em;
+		-webkit-transform: scaleX(-1);
+		    -ms-transform: scaleX(-1);
+		        transform: scaleX(-1);
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-slider__arrow-img {
+				width: calc(0.8125em * var(--media));
+				margin: 0 auto;
+		}
+}
+.battleCoupons-slider__body {
+		position: relative;
+}
+.battleCoupons-slider__bonus {
+		margin: 0em 0em 1.875em;
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-slider__bonus {
+				text-align: center;
+				margin: calc(0.625em * var(--media)) 0 calc(0.625em * var(--media));
+		}
+}
+.battleCoupons-slider__bonus-text {
+		display: inline-block;
+		font-size: 1.875em;
+		font-weight: 300;
+		padding-right: 0.3333333333em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-slider__bonus-text {
+				font-size: calc(0.875em * var(--media));
+				padding-right: 0.3571428571em;
+		}
+}
+.battleCoupons-slider__bonus-text--gradient {
+		background: -webkit-gradient(linear, left bottom, left top, from(#f0b505), color-stop(70%, #ffffb8));
+		background: -o-linear-gradient(bottom, #f0b505 0%, #ffffb8 70%);
+		background: linear-gradient(to top, #f0b505 0%, #ffffb8 70%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+}
+@media all and (-ms-high-contrast: none) {
+		.battleCoupons-slider__bonus-text--gradient {
+				background: transparent;
+				color: #f0b505;
+		}
+}
+.battleCoupons-slider__table {
+		position: relative;
+		padding: 0em 0.625em;
+}
+.battleCoupons-slider__table-wrapper {
+		margin-top: 1.25em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-slider__table-wrapper {
+				margin-top: calc(0.625em * var(--media));
+		}
+}
+.battleCoupons-slider__table-wrapper--type1 .battleCoupons-slider__table-row {
+		background: #1553d1;
+}
+.battleCoupons-slider__table-wrapper--type2 .battleCoupons-slider__table-row {
+		background: #09265d;
+}
+.battleCoupons-slider__table-wrapper--type3 .battleCoupons-slider__table-row {
+		background: #121226;
+}
+.battleCoupons-slider__table-row {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		height: 3.75em;
+		padding: 0em 2.5em;
+		margin-bottom: 0.3125em;
+		-webkit-box-shadow: 0em 0em 0.625em rgba(0, 0, 0, 0.2);
+		        box-shadow: 0em 0em 0.625em rgba(0, 0, 0, 0.2);
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-slider__table-row {
+				padding: calc(0em * var(--media)) calc(0.625em * var(--media));
+				margin-bottom: calc(0.3125em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-slider__table-row {
+				height: calc(1.875em * var(--media));
+				padding: calc(0em * var(--media)) calc(0.3125em * var(--media));
+		}
+}
+.battleCoupons-slider__table-row:last-child {
+		border-radius: 0em 0em 0.375em 0.375em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-slider__table-row:last-child {
+				border-radius: calc(0em * var(--media)) calc(0em * var(--media)) calc(0.375em * var(--media)) calc(0.375em * var(--media));
+		}
+}
+.battleCoupons-slider__table-row:first-child {
+		border-radius: 0.375em 0.375em 0em 0em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-slider__table-row:first-child {
+				border-radius: calc(0.375em * var(--media)) calc(0.375em * var(--media)) calc(0em * var(--media)) calc(0em * var(--media));
+		}
+}
+.battleCoupons-slider__table-cell {
+		-webkit-box-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+		-ms-flex-preferred-size: 9.375em;
+		    flex-basis: 9.375em;
+		font-size: 1em;
+		font-weight: 600;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-slider__table-cell:nth-child(1) {
+				-ms-flex-preferred-size: calc(2.5em * var(--media));
+				    flex-basis: calc(2.5em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-slider__table-cell:nth-child(1) {
+				-ms-flex-preferred-size: calc(0.9375em * var(--media));
+				    flex-basis: calc(0.9375em * var(--media));
+		}
+}
+.battleCoupons-slider__table-cell:nth-child(4) {
+		color: #f0b505;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-slider__table-cell:nth-child(4) {
+				-ms-flex-preferred-size: calc(3.125em * var(--media));
+				    flex-basis: calc(3.125em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-slider__table-cell:nth-child(4) {
+				-ms-flex-preferred-size: calc(1.5625em * var(--media));
+				    flex-basis: calc(1.5625em * var(--media));
+		}
+}
+.battleCoupons-slider__table-cell:nth-child(5) {
+		color: #05c1ff;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-slider__table-cell {
+				font-size: calc(0.625em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-slider__table-cell {
+				text-align: center;
+		}
+}
+.battleCoupons-slider__table-header .battleCoupons-slider__table-row {
+		height: 5em;
+		margin-bottom: 0;
+		background: #1e1e38;
+		border-bottom: 2px solid #373766;
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-slider__table-header .battleCoupons-slider__table-row {
+				height: calc(2.5em * var(--media));
+		}
+}
+.battleCoupons-slider__table-header .battleCoupons-slider__table-cell {
+		font-size: 1.125em;
+		font-weight: 300;
+		color: #636397;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-slider__table-header .battleCoupons-slider__table-cell {
+				font-size: calc(0.625em * var(--media));
+		}
+}
+.battleCoupons-section--live {
+		margin-top: 6.25em;
+		z-index: 2;
+}
+.battleCoupons-decor-live__el--bg {
+		top: -24.375em;
+		left: 0;
+		width: 120em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-decor-live__el--bg {
+				top: calc(-14.375em * var(--media));
+				-webkit-transform: scale(1.3);
+				    -ms-transform: scale(1.3);
+				        transform: scale(1.3);
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor-live__el--bg {
+				top: calc(-14.375em * var(--media));
+				-webkit-transform: scaleX(-5) scaleY(5);
+				    -ms-transform: scaleX(-5) scaleY(5);
+				        transform: scaleX(-5) scaleY(5);
+		}
+}
+.battleCoupons-section--rules {
+		margin-top: 6.25em;
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-section--rules {
+				margin-top: calc(2.5em * var(--media));
+		}
+}
+.battleCoupons-decor-rules__el--bg1 {
+		top: -56.25em;
+		left: 0;
+		width: 120em;
+		z-index: 0;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-decor-rules__el--bg1 {
+				top: calc(-18.75em * var(--media));
+				left: calc(3.125em * var(--media));
+				-webkit-transform: scale(1.4);
+				    -ms-transform: scale(1.4);
+				        transform: scale(1.4);
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor-rules__el--bg1 {
+				top: calc(-6.25em * var(--media));
+				-webkit-transform: scale(3);
+				    -ms-transform: scale(3);
+				        transform: scale(3);
+		}
+}
+.battleCoupons-decor-rules__el--bg2 {
+		top: 37.5em;
+		left: 0;
+		width: 120em;
+		z-index: 1;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-decor-rules__el--bg2 {
+				top: calc(37.5em * var(--media));
+				-webkit-transform: scale(1.4);
+				    -ms-transform: scale(1.4);
+				        transform: scale(1.4);
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor-rules__el--bg2 {
+				top: calc(62.5em * var(--media));
+				-webkit-transform: scale(3);
+				    -ms-transform: scale(3);
+				        transform: scale(3);
+		}
+}
+.battleCoupons-decor-rules__el--left {
+		top: 46.875em;
+		left: 3.125em;
+		width: 29em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-decor-rules__el--left {
+				top: calc(31.25em * var(--media));
+				left: calc(-1.25em * var(--media));
+				width: calc(12.5em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor-rules__el--left {
+				display: none;
+		}
+}
+.battleCoupons-decor-rules__el--right {
+		top: 34.375em;
+		right: 12.5em;
+		width: 18.75em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-decor-rules__el--right {
+				top: calc(32.8125em * var(--media));
+				right: calc(0em * var(--media));
+				width: calc(9.375em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-decor-rules__el--right {
+				display: none;
+		}
+}
+.battleCoupons-rules {
+		margin: 3.125em 0em 0em;
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-rules {
+				margin: calc(1.25em * var(--media)) 0 0;
+		}
+}
+.battleCoupons-rules__header {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		width: 53.75em;
+		height: 5em;
+		padding: 0em 2.5em;
+		cursor: pointer;
+		background-image: -o-linear-gradient(330deg, #4d5e80 30%, #0b0b1d 100%);
+		background-image: linear-gradient(120deg, #4d5e80 30%, #0b0b1d 100%);
+		-webkit-box-shadow: 0.625em 0.625em 1.875em rgba(0, 0, 0, 0.3);
+		        box-shadow: 0.625em 0.625em 1.875em rgba(0, 0, 0, 0.3);
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-rules__header {
+				width: calc(24em * var(--media));
+				height: calc(2.1875em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-rules__header {
+				width: calc(19.375em * var(--media));
+		}
+}
+.battleCoupons-rules__header::before, .battleCoupons-rules__header::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 53.4375em;
+		height: 4.6875em;
+		-webkit-transform: translate3d(-50%, -50%, 0);
+		        transform: translate3d(-50%, -50%, 0);
+		-webkit-transition: opacity 0.5s ease-in-out;
+		-o-transition: opacity 0.5s ease-in-out;
+		transition: opacity 0.5s ease-in-out;
+		z-index: 0;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-rules__header::before, .battleCoupons-rules__header::after {
+				width: calc(23.8125em * var(--media));
+				height: calc(2em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-rules__header::before, .battleCoupons-rules__header::after {
+				width: calc(19.1875em * var(--media));
+		}
+}
+.battleCoupons-rules__header::before {
+		opacity: 1;
+		background-color: #000014;
+		background-image: -o-linear-gradient(330deg, #242438 0%, #000014 100%);
+		background-image: linear-gradient(120deg, #242438 0%, #000014 100%);
+}
+.battleCoupons-rules__header::after {
+		opacity: 0;
+		background-color: #041e48;
+		background-image: -o-linear-gradient(330deg, #0044cc 0%, #041e48 100%);
+		background-image: linear-gradient(120deg, #0044cc 0%, #041e48 100%);
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.battleCoupons-rules__header:hover {
+				background-image: -o-linear-gradient(330deg, #05c1ff 30%, #041e48 100%);
+				background-image: linear-gradient(120deg, #05c1ff 30%, #041e48 100%);
+		}
+		.battleCoupons-rules__header:hover::before {
+				opacity: 0;
+		}
+		.battleCoupons-rules__header:hover::after {
+				opacity: 1;
+		}
+}
+.battleCoupons-rules__header--is-open {
+		background-image: -o-linear-gradient(330deg, #05c1ff 30%, #041e48 100%);
+		background-image: linear-gradient(120deg, #05c1ff 30%, #041e48 100%);
+}
+.battleCoupons-rules__header--is-open::before {
+		opacity: 0;
+}
+.battleCoupons-rules__header--is-open::after {
+		opacity: 1;
+}
+.battleCoupons-rules__header-title {
+		position: relative;
+		display: block;
+		width: 100%;
+		padding-left: 3.125em;
+		z-index: 1;
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-rules__header-title {
+				padding-left: calc(1.25em * var(--media));
+		}
+}
+.battleCoupons-rules__header-text {
+		font-weight: 100;
+		font-size: 1.375em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-rules__header-text {
+				font-size: calc(0.875em * var(--media));
+		}
+}
+.battleCoupons-rules__button {
+		position: absolute;
+		top: 50%;
+		left: 2.5em;
+		width: 1.125em;
+		-webkit-transform: translateY(-50%) rotate(90deg);
+		    -ms-transform: translateY(-50%) rotate(90deg);
+		        transform: translateY(-50%) rotate(90deg);
+		-webkit-transition: -webkit-transform 0.5s ease;
+		transition: -webkit-transform 0.5s ease;
+		-o-transition: transform 0.5s ease;
+		transition: transform 0.5s ease;
+		transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+		z-index: 1;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-rules__button {
+				width: calc(0.6875em * var(--media));
+		}
+}
+.battleCoupons-rules__button--is-open {
+		-webkit-transform: translateY(-50%) rotate(270deg);
+		    -ms-transform: translateY(-50%) rotate(270deg);
+		        transform: translateY(-50%) rotate(270deg);
+		-webkit-transition: -webkit-transform 0.5s ease;
+		transition: -webkit-transform 0.5s ease;
+		-o-transition: transform 0.5s ease;
+		transition: transform 0.5s ease;
+		transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.battleCoupons-rules__body {
+		margin-top: 3.125em;
+		display: none;
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-rules__body {
+				margin-top: calc(1.25em * var(--media));
+		}
+}
+.battleCoupons-rules__body--is-open {
+		display: block;
+}
+.battleCoupons-rules__title {
+		font-weight: 600;
+		font-size: 1.25em;
+		color: #05c1ff;
+		padding-right: 1em;
+		margin-bottom: 1em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-rules__title {
+				font-size: calc(0.875em * var(--media));
+				padding-right: 0.7142857143em;
+				margin-bottom: 0.7142857143em;
+		}
+}
+.battleCoupons-rules__item {
+		position: relative;
+		font-size: 1.125em;
+		font-weight: 100;
+		margin-top: 0;
+		margin-bottom: 1.1111111111em;
+		padding-right: 1.1111111111em;
+		line-height: 1.5;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-rules__item {
+				font-size: calc(0.75em * var(--media));
+				margin-bottom: 0.8333333333em;
+				padding-right: 0.8333333333em;
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-rules__item {
+				margin-bottom: 1.25em;
+				padding-right: 1.25em;
+		}
+}
+.battleCoupons-rules__item::before {
+		content: "";
+		position: absolute;
+		top: 0.5555555556em;
+		right: 0;
+		display: inline-block;
+		width: 0.4444444444em;
+		height: 0.4444444444em;
+		background: #05c1ff;
+		border-radius: 2.7777777778em;
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-rules__item::before {
+				right: calc(0.0833333333em * var(--media));
+		}
+}
+.battleCoupons-rules__item--none::before {
+		display: none;
+}
+.battleCoupons-rules__text-wrapper {
+		margin-bottom: 1.25em;
+		padding-right: 1.25em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-rules__text-wrapper {
+				padding-right: calc(0.625em * var(--media));
+				margin-bottom: calc(0.625em * var(--media));
+		}
+}
+.battleCoupons-rules__text {
+		font-weight: 100;
+		font-size: 1.125em;
+		line-height: 1.5;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-rules__text {
+				font-size: calc(0.75em * var(--media));
+		}
+}
+.battleCoupons-rules__text--color {
+		display: inline-block;
+		margin-left: 0.4166666667em;
+		color: #05c1ff;
+}
+.battleCoupons-rules__text--block {
+		display: block;
+}
+.battleCoupons-action {
+		position: relative;
+		text-align: center;
+		margin: 6.25em auto;
+}
+
+/*! Modals */
+/*======================================================================================================================*/
+.battleCoupons-modal {
+		position: relative;
+		font-size: 16px;
+		color: white;
+		width: 43.75em;
+		height: 21.875em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal {
+				font-size: 1vw;
+		}
+}
+.battleCoupons-modal__close {
+		position: absolute;
+		top: -1.25em;
+		left: -1.25em;
+		margin: 0;
+		padding: 0;
+		width: 2.5em;
+		height: 2.5em;
+		cursor: pointer;
+		background-image: -webkit-gradient(linear, left bottom, left top, from(#0057d1), to(#14bcde));
+		background-image: -o-linear-gradient(bottom, #0057d1 0%, #14bcde 100%);
+		background-image: linear-gradient(to top, #0057d1 0%, #14bcde 100%);
+		border: 0;
+		will-change: transform;
+		-webkit-transform: translate3d(0, 0, 0) scale(1) rotate(0);
+		        transform: translate3d(0, 0, 0) scale(1) rotate(0);
+		-webkit-transition: -webkit-transform 0.5s ease;
+		transition: -webkit-transform 0.5s ease;
+		-o-transition: transform 0.5s ease;
+		transition: transform 0.5s ease;
+		transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+		z-index: 10;
+		border-radius: 50%;
+		-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+		        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal__close {
+				top: calc(-1.25em * var(--media));
+				left: calc(-1.25em * var(--media));
+				width: calc(2.5em * var(--media));
+				height: calc(2.5em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-modal__close {
+				top: calc(-0.625em * var(--media));
+				left: calc(-0.625em * var(--media));
+				width: calc(1.875em * var(--media));
+				height: calc(1.875em * var(--media));
+		}
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.battleCoupons-modal__close:hover {
+				-webkit-transform: translate3d(0, 0, 0) scale(1) rotate(90deg);
+				        transform: translate3d(0, 0, 0) scale(1) rotate(90deg);
+				-webkit-transition: -webkit-transform 0.5s ease;
+				transition: -webkit-transform 0.5s ease;
+				-o-transition: transform 0.5s ease;
+				transition: transform 0.5s ease;
+				transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+		}
+}
+.battleCoupons-modal__close:active {
+		-webkit-transform: translate3d(0, 0, 0) scale(0.8) rotate(90deg);
+		        transform: translate3d(0, 0, 0) scale(0.8) rotate(90deg);
+		-webkit-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+}
+.battleCoupons-modal__close-img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 40%;
+		height: 40%;
+		-webkit-transform: translate3d(-50%, -50%, 0);
+		        transform: translate3d(-50%, -50%, 0);
+}
+.battleCoupons-modal__body {
+		position: relative;
+		z-index: 2;
+		padding: 0em;
+		width: 100%;
+		height: 100%;
+}
+.battleCoupons-modal__wrapper {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		width: 100%;
+		height: 100%;
+}
+.battleCoupons-modal__scroll {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		font-weight: 400;
+		color: white;
+		line-height: 1.5;
+		text-align: right;
+		padding-left: 0.9375em;
+}
+.battleCoupons-modal::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+}
+.battleCoupons-modal__decor-el {
+		position: absolute;
+		pointer-events: none;
+}
+.battleCoupons-modal-enter {
+		width: 31.25em;
+		height: 15em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-enter {
+				width: calc(31.25em * var(--media));
+				height: calc(12.5em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-modal-enter {
+				width: calc(18.75em * var(--media));
+				height: calc(22.5em * var(--media));
+		}
+}
+.battleCoupons-modal-enter::after {
+		background: url(../img/modal/enter-bg.jpg) no-repeat center;
+		background-size: 100% 100%;
+}
+.battleCoupons-modal-enter__wrapper {
+		display: block;
+		padding-top: 2.5em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-enter__wrapper {
+				padding-top: calc(1.875em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-modal-enter__wrapper {
+				padding-top: calc(3.125em * var(--media));
+		}
+}
+.battleCoupons-modal-enter__title {
+		text-align: center;
+		line-height: 1.5;
+		font-weight: 100;
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-modal-enter__title {
+				width: 80%;
+				margin: 0 auto;
+		}
+}
+.battleCoupons-modal-enter__title-text {
+		display: inline-block;
+		font-size: 1.375em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-enter__title-text {
+				font-size: calc(1.375em * var(--media));
+		}
+}
+.battleCoupons-modal-enter__action {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		margin: 2.5em 0em 0em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-enter__action {
+				margin: calc(1.25em * var(--media)) 0 0 0;
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-modal-enter__action {
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				    -ms-flex-flow: column;
+				        flex-flow: column;
+		}
+}
+.battleCoupons-modal-enter__button {
+		margin: 0em 0.625em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-enter__button {
+				margin: calc(0em * var(--media)) calc(0.625em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-modal-enter__button {
+				margin: calc(0.625em * var(--media)) calc(0em * var(--media));
+		}
+}
+.battleCoupons-modal-enter__button--main {
+		min-width: 11.25em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-enter__button--main {
+				min-width: calc(10em * var(--media));
+		}
+}
+.battleCoupons-modal-enter__button--main span {
+		padding: 1em 0.5555555556em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-enter__button--main span {
+				font-size: calc(1.125em * var(--media));
+				padding: 0.8888888889em 0.5555555556em;
+		}
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-rules {
+				width: calc(31.25em * var(--media));
+				height: calc(12.5em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-modal-rules {
+				width: calc(18.75em * var(--media));
+				height: calc(22.5em * var(--media));
+		}
+}
+.battleCoupons-modal-rules::after {
+		background: url(../img/modal/rules-bg.jpg) no-repeat center;
+		background-size: 100% 100%;
+}
+.battleCoupons-modal-rules__body {
+		padding: 1.25em;
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-modal-rules__body {
+				padding: calc(0.625em * var(--media));
+		}
+}
+.battleCoupons-modal-rules__title {
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: 100;
+		text-shadow: 0.625em 0.625em 1.25em rgba(0, 0, 0, 0.9);
+}
+.battleCoupons-modal-rules__title-text {
+		font-size: 2.5em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-rules__title-text {
+				font-size: calc(1.875em * var(--media));
+		}
+}
+.battleCoupons-modal-rules__block {
+		margin-bottom: 1.25em;
+}
+.battleCoupons-modal-rules__list-title {
+		font-weight: bold;
+		font-size: 1.25em;
+		color: #05c1ff;
+		margin-bottom: 0.5em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-rules__list-title {
+				font-size: calc(1.125em * var(--media));
+		}
+}
+.battleCoupons-modal-rules__list-title--size-m {
+		font-size: 1.125em;
+		font-weight: normal;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-rules__list-title--size-m {
+				font-size: calc(1em * var(--media));
+		}
+}
+.battleCoupons-modal-rules__list {
+		list-style: disc;
+		padding-right: 1.875em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-rules__list {
+				list-style: none;
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-modal-rules__list {
+				padding-right: calc(0.625em * var(--media));
+		}
+}
+.battleCoupons-modal-rules__item {
+		position: relative;
+		font-size: 1em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-rules__item {
+				font-size: calc(0.875em * var(--media));
+		}
+		.battleCoupons-modal-rules__item::after {
+				content: "";
+				position: absolute;
+				top: 0.5em;
+				right: -0.7142857143em;
+				width: 0.2857142857em;
+				height: 0.2857142857em;
+				background: white;
+				border-radius: 3.5714285714em;
+		}
+}
+.battleCoupons-modal-rules__text-wrapper {
+		margin-top: 0.625em;
+}
+.battleCoupons-modal-rules__text {
+		font-style: italic;
+		font-size: 1em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-rules__text {
+				font-size: calc(0.875em * var(--media));
+		}
+}
+.battleCoupons-modal-rules__text--color {
+		display: inline-block;
+		margin-left: 0.3571428571em;
+		color: #05c1ff;
+}
+.battleCoupons-modal-rules__text--normal {
+		font-style: normal;
+}
+.battleCoupons-modal-rules__text--block {
+		display: block;
+}
+.battleCoupons-modal-hello {
+		width: 43.75em;
+		height: 18.75em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-hello {
+				width: calc(31.25em * var(--media));
+				height: calc(12.5em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-modal-hello {
+				width: calc(18.75em * var(--media));
+				height: calc(22.5em * var(--media));
+		}
+}
+.battleCoupons-modal-hello::after {
+		background: url(../img/modal/hello/hello-bg.jpg) no-repeat center;
+		background-size: 100% 100%;
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-modal-hello::after {
+				background: url(../img/mobile/modal/hello/bg.jpg) no-repeat center;
+				background-size: 100% 100%;
+		}
+}
+.battleCoupons-modal-hello__body {
+		padding: 1.25em;
+}
+.battleCoupons-modal-hello__wrapper {
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+}
+.battleCoupons-modal-hello__info {
+		position: relative;
+		width: 50%;
+		text-transform: uppercase;
+		text-align: center;
+		margin-right: auto;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-hello__info {
+				width: 55%;
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-modal-hello__info {
+				width: 100%;
+		}
+}
+.battleCoupons-modal-hello__title-text {
+		font-size: 3.75em;
+		display: block;
+		font-weight: 300;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-hello__title-text {
+				font-size: calc(2.875em * var(--media));
+		}
+}
+.battleCoupons-modal-hello__subtitle {
+		font-size: 1.5em;
+		display: block;
+		text-align: center;
+		margin-top: 0.4166666667em;
+		font-weight: 200;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-hello__subtitle {
+				font-size: calc(1.25em * var(--media));
+				margin-top: 0.5em;
+		}
+}
+.battleCoupons-modal-hello__action {
+		margin-top: 1.875em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-hello__action {
+				margin-top: calc(0.9375em * var(--media));
+		}
+}
+@media only screen and (max-width: 560px) {
+		.battleCoupons-modal-hello__action {
+				margin-top: calc(9.375em * var(--media));
+		}
+}
+.battleCoupons-modal-hello__button--main {
+		min-width: 12.5em;
+}
+@media only screen and (max-width: 1000px) {
+		.battleCoupons-modal-hello__button--main {
+				min-width: calc(11.25em * var(--media));
+		}
+		.battleCoupons-modal-hello__button--main span {
+				padding: 0.9375em 0.625em;
+		}
+}
+
+/*! Custom RTL */
+/*======================================================================================================================*/
+.battleCoupons-images__card {
+		display: none;
+}
+.battleCoupons-images__card--blue {
+		-webkit-transform: translate3d(-28.125em, 0, 0);
+		        transform: translate3d(-28.125em, 0, 0);
+}
+.battleCoupons-images__card--rtl {
+		display: block;
+}
+.battleCoupons-images--flip .battleCoupons-images__card--black {
+		-webkit-transform: translate3d(-28.125em, 0, 0);
+		        transform: translate3d(-28.125em, 0, 0);
+}
