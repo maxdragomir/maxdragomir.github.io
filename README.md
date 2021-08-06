@@ -42,6 +42,8 @@
 - [**Project 19**](https://maxdragomir.github.io/portfolio/division/project19/index.html)
 - [**Project 20**](https://maxdragomir.github.io/portfolio/division/project20/index.html)
 
-### SEARATES
-> 11.2020 - 09.2021
-- [**SeaRates**](https://www.searates.com/)
+[comment]: <> (### SEARATES)
+
+[comment]: <> (> 11.2020 - 09.2021)
+
+[comment]: <> (- [**SeaRates**]&#40;https://www.searates.com/&#41;)
