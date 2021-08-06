@@ -4,22 +4,22 @@
 
 ## My Works
 - [**Old portfolio**](https://maxdragomir.github.io/portfolio/old/index.html)
-#### Logistics 
-###### 09.2016 – 12.2017
+### Logistics 
+> 09.2016 – 12.2017
 - [**Md Logistic**](http://md-logistic.com/)
-##### Freelance
+### Freelance
 - [**Pride Club**](https://maxdragomir.github.io/portfolio/pride-club/index.html)
 - [**Leader Group**](https://maxdragomir.github.io/portfolio/leader-group/index.html)
-##### Sponge Digital & Design 
-###### 01.2018 – 02.2018
+### Sponge Digital & Design 
+>01.2018 – 02.2018
 - [**Test**](https://maxdragomir.github.io/portfolio/sponge-test/index.html)
 - [**Academy**](https://maxdragomir.github.io/portfolio/academy/index.html)
-##### XMLshop 
-###### 02.2018 – 09.2018
+### XMLshop 
+> 02.2018 – 09.2018
 - [**Test**](https://maxdragomir.github.io/portfolio/xmlshop-test/index.html)
 - [**Spring Admin Panel**](https://maxdragomir.github.io/portfolio/spring/index.html)
-##### DIVISION 
-###### 10.2018 - 11.2020
+### DIVISION 
+> 10.2018 - 11.2020
 - [**Test**](https://maxdragomir.github.io/portfolio/division/test/index.html)
 - [**Project 1**](https://maxdragomir.github.io/portfolio/division/project1/index.html)
 - [**Project 2**](https://maxdragomir.github.io/portfolio/division/project2/index.html)
@@ -42,5 +42,6 @@
 - [**Project 19**](https://maxdragomir.github.io/portfolio/division/project19/index.html)
 - [**Project 20**](https://maxdragomir.github.io/portfolio/division/project20/index.html)
 
-[comment]: <> (##### SEARATES)
-[comment]: <> (###### 11.2020 - 09.2021)
+### SEARATES
+> 11.2020 - 09.2021
+- [**SeaRates**](https://www.searates.com/)
