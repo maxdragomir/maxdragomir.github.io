@@ -1,0 +1,1400 @@
+/*! Fonts */
+/*======================================================================================================================*/
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic");
+/*! Reset */
+/*======================================================================================================================*/
+ul,
+ol {
+		padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+picture,
+figcaption,
+blockquote,
+dl,
+dd {
+		margin: 0;
+		font-size: inherit;
+}
+
+picture {
+		display: block;
+}
+
+body {
+		scroll-behavior: smooth;
+		text-rendering: optimizeSpeed;
+		line-height: 1.5;
+}
+
+ul,
+ol {
+		list-style: none;
+}
+
+a:not([class]) {
+		-webkit-text-decoration-skip: ink;
+		        text-decoration-skip-ink: auto;
+}
+
+img {
+		max-width: 100%;
+		display: block;
+}
+
+article > * + * {
+		margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+		font: inherit;
+}
+
+button, a {
+		cursor: pointer;
+		text-decoration: none;
+}
+button:hover, button:focus, button:active, a:hover, a:focus, a:active {
+		outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+		* {
+				-webkit-animation-duration: 0.01ms !important;
+				        animation-duration: 0.01ms !important;
+				-webkit-animation-iteration-count: 1 !important;
+				        animation-iteration-count: 1 !important;
+				-webkit-transition-duration: 0.01ms !important;
+				     -o-transition-duration: 0.01ms !important;
+				        transition-duration: 0.01ms !important;
+				scroll-behavior: auto !important;
+		}
+}
+/*! Animation */
+/*======================================================================================================================*/
+@-webkit-keyframes flicker {
+		20%, 100% {
+				-webkit-transform: translate3d(150%, 0, 0) skew(-50deg);
+				        transform: translate3d(150%, 0, 0) skew(-50deg);
+		}
+}
+@keyframes flicker {
+		20%, 100% {
+				-webkit-transform: translate3d(150%, 0, 0) skew(-50deg);
+				        transform: translate3d(150%, 0, 0) skew(-50deg);
+		}
+}
+/*! Base */
+/*======================================================================================================================*/
+.easyGames {
+		position: relative;
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		font-weight: 400;
+		line-height: 1;
+		font-size: 16px;
+		font-family: "Roboto", sans-serif;
+		-webkit-text-size-adjust: 100%;
+		   -moz-text-size-adjust: 100%;
+		    -ms-text-size-adjust: 100%;
+		        text-size-adjust: 100%;
+		font-smooth: antialiased;
+		overflow: hidden;
+		scroll-behavior: smooth;
+		text-rendering: optimizeLegibility;
+		direction: ltr;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+}
+.easyGames *,
+.easyGames *::before,
+.easyGames *::after {
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+}
+.easyGames-inner {
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+		-webkit-box-shadow: 0.3125em 0.3125em 6.25em rgba(0, 0, 0, 0.5);
+		        box-shadow: 0.3125em 0.3125em 6.25em rgba(0, 0, 0, 0.5);
+		overflow: hidden;
+		background-size: auto;
+}
+@media only screen and (min-width: 1920px) {
+		.easyGames-inner {
+				width: 1920px;
+		}
+}
+.easyGames--is-none {
+		display: none;
+}
+.easyGames--is-mobile button,
+.easyGames--is-mobile textarea,
+.easyGames--is-mobile input,
+.easyGames--is-mobile select,
+.easyGames--is-mobile a,
+.easyGames--is-mobile div,
+.easyGames--is-mobile span {
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		-webkit-tap-highlight-color: transparent;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+}
+.easyGames-js-addition-title {
+		position: fixed;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		min-height: 1.875em;
+		background: black;
+		border: 2px solid white;
+		font-size: 1em;
+		text-transform: uppercase;
+		color: #fab700;
+		z-index: 999;
+		font-weight: 900;
+		padding-right: 0.625em;
+		padding-left: 0.625em;
+		pointer-events: none;
+}
+@media only screen and (max-width: 1920px) {
+		.easyGames-js-addition-title {
+				font-size: 0.9vw;
+		}
+}
+@media only screen and (max-width: 1680px) {
+		.easyGames-js-addition-title {
+				font-size: 0.85vw;
+		}
+}
+@media only screen and (max-width: 1366px) {
+		.easyGames-js-addition-title {
+				font-size: 0.75vw;
+		}
+}
+@media only screen and (max-width: 1300px) {
+		.easyGames-js-addition-title {
+				font-size: 0.8vw;
+		}
+}
+@media only screen and (max-width: 1000px) {
+		.easyGames-js-addition-title {
+				display: none;
+		}
+}
+.easyGames-section {
+		position: relative;
+		z-index: 1;
+}
+.easyGames-container {
+		position: relative;
+		margin: 0 auto;
+		padding: 0 1.25em;
+}
+.easyGames-title {
+		position: relative;
+		text-align: center;
+		z-index: 1;
+}
+.easyGames-btn {
+		position: relative;
+		display: inline-block;
+		text-align: center;
+		cursor: pointer;
+		outline: none;
+		padding: 0;
+		border: 0;
+		margin: 0 auto;
+		color: black;
+		background: black;
+		z-index: 2;
+		min-width: 12.5em;
+		border-radius: 50px;
+		-webkit-box-shadow: 0.625em 0.625em 1.5em 0.1875em rgba(0, 0, 0, 0.25);
+		        box-shadow: 0.625em 0.625em 1.5em 0.1875em rgba(0, 0, 0, 0.25);
+		-webkit-transform: scale(1);
+		    -ms-transform: scale(1);
+		        transform: scale(1);
+		-webkit-transition: -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+		transition: -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+		-o-transition: transform 0.5s ease, box-shadow 0.5s ease;
+		transition: transform 0.5s ease, box-shadow 0.5s ease;
+		transition: transform 0.5s ease, box-shadow 0.5s ease, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+}
+.easyGames-btn span {
+		position: relative;
+		display: block;
+		overflow: hidden;
+		font-weight: 600;
+		z-index: 1;
+		border-radius: 50px;
+		font-size: 1.125em;
+		padding: 1.3125em 0.9375em;
+}
+.easyGames-btn span::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		-webkit-transform: translate3d(-100%, 0, 0) skew(0deg);
+		        transform: translate3d(-100%, 0, 0) skew(0deg);
+		width: 100%;
+		height: 100%;
+		will-change: transform;
+		border: 1px solid transparent;
+		opacity: 0.5;
+		background-color: rgba(255, 255, 255, 0.5);
+		-webkit-animation: flicker 4s ease-in-out infinite 1s;
+		        animation: flicker 4s ease-in-out infinite 1s;
+}
+.easyGames-btn::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 102%;
+		height: 110%;
+		margin: 0 auto;
+		background: #ededed;
+		z-index: 0;
+		border-radius: 50px;
+		opacity: 1;
+		-webkit-transform: translate3d(-50%, -50%, 0);
+		        transform: translate3d(-50%, -50%, 0);
+		-webkit-transition: opacity 0.5s ease;
+		-o-transition: opacity 0.5s ease;
+		transition: opacity 0.5s ease;
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.easyGames-btn:hover {
+				-webkit-transition: -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+				transition: -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+				-o-transition: transform 0.5s ease, box-shadow 0.5s ease;
+				transition: transform 0.5s ease, box-shadow 0.5s ease;
+				transition: transform 0.5s ease, box-shadow 0.5s ease, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+		}
+		.easyGames-btn:hover::before {
+				opacity: 0.5;
+				-webkit-transition: opacity 0.5s ease;
+				-o-transition: opacity 0.5s ease;
+				transition: opacity 0.5s ease;
+		}
+		.easyGames-btn:hover span::after {
+				display: none;
+		}
+}
+.easyGames-btn:active {
+		-webkit-transform: scale(0.95);
+		    -ms-transform: scale(0.95);
+		        transform: scale(0.95);
+		-webkit-transform-origin: center;
+		    -ms-transform-origin: center;
+		        transform-origin: center;
+		-webkit-box-shadow: 0.3125em 0.3125em 0.625em 0em rgba(0, 0, 0, 0.25);
+		        box-shadow: 0.3125em 0.3125em 0.625em 0em rgba(0, 0, 0, 0.25);
+		-webkit-transition: -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+		transition: -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+		-o-transition: box-shadow 0.2s ease, transform 0.2s ease;
+		transition: box-shadow 0.2s ease, transform 0.2s ease;
+		transition: box-shadow 0.2s ease, transform 0.2s ease, -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+}
+.easyGames-btn:active::before {
+		opacity: 0.5;
+		-webkit-transition: opacity 0.5s ease;
+		-o-transition: opacity 0.5s ease;
+		transition: opacity 0.5s ease;
+}
+.easyGames-test-page {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: column;
+		        flex-flow: column;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		height: 100vh;
+		font-size: 5vw;
+		text-transform: uppercase;
+		color: #fab700;
+}
+.easyGames-test-text {
+		font-size: 3vw;
+		text-transform: uppercase;
+		color: #fab700;
+}
+.easyGames-btn-test {
+		position: absolute;
+		top: 40%;
+		right: -7.8125em;
+}
+@media only screen and (max-width: 1000px) {
+		.easyGames-btn-test {
+				top: -4.6875em;
+				right: 1.5625em;
+		}
+}
+@media only screen and (max-width: 560px) {
+		.easyGames-btn-test {
+				top: -20em;
+				right: 0.625em;
+		}
+}
+.easyGames-btn-test__tickets {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		padding: 0em;
+		width: 1.25em;
+		height: 1.25em;
+		border-radius: 50%;
+		color: black;
+		background: white;
+		-webkit-box-shadow: 0 0 0 3px black;
+		        box-shadow: 0 0 0 3px black;
+		border: 0;
+		font-size: 2.5em;
+		font-weight: 300;
+		-webkit-transform: translate3d(0, -50%, 0) scale(1);
+		        transform: translate3d(0, -50%, 0) scale(1);
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+@media only screen and (max-width: 1000px) {
+		.easyGames-btn-test__tickets {
+				width: 1em;
+				height: 1em;
+				font-size: 4.6875em;
+		}
+}
+@media only screen and (max-width: 560px) {
+		.easyGames-btn-test__tickets {
+				width: 1em;
+				height: 1em;
+				font-size: 9.375em;
+		}
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.easyGames-btn-test__tickets:hover {
+				color: black;
+				background: white;
+				-webkit-box-shadow: 0 0 5px 1px black, 0em 0em 0.1333333333em 0.02em rgba(255, 255, 255, 0.5);
+				        box-shadow: 0 0 5px 1px black, 0em 0em 0.1333333333em 0.02em rgba(255, 255, 255, 0.5);
+				-webkit-transform: translate3d(0, -50%, 0) scale(1.1);
+				        transform: translate3d(0, -50%, 0) scale(1.1);
+				-webkit-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+		}
+}
+.easyGames-btn-test__tickets:active {
+		-webkit-box-shadow: 0 0 2.5px 1px black, 0 0 10px 3px white;
+		        box-shadow: 0 0 2.5px 1px black, 0 0 10px 3px white;
+		-webkit-transform: translate3d(0, -50%, 0) scale(0.95);
+		        transform: translate3d(0, -50%, 0) scale(0.95);
+		-webkit-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+}
+.easyGames-demo-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 998;
+		width: 100%;
+		height: 100%;
+		opacity: 1;
+		display: none;
+}
+.easyGames-demo {
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 100vh;
+		width: 25em;
+		z-index: 2;
+		direction: ltr;
+		-webkit-transform: translate3d(99%, 0, 0);
+		        transform: translate3d(99%, 0, 0);
+		-webkit-transition: -webkit-transform 0.5s ease;
+		transition: -webkit-transform 0.5s ease;
+		-o-transition: transform 0.5s ease;
+		transition: transform 0.5s ease;
+		transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+@media only screen and (max-width: 1000px) {
+		.easyGames-demo {
+				font-size: 1.5625em;
+		}
+}
+@media only screen and (max-width: 560px) {
+		.easyGames-demo {
+				font-size: 3.125em;
+				width: 20em;
+		}
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.easyGames-demo:hover {
+				opacity: 1;
+				-webkit-transform: translate3d(0%, 0, 0);
+				        transform: translate3d(0%, 0, 0);
+				-webkit-transition: -webkit-transform 0.5s ease;
+				transition: -webkit-transform 0.5s ease;
+				-o-transition: transform 0.5s ease;
+				transition: transform 0.5s ease;
+				transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+		}
+		.easyGames-demo:hover .easyGames-demo__switch-button {
+				opacity: 1;
+				-webkit-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+		}
+		.easyGames-demo:hover .easyGames-demo__switch-button-svg {
+				-webkit-transform: translate3d(-50%, -50%, 0) rotate(180deg);
+				        transform: translate3d(-50%, -50%, 0) rotate(180deg);
+				-webkit-transition: all 1s ease;
+				-o-transition: all 1s ease;
+				transition: all 1s ease;
+		}
+		.easyGames-demo:hover .easyGames-demo__content {
+				-webkit-transform: translate3d(0%, 0, 0);
+				        transform: translate3d(0%, 0, 0);
+				-webkit-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+		}
+}
+.easyGames-demo--is-show {
+		opacity: 1;
+		-webkit-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+		-webkit-transition: -webkit-transform 0.5s ease;
+		transition: -webkit-transform 0.5s ease;
+		-o-transition: transform 0.5s ease;
+		transition: transform 0.5s ease;
+		transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.easyGames-demo--is-show .easyGames-demo__switch-button {
+		opacity: 1;
+		-webkit-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+}
+.easyGames-demo--is-show .easyGames-demo__switch-button-svg {
+		-webkit-transform: translate3d(-50%, -50%, 0) rotate(0);
+		        transform: translate3d(-50%, -50%, 0) rotate(0);
+		-webkit-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		transition: all 1s ease;
+}
+.easyGames-demo--is-show .easyGames-demo__content {
+		-webkit-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+.easyGames-demo--is-fixed {
+		opacity: 1;
+		-webkit-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+		-webkit-transition: -webkit-transform 0.5s ease;
+		transition: -webkit-transform 0.5s ease;
+		-o-transition: transform 0.5s ease;
+		transition: transform 0.5s ease;
+		transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.easyGames-demo--is-fixed .easyGames-demo__switch-button {
+		opacity: 1;
+		-webkit-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+}
+.easyGames-demo--is-fixed .easyGames-demo__switch-button-svg {
+		-webkit-transform: translate3d(-50%, -50%, 0) rotate(180deg);
+		        transform: translate3d(-50%, -50%, 0) rotate(180deg);
+		-webkit-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		transition: all 1s ease;
+}
+.easyGames-demo--is-fixed .easyGames-demo__content {
+		-webkit-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+.easyGames-demo__switcher {
+		position: absolute;
+		bottom: 4.375em;
+		left: -4.375em;
+		width: 4.375em;
+		height: 4.375em;
+		display: block;
+		padding: 0.5em;
+		z-index: 2;
+}
+@media only screen and (max-width: 560px) {
+		.easyGames-demo__switcher {
+				bottom: 12.5em;
+		}
+}
+.easyGames-demo__switch-button {
+		position: relative;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		background: #e6e7ed;
+		border: 1px solid #d1d9e6;
+		border-radius: 0.625em;
+		will-change: transform;
+		opacity: 0.2;
+		-webkit-transform: translate3d(0, 0, 0) scale(1);
+		        transform: translate3d(0, 0, 0) scale(1);
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+@media only screen and (max-width: 1000px) {
+		.easyGames-demo__switch-button {
+				opacity: 0.5;
+		}
+}
+.easyGames-demo__switch-button--is-active .easyGames-demo__switch-button-svg {
+		opacity: 1;
+		-webkit-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		transition: all 1s ease;
+}
+.easyGames-demo__switch-button--is-active .easyGames-demo__switch-button-svg path {
+		stroke-width: 0.625em;
+		stroke: #30334a;
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.easyGames-demo__switch-button:hover {
+				opacity: 1;
+				-webkit-transform: translate3d(0, 0, 0) scale(1.05);
+				        transform: translate3d(0, 0, 0) scale(1.05);
+				-webkit-transition: all 0.3s ease;
+				-o-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+		}
+}
+.easyGames-demo__switch-button:active {
+		-webkit-box-shadow: inset 0.125em 0.125em 0.3125em #b7b8bd, inset -0.1875em -0.1875em 0.4375em white;
+		        box-shadow: inset 0.125em 0.125em 0.3125em #b7b8bd, inset -0.1875em -0.1875em 0.4375em white;
+		-webkit-transform: translate3d(0, 0, 0) scale(1);
+		        transform: translate3d(0, 0, 0) scale(1);
+		-webkit-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+}
+.easyGames-demo__switch-button-svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: block;
+		width: 70%;
+		margin: 0 auto;
+		-webkit-transform: translate3d(-50%, -50%, 0) rotate(0);
+		        transform: translate3d(-50%, -50%, 0) rotate(0);
+		-webkit-transform-origin: center;
+		    -ms-transform-origin: center;
+		        transform-origin: center;
+		opacity: 0.5;
+		-webkit-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		transition: all 1s ease;
+}
+.easyGames-demo__switch-button-svg path {
+		fill: #30334a;
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+.easyGames-demo__content {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background: #e7e8ee;
+		border-left: 1px solid #d1d9e6;
+		-webkit-transform: translate3d(20%, 0, 0);
+		        transform: translate3d(20%, 0, 0);
+		-webkit-box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.5);
+		        box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.5);
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+@media only screen and (max-width: 560px) {
+		.easyGames-demo__content {
+				padding-bottom: 3.125em;
+		}
+}
+.easyGames-demo__lock {
+		position: absolute;
+		top: 0.3125em;
+		left: 0.3125em;
+		opacity: 0.3;
+		cursor: pointer;
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.easyGames-demo__lock:hover {
+				opacity: 0.5;
+				-webkit-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+		}
+}
+@media only screen and (max-width: 1000px) {
+		.easyGames-demo__lock {
+				display: none;
+		}
+}
+.easyGames-demo__lock-icon {
+		display: block;
+		width: 1.5625em;
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+.easyGames-demo__lock-icon--open {
+		-webkit-filter: drop-shadow(1px 1px 0 white);
+		        filter: drop-shadow(1px 1px 0 white);
+}
+.easyGames-demo__lock-icon--open path {
+		fill: #30334a;
+}
+.easyGames-demo__lock-icon--close {
+		display: none;
+}
+.easyGames-demo__version {
+		position: absolute;
+		top: 0.25em;
+		right: 0.25em;
+		font-size: 1.25em;
+		text-transform: lowercase;
+		color: #30334a;
+		text-shadow: 1px 1px 0 white;
+		font-weight: 100;
+		opacity: 0.3;
+}
+.easyGames-demo__name {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		margin: 1.875em 0.9375em;
+}
+.easyGames-demo__name-text {
+		font-size: 1.875em;
+		text-align: center;
+		text-transform: capitalize;
+		font-weight: 300;
+		color: #30334a;
+		text-shadow: 1px 1px 0 white;
+		margin-right: 0.1666666667em;
+}
+.easyGames-demo__name-info {
+		font-size: 1.125em;
+		position: relative;
+		display: block;
+		width: 1.1111111111em;
+		height: 1.1111111111em;
+		border-radius: 50%;
+		color: white;
+		background: #30334a;
+		text-transform: lowercase;
+		text-shadow: none;
+		padding: 0;
+		margin: 0;
+		border: 0;
+		opacity: 0.3;
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.easyGames-demo__name-info:hover {
+				opacity: 1;
+				-webkit-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+		}
+}
+@media only screen and (max-width: 1000px) {
+		.easyGames-demo__name-info {
+				display: none;
+		}
+}
+.easyGames-demo__block {
+		position: relative;
+		margin: 0.9375em 0.9375em 2.5em 0.9375em;
+}
+.easyGames-demo__block-keys {
+		display: none;
+}
+.easyGames-demo__block-keys--is-show {
+		display: block;
+}
+.easyGames-demo__title {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		color: #30334a;
+		margin-bottom: 0.3125em;
+		text-shadow: 1px 1px 0 white;
+}
+.easyGames-demo__title::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background: #d1d9e6;
+		-webkit-transform: translate3d(0, -50%, 0);
+		        transform: translate3d(0, -50%, 0);
+		z-index: 0;
+}
+.easyGames-demo__title--page {
+		color: #18634b;
+}
+.easyGames-demo__title--page::after {
+		background: rgba(24, 99, 75, 0.3);
+}
+.easyGames-demo__title--state {
+		color: #a91e2c;
+}
+.easyGames-demo__title--state::after {
+		background: rgba(169, 30, 44, 0.3);
+}
+.easyGames-demo__title--modal {
+		color: #0056b3;
+}
+.easyGames-demo__title--modal::after {
+		background: rgba(0, 86, 179, 0.3);
+}
+.easyGames-demo__title-icon {
+		position: relative;
+		display: none;
+		width: 7%;
+		background: #e7e8ee;
+		z-index: 1;
+}
+.easyGames-demo__title-icon path {
+		fill: #30334a;
+}
+.easyGames-demo__title-text {
+		position: relative;
+		display: inline-block;
+		padding: 0em 0.5em 0em 0.5em;
+		background: #e7e8ee;
+		font-size: 1.25em;
+		text-transform: capitalize;
+		font-weight: 300;
+		z-index: 1;
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+.easyGames-demo__wrapper {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: stretch;
+		    -ms-flex-pack: stretch;
+		        justify-content: stretch;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: row wrap;
+		        flex-flow: row wrap;
+		-webkit-box-shadow: inset 0.125em 0.125em 0.3125em #b7b8bd, inset -0.1875em -0.1875em 0.4375em white;
+		        box-shadow: inset 0.125em 0.125em 0.3125em #b7b8bd, inset -0.1875em -0.1875em 0.4375em white;
+		border: 1px solid #d1d9e6;
+		padding: 0.9375em 0.3125em 0em 0.9375em;
+		border-radius: 0.625em;
+}
+@media only screen and (max-width: 1000px) {
+		.easyGames-demo__wrapper [title=tickets] {
+				display: none;
+		}
+}
+.easyGames-demo__key {
+		position: relative;
+		-webkit-box-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+		-ms-flex-preferred-size: 100%;
+		    flex-basis: 100%;
+		text-align: center;
+		margin: 0em 0.9375em 1.125em 0em;
+		background: transparent;
+		border-radius: 0.625em;
+		padding: 0;
+		-webkit-box-shadow: 0.25em 0.25em 0.625em #b7b8bd, -0.25em -0.25em 0.625em white;
+		        box-shadow: 0.25em 0.25em 0.625em #b7b8bd, -0.25em -0.25em 0.625em white;
+		border: 1px solid #d1d9e6;
+		color: #30334a;
+		text-shadow: 1px 1px 0 white;
+		will-change: transform;
+		-webkit-transform: translate3d(0, 0, 0) scale(1);
+		        transform: translate3d(0, 0, 0) scale(1);
+		-webkit-transition: all 0.5s ease 0.2s;
+		-o-transition: all 0.5s ease 0.2s;
+		transition: all 0.5s ease 0.2s;
+}
+.easyGames-demo__key--page {
+		color: #18634b;
+}
+.easyGames-demo__key--state {
+		color: #a91e2c;
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.easyGames-demo__key:hover {
+				-webkit-transform: translate3d(0, -2px, 0) scale(1.015);
+				        transform: translate3d(0, -2px, 0) scale(1.015);
+				-webkit-transition: all 0.3s ease;
+				-o-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+		}
+}
+.easyGames-demo__key-text {
+		display: block;
+		font-size: 1em;
+		padding: 0.3125em;
+		text-transform: uppercase;
+		font-weight: 600;
+}
+.easyGames-demo__key-text--description {
+		text-transform: initial;
+		font-weight: 400;
+		opacity: 0.7;
+		color: #30334a;
+}
+.easyGames-demo__button {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: column;
+		        flex-flow: column;
+		-webkit-box-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+		-ms-flex-preferred-size: 30%;
+		    flex-basis: 30%;
+		min-height: 3.125em;
+		margin: 0em 0.9375em 1.125em 0em;
+		background: transparent;
+		border-radius: 0.625em;
+		padding: 0;
+		-webkit-box-shadow: 0.25em 0.25em 0.625em #b7b8bd, -0.25em -0.25em 0.625em white;
+		        box-shadow: 0.25em 0.25em 0.625em #b7b8bd, -0.25em -0.25em 0.625em white;
+		border: 1px solid #d1d9e6;
+		color: #30334a;
+		text-shadow: 1px 1px 0 white;
+		will-change: transform;
+		-webkit-transform: translate3d(0, 0, 0) scale(1);
+		        transform: translate3d(0, 0, 0) scale(1);
+		-webkit-transition: all 0.5s ease 0.2s;
+		-o-transition: all 0.5s ease 0.2s;
+		transition: all 0.5s ease 0.2s;
+}
+.easyGames-demo__button--page {
+		border: 1px solid rgba(24, 99, 75, 0.3);
+}
+.easyGames-demo__button--state {
+		border: 1px solid rgba(169, 30, 44, 0.3);
+}
+.easyGames-demo__button--modal {
+		border: 1px solid rgba(0, 86, 179, 0.3);
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.easyGames-demo__button:hover {
+				-webkit-transform: translate3d(0, -2px, 0) scale(1.015);
+				        transform: translate3d(0, -2px, 0) scale(1.015);
+				-webkit-transition: all 0.3s ease;
+				-o-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+		}
+		.easyGames-demo__button:hover.easyGames-demo__button--page {
+				color: #18634b;
+		}
+		.easyGames-demo__button:hover.easyGames-demo__button--state {
+				color: #a91e2c;
+		}
+		.easyGames-demo__button:hover.easyGames-demo__button--modal {
+				color: #0056b3;
+		}
+}
+.easyGames-demo__button:active {
+		-webkit-transform: translate3d(0, 0, 0) scale(1);
+		        transform: translate3d(0, 0, 0) scale(1);
+		-webkit-box-shadow: inset 0.125em 0.125em 0.3125em #b7b8bd, inset -0.1875em -0.1875em 0.4375em white;
+		        box-shadow: inset 0.125em 0.125em 0.3125em #b7b8bd, inset -0.1875em -0.1875em 0.4375em white;
+		-webkit-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+}
+@media only screen and (max-width: 560px) {
+		.easyGames-demo__button {
+				-ms-flex-preferred-size: 100%;
+				    flex-basis: 100%;
+		}
+}
+.easyGames-demo__button-text {
+		font-size: 1.125em;
+		display: block;
+		text-transform: capitalize;
+		font-weight: 400;
+}
+.easyGames .no-animate {
+		-webkit-animation: none !important;
+		        animation: none !important;
+}
+.easyGames .breadcrumbs {
+		position: absolute;
+		font-style: normal;
+		z-index: 2;
+		top: 1.25em;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		left: 1.25em;
+}
+.easyGames .breadcrumbs li {
+		color: white;
+		text-transform: uppercase;
+		display: inline-block;
+		position: relative;
+		font-weight: bold;
+		font-size: 1.125em;
+}
+.easyGames .breadcrumbs li a, .easyGames .breadcrumbs li span {
+		color: inherit;
+		font-size: inherit;
+}
+.easyGames .breadcrumbs li:first-child::before {
+		content: none;
+}
+.easyGames .breadcrumbs li::before {
+		content: "/";
+		margin-left: 0.25em;
+		margin-right: 0.5em;
+}
+@media only screen and (max-width: 1000px) {
+		.easyGames .breadcrumbs {
+				display: none;
+		}
+}
+.easyGames .v--modal {
+		top: auto !important;
+		left: auto !important;
+		overflow: visible !important;
+		height: auto !important;
+		width: auto !important;
+		background: none !important;
+		display: inline-block;
+		-webkit-box-shadow: none;
+		        box-shadow: none;
+}
+.easyGames .v--modal-background-click {
+		display: -ms-flexbox;
+		display: -webkit-box;
+		display: flex;
+		-ms-flex-pack: center;
+		-webkit-box-pack: center;
+		        justify-content: center;
+		-ms-flex-align: center;
+		-webkit-box-align: center;
+		        align-items: center;
+		height: 100%;
+}
+.easyGames .v--modal-overlay {
+		background: rgba(0, 0, 0, 0.7) !important;
+}
+.easyGames .v--modal-overlay {
+		z-index: 100010 !important;
+}
+
+.noScroll {
+		overflow: hidden;
+}
+
+/*! Account page */
+/*======================================================================================================================*/
+.easyGames-btn {
+		position: relative;
+		display: inline-block;
+		text-align: center;
+		cursor: pointer;
+		outline: none;
+		padding: 0;
+		border: 0;
+		margin: 0 auto;
+		color: black;
+		background: black;
+		z-index: 2;
+		min-width: 12.5em;
+		border-radius: 50px;
+		-webkit-box-shadow: 0.625em 0.625em 1.5em 0.1875em rgba(0, 0, 0, 0.25);
+		        box-shadow: 0.625em 0.625em 1.5em 0.1875em rgba(0, 0, 0, 0.25);
+		-webkit-transform: scale(1);
+		    -ms-transform: scale(1);
+		        transform: scale(1);
+		-webkit-transition: -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+		transition: -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+		-o-transition: transform 0.5s ease, box-shadow 0.5s ease;
+		transition: transform 0.5s ease, box-shadow 0.5s ease;
+		transition: transform 0.5s ease, box-shadow 0.5s ease, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+}
+.easyGames-btn span {
+		position: relative;
+		display: block;
+		overflow: hidden;
+		font-weight: 600;
+		z-index: 1;
+		border-radius: 50px;
+		font-size: 1.125em;
+		padding: 1.3125em 0.9375em;
+}
+.easyGames-btn span::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		-webkit-transform: translate3d(-100%, 0, 0) skew(0deg);
+		        transform: translate3d(-100%, 0, 0) skew(0deg);
+		width: 100%;
+		height: 100%;
+		will-change: transform;
+		border: 1px solid transparent;
+		opacity: 0.5;
+		background-color: rgba(255, 255, 255, 0.5);
+		-webkit-animation: flicker 4s ease-in-out infinite 1s;
+		        animation: flicker 4s ease-in-out infinite 1s;
+}
+.easyGames-btn::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		background: #ededed;
+		z-index: 0;
+		border-radius: 50px;
+		opacity: 1;
+		-webkit-transform: translate3d(-50%, -50%, 0);
+		        transform: translate3d(-50%, -50%, 0);
+		-webkit-transition: opacity 0.5s ease;
+		-o-transition: opacity 0.5s ease;
+		transition: opacity 0.5s ease;
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.easyGames-btn:hover {
+				-webkit-transition: -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+				transition: -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+				-o-transition: transform 0.5s ease, box-shadow 0.5s ease;
+				transition: transform 0.5s ease, box-shadow 0.5s ease;
+				transition: transform 0.5s ease, box-shadow 0.5s ease, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
+		}
+		.easyGames-btn:hover::before {
+				opacity: 0.5;
+				-webkit-transition: opacity 0.5s ease;
+				-o-transition: opacity 0.5s ease;
+				transition: opacity 0.5s ease;
+		}
+		.easyGames-btn:hover span::after {
+				display: none;
+		}
+}
+.easyGames-btn:active {
+		-webkit-transform: scale(0.95);
+		    -ms-transform: scale(0.95);
+		        transform: scale(0.95);
+		-webkit-transform-origin: center;
+		    -ms-transform-origin: center;
+		        transform-origin: center;
+		-webkit-box-shadow: 0.3125em 0.3125em 0.625em 0em rgba(0, 0, 0, 0.25);
+		        box-shadow: 0.3125em 0.3125em 0.625em 0em rgba(0, 0, 0, 0.25);
+		-webkit-transition: -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+		transition: -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+		-o-transition: box-shadow 0.2s ease, transform 0.2s ease;
+		transition: box-shadow 0.2s ease, transform 0.2s ease;
+		transition: box-shadow 0.2s ease, transform 0.2s ease, -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+}
+.easyGames-btn:active::before {
+		opacity: 0.5;
+		-webkit-transition: opacity 0.5s ease;
+		-o-transition: opacity 0.5s ease;
+		transition: opacity 0.5s ease;
+}
+.easyGames.easyGames-account {
+		background: transparent;
+}
+
+.easyGames-account__wrapper {
+		position: relative;
+}
+@media only screen and (max-width: 1780px) {
+		.easyGames-account__wrapper {
+				font-size: 0.85vw;
+		}
+}
+@media only screen and (max-width: 1599px) {
+		.easyGames-account__wrapper {
+				font-size: 16px;
+		}
+}
+@media only screen and (max-width: 1450px) {
+		.easyGames-account__wrapper {
+				font-size: 14px;
+		}
+}
+.easyGames-account__wrapper--logged {
+		margin-top: 1.25em;
+}
+.easyGames-account__wrapper--logged .easyGames-account__body {
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+}
+.easyGames-account__wrapper--logged .easyGames-account__body::after {
+		background: url(../img/account/bg-logged.jpg) no-repeat center;
+		background-size: cover;
+}
+.easyGames-account__body {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		min-height: 17.5em;
+		overflow: hidden;
+		padding: 2.1875em 1.875em;
+		color: white;
+}
+.easyGames-account__body::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url(../img/account/bg.jpg) no-repeat center;
+		background-size: cover;
+		-webkit-transform: scaleX(1);
+		    -ms-transform: scaleX(1);
+		        transform: scaleX(1);
+		z-index: -1;
+}
+.easyGames-account__info {
+		position: relative;
+		text-transform: uppercase;
+		font-style: italic;
+		font-weight: 600;
+		width: 28.4375em;
+}
+.easyGames-account__title {
+		font-size: 2.25em;
+		margin-bottom: 0.75em;
+}
+.easyGames-account__subtitle {
+		font-size: 1.125em;
+		line-height: 1.4;
+}
+.easyGames-account__action {
+		margin-top: 1.6875em;
+}
+.easyGames-account__prizes {
+		position: absolute;
+		top: 50%;
+		right: 9.375em;
+		width: 23.9375em;
+		-webkit-transform: translate3d(0, -50%, 0);
+		        transform: translate3d(0, -50%, 0);
+}
+@media only screen and (max-width: 1200px) {
+		.easyGames-account__prizes {
+				right: 0em;
+		}
+}
+.easyGames-account__btn--main {
+		min-width: 16.25em;
+		color: white;
+		background: #318301;
+		-webkit-box-shadow: 0em 0.3125em 0.9375em 0em rgba(0, 0, 0, 0.2);
+		        box-shadow: 0em 0.3125em 0.9375em 0em rgba(0, 0, 0, 0.2);
+}
+.easyGames-account__btn--main span {
+		font-weight: 600;
+		text-transform: uppercase;
+		padding: 0.9444444444em 0.8333333333em;
+		font-size: 1.125em;
+}
+.easyGames-account__btn--main::before {
+		border-style: solid;
+		border-width: 2px;
+		border-image-source: linear-gradient(to top, #a8e000, #529e00);
+		border-image-slice: 0.1;
+		background-image: -webkit-gradient(linear, left bottom, left top, from(#2b7e01), to(#ace600)), -webkit-gradient(linear, left bottom, left top, from(#a8e000), to(#529e00));
+		background-image: -o-linear-gradient(bottom, #2b7e01, #ace600), -o-linear-gradient(bottom, #a8e000, #529e00);
+		background-image: linear-gradient(to top, #2b7e01, #ace600), linear-gradient(to top, #a8e000, #529e00);
+		background-origin: border-box;
+		background-clip: content-box, border-box;
+}
+@media all and (-ms-high-contrast: none) {
+		.easyGames-account__btn--main::before {
+				border: none;
+		}
+}
+@media (hover: hover), all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.easyGames-account__btn--main:hover {
+				-webkit-box-shadow: 0em 0em 1.25em 0em rgba(78, 141, 7, 0.5);
+				        box-shadow: 0em 0em 1.25em 0em rgba(78, 141, 7, 0.5);
+		}
+		.easyGames-account__btn--main:hover::before {
+				opacity: 0;
+		}
+		.easyGames-account__btn--main:hover span::after {
+				display: none;
+		}
+}
+.easyGames-account__btn--main:active {
+		-webkit-transform: scale(0.95);
+		    -ms-transform: scale(0.95);
+		        transform: scale(0.95);
+		-webkit-box-shadow: 0em 0em 0.625em 0em rgba(0, 0, 0, 0.5);
+		        box-shadow: 0em 0em 0.625em 0em rgba(0, 0, 0, 0.5);
+}
+.easyGames-account__btn--main:active::before {
+		opacity: 0.5;
+}
+.easyGames-account__text {
+		font-size: 1.125em;
+		font-weight: 600;
+		text-transform: initial;
+		margin-bottom: 0.2777777778em;
+}
+.easyGames-account__tickets-number {
+		font-size: 2.25em;
+		font-weight: 900;
+		margin-right: 0.4166666667em;
+}
+.easyGames-account__tickets-text {
+		font-size: 1.5em;
+		font-weight: 400;
+		text-transform: initial;
+}
+.easyGames-account__block {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-ms-flex-flow: wrap;
+		    flex-flow: wrap;
+		width: 43.75em;
+		height: 13.75em;
+		overflow: auto;
+}
+@media only screen and (max-width: 1200px) {
+		.easyGames-account__block {
+				width: 31.25em;
+		}
+}
+.easyGames-account__ticket {
+		font-size: 1.125em;
+		border: 2px solid white;
+		border-radius: 0.5555555556em;
+		padding: 0.5555555556em 1.1666666667em;
+		margin-right: 0.5555555556em;
+		margin-bottom: 0.7527777778em;
+}
+.easyGames-account__ticket--win {
+		background-color: #3945c6;
+		font-weight: 600;
+}

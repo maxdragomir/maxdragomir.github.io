@@ -19,7 +19,7 @@
 - [**Test**](https://maxdragomir.github.io/portfolio/xmlshop-test/index.html)
 - [**Spring Admin Panel**](https://maxdragomir.github.io/portfolio/spring/index.html)
 ##### DIVISION 
-###### 10.2018 - now
+###### 10.2018 - 11.2020
 - [**Test**](https://maxdragomir.github.io/portfolio/division/test/index.html)
 - [**Project 1**](https://maxdragomir.github.io/portfolio/division/project1/index.html)
 - [**Project 2**](https://maxdragomir.github.io/portfolio/division/project2/index.html)
@@ -33,3 +33,11 @@
 - [**Project 10**](https://maxdragomir.github.io/portfolio/division/project10/index.html)
 - [**Project 11**](https://maxdragomir.github.io/portfolio/division/project11/index.html)
 - [**Project 12**](https://maxdragomir.github.io/portfolio/division/project12/index.html)
+- [**Project 13**](https://maxdragomir.github.io/portfolio/division/project13/index.html)
+- [**Project 14**](https://maxdragomir.github.io/portfolio/division/project14/index.html)
+- [**Project 15**](https://maxdragomir.github.io/portfolio/division/project15/index.html)
+- [**Project 16**](https://maxdragomir.github.io/portfolio/division/project16/index.html)
+- [**Project 17**](https://maxdragomir.github.io/portfolio/division/project17/index.html)
+
+[comment]: <> (##### SEARATES)
+[comment]: <> (###### 11.2020 - 09.2021)
