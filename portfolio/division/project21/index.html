@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>lottery | rangers</title>
+    <meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+  </head>
+  <body>
+    <!-- Styles ------------------------------------------------------------------------------------------------------>
+    <link href="styles/vendors.css" rel="stylesheet">
+    <link href="styles/rtl.css" rel="stylesheet" id="rtl">
+    <link href="styles/styles.css" rel="stylesheet" id="ltr">
+    <!-- Styles -------------------------------------------------------------------------------------------------------->
+    <!-- Landing ----------------------------------------------------------------------------------------------------->
+    <main class="rangers rangers-lottery rangers-wrapper" :class="{ 'rangers--is-mobile': mobile }">
+      <div class="rangers-inner">
+        <!-- Content ------------------------------------------------------------------------------------------------------------->
+        <!-- Section main-->
+        <section class="rangers-section rangers-section--main" id="rangers-show-main" data-aos="custom" data-aos-duration="0" data-aos-anchor="#rangers-show-main">
+          <div class="rangers-decor">
+            <picture class="rangers-decor__el rangers-decor__bg"><img src="img/decor/bg.jpg" alt="image" data-aos="zoom-out" data-aos-delay="100" data-aos-anchor="#rangers-show-main"/>
+            </picture>
+            <picture class="rangers-decor__el rangers-decor__bg rangers-decor__bg--light" data-aos="custom" data-aos-duration="0" data-aos-anchor="#rangers-show-main"><img src="img/decor/bg2.jpg" alt="image"/>
+            </picture>
+            <picture class="rangers-decor__el rangers-decor__el2 rangers-gsap-levitate-el"><img src="img/decor/el2.png" alt="image" data-aos="fade" data-aos-delay="300" data-aos-anchor="#rangers-show-main"/>
+            </picture>
+            <picture class="rangers-decor__el rangers-decor__el1 rangers-gsap-levitate-el"><img src="img/decor/el1.png" alt="image" data-aos="fade" data-aos-delay="300" data-aos-anchor="#rangers-show-main"/>
+            </picture>
+            <picture class="rangers-decor__el rangers-decor__el3 rangers-gsap-levitate-el"><img src="img/decor/el3.png" alt="image" data-aos="fade" data-aos-delay="300" data-aos-anchor="#rangers-show-main"/>
+            </picture>
+            <picture class="rangers-decor__el rangers-decor__el4 rangers-gsap-levitate-el"><img src="img/decor/el4.png" alt="image" data-aos="fade" data-aos-delay="300" data-aos-anchor="#rangers-show-main"/>
+            </picture>
+            <picture class="rangers-decor__el rangers-decor__el5 rangers-gsap-levitate-el"><img src="img/decor/el5.png" alt="image" data-aos="fade" data-aos-delay="300" data-aos-anchor="#rangers-show-main"/>
+            </picture>
+            <picture class="rangers-decor__el rangers-decor__el8 rangers-gsap-levitate-el"><img src="img/decor/el2.png" alt="image" data-aos="fade" data-aos-delay="300" data-aos-anchor="#rangers-show-main"/>
+            </picture>
+            <picture class="rangers-decor__el rangers-decor__el6 rangers-gsap-levitate-el"><img src="img/decor/el6.png" alt="image" data-aos="fade" data-aos-delay="300" data-aos-anchor="#rangers-show-main"/>
+            </picture>
+            <picture class="rangers-decor__el rangers-decor__el7 rangers-gsap-levitate-el"><img src="img/decor/el7.png" alt="image" data-aos="fade" data-aos-delay="300" data-aos-anchor="#rangers-show-main"/>
+            </picture>
+          </div>
+          <div class="rangers-header">
+            <picture class="rangers-header__logo" data-aos="fade-right" data-aos-delay="300" data-aos-anchor="#rangers-show-main">
+              <img src="img/logo.png" alt="">
+            </picture>
+            <div class="rangers-header__menu" data-aos="fade-left" data-aos-delay="300" data-aos-anchor="#rangers-show-main"><a class="rangers-header__item" href="javascript:;" @click="$modal.show('modal-rules')">Правила</a><a class="rangers-header__item" href="javascript:;">Лайв</a><a class="rangers-header__item" href="javascript:;">Линия</a>
+            </div>
+          </div>
+          <div class="rangers-main">
+            <div class="rangers-decor rangers-decor-main">
+              <picture class="rangers-decor__el rangers-decor-main__rangers"><img src="img/rangers.png" alt="image" data-aos="fade" data-aos-delay="900" data-aos-duration="200" data-aos-anchor="#rangers-show-main"/>
+              </picture>
+            </div>
+            <div class="rangers-main__caption" data-aos="fade-right" data-aos-delay="500" data-aos-anchor="#rangers-show-main">
+              <h1 class="rangers-main__title"><span class="rangers-main__title-text">200% бонус</span><span class="rangers-main__title-text rangers-main__title-text--border" data-aos="fade" data-aos-delay="750" data-aos-anchor="#rangers-show-main">200% бонус</span>
+              </h1>
+              <h2 class="rangers-main__subtitle">За первый депозит
+              </h2>
+            </div>
+            <div class="rangers-registration rangers-registration--desk" data-aos="fade-left" data-aos-delay="500" data-aos-anchor="#rangers-show-main">
+              <div class="rangers-registration__wrapper">
+                <p class="rangers-registration__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at delectus eaque ex maxime necessitatibus pariatur
+                </p>
+                <form class="rangers-form rangers-form--desk">
+                  <div class="rangers-form__step rangers-form__step--step-1" :class="{'rangers-form__step--show' : deskStep1 }">
+                    <div class="rangers-form__field">
+                      <label class="rangers-form__input-name" for="phone">Телефон:
+                      </label>
+                      <div class="rangers-form__wrapper">
+                        <multiselect v-model="select.value" select-label="" :hide-selected="true" track-by="name" label="name" :options="select.options" :searchable="false" :allow-empty="false">
+                          <template slot="singleLabel" slot-scope="props"><img class="multiselect__img" :src="props.option.src" alt="flag"><span class="multiselect__text">{{ props.option.name }}</span></template>
+                          <template slot="option" slot-scope="props"><img class="multiselect__img" :src="props.option.src" alt="flag"><span class="multiselect__text">{{ props.option.name }}</span></template>
+                        </multiselect>
+                        <div class="rangers-form__input-block"><span class="rangers-form__notification" :class="{ 'rangers-form__notification--show' : phoneError }"><span class="rangers-form__notification-text">Номер введен неверно</span></span>
+                          <picture class="rangers-form__notification-icon" :class="{ 'rangers-form__notification-icon--error' : phoneError &amp;&amp; phoneError !== null }"><img src="img/error.png" alt="image"/>
+                          </picture>
+                          <picture class="rangers-form__notification-icon" :class="{ 'rangers-form__notification-icon--done' : !phoneError &amp;&amp; phoneError !== null }"><img src="img/done.png" alt="image"/>
+                          </picture><input class="rangers-form__input" v-model="phone" ref="phone" placeholder="+7 123 4567890" id="phone" name="phone" type="tel" value="" autocomplete="off" required="required" :disabled="!error &amp;&amp; error !== null"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rangers-form__field">
+                      <label class="rangers-form__input-name" for="promo">Промокод:
+                      </label>
+                      <div class="rangers-form__wrapper"><input class="rangers-form__input" v-model="promoCode" placeholder="1234567890LOREMIPSUM" id="promo" name="promo" value="" type="text" autocomplete="off" :disabled="!error &amp;&amp; error !== null"/>
+                      </div>
+                    </div>
+                    <picture class="rangers-form__captcha"><img src="img/captcha.png" alt="image"/>
+                    </picture>
+                    <div class="rangers-form__rules" :class="{'rangers-form__rules--error' : checkboxError}"><input class="rangers-form__rules-input rangers-form__rules-input--hide" id="rules" type="checkbox" v-model="checkbox" :disabled="!error &amp;&amp; error !== null"/>
+                      <label class="rangers-form__rules-block" for="rules"><span class="rangers-form__rules-text">С</span><a class="rangers-form__rules-text rangers-form__rules-text--link" href="javascript:;" @click="$modal.show('modal-rules')">Правилами</a><span class="rangers-form__rules-text">ознакомлен и даю согласие на обработку персональных данных</span>
+                      </label>
+                    </div>
+                    <div class="rangers-form__action"><a class="rangers-button rangers-button--main" href="javascript:;" @click="deskStep1Button"><span>подтвердить</span></a>
+                    </div>
+                  </div>
+                  <div class="rangers-form__step rangers-form__step--step-2" :class="{'rangers-form__step--show' : deskStep2 }">
+                    <div class="rangers-form__field">
+                      <label class="rangers-form__input-name" for="phone">Телефон:
+                      </label>
+                      <div class="rangers-form__wrapper rangers-form__wrapper--phone">
+                        <div class="rangers-form__input-text">{{ phone }}
+                        </div>
+                        <div class="rangers-form__input-button" @click="changePhone" :class="{'rangers-form__input-button--disabled' : !error &amp;&amp; error !== null}">изменить номер
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rangers-form__field">
+                      <label class="rangers-form__input-name" for="confirm">Подтверждение:
+                      </label>
+                      <div class="rangers-form__wrapper">
+                        <div class="rangers-form__input-block"><span class="rangers-form__notification" :class="{ 'rangers-form__notification--show' : confirmError }"><span class="rangers-form__notification-text">Это обязательное поле</span></span>
+                          <picture class="rangers-form__notification-icon" :class="{ 'rangers-form__notification-icon--error' : confirmError &amp;&amp; confirmError !== null  }"><img src="img/error.png" alt="image"/>
+                          </picture>
+                          <picture class="rangers-form__notification-icon" :class="{ 'rangers-form__notification-icon--done' : !confirmError &amp;&amp; confirmError !== null  }"><img src="img/done.png" alt="image"/>
+                          </picture><input class="rangers-form__input" type="text" placeholder="456657" id="confirm" name="confirm" autocomplete="off" value="" v-model="confirm" required="required" :disabled="!error &amp;&amp; error !== null"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rangers-form__action"><a class="rangers-button rangers-button--main" href="javascript:;" @click="deskStep2Button" :class="{'rangers-button--disabled' : !error &amp;&amp; error !== null}"><span>{{btnText}}</span></a>
+                    </div>
+                    <div class="rangers-form__download"><a class="rangers-form__download-link rangers-form__download-link--android">
+                      <picture class="rangers-registration__download-image"><img src="img/download/android.png" alt="image"/>
+                      </picture></a><a class="rangers-form__download-link rangers-form__download-link--ios">
+                      <picture class="rangers-registration__download-image"><img src="img/download/ios.png" alt="image"/>
+                      </picture></a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="rangers-registration rangers-registration--mob">
+              <div class="rangers-registration__wrapper">
+                <p class="rangers-registration__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at delectus eaque ex maxime necessitatibus pariatur
+                </p>
+                <form class="rangers-form">
+                  <div class="rangers-form__step rangers-form__step--step-1" :class="{'rangers-form__step--show' : step1 }">
+                    <div class="rangers-form__field">
+                      <label class="rangers-form__input-name" for="phone">Телефон:
+                      </label>
+                      <div class="rangers-form__wrapper" :class="{'rangers-form__wrapper--show-button' : buttonSendCode }">
+                        <multiselect v-model="select.value" select-label="" :hide-selected="true" track-by="name" label="name" :options="select.options" :searchable="false" :allow-empty="false">
+                          <template slot="singleLabel" slot-scope="props"><img class="multiselect__img" :src="props.option.src" alt="flag"><span class="multiselect__text">{{ props.option.name }}</span></template>
+                          <template slot="option" slot-scope="props"><img class="multiselect__img" :src="props.option.src" alt="flag"><span class="multiselect__text">{{ props.option.name }}</span></template>
+                        </multiselect>
+                        <div class="rangers-form__input-block"><span class="rangers-form__notification" :class="{ 'rangers-form__notification--show' : phoneError }"><span class="rangers-form__notification-text">Номер введен неверно</span></span>
+                          <picture class="rangers-form__notification-icon" :class="{ 'rangers-form__notification-icon--error' : phoneError &amp;&amp; phoneError !== null }"><img src="img/error.png" alt="image"/>
+                          </picture>
+                          <picture class="rangers-form__notification-icon" :class="{ 'rangers-form__notification-icon--done' : !phoneError &amp;&amp; phoneError !== null }"><img src="img/done.png" alt="image"/>
+                          </picture><input class="rangers-form__input" v-model="phone" placeholder="+7 123 4567890" id="phone" name="phone" type="tel" value="" autocomplete="off" required="required" :disabled="!error &amp;&amp; error !== null"/>
+                        </div><a class="rangers-button rangers-button--secondary rangers-form__button" href="javascript:;" @click="sendCode"><span>Выслать смс</span></a>
+                      </div>
+                    </div>
+                    <div class="rangers-form__action"><a class="rangers-button rangers-button--main" href="javascript:;" @click="step1Button"><span>Выслать смс</span></a>
+                    </div>
+                  </div>
+                  <div class="rangers-form__step rangers-form__step--step-2" :class="{'rangers-form__step--show' : step2 }">
+                    <div class="rangers-form__field rangers-form__field--phone">
+                      <label class="rangers-form__input-name" for="phone">Телефон:
+                      </label>
+                      <div class="rangers-form__wrapper rangers-form__wrapper--phone">
+                        <div class="rangers-form__input-text">{{ phone }}
+                        </div>
+                        <div class="rangers-form__input-button" @click="changePhone" :class="{'rangers-form__input-button--disabled' : !error &amp;&amp; error !== null}">изменить номер
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rangers-form__field">
+                      <label class="rangers-form__input-name" for="confirm">Подтверждение:
+                      </label>
+                      <div class="rangers-form__wrapper">
+                        <div class="rangers-form__input-block"><span class="rangers-form__notification" :class="{ 'rangers-form__notification--show' : confirmError }"><span class="rangers-form__notification-text">Это обязательное поле</span></span>
+                          <picture class="rangers-form__notification-icon" :class="{ 'rangers-form__notification-icon--error' : confirmError &amp;&amp; confirmError !== null  }"><img src="img/error.png" alt="image"/>
+                          </picture>
+                          <picture class="rangers-form__notification-icon" :class="{ 'rangers-form__notification-icon--done' : !confirmError &amp;&amp; confirmError !== null  }"><img src="img/done.png" alt="image"/>
+                          </picture><input class="rangers-form__input" type="text" placeholder="456657" id="confirm" name="confirm" autocomplete="off" value="" v-model="confirm" required="required" :disabled="!error &amp;&amp; error !== null"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rangers-form__action"><a class="rangers-button rangers-button--main" href="javascript:;" @click="step2Button"><span>подтвердить</span></a>
+                    </div>
+                  </div>
+                  <div class="rangers-form__step rangers-form__step--step-3" :class="{'rangers-form__step--show' : step3 }">
+                    <div class="rangers-form__field">
+                      <label class="rangers-form__input-name" for="promo">Промокод:
+                      </label>
+                      <div class="rangers-form__wrapper"><input class="rangers-form__input" v-model="promoCode" placeholder="1234567890LOREMIPSUM" id="promo" name="promo" value="" type="text" autocomplete="off" :disabled="!error &amp;&amp; error !== null"/>
+                      </div>
+                    </div>
+                    <picture class="rangers-form__captcha"><img src="img/captcha.png" alt="image"/>
+                    </picture>
+                    <div class="rangers-form__rules" :class="{'rangers-form__rules--error' : checkboxError}"><input class="rangers-form__rules-input rangers-form__rules-input--hide" id="rules" type="checkbox" v-model="checkbox" :disabled="!error &amp;&amp; error !== null"/>
+                      <label class="rangers-form__rules-block" for="rules"><span class="rangers-form__rules-text">С</span><a class="rangers-form__rules-text rangers-form__rules-text--link" href="javascript:;" @click="$modal.show('modal-rules')">Правилами</a><span class="rangers-form__rules-text">ознакомлен и даю согласие на обработку персональных данных</span>
+                      </label>
+                    </div>
+                    <div class="rangers-form__action"><a class="rangers-button rangers-button--main" href="javascript:;" @click="mainBtn" :class="{'rangers-button--disabled' : !error &amp;&amp; error !== null}"><span>{{btnText}}</span></a>
+                    </div>
+                  </div>
+                </form>
+                <div class="rangers-registration__download"><a class="rangers-registration__download-link rangers-registration__download-link--android">
+                  <picture class="rangers-registration__download-image"><img src="img/download/android.png" alt="image"/>
+                  </picture></a><a class="rangers-registration__download-link rangers-registration__download-link--ios">
+                  <picture class="rangers-registration__download-image"><img src="img/download/ios.png" alt="image"/>
+                  </picture></a>
+                </div>
+                <div class="rangers-registration__info" :class="{'rangers-registration__info--show' : step3 }"><span class="rangers-registration__info-text">Данный сайт защищен reCAPTCHA;</span><a class="rangers-registration__info-text rangers-registration__info-text--underline" href="#!">Политика конфиденциальности</a><span class="rangers-registration__info-text">и</span><a class="rangers-registration__info-text rangers-registration__info-text--underline" href="#!">Пользовательское соглашение</a><span class="rangers-registration__info-text">компании Google остаются в силе.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Section main-->
+        <!-- Content ------------------------------------------------------------------------------------------------------------->
+        <!-- Modal --------------------------------------------------------------------------------------------------------------->
+        <!-- Rules-->
+        <modal name="modal-rules" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+          <div class="rangers-modal rangers-modal-rules">
+            <button class="rangers-modal__close rangers-modal-rules__close" @click="$modal.hide(&quot;modal-rules&quot;)"><img class="rangers-modal__close-img rangers-modal-rules__close-img" src="img/modal/close.svg" alt="image" title=""/>
+            </button>
+            <div class="rangers-modal__body rangers-modal-rules__body">
+              <div class="rangers-modal__wrapper rangers-modal-rules__wrapper">
+                <div class="rangers-modal__scroll rangers-modal-rules__scroll">
+                  <h3 class="rangers-modal-rules__title"><span class="rangers-modal-rules__title-text rangers-modal-rules__title-text--uppercase">200%-Й БОНУС ЗА ПЕРВЫЙ ДЕПОЗИТ.</span><span class="rangers-modal-rules__title-text">200%-Й БОНУС ЗА ПЕРВЫЙ ДЕПОЗИТ ДО 200 000 тенге! Регистрируйся на сайте и получи 200%-й бонус на сумму до 200 000 тенге за первый депозит!</span>
+                  </h3>
+                  <div class="rangers-modal-rules__block">
+                    <p class="rangers-modal-rules__list-title">Как получить бонус?
+                    </p>
+                    <ul class="rangers-modal-rules__list">
+                      <li class="rangers-modal-rules__item">Lorem ipsum dolor sit amet.</li>
+                      <li class="rangers-modal-rules__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                      <li class="rangers-modal-rules__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                      <li class="rangers-modal-rules__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum?</li>
+                    </ul>
+                  </div>
+                  <div class="rangers-modal-rules__block">
+                    <p class="rangers-modal-rules__list-title">Правила и условия
+                    </p>
+                    <ul class="rangers-modal-rules__list">
+                      <li class="rangers-modal-rules__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, est facere nam praesentium reiciendis tenetur?</li>
+                      <li class="rangers-modal-rules__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At beatae quaerat recusandae repellendus ullam voluptatem!</li>
+                      <li class="rangers-modal-rules__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque laborum quas quibusdam voluptatum! Incidunt, vero.</li>
+                      <li class="rangers-modal-rules__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dicta dolorem excepturi in laudantium mollitia!</li>
+                      <li class="rangers-modal-rules__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci explicabo facere illo, magnam quam quas.</li>
+                      <li class="rangers-modal-rules__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus dignissimos excepturi illum perferendis quam.</li>
+                    </ul>
+                    <p class="rangers-modal-rules__text-wrapper"><span class="rangers-modal-rules__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, voluptatibus?</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </modal>
+        <!-- Rules-->
+        <!-- Hello-->
+        <modal name="modal-hello" @before-open="beforeOpen" @before-close="beforeClose" @opened="opened" @closed="closed">
+          <div class="rangers-modal rangers-modal-hello">
+            <button class="rangers-modal__close rangers-modal-hello__close" @click="$modal.hide(&quot;modal-hello&quot;)"><img class="rangers-modal__close-img rangers-modal-hello__close-img" src="img/modal/close.svg" alt="image" title=""/>
+            </button>
+            <div class="rangers-modal__body rangers-modal-hello__body">
+              <div class="rangers-modal__wrapper rangers-modal-hello__wrapper">
+                <div class="rangers-modal-hello__info">
+                  <div class="rangers-modal-hello__caption">
+                    <p class="rangers-modal-hello__title"><span class="rangers-modal-hello__title-text">200% бонус</span><span class="rangers-modal-hello__title-text rangers-modal-hello__title-text--border">200% бонус</span>
+                    </p>
+                    <p class="rangers-modal-hello__subtitle">На первый депозит
+                    </p>
+                  </div>
+                  <div class="rangers-modal-hello__action"><a class="rangers-button
+            rangers-modal-hello__button
+            rangers-modal-hello__button--main" href="javascript:;"><span>ЗАРЕГИСТРИРОВАТЬСЯ</span></a>
+                  </div>
+                </div>
+                <picture class="rangers-modal-hello__rangers"><img src="img/rangers.png" alt="image"/>
+                </picture>
+              </div>
+            </div>
+          </div>
+        </modal>
+        <!-- Hello-->
+        <!-- Modal --------------------------------------------------------------------------------------------------------------->
+        <!-- Demo ---------------------------------------------------------------------------------------------------------------->
+        <div class="rangers-demo">
+          <div class="rangers-demo__switcher">
+            <button class="rangers-demo__switch-button">
+              <svg class="rangers-demo__switch-button-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 496">
+                <path d="M488 200h-37.6a206 206 0 00-25.4-61.2l26.6-26.6a8 8 0 000-11.3l-56.5-56.5a8 8 0 00-11.3 0L357.2 71A205.7 205.7 0 00296 45.6V8a8 8 0 00-8-8h-80a8 8 0 00-8 8v37.6A205.7 205.7 0 00138.8 71l-26.6-26.6a8 8 0 00-11.3 0l-56.5 56.5a8 8 0 000 11.3L71 138.8A206 206 0 0045.6 200H8a8 8 0 00-8 8v80a8 8 0 008 8h37.6A206 206 0 0071 357.2l-26.6 26.6a8 8 0 000 11.3l56.5 56.5c3.2 3 8.2 3 11.3 0l26.6-26.6a206 206 0 0061.2 25.4V488a8 8 0 008 8h80a8 8 0 008-8v-37.6a206 206 0 0061.2-25.4l26.6 26.6a8 8 0 0011.3 0l56.5-56.6a8 8 0 000-11.3L425 357.1a206 206 0 0025.4-61.1H488a8 8 0 008-8v-80a8 8 0 00-8-8zm-8 80h-36a8 8 0 00-7.8 6.4 190 190 0 01-28 67.4 8 8 0 001 10.1l25.5 25.5-45.3 45.3-25.5-25.5a8 8 0 00-10-1 190 190 0 01-67.5 28 8 8 0 00-6.4 7.8v36h-64v-36a8 8 0 00-6.4-7.8 190 190 0 01-67.4-28 8 8 0 00-10.1 1l-25.5 25.5-45.3-45.3L86.8 364a8 8 0 001-10 190 190 0 01-28-67.5A8 8 0 0052 280H16v-64h36a8 8 0 007.8-6.4 190 190 0 0128-67.4 8 8 0 00-1-10.1l-25.5-25.5 45.3-45.3L132 86.8a8 8 0 0010 1 190.1 190.1 0 0167.5-28A8 8 0 00216 52V16h64v36a8 8 0 006.4 7.8c24 5 47 14.4 67.4 28a8 8 0 0010.1-1l25.5-25.5 45.3 45.3-25.5 25.5a8 8 0 00-1 10 190 190 0 0128 67.5 8 8 0 007.8 6.4h36v64z"></path>
+                <path d="M248 160a88 88 0 100 176 88 88 0 000-176zm0 160a72 72 0 110-144 72 72 0 010 144z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="rangers-demo__content">
+            <div class="rangers-demo__lock">
+              <svg class="rangers-demo__lock-icon rangers-demo__lock-icon--open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 57">
+                <path d="M40.5,23V11.601C40.5,5.204,34.893,0,28,0S15.5,5.204,15.5,11.601v3.22c0,0.553,0.448,1,1,1s1-0.447,1-1v-3.22C17.5,6.307,22.21,2,28,2s10.5,4.307,10.5,9.601V23h-32v26v8h44v-8V23H40.5z M48.5,55h-40v-4h40V55z M8.5,49V25h40v24H8.5z"></path>
+                <path d="M28.5,31c-2.206,0-4,1.794-4,4v6c0,2.206,1.794,4,4,4s4-1.794,4-4v-6C32.5,32.794,30.706,31,28.5,31z M30.5,41c0,1.103-0.897,2-2,2s-2-0.897-2-2v-6c0-1.103,0.897-2,2-2s2,0.897,2,2V41z"></path>
+              </svg>
+              <svg class="rangers-demo__lock-icon rangers-demo__lock-icon--close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 57">
+                <path d="M40.5,23V11.601C40.5,5.204,34.893,0,28,0S15.5,5.204,15.5,11.601V23h-9v26v8h44v-8V23H40.5z M17.5,11.601C17.5,6.307,22.21,2,28,2s10.5,4.307,10.5,9.601V23h-21V11.601z M48.5,55h-40v-4h40V55z M8.5,49V25h7h25h8v24H8.5z"></path>
+                <path d="M28.5,31c-2.206,0-4,1.794-4,4v6c0,2.206,1.794,4,4,4s4-1.794,4-4v-6C32.5,32.794,30.706,31,28.5,31z M30.5,41c0,1.103-0.897,2-2,2s-2-0.897-2-2v-6c0-1.103,0.897-2,2-2s2,0.897,2,2V41z"></path>
+              </svg>
+            </div>
+            <div class="rangers-demo__settings">
+              <svg class="rangers-demo__settings-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 496">
+                <path d="M488 200h-37.6a206 206 0 00-25.4-61.2l26.6-26.6a8 8 0 000-11.3l-56.5-56.5a8 8 0 00-11.3 0L357.2 71A205.7 205.7 0 00296 45.6V8a8 8 0 00-8-8h-80a8 8 0 00-8 8v37.6A205.7 205.7 0 00138.8 71l-26.6-26.6a8 8 0 00-11.3 0l-56.5 56.5a8 8 0 000 11.3L71 138.8A206 206 0 0045.6 200H8a8 8 0 00-8 8v80a8 8 0 008 8h37.6A206 206 0 0071 357.2l-26.6 26.6a8 8 0 000 11.3l56.5 56.5c3.2 3 8.2 3 11.3 0l26.6-26.6a206 206 0 0061.2 25.4V488a8 8 0 008 8h80a8 8 0 008-8v-37.6a206 206 0 0061.2-25.4l26.6 26.6a8 8 0 0011.3 0l56.5-56.6a8 8 0 000-11.3L425 357.1a206 206 0 0025.4-61.1H488a8 8 0 008-8v-80a8 8 0 00-8-8zm-8 80h-36a8 8 0 00-7.8 6.4 190 190 0 01-28 67.4 8 8 0 001 10.1l25.5 25.5-45.3 45.3-25.5-25.5a8 8 0 00-10-1 190 190 0 01-67.5 28 8 8 0 00-6.4 7.8v36h-64v-36a8 8 0 00-6.4-7.8 190 190 0 01-67.4-28 8 8 0 00-10.1 1l-25.5 25.5-45.3-45.3L86.8 364a8 8 0 001-10 190 190 0 01-28-67.5A8 8 0 0052 280H16v-64h36a8 8 0 007.8-6.4 190 190 0 0128-67.4 8 8 0 00-1-10.1l-25.5-25.5 45.3-45.3L132 86.8a8 8 0 0010 1 190.1 190.1 0 0167.5-28A8 8 0 00216 52V16h64v36a8 8 0 006.4 7.8c24 5 47 14.4 67.4 28a8 8 0 0010.1-1l25.5-25.5 45.3 45.3-25.5 25.5a8 8 0 00-1 10 190 190 0 0128 67.5 8 8 0 007.8 6.4h36v64z"></path>
+                <path d="M248 160a88 88 0 100 176 88 88 0 000-176zm0 160a72 72 0 110-144 72 72 0 010 144z"></path>
+              </svg>
+            </div>
+            <p class="rangers-demo__name"><span class="rangers-demo__name-text">demo panel</span>
+              <button class="rangers-demo__name-info">i
+              </button>
+            </p>
+            <div class="rangers-demo__block rangers-demo__block-keys">
+              <p class="rangers-demo__title"><span class="rangers-demo__title-text">keys</span>
+              </p>
+              <div class="rangers-demo__wrapper">
+                <p class="rangers-demo__key"><span class="rangers-demo__key-text">shift + ~</span><span class="rangers-demo__key-text rangers-demo__key-text--description">close/open demo panel</span>
+                </p>
+                <p class="rangers-demo__key"><span class="rangers-demo__key-text">shift + i</span><span class="rangers-demo__key-text rangers-demo__key-text--description">close/open info block</span>
+                </p>
+                <p class="rangers-demo__key"><span class="rangers-demo__key-text">shift + s</span><span class="rangers-demo__key-text rangers-demo__key-text--description">close/open settings block</span>
+                </p>
+              </div>
+            </div>
+            <div class="rangers-demo__block rangers-demo__block-settings">
+              <p class="rangers-demo__title rangers-demo__title--settings"><span class="rangers-demo__title-text">settings</span>
+              </p>
+              <div class="rangers-demo__wrapper">
+                <div class="rangers-demo__setting">
+                  <div class="rangers-demo__toggle-wrapper">
+                    <label class="rangers-demo__toggle"><input class="rangers-demo__input rangers-demo__input--side" type="checkbox"/><span class="rangers-demo__slider-wrapper"><span class="rangers-demo__slider rangers-demo__slider--round rangers-demo__slider--color rangers-demo__slider--delay"></span><span class="rangers-demo__side rangers-demo__side--left">left</span><span class="rangers-demo__side rangers-demo__side--right">right</span></span>
+                    </label>
+                  </div><span class="rangers-demo__setting-text rangers-demo__setting-text--description">left/right position</span>
+                </div>
+                <div class="rangers-demo__setting">
+                  <div class="rangers-demo__toggle-wrapper">
+                    <label class="rangers-demo__toggle"><input class="rangers-demo__input rangers-demo__input--load" type="checkbox"/><span class="rangers-demo__slider-wrapper"><span class="rangers-demo__slider rangers-demo__slider--round"></span></span>
+                    </label>
+                  </div><span class="rangers-demo__setting-text rangers-demo__setting-text--description">show panel when page load</span>
+                </div>
+              </div>
+            </div>
+            <div class="rangers-demo__block rangers-demo__block-states">
+              <p class="rangers-demo__title rangers-demo__title--state">
+                <svg class="rangers-demo__title-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 500">
+                  <path d="M113.6 39.6h-64a8 8 0 000 16h64a8 8 0 000-16zm0 0M153.6 39.6h-8a8 8 0 000 16h8a8 8 0 000-16zm0 0M193.6 39.6h-8a8 8 0 000 16h8a8 8 0 000-16zm0 0M65.6 199.6h272a8 8 0 008-8v-64a8 8 0 00-8-8h-272a8 8 0 00-8 8v64a8 8 0 008 8zm264-16h-128v-48h128zm-256-48h112v48h-112zm0 0M65.6 375.6h208a8 8 0 008-8v-144a8 8 0 00-8-8h-208a8 8 0 00-8 8v144a8 8 0 008 8zm8-144h192v128h-192zm0 0M193.6 391.6h-128a8 8 0 000 16h128a8 8 0 000-16zm0 0M193.6 423.6h-128a8 8 0 000 16h128a8 8 0 000-16zm0 0M337.6 391.6h-96a8 8 0 000 16h96a8 8 0 000-16zm0 0M337.6 423.6h-96a8 8 0 000 16h96a8 8 0 000-16zm0 0"></path>
+                  <path d="M481.6 215.6h-88v-104c0-22.1-17.9-40-40-40h-75L248.8 12a8 8 0 00-7.2-4.4h-208a24 24 0 00-24 24v416c0 22 18 40 40 40h304c22.1 0 40-18 40-40v-104h88a8 8 0 008-8v-112a8 8 0 00-8-8zm-456-184a8 8 0 018-8h203.1l24 48h-235zm352 416a24 24 0 01-24 24h-304a24 24 0 01-24-24v-360h328a24 24 0 0124 24v104h-72a8 8 0 00-8 8v112a8 8 0 008 8h11.1l13.8 27.5a8 8 0 0014.3 0l13.8-27.5h19zm96-120h-120a8 8 0 00-7.2 4.4l-8.8 17.7-8.8-17.7a8 8 0 00-7.2-4.4h-8v-96h160zm0 0"></path>
+                  <path d="M428.2 289.4l-3.6 8.1-13.1-3.6a23.6 23.6 0 01-4.2 4l3.3 13.3-8.2 3.3-6.8-12a23.6 23.6 0 01-5.7 0l-7.1 11.7-8.2-3.5 3.7-13.2a23.6 23.6 0 01-4-4.1l-13.3 3.2-3.3-8.2 12-6.8a23.6 23.6 0 010-5.7l-11.7-7.1 3.5-8.2 13.2 3.7a23.6 23.6 0 014.1-4l-3.2-13.3 8.2-3.3 6.8 12a23.6 23.6 0 015.7 0l7-11.7 8.2 3.5-3.6 13.2a23.6 23.6 0 014 4.1l13.3-3.2 3.3 8.2-12 6.8a23.6 23.6 0 010 5.7zm-25.1-6a10.9 10.9 0 00-20-8.6 10.9 10.9 0 0020 8.6"></path>
+                </svg><span class="rangers-demo__title-text">states</span>
+              </p>
+              <div class="rangers-demo__wrapper">
+              </div>
+            </div>
+            <div class="rangers-demo__block rangers-demo__block-modals">
+              <p class="rangers-demo__title rangers-demo__title--modal">
+                <svg class="rangers-demo__title-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 500">
+                  <path xmlns="http://www.w3.org/2000/svg" d="M104 32H40a8 8 0 000 16h64a8 8 0 000-16zm0 0M144 32h-8a8 8 0 000 16h8a8 8 0 000-16zm0 0M184 32h-8a8 8 0 000 16h8a8 8 0 000-16zm0 0M370.3 173.7a8 8 0 0011.4 0l10.3-10.4 10.3 10.4a8 8 0 0011.4-11.4L403.3 152l10.4-10.3a8 8 0 00-11.4-11.4L392 140.7l-10.3-10.4a8 8 0 00-11.4 11.4l10.4 10.3-10.4 10.3a8 8 0 000 11.4zm0 0"></path>
+                  <path d="M232 192H72a8 8 0 00-8 8v208a8 8 0 008 8h160a8 8 0 008-8V200a8 8 0 00-8-8zm-8 208H80V208h144zm0 0M392 224H264a8 8 0 00-8 8v32a8 8 0 008 8h128a8 8 0 008-8v-32a8 8 0 00-8-8zm-8 32H272v-16h112zm0 0M392 288H264a8 8 0 00-8 8v32a8 8 0 008 8h128a8 8 0 008-8v-32a8 8 0 00-8-8zm-8 32H272v-16h112zm0 0"></path>
+                  <path d="M392 96a55.6 55.6 0 00-55.4 64H72c-22 0-40 18-40 40v208c0 22 18 40 40 40h336c22 0 40-18 40-40V200c0-7.7-2.3-15.3-6.6-21.7A56 56 0 00392 96zm0 16a40 40 0 110 80 40 40 0 010-80zm40 296a24 24 0 01-24 24H72a24 24 0 01-24-24V200a24 24 0 0124-24h269.5a55.8 55.8 0 0089.2 16.3 24 24 0 011.3 7.7zm0 0"></path>
+                  <path d="M368 352h-80a8 8 0 000 16h80a8 8 0 000-16zm0 0M352 384h-48a8 8 0 000 16h48a8 8 0 000-16zm0 0"></path>
+                  <path d="M456 64H269L239.1 4.4A8 8 0 00232 0H24A24 24 0 000 24v432a24 24 0 0024 24h432a24 24 0 0024-24V88a24 24 0 00-24-24zM16 24a8 8 0 018-8h203l24 48H16zm448 432a8 8 0 01-8 8H24a8 8 0 01-8-8V80h440a8 8 0 018 8zm0 0"></path>
+                </svg><span class="rangers-demo__title-text">modals</span>
+              </p>
+              <div class="rangers-demo__wrapper">
+                <button class="rangers-demo__button rangers-demo__button--modal" title="rules" @click="$modal.show('modal-rules')"><span class="rangers-demo__button-text">rules</span>
+                </button>
+                <button class="rangers-demo__button rangers-demo__button--modal" title="hello" @click="$modal.show('modal-hello')"><span class="rangers-demo__button-text">hello</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Demo ---------------------------------------------------------------------------------------------------------------->
+      </div>
+    </main>
+    <!-- Landing ------------------------------------------------------------------------------------------------------->
+    <!-- Javascript -------------------------------------------------------------------------------------------------->
+    <script src="js/vendors-lottery.js" type="text/javascript"></script>
+    <script src="js/lottery.js" type="text/javascript"></script>
+    <!-- Javascript ---------------------------------------------------------------------------------------------------->
+  </body>
+</html>

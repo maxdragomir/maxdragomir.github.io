@@ -3,6 +3,8 @@
 ## [Maxim Dragomiretskiy](https://github.com/maxdragomir)
 
 ## My Works
+### Freelance
+> 01.2016 – 09.2016
 - [**Old portfolio**](https://maxdragomir.github.io/portfolio/old/index.html)
 ### Logistics 
 > 09.2016 – 12.2017
@@ -41,9 +43,7 @@
 - [**Project 18**](https://maxdragomir.github.io/portfolio/division/project18/index.html)
 - [**Project 19**](https://maxdragomir.github.io/portfolio/division/project19/index.html)
 - [**Project 20**](https://maxdragomir.github.io/portfolio/division/project20/index.html)
-
-[comment]: <> (### SEARATES)
-
-[comment]: <> (> 11.2020 - 09.2021)
-
-[comment]: <> (- [**SeaRates**]&#40;https://www.searates.com/&#41;)
+- [**Project 21**](https://maxdragomir.github.io/portfolio/division/project21/index.html)
+### SEARATES
+> 11.2020 - now
+- [**SeaRates**](https://www.searates.com/)
