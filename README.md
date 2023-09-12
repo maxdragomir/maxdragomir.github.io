@@ -18,8 +18,6 @@
 - [**Academy**](https://maxdragomir.github.io/portfolio/academy/index.html)
 ### XMLshop 
 > 02.2018 – 09.2018
-- [**Test**](https://maxdragomir.github.io/portfolio/xmlshop-test/index.html)
-- [**Spring Admin Panel**](https://maxdragomir.github.io/portfolio/spring/index.html)
 ### DIVISION 
 > 10.2018 - 11.2020
 - [**Test**](https://maxdragomir.github.io/portfolio/division/test/index.html)
